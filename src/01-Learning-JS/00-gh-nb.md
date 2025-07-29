@@ -1,4 +1,4 @@
-# 1.0 Reviewing the GH Methodology & Learning to Write JS in Observable
+# 1.0-Reviewing the GH Methodology & Learning to Write JS in Observable
 
 Before we move forward, let's be sure we remember how to practice using our code-writing tools to work for us, rather than become impediments to our success.
 
@@ -6,7 +6,16 @@ Before we move forward, let's be sure we remember how to practice using our code
 
 When you develop your OF notebooks, you'll need to remember how to setup your programming environment, i.e., the set of technologies that we need to run altogether to make our notebooks render our content.
 
-## 1.0.3 Fundamental Observable Framework Syntax
+1. In VSC, open the Terminal by selecting the following menu option: **Terminal** > **New Terminal**.
+2. Verify that the terminal is using the correct environment.
+    - Mac: `bash`
+    - Windows: `cmd.exe`
+3. If the environment is correct, start a ***localhost*** server to see your project live by running the following command: `yarn dev`.
+    <p class="note">A new window in your default browser should have openned to the app locally on a ***localhost*** server.</p>
+
+If any of these steps do not work, please post your issue to the Help forum.
+
+## 1.0.2 Fundamental Observable Framework Syntax
 
 Before we learn how to code JS in this chapter, you need to learn a few basic syntax forms that will help you write code that executes in your OF notebook versus code that you want to display in the OF notebook.
 
@@ -27,14 +36,14 @@ Sometimes you will need to display code in the OF notebook, because you want to 
       let joinMultlineExample = multilineExample1 + multilineExample2
       ```
 
-
-
 ## 1.0.3 Practicing the Github development methodology
 
 We also need to make sure that we practice our Github development methodology, which includes the following high-level steps:
 
-1. For each chapter, create a new separate ***branch*** of work on the repo, so you isolate any new work on the repo to those specific set of files.
-    - **IMPORTANT**: Always create the new branch from the ***main*** branch, when starting a new chapter of work. By doing so, you avoid creating complex differences between files organized in the repo directories.
+1. For each chapter, ***before you start modifying any exercises***, create a new separate ***branch*** of work on the repo, so you isolate any new work on the repo to those specific set of files.
+    <p class="note">
+      Always create the new branch from the <strong>main</strong> branch, when starting a new chapter of work. By doing so, you avoid creating complex differences between files organized in the repo directories.
+    </p>
 2. Name the new branch with the following naming scheme: `CHP/x--name_of_chp`.
 3. Complete the work in the chapter, committing and pushing work as needed.
 4. When you are ready to submit your work for review, create a ***pull request*** (PR).
@@ -48,10 +57,26 @@ Here's that process again for you:
 1. Open Github Desktop (GHD).
 2. Select the correct ***repo***.
 3. Verify that the current ***branch*** currently selected is the desired branch.
-    - **TIP**: Each chapter will have its own branch.
-    - **TIP**: Always start from the ***main branch***, when starting a new chapter of work.
+    <p class="tip">
+      Each chapter will have its own branch.
+      <br><strong>AND</strong><br>
+      Always start from the <strong>main branch</strong>>, when starting a new chapter of work.
+    </p>
 4. After verifying the correct repo and branch are selected in GHD, select **Repository** > **Open in Visual Studio Code**.
 5. In VS Code, complete each chapter of work on the correct branch.
-    - **TIP**: Verify the correct branch is selected in VSC on the bottom-left corner of the UI.
+    <p class="tip">
+      Verify the correct branch is selected in VSC on the bottom-left corner of the UI.
+    </p>
 6. After you complete a section of a chapter, push your changes to the correct branch for that chapter of work.
-7. When the chapter is complete, make sure all of the changes are committed and pushed to the branch. When such changes are complete, create a pull request (PR) with the class template for all PRs for the textbook, which can be found at the following location in the repo: `Justice-Centered-Data-Design/src/TEMPLATE-PR.md`.
+7. When the chapter is complete, make sure all of the changes are committed and pushed to the branch. When such changes are complete, create a pull request (PR) with the class template for all PRs for the textbook, which can be found at the following location in the repo: `/TEMPLATE-PR.md`.
+
+## E 1.0 Practice GH Methodology
+
+**Goal**: For this exercise, we're keeping the additional content simple, so we can focus on the GH methodology noted above. So, to make some changes to this chapter, complete the following tasks:
+
+1. Enter the name of the branch for this chapter.
+2. Add a Markdown image below that renders a screenshot proving that you know how to open your terminal in VSC and start the localhost liveserver with the `yarn dev` command.
+
+**Chapter Branch Name**: `CHP/x--name_of_chp`
+
+ENTER_IMG_HERE

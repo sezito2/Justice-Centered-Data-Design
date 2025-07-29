@@ -1,10 +1,5 @@
 # 1.8 More Advanced Data Types &amp; Transformations
 
-```js
-// import {downloadCSV} from "./utils/utils.js";
-import {downloadCSV} from "./utils/utils.js";
-```
-
 In the previous lessons, we used individual variables to represent some of the demographic information about the 19th century Irish immigrants featured in the [Bellevue Almshouse data](https://gih-nyc.org/almshouse/the-almshouse-records/), such as names.
 
 ```javascript

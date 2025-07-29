@@ -14,3 +14,7 @@ In your terminal, do the following for both Mac and Windows OSes:
 
 1. Download and install Yarn:<br>`corepack enable yarn`
 2. Verify Yarn version:<br>`yarn -v`
+
+## E 0.5.1 Verify installation
+
+Submit a screenshot image to Moodle, proving that you have installed Node.js and Yarn by printing our the version number in your terminal.

@@ -1284,8 +1284,25 @@ pre, .observablehq-pre-container {
     overflow-x: unset;
   }
 }
-.note, .tip, .warning, .caution {
+.note, .tip, .warning, .caution, .example {
   margin: 2rem auto;
+}
+.example {
+  border-left: solid 1px;
+  border-radius: 0 4px 4px 0;
+  padding: 1rem 0.5rem;
+  box-sizing: border-box;
+  max-width: 640px;
+  border-left-color: var(--theme-foreground-fainter);
+  background-color: var(--theme-background-alt);
+
+  &::before {
+    content: "EXAMPLE";
+    color: var(--theme-foreground-muted);
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
 }
 .observablehq--error .observablehq--inspect {
   margin: 2rem auto;

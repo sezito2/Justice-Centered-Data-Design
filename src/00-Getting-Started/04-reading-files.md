@@ -67,7 +67,9 @@ Formatting text in MD enables you to easily format content by making things bold
 
 Learn more about MD at [Markdownguide.org](https://www.markdownguide.org/getting-started/), and save this [cheatsheet](https://www.markdownguide.org/cheat-sheet/) as a learning aid.
 
-Before you go any further, complete the [Markdown Tutorial](https://www.markdowntutorial.com/). Submit a screenshot of the completion screen to me on Moodle.
+Before you go any further, complete the [Markdown Tutorial](https://www.markdowntutorial.com/).
+
+<p class="note">You will need to submit a screenshot of the completion screen by rendering it on this page in one of the exercises below.</p>
 
 ## 0.2.3 Project Structure
 
@@ -138,68 +140,64 @@ Ok, so project's maintain a well-defined architecture, so you can organize your 
 
 All coding projects rely on the resources of numerous other code files. Your computer needs to know where those specific files are in relationship to any code file you're working on. So, it is imperative that you learn how to point to other files from within other files of a project, or even external to a project.
 
-Before we move forward, let's learn about 2 main types of filepaths and how to use them: ***absolute*** paths and ***relative*** paths.
-
-### Absolute and relative paths
-
-**Absolute paths**: A path with the complete path information from the root of the specific server/computer.
-
-- If on *remote* internet: Uses HTTP/HTTPS internet protocol at the beginning.
-    - EXAMPLE:
-- If on *local* computer: Accounts for all directories from the root of your computer. Here's an example of this particular file, as it is located on my computer:<br>`/Users/calindgr/Documents/NCSU/Courses/498-Justice-Centered-Data-Design/Justice-Centered-Data-Design/src/00-Getting-Started/04-reading-files.md`
-
-We're going to use the architecture, i.e., folder-file structure, that we reviewed above.
-
-```bash
-/
-├─ /src
-│  ├─ /00-Getting-Started
-│  │  └─ 00-what-is-framework.md
-│  │  └─ 01-git-github.md
-│  │  └─ ...
-│  ├─ /01-Learning-JS
-│  │  ├─ /utils
-│  │  │  └─ utils.js
-│  │  └─ 00-why-stats.md
-│  │  └─ 01-freq-dist.md
-│  │  └─ ...
-│  ├─ /02-Why-Stats
-│  │  └─ 00-why-stats.md
-│  │  └─ 01-freq-dist.md
-│  │  └─ ...
-│  ├─ /...
-│  ├─ /assets
-│  │  ├─ /css
-│  │  ├─ /images
-│  │  │  ├─ /1-js
-│  │  │     └─ imagefile.png
-│  │  │     └─ another.jpg
-│  │  ├─ ...
-│  ├─ /data
-│  │  ├─ /nc-voters
-│  │  │  └─ ...
-│  │  │  └─ nc_absentee_mail_groupedby_race_gender_2024.csv
-│  │  │  └─ ...
-│  │  ├─ launches.csv.js       # Observable data loader
-│  │  └─ events.json           # a static data file
-│  └─ index.md                 # the home page
-├─ .gitignore
-├─ observablehq.config.js      # the Observable app config file
-├─ package.json
-└─ README.md
-```
-
 Filepaths are written in a syntax that follows a standard called a ***URL***: ***Uniform Resource Locator*** (see [Wikipedia entry](https://en.wikipedia.org/wiki/URL)). URLs are standardized (agreed upon) ways to write out a path to a resource on any computer. This simple standard enables others to develop programming languages that can assume a universal syntax to find all resources—even on computers somewhere across the planet!
 
-As we move forward, I will simply say filepath, but we will use URL syntax, which involves a couple key declarations that tell computers what action to perform.
-
-#### Declarative notation and syntax of paths
+Before we move forward, we need to know what notations to use in filepaths as declarations that tell computers what action to perform. The table below displays the most common three notations.
 
 | Notation | Action |
 |----------|--------|
 | `/`  | **Two conditional meanings**:<br>&nbsp;&nbsp;1. **Start At Root**: If used as the first character in a path, declares you are starting at the root of a project.<br>&nbsp;&nbsp;2. **Go Forward**: Always declares the action to go forward into the next defined folder. |
 | `./`  | **Start In Present Working Directory**: Used only at the very start of a filepath. Tells computer to start the path in the present working directory of the file in which the path is written. |
 | `..`  | **Go Back In Working Directory**: Used only at the very start of a filepath. Tells computer to start the path in the present working directory of the file in which the path is written. |
+
+Ok, now that we know what URL notations are, let's learn about 2 main types of filepaths and how to use them: ***absolute*** paths and ***relative*** paths.
+
+### Absolute paths
+
+Absolute paths include the complete path information from the root of the specific server/computer.
+
+**Remote Absolute Path**: If an absolute path involves a resource on the *remote* internet, it uses HTTP/HTTPS internet protocol at the beginning. Then, based on the root folder, you move forward in the directory until you reach the dsired location/file.
+
+Let's understand this via an example of a Wikimedia image described below.
+
+<div class="example">
+  <p>
+    <strong>Remote Absolute Path</strong>:
+    <br>This particular Wikimedia remote absolute path to an image file has four main parts:
+    <br>
+    <a href="https://upload.wikimedia.org/wikipedia/commons/4/4a/The_Bell_System_technical_journal_%281922%29_%2814569328258%29.jpg" target="_blanl" rel="noreferrer noopenner">https://upload.wikimedia.org/wikipedia/commons/4/4a/The_Bell_System_technical_journal_%281922%29_%2814569328258%29.jpg</a>
+  </p>
+  <ol>
+    <li><code>https://</code> - Internet Protocol.
+    <li><code>upload.wikimedia.org</code> - Home root directory.
+    <li><code>/commons/4/4a/</code> - Travels from `root` > `commons` > `4` > `4a` directory.
+    <li><code>The_Bell_System_technical_journal_%281922%29_%2814569328258%29.jpg</code> - Locates .jpg file in `4a`.
+  </ol>
+</div>
+
+**Local Absolute Path**: Local absolute paths assume you are using a specific computer local to you. For example, your computer is your local computer.
+
+Here's an example of an absoulte path of this chapter's Markdown file, `04-reading-files.md`, as it is located on my personal local computer.
+
+<p class="example">
+  <strong>Copy Local Absolute Path</strong>:
+  <br>
+  If you view VSC's Explorer tree of this project, **right-click** on this chapter's <code>04-reading-files.md.md</code> file, and select **Copy Path**, it copies the absolute local path. In my case, the path copied is
+  <br><code>/Users/calindgr/Documents/NCSU/Courses/498-Justice-Centered-Data-Design/Justice-Centered-Data-Design/src/00-Getting-Started/04-reading-files.md</code>.
+</p>
+
+### Relative paths
+
+Relative paths include the path information that assumes you are starting from the position of the current file in the context of your project's architecture.
+
+<p class="example">
+  <strong>Copy Local Relative Path</strong>:
+  <br>
+  If you view VSC's Explorer tree of this project, **right-click** on this chapter's <code>04-reading-files.md.md</code> file, and select **Copy Relative Path**, it copies the relative local path. In our case of this repo, the path copied is
+  <br><code>src/00-Getting-Started/04-reading-files.md</code>.
+</p>
+
+### Demonstrating filepath writing in the terminal
 
 In the video below, I demonstrate how to practice using the above syntax to write paths in your terminal.
 
@@ -208,3 +206,41 @@ In the video below, I demonstrate how to practice using the above syntax to writ
        style="width: 620px; height:620px">
   <source src="../assets/vids/getting-started/04-reading-filepath-practice.mp4" type="video/mp4" />
 </video>
+
+## E 0.2.1 - Verify Mardown Course completion
+
+Create a Markdown image, e.g., `![Alt text description](./path/in/here.png)`, which renders a screenshot of you completing the Markdown course.
+
+Put the screenshot image in the following path, which assumes we're in the root of this project: `/src/assets/images/yourfilehere.png`.
+
+Use a relative filepath in the Markdown image to do so.
+
+ADD_YOUR_IMG_HERE
+
+## E 0.2.2 - Link to 0.3 Using the Command Line
+
+Write a markdown link, e.g., [Rendered linked text](./path/to/file.md), with a relative path to the `03-cmd-line.md` file for the "0.3-Using the Command Line" chapter.
+
+Write one that assumes the file is `.md`, and another that assumes it is an `.html` file.
+
+- enter_md_link_here
+- enter_html_link_here
+
+## E 0.2.3 - Link to 1.0 Reviewing the GH Methodology & Learning to Write JS in Observable
+
+Write a markdown link, e.g., [Rendered linked text](./path/to/file.md), with a relative path to the `00-gh-nb.md` file for the "1.0-Reviewing the GH Methodology & Learning to Write JS in Observable" chapter.
+
+Write one that assumes the file is `.md`, and another that assumes it is an `.html` file.
+
+<p class="tip">You will need to use the double-dot <code>..</code> notation.</p>
+
+- enter_md_link_here
+- enter_html_link_here
+
+## E 0.2.4 - Link to 1.0 Reviewing the GH Methodology & Learning to Write JS in Observable
+
+Write a markdown image, e.g., `![Alt text description](./path/in/here.jpg)`, which renders the following image located in this project: `hotel-bookings.webp`.
+
+<p class="tip">You will need to use the double-dot <code>..</code> notation.</p>
+
+ENTER_IMG_HERE
