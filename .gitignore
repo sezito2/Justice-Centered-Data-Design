@@ -1,0 +1,19 @@
+.DS_Store
+/dist/
+node_modules/
+yarn-error.log
+.github/workflows/deploy.yml
+
+# Teaching/Prep Files
+xx-*
+planning.md
+*.ipynb
+
+# TOO BIG VIDS
+*.mov
+
+# TOO BIG DATA
+nc_absentee_20241105.csv
+
+# Observable Template Example
+example-*
