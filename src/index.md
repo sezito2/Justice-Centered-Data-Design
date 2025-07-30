@@ -11,7 +11,7 @@ index: true
 
 **How can technical and professional communicators advocate for justice-centered, anti-oppressive designs and uses of data?**
 
-In *ENG 498/583 Justice-Centered Data Design*, we will interrogate how technical and professional communication (TPC) can influence, and are already influenced by, the design of data. We will learn theories of intersectionality, anti-oppressive perspectives and cases, and data-driven techniques as a response to recognizing how data is a key set of communication design practices for TPC to learn and wield for just structural change.
+In *ENG 498/583 Justice-Centered Data Design in TPC*, we will interrogate how technical and professional communication (TPC) can influence, and are already influenced by, the design of data. We will learn theories of intersectionality, anti-oppressive perspectives and cases, and data-driven techniques as a response to recognizing how data is a key set of communication design practices for TPC to learn and wield for just structural change.
 
 Data design is TPC because it is highly concerned with people (audience), goals (purpose), and technologies. TPC professionals have much to offer the necessary advocacy work needed in data-driven workplaces across industry, government, and nonprofit sectors. Yet, traditionally, our field has yet to standardize learning fundamental data-driven techniques that will better position us to make a difference in the workplace and in shaping policy and procedures.
 
