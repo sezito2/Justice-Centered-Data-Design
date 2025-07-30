@@ -193,12 +193,12 @@ These two help you build expressions by combining multiple comparisons, which we
 
 Create your own suite of operators.
 
-1. Declare and initialize your own suite of operators.
-    - **NOTE**: Have fun with it! Choose a theme like your favorite movie, story, hobby, etc.
-2. Print them all to the console with `console.log()`.
-3. Check your work, as you go, by opening the browser console with the **Inspect Element** tool.
-4. Copy and paste your completed code in the provided finished subsection.
+1. Convert the `javascript` codeblock to an executable block with the `js`.
+2. Declare and initialize your own suite of operators.
+   <p class="note">Have fun with it! Choose a theme like your favorite movie, story, hobby, etc.</p>
+3. Print them all to the console with `console.log()`.
+4. Check your work, as you go, by opening the browser console with the **Inspect Element** tool.
 
-```js
+```javascript
 // Write your code in here
 ```

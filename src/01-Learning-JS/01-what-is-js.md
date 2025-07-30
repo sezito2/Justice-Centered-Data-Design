@@ -57,7 +57,9 @@ In JS, you write with data. Computers need to be told what to do with the data o
 
 #### `var`
 
-Declares a variable, optionally initializing it to a value. See [MDN Example of var](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var).
+Declares a variable, optionally initializing it to a value.
+
+See [MDN Example of var](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var).
 
 ```javascript
 // Declare variable x and initialize by assigning a value of number 1
@@ -84,16 +86,18 @@ console.log(x)
 
 #### let
 
-Declares a block-scoped, local variable, optionally initializing it to a value. See [MDN Example of let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let).
+Declares a block-scoped, local variable, optionally initializing it to a value.
+
+See [MDN Example of let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let).
 
 ```javascript
-// Declare variable x and initialize by assigning a value of number 1
+// Declare block-scoped variable x and initialize by assigning a value of number 1
 let x = 1
 
 // If variable x value is equal to 1, then run code within scoped curly braces {}
 if (x === 1) {
 
-  // Declare variable x and initialize by assigning a value of number 2
+  // Declare block-scoped variable x and initialize by assigning a value of number 2
   let x = 2
   // Print out x to console; Expected output: 2
   console.log(x)
@@ -111,43 +115,102 @@ console.log(x)
 
 #### const
 
-Declares a block-scoped, read-only named constant. See [MDN Example of const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const).
+Declares a block-scoped, read-only named constant.
+
+See [MDN Example of const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const).
 
 ```javascript
 // Declare variable x and initialize by assigning a value of number 1
 const x = 1
 
-// If variable x value is equal to 1, then run code within scoped curly braces {}
+// If variable x value is equal to 1,
+// then run code within scoped curly braces {}
 if (x === 1) {
 
-  // Declare variable x and initialize by assigning a value of number 2
+  // Declare variable x and initialize it
+  // by assigning a value of number 2
   const x = 2
   // Print out x to console; Expected output: 2
   console.log(x)
 
-  // Re-assign variable x a value of number 2
+  // Code will error out here,
+  // since x is a read-only constant
   x = 3
-  // Print out x to console; Expected output:
-  //   > TypeError: invalid assignment to const 'x'
-  console.log(x)
-
 }
 
-// Nothing, since error is produced within scope of if conditional
+// Nothing, due to resulting x = 2 error
+// produced within scope of above if conditional
 console.log(x)
 ```
 
-### Variables
+### Rules on Naming Variables
 
 We can infer from the above examples that variables are meaningful names for values to use and reuse across your code. The names of variables, called identifiers, conform to certain rules:
 
-- Begins with a letter (a-z A-Z): `apples`
-- JS is case sensitive, so letters include the characters A through Z (uppercase) as well as a through z (lowercase).
-    - JS convention uses camelCaseFormat for variables: `applesForMe`.
-- Subsequent characters after letters can be digits (0 – 9): `applesForMe10`.
+- **Starts with Letter Character**: Begins with a letter (a-z A-Z): `apples`
+- **Use CamelCase Convention**: JS convention uses camelCaseFormat for variables: `applesForMe`.
+- **Case Sensitivity**: JS is case sensitive, so letters include the characters A through Z (uppercase) as well as a through z (lowercase).
+  <div class="example">
+    <p>
+      <code>applesForMe</code> is different variable than <code>ApplesForMe</code> or <code>applesforme</code>.
+    </p>
+  </div>
+- **Can Use Digits After First Character**: Subsequent characters after letters can be digits (0 – 9).
+  <div class="example">
+    <p>
+      <code>applesForMe10</code> or <code>apples10Mine</code>
+    </p>
+  </div>
 
 There are other conventions and rules, but we don't need to belabor them right now.
 
-## 1.1.4 What's Next
+## Exercise
+
+**Goal**: Practice writing inline and multiline comments, while practicing declaring variables and naming variables.
+
+1. Convert the `javascript` block below to an exectuable `js` block
+2. Declare and name a series of variables that pertain to your favorite foods by completing the prompts in the block.
+3. Use the correct set of variable types — `var`, `let`, and/or `const` — to ensure that whatever variable name replaces `_faveFood1_` changes within the scope of the `if () {...}` conditional.
+4. Note how the code already prints out to the console with `console.log()`, so check your work as you go by opening the browser console with the **Inspect Element** tool.
+
+```javascript
+// Convert this into a multiline comment
+// that includes your name, date,
+// and top 3 favorite foods, where
+// each set of info should be on a new line.
+
+/**
+ * Replace the value in-between the
+ * double quotes for each variable below
+ * with your favorite foods listed above.
+ * Example:
+ * "Enter_#1_Favorite_Food_Here" --> "Pizza"
+**/
+___ _faveFood1_ = "Enter_#1_Favorite_Food_Here"
+___ _faveFood2_ = "Enter_#2_Favorite_Food_Here"
+
+console.log(
+  "Ok, so y'all know that my #1 favorite food is ",
+  _faveFood1_,
+  ", and my second favorite food is ", _faveFood2_
+)
+
+if (_faveFood2_.length > 0) {
+  ___ _faveFood1_ = "Enter_#1_Favorite_Food_Here"
+
+  console.log(
+    "jk! ",
+    _faveFood1_,
+    " is actually my #1 favorite food."
+  )
+}
+
+console.log(
+  "Ok. Don't get mad, but my #1 favorite is ",
+  _faveFood1_, " actually."
+)
+```
+
+## Conclusion
 
 Comments, declarations, intitialization, and variables help us start our reading and writing journey with JS. Let's take the next step by learning some types of data formats that we can assign to declared and initialized variables.

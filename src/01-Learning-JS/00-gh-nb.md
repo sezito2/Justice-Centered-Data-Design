@@ -26,15 +26,31 @@ Sometimes you will need to display code in the OF notebook, because you want to 
 - **Inline Code**: Write code content in-between two backticks, i.e., backquotes, graves, or grave accents: <code>``</code>
     - **EXAMPLE**: `let inlineExample = "Inline code for reading display"`
 - **MultiLine Code**: Write code content in-between two sequences of 3 backticks.
-    1. <code>```</code>: The first sequence of 3 backticks opens what's called a "***preformatted***" element.
+    1. <code>```javascript</code>: The first sequence of 3 backticks and the statement of ***javascript*** opens what's called a ***preformatted*** element.
     2. <code>```</code>: The second sequence of 3 backticks closes the scope of the preformatted element:
-    - **EXAMPLE**: You'll need to see this in your VS Code editor.
-      ```
-      let multilineExample1 = "A multiline codeblock for display"
-      let multilineExample2 = " for display"
+        <br>
 
-      let joinMultlineExample = multilineExample1 + multilineExample2
-      ```
+        **EXAMPLE**:
+        <br><br>
+        **How it renders on the page**:
+
+        ```javascript
+        let multilineExample1 = "A multiline codeblock for display"
+        let multilineExample2 = " for display"
+
+        let joinMultlineExample = multilineExample1 + multilineExample2
+        ```
+
+        <br>
+
+        **How it looks in your code editor**:
+
+        <pre>```javascript
+        let multilineExample1 = "A multiline codeblock for display"
+        let multilineExample2 = " for display"
+
+        let joinMultlineExample = multilineExample1 + multilineExample2
+        \`\`\`</pre>
 
 ## 1.0.3 Practicing the Github development methodology
 
@@ -47,6 +63,9 @@ We also need to make sure that we practice our Github development methodology, w
 2. Name the new branch with the following naming scheme: `CHP/x--name_of_chp`.
 3. Complete the work in the chapter, committing and pushing work as needed.
 4. When you are ready to submit your work for review, create a ***pull request*** (PR).
+    <p class="note">
+      Copy and paste the content from the `TEMPLATE-PR.md` file in the project's root folder.
+    </p>
 5. Solicit feedback  from your assigned peers.
 6. Make any changes, as needed, based on any feedback by committing pushing those changes to the branch.
 7. Notify me, Dr. Lindgren, that you are ready for a grade.
@@ -80,3 +99,26 @@ Here's that process again for you:
 **Chapter Branch Name**: `CHP/x--name_of_chp`
 
 ENTER_IMG_HERE
+
+## Conclusion
+
+Techniques learned and practiced include:
+
+1. How to jumpstart your development environment with the `yarn dev` command in the terminal.
+2. How to write code in Observable Framework notebooks with the backtick character (<code>`</code>) that either:
+    1. renders as formatted text on the page with either:
+        - inline notation <code>`let inline = "code go here"`</code>, or
+        - multiline notation prefaced with `javascript`:
+          <pre>
+          ```javascript
+          // multiline code
+          let it = "go in here"
+          ```
+          </pre>
+    2. executes as actual JS code with a multiline block prefaced with `js`.
+3. **GH methodological workflow** specific to this class, which involves:
+    1. developing new work on a meaningful **branch** that uses the agreed upon naming scheme: `CHP/x--name_of_chp`.
+    2. Practicing the iterative process to **commit** and **push** regularly with meaningful **commit messages**.
+    3. Creating a **PR** (**pull request**) and use the provided content in the template to start it.
+    4. Respond to your peers and comment on their work too.
+    5. Submit the PR link in Moodle, when ready.

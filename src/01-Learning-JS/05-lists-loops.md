@@ -170,17 +170,15 @@ for (const a in ages) {
 Output:
 ![](./../assets/images/1-js/for-2-cond.png)
 
-## 1.5 Exercises with Lists &amp; Loops
+## Exercises with Lists &amp; Loops
 
-Let's use the following array lists for these exercises.
+Goals:
 
-```
-let professions = ['married', 'laborer', 'widow', 'laborer', ]
-let childStatus = ['Child Alana 10 days', 'Catherine 2 mos', '', 'Charles Riley afed 10 days' ]
-let sex = ['f', 'm', 'f', 'm', 'i']
-```
+Be sure to convert all javascript codeblocks to executable blocks with the `js` notation.
 
-```js
+Let's use the following array lists for these exercises, so be sure to convert this codeblock to `js`.
+
+```javascript
 let professions = ['married', 'laborer', 'widow', 'laborer', ]
 let childStatus = ['Child Alana 10 days', 'Catherine 2 mos', '', 'Charles Riley afed 10 days' ]
 let sex = ['f', 'm', 'f', 'm', 'i']
@@ -206,7 +204,7 @@ for () {
 
 Add the item "spinster" to your `professions` list, then print the list.
 
-```js
+```javascript
 // Your code here
 ```
 
@@ -214,7 +212,7 @@ Add the item "spinster" to your `professions` list, then print the list.
 
 Make a `for` loop that considers each item in the `professions` list and prints "Person's profession is ___"
 
-```js
+```javascript
 // Your code here
 ```
 
@@ -222,7 +220,7 @@ Make a `for` loop that considers each item in the `professions` list and prints 
 
 Remove the fourth item in the `childStatus` list.
 
-```js
+```javascript
 // Your code here
 ```
 
@@ -230,14 +228,14 @@ Remove the fourth item in the `childStatus` list.
 
 Make a `for` loop that considers each item in the `childStatus` list. Print "Person has child" ***if*** the person has a child ***and*** "Person does not have child" ***if not***.
 
-```js
+```javascript
 // Your code here
 ```
 ### E 1.5.6
 
 Add an item to the list `sex` called "unknown".
 
-```js
+```javascript
 // Your code here
 ```
 
@@ -245,8 +243,8 @@ Add an item to the list `sex` called "unknown".
 
 Make a `for` loop that considers each item in the `sex` list.
 
-Print "Person is male" ***if*** the person is `"m"`, "Person is female" ***if*** the person is `"f"`, "Person is intersex" ***if*** the person is `"i"`, and "Person's sex is not known" ***if*** `"unknown"`.
+Log "Person is male" ***if*** the person is `"m"`, "Person is female" ***if*** the person is `"f"`, "Person is intersex" ***if*** the person is `"i"`, and "Person's sex is not known" ***if*** `"unknown"`.
 
-```js
+```javascript
 // Your code here
 ```

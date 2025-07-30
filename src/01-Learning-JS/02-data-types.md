@@ -47,21 +47,12 @@ Primitives enable you to perform fundamental data operations.
 
 ## 1.2 Exercise
 
-1. Declare and initialize your own suite of primitives (1-6) from an above: String, Number, Boolean, null, undefined, and Object.
+1. Convert the `javascript` codeblock to an executable block with the `js`.
+2. Declare and initialize your own suite of primitives (1-6) from an above: String, Number, Boolean, null, undefined, and Object.
     - **NOTE**: Have fun with it! Choose a theme like your favorite movie, story, hobby, etc.
-2. Print them all to the console with `console.log()`.
-3. Check your work, as you go, by opening the browser console with the **Inspect Element** tool.
-4. Copy and paste your completed code in the provided finished subsection.
-
-```js
-// Write your code in here
-```
-
-### Finished Exercise Code Rendered
+3. Print them all to the console with `console.log()`.
+4. Check your work, as you go, by opening the browser console with the **Inspect Element** tool.
 
 ```javascript
-/**
-  * Show Your Work
-  * After it works, copy and paste your JS code after this comment.
-**/
+// Write your code in here
 ```

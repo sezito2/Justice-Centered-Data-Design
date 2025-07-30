@@ -251,7 +251,7 @@ console.log(
 )
 ```
 
-## 1.7 Exercises with Temporal Date Objects
+## Exercises with Date Objects
 
 Below, I have assigned a tiny sample of 4 randomly selected abridged entries from NC November 2024 absentee voter data to the variable `nc2024SampleVoters`. It is declared as an Array of JS Objects, where each object is a voter in NC. Note how there are a few properties with date information saved as Strings:
 
@@ -377,7 +377,7 @@ console.log(
 )
 ```
 
-## E 1.7.1 - d3.utcParse(): Convert string dates to Date() objects
+### E 1.7.1 - d3.utcParse(): Convert string dates to Date() objects
 
 **Goal**: Loop through the array of objects, `nc2024SampleVoters`, and save a converted version of the dates currently stored as Strings for `ballot_req_dt` to a Date() object. Save the newly converted Date() in the object with a new property with the key named `ballot_req_dt_obj`.
 
@@ -388,15 +388,15 @@ Here are some tips to follow:
     - **TIP**: Use your knowledge of looping lists, accessing objects properties with keys to indexes or looping to isolate.
 
 <!-- E 1.7.1 -->
-```js
+```javascript
 // Write E 1.7.1 code here
 ```
 
-## E 1.7.2 - d3.utcFormat(): Convert & format Date() object to String
+### E 1.7.2 - d3.utcFormat(): Convert & format Date() object to String
 
 **Goal**: Loop through the updated array of objects, `nc2024SampleVoters`, with the Date() field. Save a converted and formatted version of `ballot_req_dt_obj` with the following date format: Wed., January 27, 1981.
 
 <!-- E 1.7.2 -->
-```js
+```javascript
 // Write E 1.7.2 code here
 ```
