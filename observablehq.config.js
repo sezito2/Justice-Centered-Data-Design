@@ -58,7 +58,7 @@ export default {
           name: "1.7. Dates & Time",
           path: "/01-Learning-JS/07-dates"},
         {
-          name: "1.8. Loading Data",
+          name: "1.8. Data Formats & Loading",
           path: "/01-Learning-JS/08-load-data"},
         {
           name: "1.9. Objects & Maps",

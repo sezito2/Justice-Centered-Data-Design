@@ -1,4 +1,4 @@
-# 1.8. Loading Data & Data Loaders
+# 1.8. Data Formats & Loading
 
 <p class="cite_small">
   Some content below is reused and modified from Observable Framework's documentation page about the <a href="https://observablehq.com/framework/files" target="_blank" rel="noopenner noreferrer">FileAttachment()</a> function</a>.
