@@ -15,56 +15,7 @@ let names = ['Mary Gallagher', 'John Sanin', 'Anthony Clark', 'Margaret Farrell'
 
 Yet, if all of this data are meaningful together, we should use data types that helps us self-document our data. By self-document, I mean that the each ***value*** in the data should be labeled as a means for readers to understand what the values mean.
 
-Let's take some time to learn a few standard data file formats, as well as common JS data structures that help us work with data sets.
-
-## 1.9.1 Common Data File Formats: CSV & JSON
-
-Data are texts with a repeatable pattern in structure. We are going to learn about two main types of data file formats, which we will use throughout this course: CSV & JSON.
-
-### CSV - Comma Separated Values
-
-CSV stands for Comma Separated Values. The CSV standard assumes the following structure and patterns to create 2-dimensional data with rows and columns like spreadsheet tables:
-
-- Every line == 1 row.
-- Commas separate values, thereby making columns.
-- First line is reserved for the header, i.e., the column names.
-
-Here's an example demonstrating these basic rules:
-
-```
-col1,col2,col3,col4
-value_col1,value_col2,value_col3
-value_col1,value_col2,value_col3
-value_col1,value_col2,value_col3
-value_col1,value_col2,value_col3
-```
-
-Here's another example with highlighted text from the 2024 NC voter data set included in this project (See `/src/data/nc-voters/absentee_2024_aggregated.csv`):
-
-![](./../assets/images/1-js/csv-example-ncv.png)
-
-### JSON: JavaScript Object Notation
-
-According to the [standards body for the JavaScript Object Notation](https://www.json.org/json-en.html) (JSON), this data format is a "collection of name/value pairs" that is "... is easy for humans to read and write ... [and] for machines to parse and generate."
-
-In this project, check out the `/src/data/events.json` file, which is a small example of a JSON file. Note how it is an Array list `[...]` that contains a collection of Objects `{...}` separated by commas `,`.
-
-```json
-[
-  {"name": "Sputnik 1", "year": 1957, "y": 10},
-  {"name": "Apollo 11", "year": 1969, "y": 20},
-  {"name": "Viking 1 and 2", "year": 1975, "y": 30},
-  {"name": "Space Shuttle Columbia", "year": 1981, "y": 40},
-  {"name": "Hubble Space Telescope", "year": 1990, "y": 50},
-  {"name": "ISS Construction", "year": 1998, "y": 60}
-]
-```
-
-<p class="question">
-  What other properties of JSON do you notice?
-</p>
-
-**RESPONSE**: Write your response here.
+Let's take some time to learn a few common JS data structures that help us work with datasets.
 
 ## 1.9.1 JS Objects & Array of Objects
 

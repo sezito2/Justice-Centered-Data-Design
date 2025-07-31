@@ -6,11 +6,60 @@
 
 Thus far, we've been working with data declared and instantiated within the notebook itself. Yet, often is the case that we will be working with data sets that we save and load from the `data` folder.
 
-Let's learn how to load these files, so we can use a variety of data sets.
+Let's learn how about common standard data formats, as well as how to load these files, so we can use a variety of data sets.
 
-## 1.8.1 Framework's FileAttachment()
+## 1.8.1 Common Data File Formats: CSV & JSON
 
-The most convenient method provided by Observable Framework is their `FileAttachment()` function.
+Data are texts with a repeatable pattern in structure. We are going to learn about two main types of data file formats, which we will use throughout this course: CSV & JSON.
+
+### CSV - Comma Separated Values
+
+CSV stands for Comma Separated Values. The CSV standard assumes the following structure and patterns to create 2-dimensional data with rows and columns like spreadsheet tables:
+
+- Every line == 1 row.
+- Commas separate values, thereby making columns.
+- First line is reserved for the header, i.e., the column names.
+
+Here's an example demonstrating these basic rules:
+
+```
+col1,col2,col3,col4
+value_col1,value_col2,value_col3
+value_col1,value_col2,value_col3
+value_col1,value_col2,value_col3
+value_col1,value_col2,value_col3
+```
+
+Here's another example with highlighted text from the 2024 NC voter data set included in this project (See `/src/data/nc-voters/absentee_2024_aggregated.csv`):
+
+![](./../assets/images/1-js/csv-example-ncv.png)
+
+### JSON: JavaScript Object Notation
+
+According to the [standards body for the JavaScript Object Notation](https://www.json.org/json-en.html) (JSON), this data format is a "collection of name/value pairs" that is "... is easy for humans to read and write ... [and] for machines to parse and generate."
+
+In this project, check out the `/src/data/events.json` file, which is a small example of a JSON file. Note how it is an Array list `[...]` that contains a collection of Objects `{...}` separated by commas `,`.
+
+```json
+[
+  {"name": "Sputnik 1", "year": 1957, "y": 10},
+  {"name": "Apollo 11", "year": 1969, "y": 20},
+  {"name": "Viking 1 and 2", "year": 1975, "y": 30},
+  {"name": "Space Shuttle Columbia", "year": 1981, "y": 40},
+  {"name": "Hubble Space Telescope", "year": 1990, "y": 50},
+  {"name": "ISS Construction", "year": 1998, "y": 60}
+]
+```
+
+<p class="question">
+  What other properties of JSON do you notice?
+</p>
+
+**RESPONSE**: Write your response here.
+
+## 1.8.2 Framework's FileAttachment()
+
+Ok, so how do you work with datasets in CSV or JSON? The most convenient method provided by Observable Framework is their `FileAttachment()` function.
 
 Framework's `FileAttachment()` function takes one parameter, which is a String literal. It uses as a local path to locate the desired file to attach to the page. The path parameter is relative to the calling code’s source file, e.g., the page’s Markdown file.
 
@@ -146,7 +195,7 @@ In the table below, review what file formats are currently supported and what da
   </tbody>
 </table>
 
-## 1.8.2 Framework's Data Loaders
+## 1.8.3 Framework's Data Loaders
 
 Observable Framework also provides us with the ability to preload and preprocess larger data sets with data loaders.
 
