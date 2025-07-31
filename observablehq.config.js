@@ -61,8 +61,8 @@ export default {
           name: "1.8. Loading Data",
           path: "/01-Learning-JS/08-load-data"},
         {
-          name: "1.9. Adv Data Types & Transformations",
-          path: "/01-Learning-JS/09-data-transforms"},
+          name: "1.9. Objects & Maps",
+          path: "/01-Learning-JS/09-objs-maps"},
         {
           name: "1.10. Functions",
           path: "/01-Learning-JS/10-functions"},

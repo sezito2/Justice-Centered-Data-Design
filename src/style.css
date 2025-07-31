@@ -41,12 +41,12 @@
   --accent2Shade4:#e8751a;
   --accent2Shade5:#e46802;
 
-  --accent3Color:#014980;
-  --accent3Shade1:#80c8ff;
-  --accent3Shade2:#46adfc;
-  --accent3Shade3:#2089d9;
+  --accent3Color:#012a49;
+  --accent3Shade1:#c2e4fe;
+  --accent3Shade2:#65b8f7;
+  --accent3Shade3:#339ded;
   --accent3Shade4:#0067b6;
-  --accent3Shade5:rgb(2, 88, 155);
+  --accent3Shade5:rgb(1, 69, 120);
 
   --neutralShade1:#f2f2f2;
   --neutralShade2:#e8e9e9;
@@ -1288,6 +1288,7 @@ pre, .observablehq-pre-container {
   margin: 2rem auto;
 }
 .example {
+  margin: auto;
   border-left: solid 1px;
   border-radius: 0 4px 4px 0;
   padding: 1rem 0.5rem;
@@ -1299,6 +1300,63 @@ pre, .observablehq-pre-container {
   &::before {
     content: "EXAMPLE";
     color: var(--theme-foreground-muted);
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+}
+.question {
+  margin: auto;
+  border-left: solid 1px;
+  border-radius: 0 4px 4px 0;
+  padding: 1rem 0.5rem;
+  box-sizing: border-box;
+  max-width: 640px;
+  border-left-color: var(--theme-foreground-fainter);
+  background-color: var(--theme-background-alt);
+  font-weight: 700;
+
+  &::before {
+    content: "QUESTION";
+    color: var(--theme-foreground-muted);
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+}
+.note--data {
+  margin: auto;
+  color: var(--foregroundColor);
+  border-left: solid 1px;
+  border-radius: 0 4px 4px 0;
+  padding: 1rem 0.5rem;
+  box-sizing: border-box;
+  max-width: 640px;
+  border-left-color: var(--accentShade5);
+  background-color: var(--accentShade1);
+
+  &::before {
+    content: "ABOUT THE DATA";
+    color: var(--accentShade6);
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+}
+.note--suggested-reading {
+  margin: auto;
+  color: var(--accent3Color);
+  border-left: solid 1px;
+  border-radius: 0 4px 4px 0;
+  padding: 1rem 0.5rem;
+  box-sizing: border-box;
+  max-width: 640px;
+  border-left-color: var(--accent3Shade5);
+  background-color: var(--accent3Shade1);
+
+  &::before {
+    content: "Suggested Readings";
+    color: var(--accent3Shade6);
     display: block;
     margin-bottom: 1rem;
     font-weight: 700;
