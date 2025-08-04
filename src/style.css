@@ -64,6 +64,8 @@
   --lightGrayColor:#ddd;
 
   --codeBlock: var(--neutralShade1);
+  --syntax-keyword: var(--accent2Shade5);
+  --syntax-entity: var(--primaryShade6);
 
   font-size:18px;
   --borderRadius:6px;
@@ -105,6 +107,9 @@
   --overlay:color-mix(in lch,
   canvas 70%,
   transparent)
+
+  /* COUNTERS */
+  counter-reset: codeblock;
 }
 
 :root {
@@ -1266,15 +1271,18 @@ video {
 
 
 /* PRE / Code */
-pre, .observablehq-pre-container {
+pre,
+.observablehq-pre-container,
+.observablehq--block {
   background-color: var(--codeBlock);
   border-radius: 4px;
-  margin: 0;
+  margin: 3rem auto;
   width: 100%;
   min-height: 100%;
   padding: 0;
   overflow-x: auto;
   box-sizing: border-box;
+  box-shadow: 1px 2px 3px -1px var(--foregroundColor);
 }
 .observablehq-pre-container {
   & pre {
@@ -1362,10 +1370,57 @@ pre, .observablehq-pre-container {
     font-weight: 700;
   }
 }
+.codeblock-caption {
+  margin-bottom: -2.5rem;
+  padding: 0;
+  font-size: 1rem;
+  counter-increment: codeblock; /* increment by 1 */
+
+  &::before {
+    padding: 0.1rem 0;
+    margin-right: 0.1rem;
+    background-color: var(--accent2Color);
+    color: white;
+    content: "CB " counter(codeblock) ": ";
+  }
+}
 .observablehq--error .observablehq--inspect {
   margin: 2rem auto;
   max-width: 640px;
 }
+
+/* Interactive pre codeblocks */
+.observablehq {
+  & > span.observablehq--inspect {
+    padding: 1rem 0.25rem !important;
+
+    & .observablehq--key,
+    & a {
+      font-weight: 700 !important;
+    }
+
+    & a {
+      text-transform: uppercase !important;
+    }
+
+    & .observablehq--key { font-style: italic; }
+    & .observablehq--shallow { color: var(--accent3Shade4); }
+    & .observablehq--number,
+    & .observablehq--date { color: var(--accentShade6); }
+    & .observablehq--string { color: var(--accent2Shade5); }
+    & .observablehq--null { color: red; }
+
+    /* Add commas */
+    & .observablehq--field::after { content: ","; }
+  }
+}
+
+/* Highlight.js Customs */
+.hljs-params { color: var(--primaryColor); }
+.hljs-property { color: var(--accent2Color); }
+.hljs-title.function_ { color: var(--accent2Shade5); }
+
+/* Inline code */
 code {
   padding: 0.1rem 0.1rem;
   font-family: 'Courier New', Courier, monospace;

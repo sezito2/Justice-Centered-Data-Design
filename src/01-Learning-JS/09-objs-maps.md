@@ -15,116 +15,21 @@ let names = ['Mary Gallagher', 'John Sanin', 'Anthony Clark', 'Margaret Farrell'
 
 Yet, if all of this data are meaningful together, we should use data types that helps us self-document our data. By self-document, I mean that the each ***value*** in the data should be labeled as a means for readers to understand what the values mean.
 
-Let's take some time to learn a few common JS data structures that help us work with datasets.
+Indeed, we also learned how CSV and JSON data-interchange formats self-document the values in data: CSV files with column names as the first row, and JSON files with key/value pairs.
 
-## 1.9.1 JS Objects & Array of Objects
+Since we will want to learn how to design more robust data relationships and values, let's take some time to learn a few common JS data structures, functions, and methods that help us work with datasets.
 
-Ok, so we learned a little about the CSV and JSON data-interchange formats—formats that people can use across nation-states and expect them to work well.
+## 1.9.1 The Ubiquitous Data Problem: Processing It
 
-Now, let's learn about some JS-specific data types that you will use frequently. Similar to JSON, the JS language uses Objects to create a collection of multiple types of name/value pairs. Objects  are scoped with opening and closing curly braces, `{ }`, where in-between them we add our key/value pairs, each of which we demarcate with a comma: `{ key: value, key: value, key: value, }`.
+At this point in the chapter, you might be asking yourself, "Why do I need to learn more JS data structures?"
 
-<p class="note">Unlike JSON, JS object array keys need not be wrapped in double-quotes.</p>
+The answer? It's because datasets are complex and often designed with situated goals in mind of their creators. Due to this goal-orientedness of data, and how data now travels across contexts much more than it ever has in our networked globe, datasets rarely come in the exact structure that we may need for our goals and needs.
 
-A common structure used to create a collection of JS Objects is to push them into an Array `[]`. Indeed, recall how when you load data with Observable Framework's `FileAttachment` function, it will automatically convert it into an Array of Objects:
+Indeed, according to a survey of over 16,000 data-science practitioners ([Kaggle, 2017](https://web.archive.org/web/20181130112939/https://www.kaggle.com/surveys/2017)), data processing is the most common barrier that they face at work before their desired analysis. Due to this unavoidable situation, data work often requires processing work. In fact, it's normally the most time-consuming part of any data-driven project.
 
-```javascript
-[
-  {uniqKey: value, ...},
-  {uniqKey: value, ...},
-  {uniqKey: value, ...},
-  ...
-]
-```
+Processing is a catch-all term that typically refers to any actions that take data in its original provenance and dis-aggregated form and change any structure and/or values, as desired, by the new persons in new contexts and situations.
 
-Creating an Array of JS Objects is very helpful with more complex data, because of the self-documenting feature, as well as the ability to create more meaningful relationships between parts of the data via nested hierarchies.
-
-For example, here's a sample of NC 2024 voter data. Note how there seems to be two main parts to the available date: *voter demographics* and *ballot information*.
-
-<!-- Render nc2024SampleVoters -->
-```javascript
-// Sample of 4 randomly selected abridged entries from NC November 2024 absentee voter data
-let nc2024SampleVoters = [
-  {
-    "race": "WHITE",
-    "ethnicity": "NOT HISPANIC or NOT LATINO",
-    "gender": "F",
-    "age": 33,
-    "ballot_req_type": "MAIL",
-    "ballot_request_party": "REP",
-    "ballot_req_dt": "10/23/2024",
-    "ballot_send_dt": "10/28/2024",
-    "ballot_rtn_dt": null,
-    "ballot_rtn_status": null
-  },
-  {
-    "race": "BLACK or AFRICAN AMERICAN",
-    "ethnicity": "UNDESIGNATED",
-    "gender": "F",
-    "age": 57,
-    "ballot_req_type": "MAIL",
-    "ballot_request_party": "DEM",
-    "ballot_req_dt": "09/14/2024",
-    "ballot_send_dt": "09/23/2024",
-    "ballot_rtn_dt": "10/28/2024",
-    "ballot_rtn_status": "SPOILED-EV"
-  },
-  {
-    "race": "WHITE",
-    "ethnicity": "NOT HISPANIC or NOT LATINO",
-    "gender": "M",
-    "age": 21,
-    "ballot_req_type": "MAIL",
-    "ballot_request_party": "UNA",
-    "ballot_req_dt": "09/19/2024",
-    "ballot_send_dt": "09/21/2024",
-    "ballot_rtn_dt": "10/24/2024",
-    "ballot_rtn_status": "ACCEPTED"
-  },
-  {
-    "race": "WHITE",
-    "ethnicity": "UNDESIGNATED",
-    "gender": "F",
-    "age": 32,
-    "ballot_req_type": "MAIL",
-    "ballot_request_party": "DEM",
-    "ballot_req_dt": "08/03/2024",
-    "ballot_send_dt": "09/24/2024",
-    "ballot_rtn_dt": null,
-    "ballot_rtn_status": "SPOILED-EV"
-  }
-]
-```
-
-Arrays of JS objects, like JSON, offer us lots of flexibility and creativity when structuring our data. For example, note how each voter object includes two types of information: demographics and ballot information. So, another approach to the structure could group the voter data by voter demographics and ballot information in a nested hierarchy: `{ "key": {...}, "key": {...} }`.
-
-<!-- Render nc2024PerVoterAndBallot -->
-```javascript
-// Sample of 4 randomly selected abridged entries from NC November 2024 absentee voter data
-let nc2024PerVoterAndBallot = [
-  {
-    "voter": {
-      "race": "WHITE",
-      "ethnicity": "NOT HISPANIC or NOT LATINO",
-      "gender": "F",
-      "age": 33,
-    },
-    "ballot_info": {
-      "req_type": "MAIL",
-      "request_party": "REP",
-      "req_dt": "10/23/2024",
-      "send_dt": "10/28/2024",
-      "rtn_dt": null,
-      "rtn_status": null
-    }
-  },
-]
-```
-
-## 1.9.2 The Ubiquitous Data Problem: Processing It
-
-Here's the rub. Because datasets are complex and often designed with situated goals in mind of their creators, datasets rarely come in the exact structure that we may need for our goals and needs. Indeed, According to a survey of over 16,000 data-science practitioners ([Kaggle, 2017](https://web.archive.org/web/20181130112939/https://www.kaggle.com/surveys/2017)), data processing is the most common barrier that they face at work before their desired analysis.
-
-Due to this unavoidable situation, data work often requires processing work. In fact, it's normally the most time-consuming part of any data-driven project. Processing is a catch-all term that typically refers to any actions that take data in its original provenance and dis-aggregated form and change any structure and/or values, as desired, by the new persons in new contexts and situations.
+So, we need to learn about few more data structures called ***Maps***, so we can complete our goals for the data with confidence.
 
 <div class="note--suggested-reading">
   <p>
@@ -135,6 +40,421 @@ Due to this unavoidable situation, data work often requires processing work. In 
     <li>Lindgren, Chris. (2021). Writing with data: A study of coding on a data-journalism team. <cite>Written Communication</cite>, 38(1), 114-162. doi: <a href="https://doi.org/10.1177/0741088320968061">10.1177/0741088320968061</a>.
   </ul>
 </div>
+
+## 1.9.2 JS Object Literals & Array of Objects
+
+Ok, so we learned a little about the CSV and JSON data-interchange formats—formats that people can use across nation-states and expect them to work well.
+
+Now, let's learn about some JS-specific data types that you will use frequently. Similar to JSON, the JS language uses ***Object Literals*** to create a collection of multiple types of name/value pairs. Object literals are scoped with opening and closing curly braces, `{ }`, where in-between them we add our key/value pairs, each of which we demarcate with a comma: `{ key: value, key: value, key: value, }`.
+
+<p class="note">
+  Unlike JSON, JS object literal keys need not be wrapped in double-quotes.
+  <br>
+  <br>
+  Additionally, JS also has another type of Object different from Object literals. We only need to focus on object literals for this course.
+  <br>
+  <br>
+  If I refer to a JS Object in this textbook, it will refer to object literals, unless otherwise specified.
+</p>
+
+A common structure used to create a collection of objects is to push them into an Array `[]`. Indeed, recall how when you load data with Observable Framework's `FileAttachment` function, it will automatically convert it into an Array of Objects:
+
+```javascript
+[
+  {uniqKey: value, ...},
+  {uniqKey: value, ...},
+  {uniqKey: value, ...},
+  ...
+]
+```
+
+Creating an Array of objects is very helpful with more complex data, because of the self-documenting aspects of key/value pairs and their capacity to create more meaningful relationships between parts of the data via nested hierarchies. Arrays of objects offer us lots of flexibility and creativity when structuring our data. For example, the below example comes from a sample of NC 2024 voter data. Each object represents 1 voter
+
+<!-- Declare nc2024SampleVoters -->
+```js
+// Sample of 4 randomly selected abridged entries from NC November 2024 absentee voter data
+let nc2024SampleVoters = [
+  {
+    id_num: 452004,
+    county_desc: "WAKE",
+    race: "WHITE",
+    ethnicity: "NOT HISPANIC or NOT LATINO",
+    gender: "F",
+    age: 65,
+    voter_city: "RALEIGH",
+    voter_state: "NC",
+    voter_zip: 27614,
+    voter_party_code: "DEM",
+    precinct_desc: "PRECINCT 02-02",
+    ballot_req_dt: "1/10/24",
+    ballot_req_type: "MAIL",
+    ballot_request_party: "DEM",
+    ballot_rtn_dt: null,
+    ballot_rtn_status: "SPOILED-EV",
+    ballot_send_dt: "9/24/24",
+  },
+  {
+    id_num: 462107,
+    county_desc: "WAYNE",
+    race: "BLACK or AFRICAN AMERICAN",
+    ethnicity: "UNDESIGNATED",
+    gender: "F",
+    age: 53,
+    voter_city: "GOLDSBORO",
+    voter_state: "NC",
+    voter_zip: 27530,
+    voter_party_code: "DEM",
+    precinct_desc: 29,
+    ballot_req_type: "MAIL",
+    ballot_request_party: "DEM",
+    ballot_req_dt: "9/21/24",
+    ballot_send_dt: "9/24/24",
+    ballot_rtn_dt: null,
+    ballot_rtn_status: "SPOILED-EV"
+  },
+  {
+    id_num: 436436,
+    county_desc: "WAKE",
+    race: "ASIAN",
+    ethnicity: "UNDESIGNATED",
+    gender: "M",
+    age: 60,
+    voter_city: "CARY",
+    voter_state: "NC",
+    voter_zip: 27519,
+    voter_party_code: "UNA",
+    precinct_desc: "PRECINCT 20-15",
+    ballot_req_type: "MAIL",
+    ballot_request_party: "UNA",
+    ballot_req_dt: "8/7/24",
+    ballot_send_dt: "9/24/24",
+    ballot_rtn_dt: null,
+    ballot_rtn_status: null
+  },
+  {
+    id_num: 367818,
+    county_desc: "SURRY",
+    race: "WHITE",
+    ethnicity: "NOT HISPANIC or NOT LATINO",
+    gender: "F",
+    age: 81,
+    voter_city: "MOUNT AIRY",
+    voter_state: "NC",
+    voter_zip: 27030,
+    voter_party_code: "REP",
+    precinct_desc: "MT AIRY #9",
+    ballot_req_type: "MAIL",
+    ballot_request_party: "REP",
+    ballot_req_dt: "9/25/24",
+    ballot_send_dt: "9/26/24",
+    ballot_rtn_dt: null,
+    ballot_rtn_status: null
+  },
+]
+```
+
+<p class="codeblock-caption">
+  Interactive output of <code>nc2024SampleVoters</code>:
+</p>
+
+```js
+nc2024SampleVoters
+```
+
+Note how each voter object includes three main types of information: **demographics**, ***location***, and **ballot information**. So, another approach to the structure could group the each voter object into those three categories in a nested hierarchy: `{ demographics: {...}, location: {...}, ballot_info: {...} }`.
+
+<!-- Assign nc2024GroupedVoterInfo -->
+```js
+// Variation on structure per voter
+let nc2024GroupedVoterInfo = [
+  {
+    demographics: {
+      id_num: 436436,
+      race: "ASIAN",
+      ethnicity: "UNDESIGNATED",
+      gender: "M",
+      age: 60,
+      voter_party_code: "UNA",
+    },
+    location: {
+      county_desc: "WAKE",
+      voter_city: "CARY",
+      voter_state: "NC",
+      voter_zip: 27519,
+    },
+    ballot_info: {
+      ballot_req_type: "MAIL",
+      ballot_request_party: "UNA",
+      ballot_req_dt: "8/7/24",
+      ballot_send_dt: "9/24/24",
+      ballot_rtn_dt: null,
+      ballot_rtn_status: null
+    }
+  },
+]
+```
+
+<p class="codeblock-caption">
+  Interactive output of <code>nc2024GroupedVoterInfo</code>
+</p>
+
+```js
+nc2024GroupedVoterInfo[0]
+```
+
+### Accessing, setting, and updating object properties
+
+Here's how to access properties of an object. To practice, I created a new executable `js` codeblock below and declared and assigned the above array of object literals: `nc2024VoterInfo`.
+
+<!-- Declare nc2024VoterInfo -->
+```js
+let nc2024VoterInfo = [
+  {
+    demographics: {
+      id_num: 436436,
+      race: "ASIAN",
+      ethnicity: "UNDESIGNATED",
+      gender: "M",
+      age: 60,
+      voter_party_code: "UNA",
+    },
+    location: {
+      county_desc: "WAKE",
+      voter_city: "CARY",
+      voter_state: "NC",
+      voter_zip: 27519,
+    },
+    ballot_info: {
+      ballot_req_type: "MAIL",
+      ballot_request_party: "UNA",
+      ballot_req_dt: "8/7/24",
+      ballot_send_dt: "9/24/24",
+      ballot_rtn_dt: null,
+      ballot_rtn_status: null
+    }
+  },
+]
+```
+
+Recall that this outermost structure is an Array `[]`, so we can use each item's index position to access each object.
+
+#### Access first object in Array
+
+Easy review here. Use the index position to access each object literal in the Array.
+
+**The output:**
+
+```js
+nc2024VoterInfo[0]
+```
+
+#### Access object properties with dot notation
+
+Use dot notation to access values of object properties: `nc2024VoterInfo[0].demographics`. It can be understood as follows:
+
+1. `[0]` -- Access first object in Array
+2. `.demographics` -- Access demographics object
+
+**The output:**
+
+```js
+nc2024VoterInfo[0].demographics
+```
+
+#### Access nested object properties with chained dot notation
+
+You can chain dot notation properties, which represent the hierarchy in the object literal. It's simple. If we tack on `.race` after `.demographics`, we can access the race object value nested within the demographics object: `nc2024VoterInfo[0].demographics.race`.
+
+**The output:**
+
+```js
+nc2024VoterInfo[0].demographics.race
+```
+
+#### Loop objects with `for...of` loop
+
+Let's use the `nc2024SampleVoters` Array of objects to learn about looping through all of the objects.
+
+In JS, one of the current best practices is to use the `for...of` loop. This looping method helps you define a meaningful variable to use within the scope of the loop. In this case, each object in the array represents one voter, so it makes sense to name the variable as such.
+
+<!-- for...of example -->
+```javascript
+for (const voter of nc2024SampleVoters) {
+  console.log(
+    "Voter number",
+    voter.id_num,
+    "requested their ballot on",
+    voter.ballot_req_dt
+  )
+  // Logs
+  // Voter number 452004 requested their ballot on 1/10/24
+  // Voter number 462107 requested their ballot on 9/21/24
+  // ...
+}
+```
+
+#### Set/update new values for properties
+
+Now that we know how to loop through an Array of objects, let's learn how to loop through an array of objects with `for...of`, so we can **add new properties and values**, as well as **update values on existing properties**.
+
+```js
+import {utcParse,utcFormat} from "d3-time-format";
+
+// D3 Date Parser
+const parseDateSlash = utcParse("%d/%m/%y")
+// D3 Date Formatters
+const formatExistingDate = utcFormat("%d/%m/%Y")
+const formatMonthName = utcFormat("%B")
+const formatPrettyDate = utcFormat("%a, %b %d, %Y")
+```
+
+<!-- Assign nc2024SampleVotersUpdate -->
+```js
+let nc2024SampleVotersUpdate = [
+  {
+    id_num: 452004,
+    county_desc: "WAKE",
+    race: "WHITE",
+    ethnicity: "NOT HISPANIC or NOT LATINO",
+    gender: "F",
+    age: 65,
+    voter_city: "RALEIGH",
+    voter_state: "NC",
+    voter_zip: 27614,
+    voter_party_code: "DEM",
+    precinct_desc: "PRECINCT 02-02",
+    ballot_req_dt: "1/10/24",
+    ballot_req_type: "MAIL",
+    ballot_request_party: "DEM",
+    ballot_rtn_dt: null,
+    ballot_rtn_status: "SPOILED-EV",
+    ballot_send_dt: "9/24/24",
+  },
+  {
+    id_num: 462107,
+    county_desc: "WAYNE",
+    race: "BLACK or AFRICAN AMERICAN",
+    ethnicity: "UNDESIGNATED",
+    gender: "F",
+    age: 53,
+    voter_city: "GOLDSBORO",
+    voter_state: "NC",
+    voter_zip: 27530,
+    voter_party_code: "DEM",
+    precinct_desc: 29,
+    ballot_req_type: "MAIL",
+    ballot_request_party: "DEM",
+    ballot_req_dt: "9/21/24",
+    ballot_send_dt: "9/24/24",
+    ballot_rtn_dt: null,
+    ballot_rtn_status: "SPOILED-EV"
+  },
+  {
+    id_num: 436436,
+    county_desc: "WAKE",
+    race: "ASIAN",
+    ethnicity: "UNDESIGNATED",
+    gender: "M",
+    age: 60,
+    voter_city: "CARY",
+    voter_state: "NC",
+    voter_zip: 27519,
+    voter_party_code: "UNA",
+    precinct_desc: "PRECINCT 20-15",
+    ballot_req_type: "MAIL",
+    ballot_request_party: "UNA",
+    ballot_req_dt: "8/7/24",
+    ballot_send_dt: "9/24/24",
+    ballot_rtn_dt: null,
+    ballot_rtn_status: null
+  },
+  {
+    id_num: 367818,
+    county_desc: "SURRY",
+    race: "WHITE",
+    ethnicity: "NOT HISPANIC or NOT LATINO",
+    gender: "F",
+    age: 81,
+    voter_city: "MOUNT AIRY",
+    voter_state: "NC",
+    voter_zip: 27030,
+    voter_party_code: "REP",
+    precinct_desc: "MT AIRY #9",
+    ballot_req_type: "MAIL",
+    ballot_request_party: "REP",
+    ballot_req_dt: "9/25/24",
+    ballot_send_dt: "9/26/24",
+    ballot_rtn_dt: null,
+    ballot_rtn_status: null
+  },
+]
+```
+
+This voter data has lots of dates, which we learned how to process and change with parsers and formatters from D3.js/Observable. Let's In the codeblock below with a new version of the data assigned to the variable `nc2024SampleVotersUpdate`.
+
+<!-- Rendered for...of nc2024SampleVotersUpdate -->
+```javascript
+for (const voter of nc2024SampleVotersUpdate) {
+  // Create a Date object from the String value
+  let voterReqDate = parseDateSlash(voter.ballot_req_dt)
+
+  // Update existing date with more standard String
+  // 1/1/24 ==> 01/01/2024
+  voter.ballot_req_dt = formatExistingDate(voterReqDate)
+
+  // Set new properties to the voter object
+  voter.ballot_req_dt_obj = voterReqDate
+  voter.ballot_req_month = formatMonthName(voterReqDate)
+  voter.ballot_req_pretty_date = formatPrettyDate(voterReqDate)
+
+  // Log to console for review
+  console.log(
+    "Voter Num:",voter.id_num,
+    "--",
+    voter
+  )
+}
+```
+
+<!-- Executed for...of nc2024SampleVotersUpdate -->
+```js
+for (const voter of nc2024SampleVotersUpdate) {
+  // Create a Date object from the String value
+  let voterReqDate = parseDateSlash(voter.ballot_req_dt)
+
+  // Update existing date with more standard String
+  // 1/1/24 ==> 01/01/2024
+  voter.ballot_req_dt = formatExistingDate(voterReqDate)
+
+  // Set new properties to the voter object
+  voter.ballot_req_dt_obj = voterReqDate
+  voter.ballot_req_month = formatMonthName(voterReqDate)
+  voter.ballot_req_pretty_date = formatPrettyDate(voterReqDate)
+
+  // Log to console for review
+  console.log(
+    "Voter Num:",voter.id_num,
+    "--",
+    voter
+  )
+}
+```
+
+Convert the above codeblock to be executable, so you can see how three new properties have been set to each voter object in the array:
+
+1. `ballot_req_dt_obj`
+2. `ballot_req_month`
+3. `ballot_req_pretty_date`
+
+Additionally, we reformatted the original String date to include leading zeroes for the month and date, as well as provide the full four-digit year. Below is what the console will log for the first object in the array.
+
+<p class="codeblock-caption">
+  Interactive output of <code>nc2024SampleVotersUpdate</code>
+</p>
+
+```js
+nc2024SampleVotersUpdate
+```
 
 ## 1.9.3 Why Create Maps & Groups?
 
@@ -240,14 +560,26 @@ Ok. Here's a great case for using Map!
 
 Sometimes you need to group an array of objects by a specific field in your data.
 
-For example, if your data set is at the individual voter level, like `nc2024SampleVoters`, but you need the data organized by voters' ***requested ballot party affiliation***, you can group the per Voter level by the available `ballot_request_party` field. The final returned Map uses the unique values from `.groupBy()` as keys, which can be used to get the array of elements in each group.
+For example, if your data set is at the individual voter level, like `nc2024SampleVotersUpdate`, but you need the data organized by voters' ***requested ballot party affiliation***, you can group the per Voter level by the available `ballot_request_party` field. The final returned Map uses the unique values from `.groupBy()` as keys, which can be used to get the array of elements in each group.
 
-Still tricky to understand. No problem. Let's review how that looks like in practice with our running `nc2024SampleVoters` array of objects:
+Before we move forward with this example, let's break that structure down in a simplified fashion. Here's the basic structure and pieces:
+
+<!-- EXAMPLE .groupBy() structure -->
+```javascript
+Map.groupBy(arrayOfObjectsHere,
+  ({parameterHere, anotherParamAsNeeded}) => {
+    // Function will go through each object/'row' in the data,
+    // so code in this body will evaluate on per object basis
+  }
+)
+```
+
+Still tricky to understand. No problem. Let's review how that looks like in practice with our running `nc2024SampleVotersUpdate` array of objects:
 
 <!-- EXAMPLE .groupBy() in practice -->
 ```javascript
 // Create and assign the groupBy result to a new variable
-let ncVotersGroupedByParty = Map.groupBy(nc2024SampleVoters,
+let ncVotersGroupedByParty = Map.groupBy(nc2024SampleVotersUpdate,
   ({ballot_request_party}) => {
     /**
       * Enter desired evaluative expression(s)
@@ -262,70 +594,37 @@ let ncVotersGroupedByParty = Map.groupBy(nc2024SampleVoters,
 )
 ```
 
-Here's the resulting JS Map() object from the above code, which you should plug into your console:
-
-```javascript
-Map([
-  // All voters who requested Republican ballots
-  ["REP", [
-      {
-        "race": "WHITE",
-        "ethnicity": "NOT HISPANIC or NOT LATINO",
-        "gender": "F",
-        "age": 33,
-        "ballot_req_type": "MAIL",
-        "ballot_request_dt": "10/23/2024",
-        "ballot_send_dt": "10/28/2024",
-        "ballot_rtn_dt": null,
-        "ballot_rtn_status": null
-      },
-      ... // rinse and repeat for every voter who requested on this date
-    ],
-  ],
-  // All voters who requested Democrat ballots
-  ["DEM", [{...}]],
-  // All voters whose ballot requests are unavailable
-  ["UNA", [{...}]],
-  // rinse and repeat for every unique "ballot_request_party"
-])
-```
-
-Here's how it will look in your console:
-
-![](./../assets/images/1-js/js-map-obj.png)
-
+<!-- Assign ncVotersGroupedByParty with .groupBy() -->
 ```js
-let ncVotersGroupedByParty = Map.groupBy(nc2024SampleVoters, ({ballot_request_party}) => {
-  // Enter evaluative expression
-  if (ballot_request_party == "REP") { return "REP" }
-  else if (ballot_request_party == "DEM") { return "DEM" }
-  else if (ballot_request_party == "UNA") { return "UNA" }
-})
-
-console.log('ncVotersGroupedByParty')
-console.log(ncVotersGroupedByParty)
-```
-
-Before we move forward, let's break that structure down in a simplified fashion. Here's the basic structure and pieces:
-
-<!-- EXAMPLE .groupBy() structure -->
-```javascript
-Map.groupBy(objectArray,
-  ({parameterHere, asNeeded}) => {
-    // code to evaluate here
+let ncVotersGroupedByParty = Map.groupBy(nc2024SampleVotersUpdate,
+  ({ballot_request_party}) => {
+    if (ballot_request_party == "REP") { return "REP" }
+    else if (ballot_request_party == "DEM") { return "DEM" }
+    else if (ballot_request_party == "UNA") { return "UNA" }
   }
 )
 ```
 
-## 1.9.5 D3.js InternMap() - Grouping Data by Date() objects
+<p class="codeblock-caption">
+  Interactive JS Map() object output of <code>ncVotersGroupedByParty</code>
+</p>
 
+```js
+ncVotersGroupedByParty
+```
+
+The built-in JS Map is great, but there are some reasons that we should learn D3's version of the Map object called an InternMap. Thankfully, they're really close to the same thing with some upgraded features. Plus, we will be using InterMaps quite a bit, so let's take make sure we learn how to use them.
+
+## 1.9.5 D3.js InternMap()L Easily Group Data
+
+<!-- Import the InternMap for use from D3's array lib/module -->
 ```js
 import {InternMap} from "d3-array";
 ```
 
-In addition to JS's built-in data structures, like Arrays, Object Arrays, and Map(), we should also learn some of D3.js' data structures, since we are already importing and using it. Why? Because sometimes JS doesn't do what you think it will.
+In addition to JS's built-in data structures, like Arrays, Object Arrays, and Map(), we should also learn some of D3.js' data structures, since we are already importing and using it. Why? Because sometimes JS doesn't do what you think it will, and other development communities, like D3 and Observable, have been doing great data work with JS, so they have created some robust functions and methods to use.
 
-For example, if you use dates as keys in a JavaScript Map, you may be surprised that it won’t work as you expect. Indeed, if you use `Date()` objects as keys in a `Map()`, JS will not always respect the one key per collection rule. Let's see what happens in the example below:
+The main reason why we should learn how to use D3's InternMaps over the regular JS Map has to do with using the Date object as keys to group our data. For example, if you use dates as keys in a JavaScript Map, you may be surprised that it won’t work as you expect. Indeed, if you use `Date()` objects as keys in a `Map()`, JS will not always respect the one unique key per collection rule. Let's see what happens in the example below:
 
 ```javascript
 // Example JS Map() with Date() objects as keys
@@ -360,97 +659,9 @@ const exampleInternMap = new InternMap([
 exampleInternMap.get(new Date(Date.UTC(2001, 0, 1))) // "green"
 ```
 
-Here's a more helpful and applied example to see the InternMap() in action. Let's say you wanted to group all of the NC 2024 voter data by their requested ballot party affiliation: `ballot_request_party`. Here's how that new grouping structure would look like with an InternMap():
+### D3's InternMap() is an upgraded version of JS Map()
 
-```javascript
-let nc2024ByReqDate = new InternMap([
-  ["REP", [
-      {
-        "race": "WHITE",
-        "ethnicity": "NOT HISPANIC or NOT LATINO",
-        "gender": "F",
-        "age": 33,
-        "ballot_req_type": "MAIL",
-        "ballot_request_dt": "10/23/2024",
-        "ballot_send_dt": "10/28/2024",
-        "ballot_rtn_dt": null,
-        "ballot_rtn_status": null
-      },
-      ... // rinse and repeat for every voter who requested on this date
-    ],
-  ],
-  ["DEM", [{...}]],
-  ["UNA", [{...}]],
-  // rinse and repeat for every unique "ballot_request_party"
-])
-```
-
-<!-- Execute nc2024ByReqDate -->
-```js
-let nc2024ByReqDate = new InternMap([
-  ["REP", [
-      {
-        "race": "WHITE",
-        "ethnicity": "NOT HISPANIC or NOT LATINO",
-        "gender": "F",
-        "age": 33,
-        "ballot_req_type": "MAIL",
-        "ballot_request_party": "REP",
-        "ballot_send_dt": "10/28/2024",
-        "ballot_rtn_dt": null,
-        "ballot_rtn_status": null
-      },
-    ],
-  ],
-  ["DEM", [
-      {
-        "race": "BLACK or AFRICAN AMERICAN",
-        "ethnicity": "UNDESIGNATED",
-        "gender": "F",
-        "age": 57,
-        "ballot_req_type": "MAIL",
-        "ballot_req_dt": "09/14/2024",
-        "ballot_send_dt": "09/23/2024",
-        "ballot_rtn_dt": "10/28/2024",
-        "ballot_rtn_status": "SPOILED-EV"
-      },
-      {
-        "race": "WHITE",
-        "ethnicity": "UNDESIGNATED",
-        "gender": "F",
-        "age": 32,
-        "ballot_req_type": "MAIL",
-        "ballot_req_dt": "08/03/2024",
-        "ballot_send_dt": "09/24/2024",
-        "ballot_rtn_dt": null,
-        "ballot_rtn_status": "SPOILED-EV"
-      },
-    ],
-  ],
-  ["UNA", [
-      {
-        "race": "WHITE",
-        "ethnicity": "NOT HISPANIC or NOT LATINO",
-        "gender": "M",
-        "age": 21,
-        "ballot_req_type": "MAIL",
-        "ballot_req_dt": "09/19/2024",
-        "ballot_send_dt": "09/21/2024",
-        "ballot_rtn_dt": "10/24/2024",
-        "ballot_rtn_status": "ACCEPTED"
-      },
-    ]
-  ],
-  // rinse and repeat for every unique "ballot_req_dt"
-])
-
-// Outputs list of InternMap() keys --> [ "REP", "DEM", "UNA" ]
-console.log( nc2024ByReqDate )
-```
-
-### InternMap() Methods
-
-Thankfully, InternMap() has essentially revised JS's global Map(), so it uses many of the same built-in methods like the following:
+Ok, Date() object behavior is one big reason to use InternMaps. Additionally, InternMap() has essentially just revised and upgraded JS's global Map(), so it uses many of the same built-in methods like the following:
 
 - `.set()`
 - `.get()`
@@ -461,83 +672,209 @@ Thankfully, InternMap() has essentially revised JS's global Map(), so it uses ma
 - `.size()`
 - ...
 
-Don't believe me, check out both of their respective `prototype` functions in the console, after you convert this `javascript` codeblock to an executable `js` codeblock:
+For more proof, check out both of their respective `prototype` functions in the web console. Convert this `javascript` codeblock to an executable `js` codeblock and see for yourself:
 
 ```javascript
 let ogJsMap = new Map()
 let d3InternMap = new InternMap()
-console.log("ogJsMap\n", ogJsMap)
-console.log("d3InternMap\n", d3InternMap)
+console.log(
+  "ogJsMap\n", ogJsMap
+  "\nd3InternMap\n", d3InternMap
+)
 ```
 
-Notice how InternMap() echoes JS's Map().
+Notice how InternMap() echoes JS's Map(), so if you learn one type of map, you will intuitively understand how to work with the others. (Thank you, designers and developers!)
 
 ![](./../assets/images/1-js/js-compare-map-internmap.png)
 
-```javascript
-// Spread operator will list all values as Array List []
-[...map.keys()] // [2001-01-01]
-```
+### Converting arrays of objects to D3 InternMaps
 
-While InternMap uses object.valueOf by default to compute the intern key, you can pass a key function as a second argument to the constructor to change the behavior. For example, if you use JSON.stringify as a parameter for a new InternMap(), you can use arrays as compound keys (assuming that the array elements can be serialized to JSON).
+We can easily create InternMap objects with the following three D3.js methods in the [d3-array](https://d3js.org/d3-array/group) code library: `d3.group`, `d3.rollup`, and `d3.index`.
 
-```javascript
-let mapAsJSON = new InternMap([
-  [["foo", "bar"], 1],
-  [["foo", "baz"], 2],
-  [["goo", "bee"], 3]
-], JSON.stringify)
-```
-
-If you convert the above `javascript` codeblock to an executable `js` codeblock, then log `mapAsJSON`, you will see the following printout:
-
-```bash
-// Console log printout:
-Map(3) { (2) […] → 1, (2) […] → 2, (2) […] → 3 }
-_intern: Map(3) { '["foo","bar"]' → (2) […], '["foo","baz"]' → (2) […], '["goo","bee"]' → (2) […] }
-size: 3
-<entries>
-  0: '["foo","bar"]' → Array [ "foo", "bar" ]
-  1: '["foo","baz"]' → Array [ "foo", "baz" ]
-  2: '["goo","bee"]' → Array [ "goo", "bee" ]
-<prototype>: Map.prototype { … }
-_key: function stringify()
-size: 3
-<entries>
-  0: Array [ "foo", "bar" ] → 1
-  1: Array [ "foo", "baz" ] → 2
-  2: Array [ "goo", "bee" ] → 3
-<prototype>: Object { … }
-```
-
-## 1.9.6 Grouping Arrays of Objects as InternMaps()
+<p class="note--data">
+  For our examples in the remainder of this chapter, we are going to use a randomly generated sample of 20000 <strong>absentee</strong> NC voter data from the 2024 election cycle. The original set has over 468000 rows, so I reduced it to a smaller number to balance computational performance without forsaking much of the distribution of the full dataset. The data has been anonymized.
+</p>
 
 <!-- Attach sampled NC voter data -->
 ```js
-const nc2024SampledVoters = FileAttachment("./../data/nc-voters/nc_absentee_mail_2024_n500.csv").csv({typed: true})
+const nc2024SampledVoters = FileAttachment("./../data/nc-voters/nc_absentee_mail_2024_n20000.csv").csv({typed: true})
 ```
 
-We can easily create InternMap() objects with the following three D3.js methods in the [d3-array](https://d3js.org/d3-array/group) code library: `d3.group`, `d3.rollup`, and `d3.index`.
+### `d3.group()` - Convert Array of objects to InternMap()
 
-<p class="note--data">
-  For our examples in this section, we are going to use a randomly generated sample of 500 absentee NC voter data from the 2024 election cycle. The original set has over 468,000 rows, so I reduced it to a smaller number for performance and simplicity. The data has been anonymized.
-</p>
-
-### d3.group()
-
-As its name suggests, [d3.group](https://d3js.org/d3-array/group) groups the iterable Array of Object values into an InternMap() from key to array of values.
+As its name suggests, [d3.group](https://d3js.org/d3-array/group) groups the iterable Array of Object values into an InternMap() organized by that newly and uniquely keyed value. Grouping data with d3.group() helps us when we need to narrow the focus of our exploration and questions of the data.
 
 Let's review an applied example.
 
-Perhaps we have questions that we want to ask and explore about `race` in the dataset. Typically, group the voters in the sampled dataset by the field:. It returns an InternMap from the desired <em>key</em> to the corresponding Array of <em>values</em>. For example, say you have a table of highly-paid athletes:</p>
-</div>
+A typical situation that arises when working with a dataset includes the following: After some initial data cleaning, the need arises to **explore the dataset by a specific field, so we can view new angles of the data and ask new questions about it**.
+
+Perhaps we have initial questions that we want to ask and explore about political affilliation in the dataset. We can use the field, `ballot_request_party`, to group the data with the `d3.group()` method.
+
+D3's `group()` accepts mainly two parameters:
+
+1. the input data, and
+2. a function specifying which field(s) to group the data by.
+
+Here's the expression:
+
+```javascript
+// Basic structure of expression
+const outputInternMap = d3.group(
+  // First param == array of objects
+  arrayOfObjects,
+  /**
+   * Second param is an "arrow function" in JS
+   * (d): the list of parameters, where 'd' is the data
+   * d.desired_property: the key that you wish to group by
+  **/
+  (d) => d.desired_property
+)
+
+// Applied example with our nc2024SampleVotersUpdate array of objects
+const nc2024ByPartyInternMap = d3.group(
+  nc2024SampledVoters,
+  (d) => d.ballot_request_party
+)
+```
+
+```js
+const nc2024ByPartyInternMap = d3.group(nc2024SampledVoters, (d) => d.ballot_request_party)
+```
+
+<p class="codeblock-caption">
+  Interactive output of absentee data grouped by <code>ballot_request_party</code>
+</pß>
+
+```js
+nc2024ByPartyInternMap
+```
+
+As you look through the interactive InternMap above, consider what `.group()` did to the array of objects. Essentially, it has been programmed to create a new set of keys based on the available and unique set of values for that field. In our case above, it was `ballot_request_party`. Then, it will get all of the values that share that unique key and place them in that new group. So, essentially, `.group()` creates new unique buckets in which to place associated items within that bucket.
+
+Instead of political party affiliation, let's group it by race to peruse new angles. Look through the interactive output and notice how you can even start noticing some potentially interesting angles and questions to ask just by grouping the data.
+
+```js
+let nc24VotersByRace = d3.group(
+  nc2024SampledVoters,
+  (d) => d.race
+)
+```
+
+<p class="codeblock-caption">
+  Interactive output of absentee data grouped by race
+</p>
+
+```js
+nc24VotersByRace
+```
+
+#### Create nested groups with multiple keys
+
+As you can see from the party grouping, the dataset is still difficult to parse. You can see Array lengths per party, which might yield some questions about distribution. (We'll learn about distribution later!) To take another step into potential angles to consider, we can drill down deeper and group the dataset by more than one field.
+
+Indeed, you can create nested groups. So, let's take a look at the dataset grouped first by political party, then by race -- `ballot_request_party` > `race`:
+
+```js
+let nc24VotersByPartyAndRace = d3.group(
+  nc2024SampledVoters,
+  (d) => d.ballot_request_party, (d) => d.race
+)
+```
+
+<p class="codeblock-caption">
+  Interactive output of absentee data grouped by <code>ballot_request_party</code> > <code>race</code>:
+</p>
+
+```js
+nc24VotersByPartyAndRace
+```
+
+Check out the output above, and note how you might consider asking some more specific questions just be reviewing the data outputs in this format.
+
+<p class="note">
+  Don't worry! We'll learn better ways to explore the data later with tables and visuals.
+</p>
+
+## d3.rollup() - Group & Reduce the Data
+
+Ok! Let's learn a variation on `d3.group()`, which is `d3.rollup()`.
+
+Sometimes you just need to compute some values about your data, rather than preseve all of the information. Enter `d3.rollup()`!
+
+`d3.rollup` first groups the data—just like `.group()`. Yet, `rollup` then **reduces** the specified iterable of values into an InternMap from the provided key to reduced value. For example, let's say we just want to count the number of voters in a particular group? Rollup to the rescue!
+
+<!-- Render party>gender rollup -->
+```javascript
+let nc24VotersRollUpPartyAndRace = d3.rollup(
+  // Input array of objects
+  nc2024SampledVoters,
+  // Reduce by counting how many per field
+  (D) => D.length,
+  // Like, d3.group(), use comma-sep arrow functions
+  (d) => d.ballot_request_party, (d) => d.gender
+)
+```
+
+<!-- Assign party>gender rollup -->
+```js
+let nc24VotersRollUpPartyAndRace = d3.rollup(
+  nc2024SampledVoters,
+  (D) => D.length,
+  (d) => d.ballot_request_party, (d) => d.gender
+)
+```
+
+<p class="codeblock-caption">
+  Interactive output of <code>nc24VotersRollUpPartyAndRace</code>
+</p>
+
+<!-- Interactive output -->
+```js
+nc24VotersRollUpPartyAndRace
+```
+
+### .get() rolled up InternMap data
+
+Here's how to get the count of absentee voters whose party is `"DEM"` and whose gender is `"F"`:
+
+```javascript
+nc24VotersRollUpPartyAndRace.get("DEM").get("F") // Yields 4149
+```
+
+```js
+nc24VotersRollUpPartyAndRace.get("DEM").get("F") // Yields 4149
+```
 
 ## Exercises
 
-### E 1.8.1 Group NC Voters By Age Range as an InternMap()
+### E 1.8.1 Group NC Voters By the Ballot Sent Date as an InternMap()
+
+**Goal**: Take the `nc2024SampleVoters` data and do the following:
+
+1. Convert the `javascript` codeblocks to `js` codeblocks.
+2. Create a new field for each entry at the voter level called `ballot_send_dt_obj` and set the value to this field by converting the string value of dates ballots were sent to voters -- `ballot_send_dt` -- into a Date() object.
+3. Aggregate the updated `nc2024SampleVoters` by grouping the data by `ballot_send_dt_obj` as a new `InternMap()`.
+4. Add your new InternMap to the second `js` codeblock to render an interactive output.
+
+<p class="tip">
+  Be sure to write your code in a manner aligned with how I break down the process above.
+</p>
+
+```javascript
+// Your code goes here
+```
+
+E 1.8.1 Interactive Output
+
+```javascript
+// Your grouped variable here
+```
+
+### E 1.8.2 Group NC Voters By Age Range as an InternMap()
 
 **Goal**: Take the `nc2024SampleVoters` data and group it by a set of age ranges of your own choosing using `InternMap()`.
 
+<!-- Tip for 1.8.2 -->
 <div class="tip">
   <p>
     I'll guide you through this first one. Again, it helps to listify the process required, so you can then think about what JS you've learned so far to help you implmement those steps.
@@ -553,24 +890,17 @@ Perhaps we have questions that we want to ask and explore about `race` in the da
 // Your code goes here
 ```
 
-### E 1.8.2 Group NC Voters By the Ballot Sent Date as an InternMap()
-
-**Goal**: Take the `nc2024SampleVoters` data and do the following:
-
-1. Create a new field for each entry at the voter level called `ballot_send_dt_obj` and set the value to this field by converting the string value of dates ballots were sent to voters -- `ballot_send_dt` -- into a Date() object.
-2. Aggregate the updated `nc2024SampleVoters` by grouping the data by `ballot_send_dt_obj` as a new `InternMap()`.
-
-<p class="tip">
-  Be sure to write your code in a manner aligned with how I break down the process above.
-</p>
+E 1.8.2 Interactive Output
 
 ```javascript
-// Your code goes here
+// Your grouped variable here
 ```
 
-### E 1.8.3 Group NC Voters by Your Desired Field as an InternMap()
+### E 1.8.3 Group NC Voters by Your Desired set of 2-3 Fields as an InternMap()
 
-**Goal**: Take the `nc2024SampleVoters` data and group it by your own desired field. First outline your procedure with steps below. Then, use the JS codeblock to perform your grouping as a D3.js `InternMap()`.
+**Goal**: Take the `nc2024SampleVoters` data and group it by your own desired set of 2-3 fields.
+
+First outline your procedure with steps below. Then, use the JS codeblock to perform your grouping as a D3.js `InternMap()`.
 
 1. Enter step 1
 2. Enter step 2
@@ -578,4 +908,30 @@ Perhaps we have questions that we want to ask and explore about `race` in the da
 
 ```javascript
 // Your code goes here
+```
+
+E 1.8.3 Interactive Output
+
+```javascript
+// Your grouped variable here
+```
+
+### E 1.8.4 Rollup NC Voters by Total Ballot Sent Date as an InternMap()
+
+**Goal**: Take the `nc2024SampleVoters` data, add a Date() field for the ballot request date field, then roll it up by your new field to get the total count per ballot request date.
+
+First outline your procedure with steps below. Then, use the JS codeblock to perform your rollup as a D3.js `InternMap()`.
+
+1. Enter step 1
+2. Enter step 2
+3. ...
+
+```javascript
+// Your code goes here
+```
+
+E 1.8.3 Interactive Output
+
+```javascript
+// Your grouped variable here
 ```
