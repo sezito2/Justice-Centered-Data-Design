@@ -73,73 +73,67 @@ For example, it doesn't make sense to write a function that converts dates in yo
 
 Overall keep that rule-of-thumb in mind as you practice writing functions.
 
-<!-- Assign nc2024SampleVoters -->
-```js
-// Sample of 4 randomly selected abridged entries from NC November 2024 absentee voter data
-let nc2024SampleVoters = [
-  {
-    "race": "WHITE",
-    "ethnicity": "NOT HISPANIC or NOT LATINO",
-    "gender": "F",
-    "age": 33,
-    "ballot_req_type": "MAIL",
-    "ballot_request_party": "REP",
-    "ballot_req_dt": "10/23/2024",
-    "ballot_send_dt": "10/28/2024",
-    "ballot_rtn_dt": null,
-    "ballot_rtn_status": null
-  },
-  {
-    "race": "BLACK or AFRICAN AMERICAN",
-    "ethnicity": "UNDESIGNATED",
-    "gender": "F",
-    "age": 57,
-    "ballot_req_type": "MAIL",
-    "ballot_request_party": "DEM",
-    "ballot_req_dt": "09/14/2024",
-    "ballot_send_dt": "09/23/2024",
-    "ballot_rtn_dt": "10/28/2024",
-    "ballot_rtn_status": "SPOILED-EV"
-  },
-  {
-    "race": "WHITE",
-    "ethnicity": "NOT HISPANIC or NOT LATINO",
-    "gender": "M",
-    "age": 21,
-    "ballot_req_type": "MAIL",
-    "ballot_request_party": "UNA",
-    "ballot_req_dt": "09/19/2024",
-    "ballot_send_dt": "09/21/2024",
-    "ballot_rtn_dt": "10/24/2024",
-    "ballot_rtn_status": "ACCEPTED"
-  },
-  {
-    "race": "WHITE",
-    "ethnicity": "UNDESIGNATED",
-    "gender": "F",
-    "age": 32,
-    "ballot_req_type": "MAIL",
-    "ballot_request_party": "DEM",
-    "ballot_req_dt": "08/03/2024",
-    "ballot_send_dt": "09/24/2024",
-    "ballot_rtn_dt": null,
-    "ballot_rtn_status": "SPOILED-EV"
-  }
-]
-```
-
 ## 1.9.6 Exercises
 
-For all of the exercises, use the `absentee_2024_aggregated.csv` data set.
+<p class="note--data">
+  For our exercises, we will again use the randomly generated sample of 20000 <strong>absentee</strong> NC voter data from the 2024 election cycle. The original set has over 468000 rows, so I reduced it to a smaller number to balance computational performance without forsaking much of the distribution of the full dataset. The data has been anonymized.
+</p>
 
 Use D3.js `FileAttachment()` method below in VS Code. Remember that you'll need to write a relative path as a String parameter that helps the computer find where the CSV file is in relation to this particular page's file in the project tree.
 
+<!-- Attach sampled NC voter data -->
 ```javascript
-// Turn me into a 'js' block :-)
+// Convert to `js` codeblock and attach sampled NC voter data file: nc_absentee_mail_2024_n20000.csv
 ```
 
-## E 1.9.1 ...
+## E 1.9.1 - Convert String dates to Date() objects
 
-Goal:
+**Goal**: Write a function that accepts any array of objects that can convert any of its String date fields to Date() objects as a new property in the object.
 
-1.
+First outline your procedure with steps below.
+
+1. Enter step 1
+2. Enter step 2
+3. ...
+
+Now, code!
+
+```javascript
+// Your function code goes here
+```
+
+```javascript
+// Your use of the function code goes here
+```
+
+E 1.8.3 Interactive Output
+
+```javascript
+// Your output variable here
+```
+
+## E 1.9.2 - Create Your Own Function (with Conditions)!
+
+**Goal**: Write your own function using the 2024 absentee NC voter data. The only condition is to include conditions. `:-)`
+
+First outline your procedure with steps below.
+
+1. Enter step 1
+2. Enter step 2
+3. ...
+
+Now, code!
+
+```javascript
+// Your function code goes here
+```
+
+```javascript
+// Your use of the function code goes here
+```
+
+E 1.8.3 Interactive Output
+
+```javascript
+// Your output variable here
+```
