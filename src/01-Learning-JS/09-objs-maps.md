@@ -615,7 +615,7 @@ ncVotersGroupedByParty
 
 The built-in JS Map is great, but there are some reasons that we should learn D3's version of the Map object called an InternMap. Thankfully, they're really close to the same thing with some upgraded features. Plus, we will be using InterMaps quite a bit, so let's take make sure we learn how to use them.
 
-## 1.9.5 D3.js InternMap()L Easily Group Data
+## 1.9.5 D3.js InternMap() Easily Group Data
 
 <!-- Import the InternMap for use from D3's array lib/module -->
 ```js
@@ -795,7 +795,7 @@ Check out the output above, and note how you might consider asking some more spe
   Don't worry! We'll learn better ways to explore the data later with tables and visuals.
 </p>
 
-## d3.rollup() - Group & Reduce the Data
+### `d3.rollup()` - Group & Reduce the Data
 
 Ok! Let's learn a variation on `d3.group()`, which is `d3.rollup()`.
 
@@ -833,7 +833,7 @@ let nc24VotersRollUpPartyAndRace = d3.rollup(
 nc24VotersRollUpPartyAndRace
 ```
 
-### .get() rolled up InternMap data
+#### .get() rolled up InternMap data
 
 Here's how to get the count of absentee voters whose party is `"DEM"` and whose gender is `"F"`:
 
