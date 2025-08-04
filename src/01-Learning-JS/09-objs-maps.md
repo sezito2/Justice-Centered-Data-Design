@@ -689,7 +689,7 @@ Notice how InternMap() echoes JS's Map(), so if you learn one type of map, you w
 
 ### Converting arrays of objects to D3 InternMaps
 
-We can easily create InternMap objects with the following three D3.js methods in the [d3-array](https://d3js.org/d3-array/group) code library: `d3.group`, `d3.rollup`, and `d3.index`.
+We can easily create InternMap objects with the following three D3.js methods in the [d3-array](https://d3js.org/d3-array/group) code library: `d3.group` and `d3.rollup`.
 
 <p class="note--data">
   For our examples in the remainder of this chapter, we are going to use a randomly generated sample of 20000 <strong>absentee</strong> NC voter data from the 2024 election cycle. The original set has over 468000 rows, so I reduced it to a smaller number to balance computational performance without forsaking much of the distribution of the full dataset. The data has been anonymized.
