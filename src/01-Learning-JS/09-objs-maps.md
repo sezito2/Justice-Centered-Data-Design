@@ -777,7 +777,8 @@ Indeed, you can create nested groups. So, let's take a look at the dataset group
 ```js
 let nc24VotersByPartyAndRace = d3.group(
   nc2024SampledVoters,
-  (d) => d.ballot_request_party, (d) => d.race
+  (d) => d.ballot_request_party,
+    (d) => d.race
 )
 ```
 
@@ -811,7 +812,8 @@ let nc24VotersRollUpPartyAndRace = d3.rollup(
   // Reduce by counting how many per field
   (D) => D.length,
   // Like, d3.group(), use comma-sep arrow functions
-  (d) => d.ballot_request_party, (d) => d.gender
+  (d) => d.ballot_request_party,
+    (d) => d.gender
 )
 ```
 
@@ -820,7 +822,8 @@ let nc24VotersRollUpPartyAndRace = d3.rollup(
 let nc24VotersRollUpPartyAndRace = d3.rollup(
   nc2024SampledVoters,
   (D) => D.length,
-  (d) => d.ballot_request_party, (d) => d.gender
+  (d) => d.ballot_request_party,
+    (d) => d.gender
 )
 ```
 

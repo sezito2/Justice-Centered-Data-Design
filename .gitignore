@@ -9,6 +9,8 @@ xx-*
 planning.md
 *.ipynb
 src/assets/readings/wX-*
+src/*/utils/
+
 
 # TOO BIG VIDS
 *.mov
