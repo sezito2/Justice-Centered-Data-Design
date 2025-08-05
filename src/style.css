@@ -1,5 +1,4 @@
 @import url("observablehq:default.css");
-/* @import 'https://fonts.googleapis.com/css2?family=Bree+Serif&family=Inter&family=Lobster&display=swap'; */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Protest+Guerrilla&family=Special+Elite&family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap');
 
 :root {
@@ -231,22 +230,32 @@ a {
 
 /* HEADINGS  */
 
-h1,h2,h3 {
+h2,h3 {
   font-family: var(--headingFonts);
 }
 
 h1 { 
+  font-family: var(--titleFont);
+  font-size: 2.75rem;
+  font-weight: 400;
+  margin: 1rem auto 4rem auto;
   max-width: unset;
+
+  /* Effect */
+  background: linear-gradient( 30deg, var(--theme-foreground-focus), currentColor);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 
   & > a {
     background: unset !important;
-    text-decoration: underline !important;
+    text-decoration: none !important;
     transition: 0.2s !important;
 
     &:hover,&:focus {
       color: var(--accentShade5) !important;
       background: unset !important;
-      text-decoration: none !important;
+      text-decoration: underline !important;
       transition: 0.16s !important;
     }
   }

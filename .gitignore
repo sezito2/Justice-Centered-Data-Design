@@ -8,6 +8,7 @@ yarn-error.log
 xx-*
 planning.md
 *.ipynb
+src/assets/readings/wX-*
 
 # TOO BIG VIDS
 *.mov
