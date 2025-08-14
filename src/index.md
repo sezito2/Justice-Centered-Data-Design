@@ -11,18 +11,18 @@ index: true
 
 **How can technical and professional communicators advocate for justice-centered, anti-oppressive designs and uses of data?**
 
-In *ENG 498/583 Justice-Centered Data Design in TPC*, we will interrogate how technical and professional communication (TPC) can influence, and are already influenced by, the design of data. We will learn theories of intersectionality, anti-oppressive perspectives and cases, and data-driven techniques as a response to recognizing how data is a key set of communication design practices for TPC to learn and wield for just structural change.
+In *ENG 498/583 Justice-Centered Data Design in TPC*, we will interrogate how technical and professional communication (TPC) can influence, and are already influenced by, the design of data. We will learn about the justice-turn in TPC, anti-oppressive perspectives and cases, and data-driven techniques as a response to recognizing how data is a key set of communication design practices for TPC to learn and wield for just structural change.
 
-Data design is TPC because it is highly concerned with people (audience), goals (purpose), and technologies. TPC professionals have much to offer the necessary advocacy work needed in data-driven workplaces across industry, government, and nonprofit sectors. Yet, traditionally, our field has yet to standardize learning fundamental data-driven techniques that will better position us to make a difference in the workplace and in shaping policy and procedures.
+Data design is TPC because it is highly concerned with people (audience), goals (purpose), and technologies. TPC professionals have much to offer the necessary advocacy work needed in data-driven workplaces across industry, government, and nonprofit sectors. Yet, traditionally, our field has yet to standardize learning fundamental data-driven techniques that will better position us to make a difference in the workplace and in shaping policy and procedures. In this class, we will invent and speculate possibilities for the future of TPC.
 
 ## Learning Objectives
 
 Due to the situation described above, we will achieve the following learning objectives, so TPC is better prepared to actively and confidently advocate for those who are not represented, misrepresented, and actively being harmed by data-driven science, engineering, and business strategies:
 
-1. Explain theories of intersectionality in relation to data and empiricism;
+1. Explain the justice-turn in TPC in relation to data and empiricism;
 2. Demonstrate foundational statistical analysis techniques through applied anti-oppressive cases;
-3. Apply intersectionality to develop a strong hypothesis to test, report the results, and explain the study's constraints with an anti-oppresive, structural perspective.
-4. Learn foundational coding, data, and visualization techniques using the JavaScript-based Observable Framework.
+3. Learn foundational coding, data, and visualization techniques using the JavaScript-based Observable Framework.
+4. Apply a justice-centered approach to critique and reimagine an existing dataset.
 
 We will learn and apply integral theories about data and power via accompanying case studies and hands-on tutorials to help you learn fundamental approaches to finding, collecting, analyzing, and reporting data-driven stories about opaque social-technical systems.
 
@@ -40,29 +40,29 @@ Also not a problem! This course assumes you know nothing and walks through the f
 
 ## Major Assignments
 
-### Applied Lessons (xx%)
+### Applied Lessons / Responses (45%)
 
 - **Due**: Weekly
 - **Individual or Group**: Individual
 - **Deliverable**: Completed activity in Observable textbook.
-- **Points**: xx-xx per activity
+- **Points**: 5-15 per activity
 
 **Description**: Enter description.
 
-### Participation (xx%)
+### Participation (15%)
 
 - **Due**: Midterm &amp; Final
 - **Individual or Group**: Individual
 - **Deliverable**: Reflective memo
-- **Points**: xx per memo
+- **Points**: 15 per memo
 
 **Description**: Enter description.
 
-### Final: Data Design (xx%)
+### Final: Data Design (40%)
 
-- **Due**: December xx
+- **Due**: Monday, December 8th.
 - **Individual or Group**: Group
-- **Points**: xx-xx per lesson
+- **Points**: 100
 
 **Description**: Enter description.
 
@@ -78,63 +78,4 @@ Lindgren has incorporated content from:
 ## Corrections, comments, suggestions?
 
 Email: calindgr@ncsu.edu<br>
-File an issue: on [GitHub](#)
-
-<div class="grid grid-cols-2" style="grid-auto-rows: 504px;">
-  <div class="card">${
-    resize((width) => Plot.plot({
-      title: "Your awesomeness over time 🚀",
-      subtitle: "Up and to the right!",
-      width,
-      y: {grid: true, label: "Awesomeness"},
-      marks: [
-        Plot.ruleY([0]),
-        Plot.lineY(aapl, {x: "Date", y: "Close", tip: true})
-      ]
-    }))
-  }</div>
-  <div class="card">${
-    resize((width) => Plot.plot({
-      title: "How big are penguins, anyway? 🐧",
-      width,
-      grid: true,
-      x: {label: "Body mass (g)"},
-      y: {label: "Flipper length (mm)"},
-      color: {legend: true},
-      marks: [
-        Plot.linearRegressionY(penguins, {x: "body_mass_g", y: "flipper_length_mm", stroke: "species"}),
-        Plot.dot(penguins, {x: "body_mass_g", y: "flipper_length_mm", stroke: "species", tip: true})
-      ]
-    }))
-  }</div>
-</div>
-
----
-
-## Next steps
-
-Here are some ideas of things you could try…
-
-<div class="grid grid-cols-4">
-  <div class="card">
-    Chart your own data using <a href="https://observablehq.com/framework/lib/plot"><code>Plot</code></a> and <a href="https://observablehq.com/framework/files"><code>FileAttachment</code></a>. Make it responsive using <a href="https://observablehq.com/framework/javascript#resize(render)"><code>resize</code></a>.
-  </div>
-  <div class="card">
-    Create a <a href="https://observablehq.com/framework/project-structure">new page</a> by adding a Markdown file (<code>whatever.md</code>) to the <code>src</code> folder.
-  </div>
-  <div class="card">
-    Add a drop-down menu using <a href="https://observablehq.com/framework/inputs/select"><code>Inputs.select</code></a> and use it to filter the data shown in a chart.
-  </div>
-  <div class="card">
-    Write a <a href="https://observablehq.com/framework/loaders">data loader</a> that queries a local database or API, generating a data snapshot on build.
-  </div>
-  <div class="card">
-    Import a <a href="https://observablehq.com/framework/imports">recommended library</a> from npm, such as <a href="https://observablehq.com/framework/lib/leaflet">Leaflet</a>, <a href="https://observablehq.com/framework/lib/dot">GraphViz</a>, <a href="https://observablehq.com/framework/lib/tex">TeX</a>, or <a href="https://observablehq.com/framework/lib/duckdb">DuckDB</a>.
-  </div>
-  <div class="card">
-    Ask for help, or share your work or ideas, on our <a href="https://github.com/observablehq/framework/discussions">GitHub discussions</a>.
-  </div>
-  <div class="card">
-    Visit <a href="https://github.com/observablehq/framework">Framework on GitHub</a> and give us a star. Or file an issue if you’ve found a bug!
-  </div>
-</div>
+File an issue: on [GitHub](https://github.com/ENG498-JCDD/Justice-Centered-Data-Design/issues)
