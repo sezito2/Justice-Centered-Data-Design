@@ -1,10 +1,6 @@
 # 0.2-Version Control: Forking & Cloning
 
-It's time! It's time to make a copy of this repo by completing the following steps:
-
-1. Fork my repo to your Github profile
-2. Clone your forked copy to your local computer
-3. Open your local copy in VS Code
+In this chapter, we will cover how to fork and clone repositories.
 
 ## 0.2.1 How to fork a repo
 
@@ -80,3 +76,10 @@ Before you move forward, be sure that you understand the following ideas and pro
 1. What **forks** are, and how to create them.
 2. What **clones** are, and how to create them.
 3. The difference between **local** versus **remote**, and why those differences in location matter.
+
+## Submission
+
+On Moodle, submit an image of the following:
+
+1. Your forked version of [https://github.com/lingeringcode/sjd-test](https://github.com/lingeringcode/sjd-test) in your GH profile online.
+2. A cloned version of this fork on your local computer.

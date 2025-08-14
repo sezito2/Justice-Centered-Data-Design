@@ -35,6 +35,15 @@
 
 # 0.2-Reading Code Files
 
+## Start Your GH Workflow
+
+Remember, before you start anything else, always follow this GH methodological workflow:
+
+1. Create meaningful **branch** that uses the agreed upon naming scheme: `CHP/x--name_of_chp`.
+2. Practice the iterative process to **commit** and **push** regularly with meaningful **commit messages**.
+
+## Overview
+
 Let's cover some fundamentals before we venture any further. You must first learn how to read the different types of code files in the project *and* understand how the files are organized in what's called the ***architecture*** of the project. We will focus first on files written in what's called ***Markdown***.
 
 ## 0.2.1 Configure VS Code
@@ -207,7 +216,7 @@ In the video below, I demonstrate how to practice using the above syntax to writ
   <source src="../assets/vids/getting-started/04-reading-filepath-practice.mp4" type="video/mp4" />
 </video>
 
-## E 0.2.1 - Verify Mardown Course completion
+## E1. Verify Mardown Course completion
 
 Create a Markdown image, e.g., `![Alt text description](./path/in/here.png)`, which renders a screenshot of you completing the Markdown course.
 
@@ -217,7 +226,7 @@ Use a relative filepath in the Markdown image to do so.
 
 ADD_YOUR_IMG_HERE
 
-## E 0.2.2 - Link to 0.3 Using the Command Line
+## E2. Link to 0.3 Using the Command Line
 
 Write a markdown link, e.g., [Rendered linked text](./path/to/file.md), with a relative path to the `03-cmd-line.md` file for the "0.3-Using the Command Line" chapter.
 
@@ -226,7 +235,7 @@ Write one that assumes the file is `.md`, and another that assumes it is an `.ht
 - enter_md_link_here
 - enter_html_link_here
 
-## E 0.2.3 - Link to 1.0 Reviewing the GH Methodology & Learning to Write JS in Observable
+## E3. Link to page in same project
 
 Write a markdown link, e.g., [Rendered linked text](./path/to/file.md), with a relative path to the `00-gh-nb.md` file for the "1.0-Reviewing the GH Methodology & Learning to Write JS in Observable" chapter.
 
@@ -237,10 +246,16 @@ Write one that assumes the file is `.md`, and another that assumes it is an `.ht
 - enter_md_link_here
 - enter_html_link_here
 
-## E 0.2.4 - Link to 1.0 Reviewing the GH Methodology & Learning to Write JS in Observable
+## E4. Render an image
 
 Write a markdown image, e.g., `![Alt text description](./path/in/here.jpg)`, which renders the following image located in this project: `hotel-bookings.webp`.
 
 <p class="tip">You will need to use the double-dot <code>..</code> notation.</p>
 
 ENTER_IMG_HERE
+
+## Submission
+
+1. Create a **PR** (**pull request**) and use the provided content in the template to start it.
+2. Respond to your peers and comment on their work too.
+3. Submit the PR link in Moodle, when you're ready.
