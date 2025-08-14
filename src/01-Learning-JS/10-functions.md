@@ -1,5 +1,14 @@
 # 1.9 JS Functions: Do One Thing Well
 
+## Start Your GH Workflow
+
+Remember, before you start anything else, always follow this GH methodological workflow:
+
+1. Create meaningful **branch** that uses the agreed upon naming scheme: `CHP/x--name_of_chp`.
+2. Practice the iterative process to **commit** and **push** regularly with meaningful **commit messages**.
+
+## Overview
+
 We've learned a lot so far about JS: data primitives and types, operators, conditionals, loops and parsers, and other types of transformers. Now, one of the last fundamentals to learn about JS is the ability to wrap up some code that performs one functional action well.
 
 <img src="./../assets/images/1-js/penguin-windup.jpg" style="width:200px;float:left;border-radius: 10px;margin-right:1rem">
@@ -86,7 +95,7 @@ Use D3.js `FileAttachment()` method below in VS Code. Remember that you'll need 
 // Convert to `js` codeblock and attach sampled NC voter data file: nc_absentee_mail_2024_n20000.csv
 ```
 
-## E 1.9.1 - Convert String dates to Date() objects
+## E1. Convert String dates to Date() objects
 
 **Goal**: Write a function that accepts any array of objects that can convert any of its String date fields to Date() objects as a new property in the object.
 
@@ -106,13 +115,13 @@ Now, code!
 // Your use of the function code goes here
 ```
 
-E 1.8.3 Interactive Output
+E1 Interactive Output
 
 ```javascript
 // Your output variable here
 ```
 
-## E 1.9.2 - Create Your Own Function (with Conditions)!
+## E2. Create Your Own Function (with Conditions)!
 
 **Goal**: Write your own function using the 2024 absentee NC voter data. The only condition is to include conditions. `:-)`
 
@@ -132,8 +141,14 @@ Now, code!
 // Your use of the function code goes here
 ```
 
-E 1.8.3 Interactive Output
+E2 Interactive Output
 
 ```javascript
 // Your output variable here
 ```
+
+## Submission
+
+1. Create a **PR** (**pull request**) and use the provided content in the template to start it.
+2. Respond to your peers and comment on their work too.
+3. Submit the PR link in Moodle, when you're ready.

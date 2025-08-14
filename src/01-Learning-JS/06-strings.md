@@ -4,6 +4,15 @@
   Some content below is reused and modified from <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" rel="noopenner noreferrer">MDN's JS reference guide</a>.
 </p>
 
+## Start Your GH Workflow
+
+Remember, before you start anything else, always follow this GH methodological workflow:
+
+1. Create meaningful **branch** that uses the agreed upon naming scheme: `CHP/x--name_of_chp`.
+2. Practice the iterative process to **commit** and **push** regularly with meaningful **commit messages**.
+
+## Overview
+
 Strings are useful for holding data that can be represented in text form. Some of the most-used operations on strings are to check their length, to build and concatenate them using the + and += string operators, checking for the existence or location of substrings with the indexOf() method, or extracting substrings with the substring() method.
 
 ## 1.6.1 Creating Strings
@@ -80,6 +89,8 @@ let str1 = "Cat In The Hat"
 | `str1.includes("The Hat")`  | Checks if the given String value is in the string.<br>Returns Boolean `true` or `false`. | `true`|
 | `str1.startsWith("c")`  | Checks if String starts with character.<br>Returns Boolean `true` or `false`. | `false`|
 | `str1.endsWidth("t")`  | Checks if String ends with character.<br>Returns Boolean `true` or `false`. | `true`|
+| `str1.replace("Cat", "Dog")`  | If the method finds any matches of the<br>first `String` parameter (`"Cat"`),<br>it replaces the first matched instance ONLY<br>with the second `String` parameter (`"Dog"`).<br>Returns a `String`. | `"Dog In The Hat"`|
+| `str1.replaceAll("a", "u")`  | If the method finds any matches of the<br>first `String` parameter (`"a"`),<br>it replaces ALL matched instance<br>with the second `String` parameter (`"u"`).<br>Returns a `String`. | `"Cut In The Hut"`|
 
 ## 1.6.4 Chaining JS Methods
 
@@ -91,14 +102,110 @@ Many methods can be ***chained*** in a desired sequence of execution in JS. By c
   * 1. .toLowerCase() --> make all chars lowercase in string.
   * 2. .includes() --> search for desired part of the string.
 **/
-str1.toLowerCase().includes("hat") // returns true
+str1.toLowerCase().includes("hat") // returns `true`
 ```
 
 This chaining method can be applied with many JS methods—not just Strings.
 
-## Exercises
+## String Method Exercises
 
 ```js
 const vonnegut = FileAttachment("./../data/vonnegut.txt").text()
 ```
 
+For these String method exercises, let's use a larger, longer, and more interesting String: Kurt Vonnegut's short story, "2 B R 0 2 B" ([gutenberg.org source](https://www.gutenberg.org/files/21279/21279-h/21279-h.htm)). I have assigned Vonnegut's short story, because it is simply a plain-text (`.txt`) file that I have input as a very large `String`.
+
+In the codeblock below, I have rendered the String assigned to the variable, `vonnegut`, for your review. If you want to see the full file, it is located relative to this file here: [./../data/vonnegut.txt](./../data/vonnegut.txt).
+
+<p class="codeblock-caption">
+  String output of <code>vonnegut.txt</code> file.
+</p>
+
+```js
+vonnegut
+```
+
+### E1. Find the length of a String
+
+Let's start simple. Output the length of the String, `vonnegut`, in a `js` codeblock below.
+
+```javascript
+// Convert me to a js block
+```
+
+### E2. Replace parts of a String
+
+If you review the String, you will notice how there are section breaks represented with the following characters: `       *       *       *       *       *`. Here's what I want you to practice doing across 4 codeblocks:
+
+1. In the first codeblock, remove ***all*** of these section breaks in `vonnegut` and replace them with an empty string (`""`). Assign it to a new variable: `vonnegutNoSB`.
+2. In the second codeblock, output the new variable, `vonnegutNoSB`, to verify if it worked.
+3. If it worked, use a third codeblock to remove ***all*** major types of puncutation with a chained set of replaceAll() methods on the new `vonnegutNoSB` variable. Assign it to a new variable: `vonnegutClean`. Specifically, create a chain of `removeAll()` methods for each of the following characters: double-quotes (`"`), single-quotes (`'`), commas (`,`), periods (`.`), question marks (`?`), semi-colons (`;`), and the following pattern of two dashes (`--`). Replace the `--` with a single space (`" "`), but replace every other puncuation with an empty String (`""`).
+    <div class="tip">
+      <p>
+        <strong>Escaping quotes</strong>: Strings are assigned with quotation marks. This means the single and double quotes are handled in special ways. For you to tell the <code>replaceAll()</code> method to match either type of quote characters, you need to escape them with a backslash (<code>\</code>). So, in your code, you will need to use an escaped character for double-quotes and single-quotes: <code>"\""</code> and <code>"\'"</code>.
+      </p>
+    </div>
+4. In the fourth codeblock, output the new variable, `vonnegutNoSBDQ`, to verify if it worked.
+
+```javascript
+// Convert me to a js block and complete #1
+```
+
+```javascript
+// Convert me to a js block and complete #2
+```
+
+```javascript
+// Convert me to a js block and complete #3
+```
+
+```javascript
+// Convert me to a js block and complete #4
+```
+
+Ok, those chains were ridiculous, right? Below, complete the same outcome, but use a `for...loop` to accomplish the aim instead. Assign it to a new variable called `vonnegutNoPuncs`.
+
+<p class="tip">
+  Put those desired marks to replace in an Array. You will also need to write a conditional statement to handle the <code>--</code> differently.
+</p>
+
+```javascript
+// Convert me and use a for loop to remove all desired punctuation
+```
+
+```javascript
+// Convert me and output the new string, vonnegutNoPuncs, here
+```
+
+### E3. Split the String into an Array of Strings
+
+Sometimes, we need to isolate parts of a text for analysis by splitting it into meaningful units for analysis. One such unit is at the per word level. While we definitely would need to process our short story more, we can begin to see how we can easily convert our short story into an array of strings that indeed are at the per word level.
+
+Create an array of strings of Vonnegut's story as a new variable called `vonnSplit`. Do so by splitting the newly cleaned String, `vonnegutNoPuncs`, with an empty single space (`" "`).
+
+```javascript
+// Convert me to a js block and complete the exercise
+```
+
+```javascript
+// Convert me to a js block and output `vonnSplit`
+```
+
+### E4. Create array of all hyphenated words
+
+Ok, last exercise! Complete the following steps to create a new array that only includes hyphenated words.
+
+<p class="note">There will be an oddity to observe and discuss in the question after you complete the exercise.</p>
+
+1. In a first codeblock, declare a new array called `hyphenatedWords`. Then, push only hyphenated words into it.
+2. In a second codeblock, output the new array to verify your work.
+
+**Question**: What oddities do you notice about the outcome? Below, explain what you suggest is happenning, and what you would do to resolve the issue with isolating a better list of hyphenated words.
+
+ENTER_YOUR_RESPONSE_HERE
+
+## Submission
+
+1. Create a **PR** (**pull request**) and use the provided content in the template to start it.
+2. Respond to your peers and comment on their work too.
+3. Submit the PR link in Moodle, when you're ready.

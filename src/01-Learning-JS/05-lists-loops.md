@@ -1,5 +1,14 @@
 # 1.5 Lists (Arrays) and Loops
 
+## Start Your GH Workflow
+
+Remember, before you start anything else, always follow this GH methodological workflow:
+
+1. Create meaningful **branch** that uses the agreed upon naming scheme: `CHP/x--name_of_chp`.
+2. Practice the iterative process to **commit** and **push** regularly with meaningful **commit messages**.
+
+## Overview
+
 In the previous lesson, we used individual variables to represent some of the demographic information about the 19th century Irish immigrants featured in the [Bellevue Almshouse data](https://gih-nyc.org/almshouse/the-almshouse-records/), such as names.
 
 ```javascript
@@ -448,3 +457,9 @@ let sexFullTerm = sex.map((sexItem) => {
   // where appropriate!
 })
 ```
+
+## Submission
+
+1. Create a **PR** (**pull request**) and use the provided content in the template to start it.
+2. Respond to your peers and comment on their work too.
+3. Submit the PR link in Moodle, when you're ready.

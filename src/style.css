@@ -280,6 +280,14 @@ h3, .card h3 {
 
 /* OTHER TYPOGRAPHY */
 
+/* Blockquotes */
+blockquote {
+  margin: 2rem auto;
+  font-style: italic;
+  border-left: solid 1px var(--accent2Color);
+  padding-left: 0.5rem;
+}
+
 /* Small Cites */
 .cite_small {
   font-size: 0.8rem;

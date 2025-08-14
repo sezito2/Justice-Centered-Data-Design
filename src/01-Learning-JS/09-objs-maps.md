@@ -1,5 +1,14 @@
 # 1.9 Objects & Maps
 
+## Start Your GH Workflow
+
+Remember, before you start anything else, always follow this GH methodological workflow:
+
+1. Create meaningful **branch** that uses the agreed upon naming scheme: `CHP/x--name_of_chp`.
+2. Practice the iterative process to **commit** and **push** regularly with meaningful **commit messages**.
+
+## Overview
+
 In the previous lessons, we used individual variables to represent some of the demographic information about the 19th century Irish immigrants featured in the [Bellevue Almshouse data](https://gih-nyc.org/almshouse/the-almshouse-records/), such as names.
 
 ```javascript
@@ -456,6 +465,80 @@ Additionally, we reformatted the original String date to include leading zeroes 
 nc2024SampleVotersUpdate
 ```
 
+#### Iterate iterables with `.map()`
+
+The built-in `.map()` method is one more method to iterate an iterable like an array of objects. We use .map() when we want to create a brand new iterable, rather than update an existing one like above.
+
+Let's say we had questions about what months people requested dates per county. So, now we need to make a new array that is solely about the ballot request months in each county in the data. To do so, we want to create an array where each item has two properties: `county` and `reqMonth`. We can use `map()` to iterate each object within the array of `nc2024SampleVotersUpdate` and isolate our targeted properties to then output a reduced version of the original data.
+
+First, here's how `.map()` works. Think of `.map()` as a new expression that consolidates the for loop statement. Instead of writing
+
+> `for (const item of Iterable) { do something with item in here ... }`
+
+`.map()` simply let's you pass the item into a function expression:
+
+> `(item) => { do something with item in here ... }`
+
+```javascript
+// .map() expects a Function as a parameter
+iterableData.map(
+  (itemAsParam) => {
+    // do something with item in here ...
+    return // whatever new value
+  }
+)
+```
+
+Here's how it looks for our example of isolating requested ballot months for each voter's county.
+
+<!-- Rendered map() of ballotRequestMonthsPerCounty -->
+```javascript
+let ballotRequestMonthsPerCounty = nc2024SampleVotersUpdate.map(
+  (voter) => {
+    // Create a Date object from the String value
+    const voterReqDate = parseDateSlash(voter.ballot_req_dt)
+    const reqMonth = formatMonthName(voterReqDate)
+    const county = voter.county_desc
+
+    /**
+     * Returns object with Self-assigned properties
+     * The keys beome county & reqMonth
+     * while also assigning values to those
+     * properties from those same-named variables
+    **/
+    return {county, reqMonth}
+  }
+)
+```
+
+<!-- Executed map() ballotRequestMonthsPerCounty -->
+```js
+let ballotRequestMonthsPerCounty = nc2024SampleVotersUpdate.map(
+  (voter) => {
+    // Create a Date object from the String value
+    const voterReqDate = parseDateSlash(voter.ballot_req_dt)
+    const reqMonth = formatMonthName(voterReqDate)
+    const county = voter.county_desc
+
+    /**
+     * Returns object with Self-assigned properties
+     * The keys beome county & reqMonth
+     * while also assigning values to those
+     * properties from those same-named variables
+    **/
+    return {county, reqMonth}
+  }
+)
+```
+
+<p class="codeblock-caption">
+  Interactive output of <code>ballotRequestMonthsPerCounty</code>:
+</p>
+
+```js
+ballotRequestMonthsPerCounty
+```
+
 ## 1.9.3 Why Create Maps & Groups?
 
 In JS, an Array of Objects is great structures for meaningfully storing, structuring, and transforming datasets in JS. But, throughout the remainder of the chapter, we are going to learn JS and D3.js/Observable data types called ***maps***.
@@ -529,6 +612,7 @@ const myMap = new Map()
 myMap.set(0, "zero")
 myMap.set(1, "one")
 
+// "Spread" assign the values in an array
 for (const [key, value] of myMap) {
   console.log(`${key} = ${value}`)
 }
@@ -850,7 +934,28 @@ nc24VotersRollUpPartyAndRace.get("DEM").get("F") // Yields 4149
 
 ## Exercises
 
-### E 1.8.1 Group NC Voters By the Ballot Sent Date as an InternMap()
+### E1. .map() NC Voters' ballot return status as a new array of objects
+
+**Goal**: Take the `nc2024SampleVoters` data and do the following:
+
+1. Convert the `javascript` codeblocks to `js` codeblocks.
+2. Use the `.map()` method to iterate through the array of objects and create a new variable about the `ballot_rtn_status` and `race`.
+3. Inside of `.map()`, use an if condition to only return an object with noted two properties, if the value of ballot_rtn_status does not equal `null`.
+4. Add your new array of objects to the second `js` codeblock to render an interactive output.
+
+<p class="tip">
+  Be sure to write your code in a manner aligned with how I break down the process above.
+</p>
+
+```javascript
+// Your code goes here
+```
+
+```javascript
+// Your new variable here
+```
+
+### E2. Group NC Voters By the Ballot Sent Date as an InternMap()
 
 **Goal**: Take the `nc2024SampleVoters` data and do the following:
 
@@ -867,17 +972,15 @@ nc24VotersRollUpPartyAndRace.get("DEM").get("F") // Yields 4149
 // Your code goes here
 ```
 
-E 1.8.1 Interactive Output
-
 ```javascript
 // Your grouped variable here
 ```
 
-### E 1.8.2 Group NC Voters By Age Range as an InternMap()
+### E3. Group NC Voters By Age Range as an InternMap()
 
 **Goal**: Take the `nc2024SampleVoters` data and group it by a set of age ranges of your own choosing using `InternMap()`.
 
-<!-- Tip for 1.8.2 -->
+<!-- Tip for E3 -->
 <div class="tip">
   <p>
     I'll guide you through this first one. Again, it helps to listify the process required, so you can then think about what JS you've learned so far to help you implmement those steps.
@@ -893,13 +996,11 @@ E 1.8.1 Interactive Output
 // Your code goes here
 ```
 
-E 1.8.2 Interactive Output
-
 ```javascript
 // Your grouped variable here
 ```
 
-### E 1.8.3 Group NC Voters by Your Desired set of 2-3 Fields as an InternMap()
+### E4. Group NC Voters by Your Desired set of 2-3 Fields as an InternMap()
 
 **Goal**: Take the `nc2024SampleVoters` data and group it by your own desired set of 2-3 fields.
 
@@ -913,13 +1014,11 @@ First outline your procedure with steps below. Then, use the JS codeblock to per
 // Your code goes here
 ```
 
-E 1.8.3 Interactive Output
-
 ```javascript
 // Your grouped variable here
 ```
 
-### E 1.8.4 Rollup NC Voters by Total Ballot Sent Date as an InternMap()
+### E5. Rollup NC Voters by Total Ballot Sent Date as an InternMap()
 
 **Goal**: Take the `nc2024SampleVoters` data, add a Date() field for the ballot request date field, then roll it up by your new field to get the total count per ballot request date.
 
@@ -933,8 +1032,12 @@ First outline your procedure with steps below. Then, use the JS codeblock to per
 // Your code goes here
 ```
 
-E 1.8.3 Interactive Output
-
 ```javascript
 // Your grouped variable here
 ```
+
+## Submission
+
+1. Create a **PR** (**pull request**) and use the provided content in the template to start it.
+2. Respond to your peers and comment on their work too.
+3. Submit the PR link in Moodle, when you're ready.

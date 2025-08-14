@@ -4,7 +4,16 @@
   Some content below is reused and modified from MDN Web Docs' <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/" target="_blank" rel="noopenner noreferrer">JavaScript Guide</a>.
 </p>
 
-The latest ECMAScript standard defines eight data types that are called **primitives**, i.e., the most basic units of data in the JS language:
+## Start Your GH Workflow
+
+Remember, before you start anything else, always follow this GH methodological workflow:
+
+1. Create meaningful **branch** that uses the agreed upon naming scheme: `CHP/x--name_of_chp`.
+2. Practice the iterative process to **commit** and **push** regularly with meaningful **commit messages**.
+
+## Overview
+
+The latest JS standard defines eight data types that are called **primitives**, i.e., the most basic units of data in the JS language:
 
 1. [**String**](https://developer.mozilla.org/en-US/docs/Glossary/String). A sequence of characters that represent a text value scoped by double quotes `""`. For example:
     ```javascript
@@ -56,3 +65,9 @@ Primitives enable you to perform fundamental data operations.
 ```javascript
 // Write your code in here
 ```
+
+## Submission
+
+1. Create a **PR** (**pull request**) and use the provided content in the template to start it.
+2. Respond to your peers and comment on their work too.
+3. Submit the PR link in Moodle, when you're ready.

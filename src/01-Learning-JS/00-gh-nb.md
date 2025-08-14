@@ -117,8 +117,8 @@ Techniques learned and practiced include:
           </pre>
     2. executes as actual JS code with a multiline block prefaced with `js`.
 3. **GH methodological workflow** specific to this class, which involves:
-    1. developing new work on a meaningful **branch** that uses the agreed upon naming scheme: `CHP/x--name_of_chp`.
+    1. Developing new work on a meaningful **branch** that uses the agreed upon naming scheme: `CHP/x--name_of_chp`.
     2. Practicing the iterative process to **commit** and **push** regularly with meaningful **commit messages**.
     3. Creating a **PR** (**pull request**) and use the provided content in the template to start it.
     4. Respond to your peers and comment on their work too.
-    5. Submit the PR link in Moodle, when ready.
+    5. Submit the PR link in Moodle, when you're ready.

@@ -1,13 +1,22 @@
 # 1.7 Dates & Time
 
 ```js
-// We'll cover this part in the D3.js section :-)
+// We'll cover what this code means in the D3.js section :-)
 import {utcParse,utcFormat} from "d3-time-format";
 ```
 
 <p class="cite_small">
   Some content below is reused and modified from <a href="https://tc39.es/proposal-temporal/docs/" target="_blank" rel="noopenner noreferrer">JavaScript's official API documentation</a>.
 </p>
+
+## Start Your GH Workflow
+
+Remember, before you start anything else, always follow this GH methodological workflow:
+
+1. Create meaningful **branch** that uses the agreed upon naming scheme: `CHP/x--name_of_chp`.
+2. Practice the iterative process to **commit** and **push** regularly with meaningful **commit messages**.
+
+## Overview
 
 **Dates and time** are very special types of data type in all programming languages. The datetime object is often tricky to use, change, transform, and "clean" in your data. So, we need to take an entire chapter to cover the basics, because there's no escaping them.
 
@@ -45,18 +54,33 @@ Let's practice making datetime objects with Temporal. Open your browser's consol
  *
  */
 
-const date = Temporal.Now.plainDateISO() // Gets the current date
-date.toString() // returns the date in ISO 8601 date format
+const dateNow = Temporal.Now.plainDateISO() // Gets the current date
 
-// If you additionally want the time:
-Temporal.Now.plainDateTimeISO().toString() // date and time in ISO 8601 format
+// If you additionally want the date AND time:
+const dateSuperNow = Temporal.Now.plainDateTimeISO()
 ```
 
-**Output**
+```js
+const dateSuperNow = Temporal.Now.plainDateTimeISO()
+```
 
-Make sure to review just how much information -- data -- is stored, as well as how many methods are available with every single Temporal object.
+Make sure to review just how much information -- ***data*** -- is stored, as well as how many methods are available with every single Temporal object.
 
-![](./../assets/images/1-js/temporal-now-1.png)
+<p class="codeblock-caption">
+  Output of <code>dateSuperNow</code> will change.
+</p>
+
+```js
+dateSuperNow
+```
+
+<p class="codeblock-caption">
+  Output of <code>dateSuperNow.dayOfYear</code> will change.
+</p>
+
+```js
+dateSuperNow.dayOfYear
+```
 
 ### `.toString()` Convert Temporal object to a String
 
@@ -65,6 +89,18 @@ If you additionally want the time, then you can chain methods by first using `.p
 ```javascript
 // date and time in ISO 8601 format
 const stringISODateTime = Temporal.Now.plainDateTimeISO().toString()
+```
+
+<p class="codeblock-caption">
+  If you refresh your browser, this output of <code>stringISODateTime</code> will change.
+</p>
+
+```js
+const stringISODateTime = Temporal.Now.plainDateTimeISO().toString()
+```
+
+```js
+stringISODateTime
 ```
 
 When I wrote this chapter, I assigned the following date and time data as a string to `stringDateTime`: `"2025-07-17T09:51:42.651"`. Here it is broken down by the chained methods to `Temporal.Now`:
@@ -259,62 +295,7 @@ Below, I have assigned a tiny sample of 4 randomly selected abridged entries fro
 2. `ballot_send_dt`: Date ballot sent to voter
 3. `ballot_rtn_dt`: Date ballot returned to NC
 
-Take a moment to review the data below and open your browser's console to see it logged there too.
-
-<!-- nc2024SampleVoters -->
-```javascript
-// Sample of 4 randomly selected abridged entries from NC November 2024 absentee voter data
-let nc2024SampleVoters = [
-  {
-    "race": "WHITE",
-    "ethnicity": "NOT HISPANIC or NOT LATINO",
-    "gender": "F",
-    "age": 33,
-    "ballot_req_type": "MAIL",
-    "ballot_request_party": "REP",
-    "ballot_req_dt": "10/23/2024",
-    "ballot_send_dt": "10/28/2024",
-    "ballot_rtn_dt": null,
-    "ballot_rtn_status": null
-  },
-  {
-    "race": "BLACK or AFRICAN AMERICAN",
-    "ethnicity": "UNDESIGNATED",
-    "gender": "F",
-    "age": 57,
-    "ballot_req_type": "MAIL",
-    "ballot_request_party": "DEM",
-    "ballot_req_dt": "09/14/2024",
-    "ballot_send_dt": "09/23/2024",
-    "ballot_rtn_dt": "10/28/2024",
-    "ballot_rtn_status": "SPOILED-EV"
-  },
-  {
-    "race": "WHITE",
-    "ethnicity": "NOT HISPANIC or NOT LATINO",
-    "gender": "M",
-    "age": 21,
-    "ballot_req_type": "MAIL",
-    "ballot_request_party": "UNA",
-    "ballot_req_dt": "09/19/2024",
-    "ballot_send_dt": "09/21/2024",
-    "ballot_rtn_dt": "10/24/2024",
-    "ballot_rtn_status": "ACCEPTED"
-  },
-  {
-    "race": "WHITE",
-    "ethnicity": "UNDESIGNATED",
-    "gender": "F",
-    "age": 32,
-    "ballot_req_type": "MAIL",
-    "ballot_request_party": "DEM",
-    "ballot_req_dt": "08/03/2024",
-    "ballot_send_dt": "09/24/2024",
-    "ballot_rtn_dt": null,
-    "ballot_rtn_status": "SPOILED-EV"
-  }
-]
-```
+Take a moment to review the data below in the interactive output.
 
 <!-- Assign nc2024SampleVoters -->
 ```js
@@ -369,34 +350,54 @@ let nc2024SampleVoters = [
     "ballot_rtn_status": "SPOILED-EV"
   }
 ]
-console.log(
-  "########################",
-  "\n## nc2024SampleVoters ##",
-  "\n########################\n",
-  nc2024SampleVoters
-)
 ```
 
-### E 1.7.1 - d3.utcParse(): Convert string dates to Date() objects
+<p class="codeblock-caption">
+  Interactive output of <code>nc2024SampleVoters</code>
+</p>
+
+```js
+nc2024SampleVoters
+```
+
+### E1. d3.utcParse(): Convert string dates to Date() objects
 
 **Goal**: Loop through the array of objects, `nc2024SampleVoters`, and save a converted version of the dates currently stored as Strings for `ballot_req_dt` to a Date() object. Save the newly converted Date() in the object with a new property with the key named `ballot_req_dt_obj`.
 
 Here are some tips to follow:
 
-1. **Read your data by logging it to the console**: When working with new data, one great first move, among more we'll learn later, is to read the data by importing it and printing it to the console.
-2. **Isolate interested parts of data**: If dates are important to the inquiry, remember that the dates are stored as `Strings` in the following format: `"10/24/2024"`, i.e., `"mm/dd/YYYY"`.
-    - **TIP**: Use your knowledge of looping lists, accessing objects properties with keys to indexes or looping to isolate.
+<div class="tip">
+  <ol>
+    <li><strong>Read your data</strong>: When working with new data, one great first move, among more we'll learn later, is to read the data by logging it to the web browser console. In Observable notebooks, we can simply output the variable of choice interactively to the page by placing it alone in a js codeblock like above.
+    <li><strong>Isolate interested parts of data</strong>: If dates are important to the inquiry, remember that the dates are stored as Strings in the following format: <code>"10/24/2024"</code>, i.e.,<code>"mm/dd/YYYY"</code>.
+    <li>Don't forget that you know how to iterate/loop through arrays, and you can access an object's property values with keys.
+  </ol>
+</div>
 
-<!-- E 1.7.1 -->
+<!-- E1 -->
 ```javascript
-// Write E 1.7.1 code here
+// Convert to js block and write E1 code here
 ```
 
-### E 1.7.2 - d3.utcFormat(): Convert & format Date() object to String
+```javascript
+// Convert to js block and output your updated nc2024SampleVoters here
+```
+
+### E2. d3.utcFormat(): Convert & format Date() object to String
 
 **Goal**: Loop through the updated array of objects, `nc2024SampleVoters`, with the Date() field. Save a converted and formatted version of `ballot_req_dt_obj` with the following date format: Wed., January 27, 1981.
 
-<!-- E 1.7.2 -->
+<!-- E2 -->
 ```javascript
-// Write E 1.7.2 code here
+// Convert to js block and write E2 code here
 ```
+
+```javascript
+// Convert to js block and output your updated nc2024SampleVoters here
+```
+
+## Submission
+
+1. Create a **PR** (**pull request**) and use the provided content in the template to start it.
+2. Respond to your peers and comment on their work too.
+3. Submit the PR link in Moodle, when you're ready.

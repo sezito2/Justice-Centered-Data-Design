@@ -1,5 +1,14 @@
 # 1.4 Conditionals
 
+## Start Your GH Workflow
+
+Remember, before you start anything else, always follow this GH methodological workflow:
+
+1. Create meaningful **branch** that uses the agreed upon naming scheme: `CHP/x--name_of_chp`.
+2. Practice the iterative process to **commit** and **push** regularly with meaningful **commit messages**.
+
+## Overview
+
 By now, I hope you can see how writing code is a lot like writing a list of detailed instructions to the computer, telling it what you want it to do with the data.
 
 Most of the time you will be asking the computer to perform certain tasks if certain conditions are met. For example:
@@ -388,3 +397,9 @@ person1['profession'] = "student"
 ```js
 // Your code here
 ```
+
+## Submission
+
+1. Create a **PR** (**pull request**) and use the provided content in the template to start it.
+2. Respond to your peers and comment on their work too.
+3. Submit the PR link in Moodle, when you're ready.

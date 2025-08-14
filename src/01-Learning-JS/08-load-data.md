@@ -4,6 +4,15 @@
   Some content below is reused and modified from Observable Framework's documentation page about the <a href="https://observablehq.com/framework/files" target="_blank" rel="noopenner noreferrer">FileAttachment()</a> function</a>.
 </p>
 
+## Start Your GH Workflow
+
+Remember, before you start anything else, always follow this GH methodological workflow:
+
+1. Create meaningful **branch** that uses the agreed upon naming scheme: `CHP/x--name_of_chp`.
+2. Practice the iterative process to **commit** and **push** regularly with meaningful **commit messages**.
+
+## Overview
+
 Thus far, we've been working with data declared and instantiated within the notebook itself. Yet, often is the case that we will be working with data sets that we save and load from the `data` folder.
 
 Let's learn how about common standard data formats, as well as how to load these files, so we can use a variety of data sets.
@@ -71,8 +80,8 @@ const data = FileAttachment("./../relative/path/to/data.csv")
 
 If loaded successfully, the following properties of the variable are available in addition to the data:
 
-- `name` - the file’s name (such as `rdu-forum-board.json`)
-- `mimeType` - MIME type (such as application/json),
+- `name` - the file’s name (such as `data.csv`)
+- `mimeType` - MIME type (such as text/csv),
 - `lastModified` - modification time (in milliseconds since epoch), and
 - `size` - size in bytes.
 
@@ -207,19 +216,24 @@ If you wish to read about them, see Observable Framework's "[Data loaders](https
 
 **Goal**: Load a data file and demonstrate your ability to access its properties and data values.
 
-<p class="note">Remember to convert all of the <code>javascript</code> codeblocks to executable <code>js</code> codeblocks.
+### E1. Load a CSV file
 
-### E 1.8.1 - Load a CSV file
+Load the following CSV file: `src/data/s4sj/s4sj-3.1-clients-names-num-children.csv`
 
-1. Attach the `.csv` file in the first codeblock and assign it to a meaningful variable name.
-2. In the second codeblock, log the following properties to the console: name and size.
-3. Still in the second codeblock, log the first object in the Array to the console.
-4. Don't forget to go through the GH/PR process.
+1. In the first codeblock, attach the `.csv` file and assign it to a meaningful variable name.
+2. In the second codeblock, use `console.log()` to log the following properties to the console: `.name` and `.size`.
+3. Still in the second codeblock, add a second `console.log()` and log the first object in the Array to the console.
 
 ```javascript
 // Your FileAttachment() code goes here
 ```
 
 ```javascript
-// Your other code with the variable goes here
+// Your other code with your variable goes here
 ```
+
+## Submission
+
+1. Create a **PR** (**pull request**) and use the provided content in the template to start it.
+2. Respond to your peers and comment on their work too.
+3. Submit the PR link in Moodle, when you're ready.

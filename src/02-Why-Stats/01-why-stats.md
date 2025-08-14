@@ -1,6 +1,15 @@
 # 2.1-Why Statistics Are Important [to TPC]
 
-The *Statistics for Social Justice* book (S4SJ) is written directly to and for social workers—not TPC. However, throughout this course, I am asking you to translate concerns, issues, situations, and methods that you recognize as potentially overlapping and similar with TPC professionals or even be inspired to invent different and new issues and methods for TPC.
+## Start Your GH Workflow
+
+Remember, before you start anything else, always follow this GH methodological workflow:
+
+1. Create meaningful **branch** that uses the agreed upon naming scheme: `CHP/x--name_of_chp`.
+2. Practice the iterative process to **commit** and **push** regularly with meaningful **commit messages**.
+
+## Overview
+
+The *Statistics for Social Justice* book (S4SJ) is written directly to and for social workers—not TPC. However, throughout this course, I am asking us to translate concerns, issues, situations, and methods that we recognize as potentially overlapping and similar with TPC professionals or even be inspired to invent different and new issues and methods for TPC.
 
 The first three readings set us down this inventive path for the future of TPC professionals to take up more data-driven, structural approaches to our work, ***or what could be our work***! Here's a basic rationale and use for each of the readings in the context of this course:
 
@@ -55,7 +64,7 @@ Your_response_here
 
 ### 2.2. Why an SJ ethic?
 
-**Question**: Why do Lindgren, Gerdes, and Lawrence position a SJ ethic as essential to the future of TPC? What types of problems does it help TPC tackle?
+**Question**: Why do Lindgren, Gerdes, and Lawrence position a "SJ ethic" as essential to the future of TPC? What types of problems does it help TPC tackle?
 
 Your_response_here
 
@@ -83,3 +92,9 @@ Your_response_here
 **Question**: After considering all three of these texts -- their exigencies, propositions, and methods -- translate Mullaly's broader definition of the *structural approach* and Moreau's *practice methods* in social work into our domain of TPC by putting them into conversation with Lindgren, Gerdes, and Lawrence's SJ ethic and Graham et al's statistical genre analysis. In other words, develop a TPC structural perspective and set of practices that translates Moreau's 5 practices. Finaly, add one new practice approach specific to TPC.
 
 Your_response_here
+
+## Submission
+
+1. Create a **PR** (**pull request**) and use the provided content in the template to start it.
+2. Respond to your peers and comment on their work too.
+3. Submit the PR link in Moodle, when you're ready.

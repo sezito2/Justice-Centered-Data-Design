@@ -77,17 +77,11 @@ export default {
           name: "2.1 Why Stats?",
           path: "/02-Why-Stats/01-why-stats"},
         {
-          name: "2.2 Frequency Distributions",
-          path: "/02-Why-Stats/02-freq-dist"},
+          name: "2.2 Creating Frequency Distributions",
+          path: "/02-Why-Stats/02-freq-dist-create"
+        },
       ]
     },
-    // {
-    //   name: "X. Coding in Observable",
-    //   open: false,
-    //   pages: [
-    //     {name: "Marks", path: "/XX-Learning-Observable/xx-marks"},
-    //   ]
-    // },
   ],
 
   // Content to add to the head of the page, e.g. for a favicon:

@@ -4,6 +4,15 @@
   Some content below is reused and modified from MDN Web Docs' <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/" target="_blank" rel="noopenner noreferrer">JavaScript Guide</a>.
 </p>
 
+## Start Your GH Workflow
+
+Remember, before you start anything else, always follow this GH methodological workflow:
+
+1. Create meaningful **branch** that uses the agreed upon naming scheme: `CHP/x--name_of_chp`.
+2. Practice the iterative process to **commit** and **push** regularly with meaningful **commit messages**.
+
+## JavaScript Overview
+
 JavaScript (JS) is a cross-platform, object-oriented scripting language used to make webpages interactive (e.g., having complex animations, clickable buttons, popup menus, etc.). There are also more advanced server side versions of JS such as Node.js, which allow you to add more functionality to a website than downloading files (such as realtime collaboration between multiple computers). Overall, JS helps you create and select digital objects on the web, so you can programmatically change what they do and look like.
 
 Computers have been programmed to interpret the source text of JS by parsing JS code from left to right and converting the text into a sequence of input elements, such as predefined and protected names for tokens, control characters, line terminators, comments, or whitespace, (e.g., spaces, tabs, and newline characters).
@@ -214,3 +223,9 @@ console.log(
 ## Conclusion
 
 Comments, declarations, intitialization, and variables help us start our reading and writing journey with JS. Let's take the next step by learning some types of data formats that we can assign to declared and initialized variables.
+
+## Submission
+
+1. Create a **PR** (**pull request**) and use the provided content in the template to start it.
+2. Respond to your peers and comment on their work too.
+3. Submit the PR link in Moodle, when you're ready.
