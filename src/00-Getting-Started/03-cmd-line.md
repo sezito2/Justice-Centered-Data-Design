@@ -115,6 +115,17 @@ To access the command line from a Chromebook, you first need to turn on Linux (B
 | `grep` "search term" *filename* or *directory-name*       |      search for lines that include search term in file                                                                                                     | `findstr` "search term" *filename*                                                                 |
 | `curl -O` *url*            | **get**, a file from the **w**eb                                                                          | `wget` *url* `-OutFile` *new-filename*                                               |
 
-<!-- ## Web Console
+## Submission
 
-JS is a language born from the web. It was designed originally to handle dynamic interactions experienced in the web browser. Because JS was such a foundational language for web browsers, people developed a built-in tool for web browsers called the **console**. -->
+On Moodle, submit an image of a screenshot showing your command of the command line.
+
+Make sure the screenshot shows how you demonstrate the following actions:
+
+1. Change directories/folder to somewhere like `Documents` on your local computer.
+2. Inside of this directory,
+    1. Make a new directory/folder called `Command`.
+    2. Change the directory into `Command`.
+    3. Inside `Command`, make another new directory/folder called `Prompt`.
+    4. Change the directory into `Prompt`
+    5. Inside of `Prompt`, create a new file called `here.md`
+3. In one change of directory, go back to the original folder like the example's `Documents`.
