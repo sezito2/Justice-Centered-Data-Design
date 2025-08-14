@@ -38,6 +38,8 @@ Not a problem! This course assumes you know nothing, emphasizes underlying princ
 
 Also not a problem! This course assumes you know nothing and walks through the fundamentals of data collection, processing, and analysis techniques through applied cases and reflections.
 
+We will also take time during class to review the materials and exercises together.
+
 ## Major Assignments
 
 ### Applied Lessons / Responses (45%)
@@ -47,7 +49,7 @@ Also not a problem! This course assumes you know nothing and walks through the f
 - **Deliverable**: Completed activity in Observable textbook.
 - **Points**: 5-15 per activity
 
-**Description**: Enter description.
+**Description**: We will be learning lots of new skills, so it is imperative that we practice, practice, practice. These weekly or daily exercises integrate new ideas and skills into your repertoire. They will typically be submitted via a Github link to your "pull request" on Moodle. Some exercises are worth more than others, due to their difficulty.
 
 ### Participation (15%)
 
@@ -56,15 +58,22 @@ Also not a problem! This course assumes you know nothing and walks through the f
 - **Deliverable**: Reflective memo
 - **Points**: 15 per memo
 
-**Description**: Enter description.
+**Description**: Rationalize your participation grade with supporting evidence from your engagement in this course. You will also reflect on the experience by providing some basic feedback for me to consider.
 
 ### Final: Data Design (40%)
 
 - **Due**: Monday, December 8th.
 - **Individual or Group**: Group
-- **Points**: 100
+- **Deliverables**:
+    1. 100 points - Observable Framework data app
+    2. 50 points - Project management via GH workflow and Google Sheet Project Tracker
+- **Points**: 150
 
-**Description**: Enter description.
+**Description**: In a group, your team will create a professional scenario with an existing public dataset and apply the techniques that we learned throughout the course to accomplish your set out goals with the data. You will create a new Observable Framework data app that demonstrates the following:
+
+1. Appropriate choice of analysis techniques.
+2. Appropriate use of visuals and tables to highlight certain points to your scenarios audience.
+3. Reflection page that discusses the benefits and limitations of the data in your problem scenario, as well as what data would be needed to redress or understand any other issues. Finally, it asks what next steps you envision for TPC to continue this work in this domain.
 
 ## Who developed this course?
 
