@@ -21,7 +21,7 @@ Due to the situation described above, we will achieve the following learning obj
 
 1. Explain the justice-turn in TPC in relation to data and empiricism;
 2. Demonstrate foundational statistical analysis techniques through applied anti-oppressive cases;
-3. Learn foundational coding, data, and visualization techniques using the JavaScript-based Observable Framework.
+3. Learn foundational coding, data, and visualization techniques within the context of Observable Framework.
 4. Apply a justice-centered approach to critique and reimagine an existing dataset.
 
 We will learn and apply integral theories about data and power via accompanying case studies and hands-on tutorials to help you learn fundamental approaches to finding, collecting, analyzing, and reporting data-driven stories about opaque social-technical systems.
@@ -39,6 +39,22 @@ Not a problem! This course assumes you know nothing, emphasizes underlying princ
 Also not a problem! This course assumes you know nothing and walks through the fundamentals of data collection, processing, and analysis techniques through applied cases and reflections.
 
 We will also take time during class to review the materials and exercises together.
+
+### Work Load
+
+Students should expect to spend an average of 6 hours per week on this 3-credit course, outside of our regularly scheduled class.
+
+## Texts
+
+All readings available via Moodle.
+
+## Technologies
+
+All technologies are free.
+
+- VS Code Editor
+- Github account and Github Desktop application
+- Other programming language technologies as we move forward
 
 ## Major Assignments
 
