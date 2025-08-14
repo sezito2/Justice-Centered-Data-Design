@@ -20,7 +20,7 @@ Data design is TPC because it is highly concerned with people (audience), goals 
 Due to the situation described above, we will achieve the following learning objectives, so TPC is better prepared to actively and confidently advocate for those who are not represented, misrepresented, and actively being harmed by data-driven science, engineering, and business strategies:
 
 1. Explain the justice-turn in TPC in relation to data and empiricism;
-2. Demonstrate foundational statistical analysis techniques through applied anti-oppressive cases;
+2. Demonstrate foundational statistical analysis techniques through applied cases, e.g., exploratory data analysis and textual analysis;
 3. Learn foundational coding, data, and visualization techniques within the context of Observable Framework.
 4. Apply a justice-centered approach to critique and reimagine an existing dataset.
 
