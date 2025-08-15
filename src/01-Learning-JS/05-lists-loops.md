@@ -40,7 +40,7 @@ Let's check out the data type of `Array`.
 names
 ```
 
-Notice some of the features  about the Array data type that you can review in the console:
+Notice some of the features about the `Array` data type that you can review in the console:
 
 - Defines the position of each value in the list: 0-3.
 - Length of the array, i.e., the number of items in the list: 4.
@@ -61,9 +61,6 @@ let agesUgly = [28, 19, "60", 30]
 <!-- Executable js codeblock -->
 ```js
 let ages = [28, 19, 60, 30]
-
-// While not a good practice to mix data types,
-// here's an example where "60" is not a Number, but a String.
 let agesUgly = [28, 19, "60", 30]
 ```
 
@@ -363,9 +360,9 @@ You have the choice about which for loop to use: `for...in` vs. `for...of`. You 
 Let's use the following array lists for these exercises.
 
 ```javascript
-let professions = ['married', 'laborer', 'widow', 'laborer', ]
-let childStatus = ['Child Alana 10 days', 'Catherine 2 mos', '', 'Charles Riley afed 10 days' ]
-let sex = ['f', 'm', 'f', 'm', 'i']
+let professions = ["married", "laborer", "widow", "laborer", ]
+let childStatus = ["Child Alana 10 days", "Catherine 2 mos", "", "Charles Riley afed 10 days" ]
+let sex = ["f", "m", "f", "m", "i"]
 ```
 
 <ul class="note">
@@ -374,67 +371,105 @@ let sex = ['f', 'm', 'f', 'm', 'i']
 </ul>
 
 ```js
-let professions = ['married', 'laborer', 'widow', 'laborer', ]
-let childStatus = ['Child Alana 10 days', 'Catherine 2 mos', '', 'Charles Riley afed 10 days' ]
-let sex = ['f', 'm', 'f', 'm', 'i']
+let professions = ["married", "laborer", "widow", "laborer", ]
+let childStatus = ["Child Alana 10 days", "Catherine 2 mos", "", "Charles Riley afed 10 days", "" ]
+let sex = ["f", "m", "f", "m", "i"]
 ```
 
-### E 1.5.1
+### E1. Removing an item from an Array
 
-**Goal**: Using a for loop and a conditional statement, remove the second item in the list `professions`.
+**Goal**: Use a `for...in` loop and a conditional statement to create a new array `lessProfessions` that does not have the second item, `"laborer"` in the list `professions`.
 
 **Remember that the index begins with 0!**.
+
+<p class="codeblock-caption">
+  Interactive output of the array of <code>professions</code>
+</p>
+
+```js
+professions
+```
 
 For this first exercise, I'll provide you with the basic structure:
 
 ```javascript
+// Declare new and freshly empty array in which to push new items
+let lessProfessions = []
 for () {
   if () {
-    console.log()
+    // Do something in here
   }
 }
 ```
 
-### E 1.5.2
+<p class="codeblock-caption">
+  Interactive output of the array of <code>lessProfessions</code>
+</p>
 
-**Goal**: Add the item "spinster" to your `professions` list, then print the list.
+```javascript
+// Convert me to output `lessProfessions`
+lessProfessions
+```
+
+### E2. Push/add a new profession to an array
+
+**Goal**: Add a new profession as a String, `"spinster"`, to your `professions` list, then log it to the web console.
+
+```javascript
+// Convert and code here
+```
+
+<p class="codeblock-caption">
+  Interactive output of the array of <code>lessProfessions</code>
+</p>
+
+```javascript
+// Convert me to output `professions`
+professions
+```
+
+### E3. Loop through an array and log to the console
+
+**Goal**: Make a `for` loop that considers each item in the `professions` array and logs "Person's profession is ___", which "___" should be the profession from the array.
+
+```javascript
+// Convert and code here
+```
+
+### E4. More conditional pushing with `for...of`
+
+**Goal**: Create a new array and populate, i.e., push all items from the `childStatus` array, except for any empty Strings. Use a `for...of` loop to do so.
 
 ```javascript
 // Your code here
 ```
 
-### E 1.5.3
+### E5. Conditional logging
 
-**Goal**: Make a `for` loop that considers each item in the `professions` list and prints "Person's profession is ___"
-
-```javascript
-// Your code here
-```
-
-### E 1.5.4
-
-**Goal**: Remove the fourth item in the `childStatus` list.
+**Goal**: Make a `for` loop that considers each item in the `childStatus` list. Log `"Person has child"` ***if*** the person has a child ***and*** `"Person does not have child"` ***if not***. Use `.length` in your conditional statement to enact this logging.
 
 ```javascript
 // Your code here
 ```
 
-### E 1.5.5
+Make sure you check to see if the correct language has been logged to the web console.
 
-**Goal**: Make a `for` loop that considers each item in the `childStatus` list. Print "Person has child" ***if*** the person has a child ***and*** "Person does not have child" ***if not***.
+### E6. Push a new item
 
-```javascript
-// Your code here
-```
-### E 1.5.6
+**Goal**: Add a new String to the list `sex` called `"unknown"`. Output it to the page.
 
-**Goal**: Add an item to the list `sex` called "unknown".
+For your reference, here's the original declaration and instantiation of `sex`: `let sex = ["f", "m", "f", "m", "i"]`.
 
 ```javascript
-// Your code here
+// Convert and code here
 ```
 
-### E 1.5.7
+```javascript
+// Convert and output here
+sex
+```
+
+### E7. More looping and conditional practice
 
 **Goal**: Make a `for` loop that considers each item in the `sex` list. Log "Person is male" ***if*** the person is `"m"`, "Person is female" ***if*** the person is `"f"`, "Person is intersex" ***if*** the person is `"i"`, and "Person's sex is not known" ***if*** `"unknown"`.
 
@@ -442,20 +477,24 @@ for () {
 // Your code here
 ```
 
-### E 1.5.8 - .map() with conditions
+Make sure to check if the items are logged correctly.
 
-**Goal**: From the array `sex = ['f', 'm', 'f', 'm', 'i']`, use .map() to create a new array called `sexFullTerm`, wherein each item uses the full term. Specifically, each instance of `"f"` becomes `"female"`, each `"m"` becomes `"male"`, and each `"i"` becomes `"intersex"`.
+### E8. Using `.map()` with conditions
 
-Since this is your first big use of .map(), I'll give you the skeleton of the expression:
+**Goal**: From the array `sex`, use `.map()` to create a new array called `sexFullTerm`, wherein each item pushed to the new array uses the full term. Specifically, each instance of `"f"` becomes `"female"`, each `"m"` becomes `"male"`, and each `"i"` becomes `"intersex"`.
+
+Since this is your first big use of `.map()`, I'll give you the skeleton of the expression:
 
 ```javascript
 // Skeleton of .map()
-let sexFullTerm = sex.map((sexItem) => {
-  // Enter your code in here,
-  // which will include conditional statements.
-  // Also, be sure to use return statements
-  // where appropriate!
-})
+let sexFullTerm = sex.map(
+  (sexItem) => {
+    // Enter your code in here,
+    // which will include conditional statements.
+    // Also, be sure to use `return` statements
+    // where appropriate!
+  }
+)
 ```
 
 ## Submission
