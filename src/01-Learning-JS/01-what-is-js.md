@@ -173,7 +173,7 @@ We can infer from the above examples that variables are meaningful names for val
 
 There are other conventions and rules, but we don't need to belabor them right now.
 
-## Exercise
+## E1. Writing Comments + Variable Declaration Scope & Naming
 
 **Goal**: Practice writing inline and multiline comments, while practicing declaring variables and naming variables.
 
@@ -181,6 +181,9 @@ There are other conventions and rules, but we don't need to belabor them right n
 2. Declare and name a series of variables that pertain to your favorite foods by completing the prompts in the block.
 3. Use the correct set of variable types — `var`, `let`, and/or `const` — to ensure that whatever variable name replaces `_faveFood1_` changes within the scope of the `if () {...}` conditional.
 4. Note how the code already prints out to the console with `console.log()`, so check your work as you go by opening the browser console with the **Inspect Element** tool.
+    <video controls style="width: 620px; height:620px">
+      <source src="../assets/vids/01-js/01-web-console.mp4" type="video/mp4" />
+    </video>
 
 ```javascript
 // Convert this into a multiline comment
@@ -189,11 +192,18 @@ There are other conventions and rules, but we don't need to belabor them right n
 // each set of info should be on a new line.
 
 /**
- * Replace the value in-between the
- * double quotes for each variable below
- * with your favorite foods listed above.
- * Example:
- * "Enter_#1_Favorite_Food_Here" --> "Pizza"
+ * 1. Replace the value in-between the
+ *    double quotes for each variable below
+ *    with your favorite foods listed above.
+ *      Example:
+ *      "Enter_#1_Favorite_Food_Here" --> "Pizza"
+ *
+ * 2. Rename the variable names, (e.g., _faveFood1_),
+ *    appropriately with camelCase scheme.
+ *
+ * 3. Replace all "___" with the declaration type
+ *    that will make sure each favorite food is
+ *    logged to the correct place in the console.
 **/
 ___ _faveFood1_ = "Enter_#1_Favorite_Food_Here"
 ___ _faveFood2_ = "Enter_#2_Favorite_Food_Here"
@@ -205,7 +215,8 @@ console.log(
 )
 
 if (_faveFood2_.length > 0) {
-  ___ _faveFood1_ = "Enter_#1_Favorite_Food_Here"
+  // Redeclare _faveFood1_ within this scope only
+  ___ _faveFood1_ = "Enter__NEW__#1_Favorite_Food_Here"
 
   console.log(
     "jk! ",
@@ -227,5 +238,5 @@ Comments, declarations, intitialization, and variables help us start our reading
 ## Submission
 
 1. Create a **PR** (**pull request**) and use the provided content in the template to start it.
-2. Respond to your peers and comment on their work too.
+2. Respond to 1-2 questions or ideas from at least one of your peers.
 3. Submit the PR link in Moodle, when you're ready.
