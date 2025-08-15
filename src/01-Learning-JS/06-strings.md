@@ -160,10 +160,13 @@ If you review the String, you will notice how there are section breaks represent
 ```
 
 ```javascript
-// Convert me to a js block and complete #4
+// Convert me to output the grand finale!
+vonnegutNoSBDQ
 ```
 
-Ok, those chains were ridiculous, right? Below, complete the same outcome, but use a `for...loop` to accomplish the aim instead. Assign it to a new variable called `vonnegutNoPuncs`.
+### E3. Same thing, but better method with a for loop
+
+Ok, those chains were ridiculous, right? Below, complete the same outcome, but use a `for...of` loop to accomplish the aim instead. Assign it to a new variable called `vonnegutNoPuncs`.
 
 <p class="tip">
   Put those desired marks to replace in an Array. You will also need to write a conditional statement to handle the <code>--</code> differently.
@@ -177,7 +180,7 @@ Ok, those chains were ridiculous, right? Below, complete the same outcome, but u
 // Convert me and output the new string, vonnegutNoPuncs, here
 ```
 
-### E3. Split the String into an Array of Strings
+### E4. Split the String into an Array of Strings
 
 Sometimes, we need to isolate parts of a text for analysis by splitting it into meaningful units for analysis. One such unit is at the per word level. While we definitely would need to process our short story more, we can begin to see how we can easily convert our short story into an array of strings that indeed are at the per word level.
 
@@ -191,7 +194,7 @@ Create an array of strings of Vonnegut's story as a new variable called `vonnSpl
 // Convert me to a js block and output `vonnSplit`
 ```
 
-### E4. Create array of all hyphenated words
+### E5. Create array of all hyphenated words
 
 Ok, last exercise! Complete the following steps to create a new array that only includes hyphenated words.
 
