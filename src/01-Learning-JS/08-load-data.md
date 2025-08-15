@@ -218,9 +218,10 @@ If you wish to read about them, see Observable Framework's "[Data loaders](https
 
 ### E1. Load a CSV file
 
-Load the following CSV file: `src/data/s4sj/s4sj-3.1-clients-names-num-children.csv`
+Load the following CSV file: `nc_absentee_mail_2024.csv`.
 
 1. In the first codeblock, attach the `.csv` file and assign it to a meaningful variable name.
+    <p class="tip">You're going to need to write a relative path here!</p>
 2. In the second codeblock, use `console.log()` to log the following properties to the console: `.name` and `.size`.
 3. Still in the second codeblock, add a second `console.log()` and log the first object in the Array to the console.
 
@@ -231,6 +232,8 @@ Load the following CSV file: `src/data/s4sj/s4sj-3.1-clients-names-num-children.
 ```javascript
 // Your other code with your variable goes here
 ```
+
+Make sure that you verify the logs are there!
 
 ## Submission
 
