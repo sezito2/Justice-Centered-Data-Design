@@ -54,7 +54,7 @@ The latest JS standard defines eight data types that are called **primitives**, 
 
 Primitives enable you to perform fundamental data operations.
 
-## 1.2 Exercise
+## E1. Create a Suite of Primitives
 
 1. Convert the `javascript` codeblock to an executable block with the `js`.
 2. Declare and initialize your own suite of primitives (1-6) from an above: String, Number, Boolean, null, undefined, and Object.
