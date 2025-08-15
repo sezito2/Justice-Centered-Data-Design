@@ -30,7 +30,7 @@ You can read more about the controversy in ["The Schism at the Heart of the Open
 
 ## 0.1.5 Anatomy of a GitHub Page
 
-<img src="../assets/images/getting-started/GitHub-Anatomy.png" />
+![](../assets/images/0-gs/gh-anatomy.png)
 
 ## 0.1.6 Install git
 
@@ -58,6 +58,12 @@ GH Desktop is a nice GUI for git/Github technology. Github Desktop will allow us
 2. Click download, since it should know which OS you're using, and
 3. Follow the instructions.
 
-## 0.1.8 Practice using Github
+## 0.1.8 Install VS Code
 
-To learn how to start working with a GitHub repository, proceed to [Fork and clone a repo](./02-Fork-and-Clone-Course-Repo)
+Before we start using Github, let's download and install a code editor: Visual Studio Code.
+
+Microsoft owns VS Code, but it is free to download and use.
+
+## Submission
+
+Nothing yet. We are going to practice using Github in the next chapter. Then, you will submit some verification that you have indeed downloaded, installed, and practiced using VS Code and Github Desktop.
