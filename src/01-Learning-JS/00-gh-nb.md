@@ -89,16 +89,16 @@ Here's that process again for you:
 6. After you complete a section of a chapter, push your changes to the correct branch for that chapter of work.
 7. When the chapter is complete, make sure all of the changes are committed and pushed to the branch. When such changes are complete, create a pull request (PR) with the class template for all PRs for the textbook, which can be found at the following location in the repo: `/TEMPLATE-PR.md`.
 
-## E 1.0 Practice GH Methodology
+## E1. Practice GH Methodology
 
 **Goal**: For this exercise, we're keeping the additional content simple, so we can focus on the GH methodology noted above. So, to make some changes to this chapter, complete the following tasks:
 
-1. Enter the name of the branch for this chapter.
-2. Add a Markdown image below that renders a screenshot proving that you know how to open your terminal in VSC and start the localhost liveserver with the `yarn dev` command.
-
-**Chapter Branch Name**: `CHP/x--name_of_chp`
-
-ENTER_IMG_HERE
+1. Create a multiline JS codeblock that renders to the page with the "javascript" keyword after the first 3 backticks.
+2. Inside the "javascript" codeblock, add the following text `// I will show up on the page`.
+    - **NOTE**: This codeblock should render on the locally hosted page.
+3. Create another multiline JS codeblock that is executable by using the "js" keyword after the first 3 backticks.
+4. Inside the "js" codeblock, add the following text `console.log("I do NOT show up on the page")`.
+    - **NOTE**: This codeblock should NOT render on the locally hosted page. I'll show where to find it in class. `:-)`
 
 ## Conclusion
 
