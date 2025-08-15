@@ -82,11 +82,13 @@ For example, it doesn't make sense to write a function that converts dates in yo
 
 Overall keep that rule-of-thumb in mind as you practice writing functions.
 
-## 1.9.6 Exercises
+## Exercises
 
 <p class="note--data">
   For our exercises, we will again use the randomly generated sample of 20000 <strong>absentee</strong> NC voter data from the 2024 election cycle. The original set has over 468000 rows, so I reduced it to a smaller number to balance computational performance without forsaking much of the distribution of the full dataset. The data has been anonymized.
 </p>
+
+## E1. Attach the dataset
 
 Use D3.js `FileAttachment()` method below in VS Code. Remember that you'll need to write a relative path as a String parameter that helps the computer find where the CSV file is in relation to this particular page's file in the project tree.
 
@@ -95,7 +97,7 @@ Use D3.js `FileAttachment()` method below in VS Code. Remember that you'll need 
 // Convert to `js` codeblock and attach sampled NC voter data file: nc_absentee_mail_2024_n20000.csv
 ```
 
-## E1. Convert String dates to Date() objects
+## E2. Convert String dates to Date() objects
 
 **Goal**: Write a function that accepts any array of objects that can convert any of its String date fields to Date() objects as a new property in the object.
 
@@ -115,13 +117,15 @@ Now, code!
 // Your use of the function code goes here
 ```
 
-E1 Interactive Output
+<p class="codeblock-caption">
+  E1 Interactive Output
+</p>
 
 ```javascript
-// Your output variable here
+// Convert and output variable here
 ```
 
-## E2. Create Your Own Function (with Conditions)!
+## E3. Create Your Own Function (with Conditions)!
 
 **Goal**: Write your own function using the 2024 absentee NC voter data. The only condition is to include conditions. `:-)`
 
@@ -141,7 +145,9 @@ Now, code!
 // Your use of the function code goes here
 ```
 
-E2 Interactive Output
+<p class="codeblock-caption">
+  E2 Interactive Output
+</p>
 
 ```javascript
 // Your output variable here
