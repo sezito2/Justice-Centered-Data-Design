@@ -122,3 +122,7 @@ Techniques learned and practiced include:
     3. Creating a **PR** (**pull request**) and use the provided content in the template to start it.
     4. Respond to your peers and comment on their work too.
     5. Submit the PR link in Moodle, when you're ready.
+
+## Submission
+
+Submit the PR link in Moodle, when you're ready.
