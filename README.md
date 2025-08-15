@@ -2,27 +2,19 @@
 
 This repo serves as a computational textbook for ENGLISH (ENGL) 498 - Justice-Centered Data Design, which is created and taught by Dr. Chris Lindgren.
 
-Course Description: enter_here.
-
-## Textbook Table of Contents
-
-0. Getting Started
-1. Defining Socially Just Data
-2. Methods &amp; Methodologies
-3. Collecting Data
-    1. What topics?
-
 ## How to Use / Getting Started
 
 This is an [Observable Framework](https://observablehq.com/framework/) app. Follow the below setup to get this project running locally on your computer.
 
 ### 1. Install dependencies
 
-To install the required *dependencies* defined in [package.json](./package.json), run:
+To install the required *dependencies* defined in [package.json](./package.json),
 
-```
-yarn install
-```
+1. Open a Terminal in VS Code.
+2. In your Terminal, run:
+    ```
+    yarn install
+    ```
 
 ### 2. Start local server
 
@@ -36,7 +28,7 @@ yarn dev
 
 Visit <http://localhost:3000> to preview your app.
 
-For more, see <https://observablehq.com/framework/getting-started>.
+For more information about Observable Framework in general, see their [Getting Started](https://observablehq.com/framework/getting-started) page.
 
 ## Project structure
 
