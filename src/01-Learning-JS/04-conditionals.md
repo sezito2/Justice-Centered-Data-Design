@@ -162,7 +162,7 @@ let person1Gender = 'f'
 let person1ChildStatus = 'Child Alana 10 days'
 ```
 
-### E 1.4.1
+## E1
 
 Write an `if` statement that reports whether `person1Age` is less than 30 years old.
 
@@ -178,7 +178,7 @@ if () {
 // Your code here
 ```
 
-### E 1.4.2
+## E2
 
 Write an `if` statement that reports whether `person1Profession` is `"married"`.
 
@@ -188,7 +188,7 @@ Use the following console log, when the condition is `true`: `console.log("Perso
 // Your code here
 ```
 
-### E 1.4.3
+## E3
 
 Write an `if` statement that reports whether `person1Age` is less than 30 years old *and* `person1Profession` is "married".
 
@@ -198,7 +198,7 @@ Use the following console log, when the condition is `true`: `console.log("Perso
 // Your code here
 ```
 
-### E 1.4.4
+## E4
 
 Ok, let's add some more variables:
 
@@ -231,7 +231,7 @@ Use the following console logs:
 // Your code here
 ```
 
-### E 1.4.5 - ELSE IF time!
+## E5 - ELSE IF time!
 
 Ok, even more variables!
 
@@ -265,7 +265,7 @@ Use the following console logs:
 // Your code here
 ```
 
-### E 1.4.6 - Conditional with numbers and an object!
+## E6 - Conditional with numbers and an object!
 
 Ok, let's add more information, but let's use an object with properties, since that's usually more appropriate than strung out simple variables.
 
@@ -293,7 +293,7 @@ Use the following console log, when `if` is `true`: `console.log('Person has chi
 // Your code here
 ```
 
-### E 1.4.7
+## E7
 
 Write a single `if` statement that will accurately report whether `childrenTotal['person1']` has any children. Then, another `if` that will accurately report if `childrenTotal['person2']` has children.
 
@@ -315,7 +315,7 @@ if (childrenTotal['person2']) {
 // Your code here
 ```
 
-### E 1.4.8
+## E8
 
 Finally, write a conditional that will report whether `person1['profession']` is `"married"`, `"laborer"`, `"widow"`, or `"unknown profession"`.
 
@@ -348,7 +348,7 @@ let person1 = {
 // Your code here
 ```
 
-#### Change to laborer
+### E8.1 Change to laborer
 
 It should print out the laborer profession.
 
@@ -373,7 +373,7 @@ person1['profession'] = "laborer"
 // Your code here
 ```
 
-#### Change to student
+### E8.2 Change to student
 
 It should print out the unknown profession.
 
