@@ -63,6 +63,7 @@ Why learn JavaScript within the context of Observable Framework? Because JS is f
 
 Before moving onto the next section, respond to the following questions in the Moodle assignment for this chapter (0.0):
 
-- What are data apps?
-- What are your prior experiences with data apps and data in general?
-- What is Observable Framework and its main affordances?
+1. What are data apps?
+2. What are your prior experiences with data apps and data in general?
+3. What is Observable Framework and its main affordances?
+4. What do you understand -- at this moment -- as the main goals of TPC? Where might data-driven work and OF fit into those goals?
