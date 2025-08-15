@@ -30,6 +30,8 @@ You can read more about the controversy in ["The Schism at the Heart of the Open
 
 ## 0.1.5 Anatomy of a GitHub Page
 
+Below is a breakdown of a repository's page on the Github hosted web version. This interface online enables you to see the shared version hosted by Github's remote servers. By remote, I mean servers that are not local to you and me. We will use this space to do some peer reviewing of any work that we do in a repo.
+
 ![](../assets/images/0-gs/gh-anatomy.png)
 
 ## 0.1.6 Install git
@@ -60,10 +62,14 @@ GH Desktop is a nice GUI for git/Github technology. Github Desktop will allow us
 
 ## 0.1.8 Install VS Code
 
-Before we start using Github, let's download and install a code editor: Visual Studio Code.
+Before we start using Github, let's download and install a code editor: Visual Studio Code [download page](https://code.visualstudio.com/download).
 
 Microsoft owns VS Code, but it is free to download and use.
 
+We will review VS Code together in class, but, at the very least, you have years of literacy experiences with text editors to help you acclimate to its fundamental features of writing and editing text.
+
 ## Submission
 
-Nothing yet. We are going to practice using Github in the next chapter. Then, you will submit some verification that you have indeed downloaded, installed, and practiced using VS Code and Github Desktop.
+Submit a screenshot that verifies that you have indeed downloaded and install VS Code onto your computer.
+
+Regarding, GH, we are going to practice using it in the next chapter. Then, you will submit some verification that you have indeed downloaded, installed, and practiced using Github Desktop.
