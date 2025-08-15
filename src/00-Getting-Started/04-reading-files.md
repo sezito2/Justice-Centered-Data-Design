@@ -45,8 +45,20 @@ Ok, you should first make sure to have **forked** ***AND*** **cloned** this [boo
 
 Then, we will practice always following this GH methodological workflow for most assignments:
 
-1. Create meaningful **branch** that uses the agreed upon naming scheme: `CHP/x--name_of_chp`.
-2. Practice the iterative process to **commit** and **push** regularly with meaningful **commit messages**.
+1. For each chapter, ***before you start modifying any exercises***, create a new separate ***branch*** of work on the repo, so you isolate any new work on the repo to those specific set of files.
+    <p class="note">
+      Always create the new branch from the <strong>main</strong> branch, when starting a new chapter of work. By doing so, you avoid creating complex differences between files organized in the repo directories.
+    </p>
+2. Name the new branch with the following naming scheme: `CHP/x--name_of_chp`.
+3. Complete the work in the chapter, committing and pushing work as needed.
+4. When you are ready to submit your work for review, create a ***pull request*** (PR).
+    <p class="note">
+      Copy and paste the content from the `TEMPLATE-PR.md` file in the project's root folder.
+    </p>
+5. Solicit feedback from your assigned peers.
+6. Make any changes, as needed, based on any feedback by committing pushing those changes to the branch.
+7. Notify me, Dr. Lindgren, that you are ready for a grade.
+8. When I tell you that your work is complete, ***merge*** the PR into the ***main*** branch.
 
 ## Overview
 
