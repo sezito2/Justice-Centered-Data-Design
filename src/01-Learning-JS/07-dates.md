@@ -362,38 +362,36 @@ nc2024SampleVoters
 
 ### E1. d3.utcParse(): Convert string dates to Date() objects
 
-**Goal**: Loop through the array of objects, `nc2024SampleVoters`, and save a converted version of the dates currently stored as Strings for `ballot_req_dt` to a Date() object. Save the newly converted Date() in the object with a new property with the key named `ballot_req_dt_obj`.
+**Goal**: Use `.map()` to loop through the array of objects, `nc2024SampleVoters`, and create a new array of objects called `ballotsWithDateObjs`. In the new array of objects, assign a converted version of the String dates for `ballot_req_dt` to a Date() object with a new property with the key named `ballot_req_dt_obj`.
 
-Here are some tips to follow:
+Here are some tips to consider as you complete this exercise.
 
-<div class="tip">
-  <ol>
-    <li><strong>Read your data</strong>: When working with new data, one great first move, among more we'll learn later, is to read the data by logging it to the web browser console. In Observable notebooks, we can simply output the variable of choice interactively to the page by placing it alone in a js codeblock like above.
-    <li><strong>Isolate interested parts of data</strong>: If dates are important to the inquiry, remember that the dates are stored as Strings in the following format: <code>"10/24/2024"</code>, i.e.,<code>"mm/dd/YYYY"</code>.
-    <li>Don't forget that you know how to iterate/loop through arrays, and you can access an object's property values with keys.
-  </ol>
-</div>
+<p class="tip"></strong>Accessing object properties</strong>: Access an object's properties with either dot notation, <code>nc2024SampleVoters.ballot_req_dt</code>, or by the square-bracket method, <code>nc2024SampleVoters["ballot_req_dt"]</code>.</p>
+<p class="tip"><strong>Read your data</strong>: When working with new data, one great first move, among more we'll learn later, is to read the data by logging it to the web browser console. In Observable notebooks, we can simply output the variable of choice interactively to the page by placing it alone in a js codeblock like above.</p>
+<p class="tip"><strong>Isolate interested parts of data</strong>: If dates are important to the inquiry, remember that the dates are stored as Strings in the following format: <code>"10/24/2024"</code>, i.e.,<code>"mm/dd/YYYY"</code>.</p>
 
 <!-- E1 -->
 ```javascript
-// Convert to js block and write E1 code here
+// Convert and code here
 ```
 
 ```javascript
-// Convert to js block and output your updated nc2024SampleVoters here
+// Convert and output
+ballotsWithDateObjs
 ```
 
 ### E2. d3.utcFormat(): Convert & format Date() object to String
 
-**Goal**: Loop through the updated array of objects, `nc2024SampleVoters`, with the Date() field. Save a converted and formatted version of `ballot_req_dt_obj` with the following date format: Wed., January 27, 1981.
+**Goal**: Use `.map()` to loop through the updated array of objects, `ballotsWithDateObjs`, and create a new array of objects called `updatedBallots`. In the new `updatedBallots`, use `d3.utcFormat()` to assign a converted and formatted version of `ballot_req_dt_obj` with the following date ***format***: Wed., January 27, 1981.
 
 <!-- E2 -->
 ```javascript
-// Convert to js block and write E2 code here
+// Convert and code here
 ```
 
 ```javascript
-// Convert to js block and output your updated nc2024SampleVoters here
+// Convert and output updatedBallots here
+updatedBallots
 ```
 
 ## Submission
