@@ -6,7 +6,7 @@ See Node.js directions on their website: [https://nodejs.org/en/download](https:
 
 Make sure that you use their dropdown menus to select your operating system and `nvm` (Node Version Manager) and `npm` (Node Package Manager), as seen below.
 
-![Nodejs installation page with dropdown menus highlighted in red boxes](/assets/images/getting-started/install-nodejs.png)
+![Nodejs installation page with dropdown menus highlighted in red boxes](./../assets/images/0-gs/install-nodejs.png)
 
 ## Install Yarn Package Manager
 

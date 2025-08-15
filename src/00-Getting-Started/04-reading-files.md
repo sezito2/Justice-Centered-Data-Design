@@ -33,7 +33,7 @@
 
 </style>
 
-# 0.2-Reading Code Files
+# 0.2-Reading & Writing Code Files
 
 ## Start Your GH Workflow
 
@@ -77,6 +77,8 @@ Formatting text in MD enables you to easily format content by making things bold
 Learn more about MD at [Markdownguide.org](https://www.markdownguide.org/getting-started/), and save this [cheatsheet](https://www.markdownguide.org/cheat-sheet/) as a learning aid.
 
 Before you go any further, complete the [Markdown Tutorial](https://www.markdowntutorial.com/).
+
+![](./../assets/images/0-gs/markdown-tutorial.png)
 
 <p class="note">You will need to submit a screenshot of the completion screen by rendering it on this page in one of the exercises below.</p>
 
@@ -216,7 +218,7 @@ In the video below, I demonstrate how to practice using the above syntax to writ
   <source src="../assets/vids/getting-started/04-reading-filepath-practice.mp4" type="video/mp4" />
 </video>
 
-## E1. Verify Mardown Course completion
+## E1. Verify Markdown Course completion
 
 Create a Markdown image, e.g., `![Alt text description](./path/in/here.png)`, which renders a screenshot of you completing the Markdown course.
 
@@ -259,3 +261,4 @@ ENTER_IMG_HERE
 1. Create a **PR** (**pull request**) and use the provided content in the template to start it.
 2. Respond to your peers and comment on their work too.
 3. Submit the PR link in Moodle, when you're ready.
+    <p class="warning">Make sure that your repo is set to being Public.</p>

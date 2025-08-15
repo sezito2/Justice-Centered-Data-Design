@@ -23,7 +23,7 @@ export default {
         {name: "0.1 Install git/Github", path: "/00-Getting-Started/01-git-github"},
         {name: "0.2 VC: Forking & Cloning", path: "/00-Getting-Started/02-vc-fork-clone"},
         {name: "0.3 Command Line", path: "/00-Getting-Started/03-cmd-line"},
-        {name: "0.4 Reading code files", path: "/00-Getting-Started/04-reading-files"},
+        {name: "0.4 Reading & Writing Code Files", path: "/00-Getting-Started/04-reading-files"},
         {name: "0.5 Installing Node.js", path: "/00-Getting-Started/05-install-node"},
         {name: "0.6 Conclusion", path: "/00-Getting-Started/06-conclusion"}
       ]
