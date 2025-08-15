@@ -214,11 +214,20 @@ If you wish to read about them, see Observable Framework's "[Data loaders](https
 
 ## Exercises
 
+### E1. Understanding CSV file formats
+
+Goal: Demonstrate your understanding of the CSV file format by creating a mini CSV file with **3 columns and 5 rows with the topic of your choice**.
+
+Use the empty codeblock below.
+
+```
+```
+
+### E2. Load a CSV file
+
 **Goal**: Load a data file and demonstrate your ability to access its properties and data values.
 
-### E1. Load a CSV file
-
-Load the following CSV file: `nc_absentee_mail_2024.csv`.
+In this case, load the following CSV file: `nc_absentee_mail_2024.csv`.
 
 1. In the first codeblock, attach the `.csv` file and assign it to a meaningful variable name.
     <p class="tip">You're going to need to write a relative path here!</p>
