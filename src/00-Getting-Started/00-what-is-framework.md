@@ -59,9 +59,10 @@ Why learn JavaScript within the context of Observable Framework? Because JS is f
   5 Observable is an end-to-end solution. Well-designed tools let communicators focus on highly customizable workflows and communication design. Framework's defaults build on numerous years of foster a good user experience. You can also deploy Framework to Observable, so you can easily collaborate on data apps and securely share them with your team.
 </p>
 
-## 0.0.1 Learning Review
+## Submission
 
-Before moving onto the next section, you should understand the following:
+Before moving onto the next section, respond to the following questions in the Moodle assignment for this chapter (0.0):
 
 - What are data apps?
+- What are your prior experiences with data apps and data in general?
 - What is Observable Framework and its main affordances?
