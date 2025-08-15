@@ -771,17 +771,25 @@ Notice how InternMap() echoes JS's Map(), so if you learn one type of map, you w
 
 ![](./../assets/images/1-js/js-compare-map-internmap.png)
 
-### Converting arrays of objects to D3 InternMaps
+## 1.9.6 Converting an Array of Objects to D3 InternMaps
 
 We can easily create InternMap objects with the following three D3.js methods in the [d3-array](https://d3js.org/d3-array/group) code library: `d3.group` and `d3.rollup`.
 
 <p class="note--data">
-  For our examples in the remainder of this chapter, we are going to use a randomly generated sample of 20000 <strong>absentee</strong> NC voter data from the 2024 election cycle. The original set has over 468000 rows, so I reduced it to a smaller number to balance computational performance without forsaking much of the distribution of the full dataset. The data has been anonymized.
+  For our examples in the remainder of this chapter, we are going to use a randomly generated sample of 20,000 <strong>absentee</strong> NC voter data from the 2024 election cycle. The original set has over 468000 rows, so I reduced it to a smaller number to balance computational performance without forsaking much of the distribution of the full dataset. The data has been anonymized.
 </p>
 
 <!-- Attach sampled NC voter data -->
 ```js
 const nc2024SampledVoters = FileAttachment("./../data/nc-voters/nc_absentee_mail_2024_n20000.csv").csv({typed: true})
+```
+
+<p class="codeblock-caption">
+  Interactive output of attached sampled 2024 NC Voter dataset.
+</p>
+
+```js
+nc2024SampledVoters
 ```
 
 ### `d3.group()` - Convert Array of objects to InternMap()
@@ -934,13 +942,13 @@ nc24VotersRollUpPartyAndRace.get("DEM").get("F") // Yields 4149
 
 ## Exercises
 
-### E1. .map() NC Voters' ballot return status as a new array of objects
+### E1. `.map()` NC Voters' ballot return status as a new array of objects
 
 **Goal**: Take the `nc2024SampleVoters` data and do the following:
 
 1. Convert the `javascript` codeblocks to `js` codeblocks.
 2. Use the `.map()` method to iterate through the array of objects and create a new variable about the `ballot_rtn_status` and `race`.
-3. Inside of `.map()`, use an if condition to only return an object with noted two properties, if the value of ballot_rtn_status does not equal `null`.
+3. Inside of `.map()`, use an if condition to only return an object with noted two properties, **if the value of `ballot_rtn_status` does not equal `null`**.
 4. Add your new array of objects to the second `js` codeblock to render an interactive output.
 
 <p class="tip">
