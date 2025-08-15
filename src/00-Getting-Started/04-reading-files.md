@@ -60,6 +60,24 @@ Then, we will practice always following this GH methodological workflow for most
 7. Notify me, Dr. Lindgren, that you are ready for a grade.
 8. When I tell you that your work is complete, ***merge*** the PR into the ***main*** branch.
 
+Here's how to complete this process with Github Desktop and VS Code:
+
+1. Open Github Desktop (GHD).
+2. Select the correct ***repo***.
+3. Verify that the current ***branch*** currently selected is the desired branch.
+    <p class="tip">
+      Each chapter will have its own branch.
+      <br><strong>AND</strong><br>
+      Always start from the <strong>main branch</strong>>, when starting a new chapter of work.
+    </p>
+4. After verifying the correct repo and branch are selected in GHD, select **Repository** > **Open in Visual Studio Code**.
+5. In VS Code, complete each chapter of work on the correct branch.
+    <p class="tip">
+      Verify the correct branch is selected in VSC on the bottom-left corner of the UI.
+    </p>
+6. After you complete a section of a chapter, push your changes to the correct branch for that chapter of work.
+7. When the chapter is complete, make sure all of the changes are committed and pushed to the branch. When such changes are complete, create a pull request (PR) with the class template for all PRs for the textbook, which can be found at the following location in the repo: `/TEMPLATE-PR.md`.
+
 ## Overview
 
 Let's cover some fundamentals before we venture any further. You must first learn how to read the different types of code files in the project *and* understand how the files are organized in what's called the ***architecture*** of the project. We will focus first on files written in what's called ***Markdown***.

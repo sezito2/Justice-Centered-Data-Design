@@ -66,7 +66,7 @@ We also need to make sure that we practice our Github development methodology, w
     <p class="note">
       Copy and paste the content from the `TEMPLATE-PR.md` file in the project's root folder.
     </p>
-5. Solicit feedback  from your assigned peers.
+5. Solicit feedback from your assigned peers.
 6. Make any changes, as needed, based on any feedback by committing pushing those changes to the branch.
 7. Notify me, Dr. Lindgren, that you are ready for a grade.
 8. When I tell you that your work is complete, ***merge*** the PR into the ***main*** branch.
