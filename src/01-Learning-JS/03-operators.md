@@ -124,7 +124,11 @@ JS does ***not*** convert numeric values to strings, when using any other operat
 
 Sometimes we need to compare values in our project. Comparison operators allow us to compare variables, whether numbers or strings, so we can yield `true` or `false` Boolean values.
 
-Open your console and try them out by using some of the examples below.
+<p class="tip">Open your console and try them out by using some of the examples below.</p>
+
+<video controls style="width: 620px; height:620px">
+  <source src="../assets/vids/01-js/01.3-operators-console.mp4" type="video/mp4" />
+</video>
 
 - **`==` Is Equal To**
     ```javascript
@@ -198,15 +202,18 @@ These two help you build expressions by combining multiple comparisons, which we
     12 == 12 || 10 == 10
     ```
 
-## 1.3 Exercises with Operators
+## E1. Create a Suite of Variables Evaluated by Operators
 
-Create your own suite of operators.
+Create your own suite of operators that evaluate a suite of variables.
+
+First, go back to the last chapter and grab the suite of primitives that you created as a starting point. Feel free to add more variables, as needed to practice writing operators with any combination of those variables.
 
 1. Convert the `javascript` codeblock to an executable block with the `js`.
-2. Declare and initialize your own suite of operators.
+2. Declare and initialize your own suite of variables. As mentioned above, feel free to grab the variables used in the prior chapter.
+3. Declare and initialize your own suite of operators.
    <p class="note">Have fun with it! Choose a theme like your favorite movie, story, hobby, etc.</p>
-3. Print them all to the console with `console.log()`.
-4. Check your work, as you go, by opening the browser console with the **Inspect Element** tool.
+4. Print them all to the console with `console.log()`.
+5. Check your work, as you go, by opening the browser console with the **Inspect Element** tool.
 
 ```javascript
 // Write your code in here
