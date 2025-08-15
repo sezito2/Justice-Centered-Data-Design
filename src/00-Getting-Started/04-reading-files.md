@@ -35,9 +35,15 @@
 
 # 0.2-Reading & Writing Code Files
 
+In this chapter, we will practice configuring your VS Code editor, understanding the project architecture of this book's Observable data app, and learning how to read and write texts in the Markdown format.
+
+Learning this Markdown format is essential, because it will help you develop your Observable Framework data apps, since your coding work will be interwoven with Markdown-flavored text.
+
 ## Start Your GH Workflow
 
-Remember, before you start anything else, always follow this GH methodological workflow:
+Ok, you should first make sure to have **forked** ***AND*** **cloned** this [book's repository](https://github.com/ENG498-JCDD/Justice-Centered-Data-Design) to your personal GH account.
+
+Then, we will practice always following this GH methodological workflow for most assignments:
 
 1. Create meaningful **branch** that uses the agreed upon naming scheme: `CHP/x--name_of_chp`.
 2. Practice the iterative process to **commit** and **push** regularly with meaningful **commit messages**.
@@ -48,7 +54,7 @@ Let's cover some fundamentals before we venture any further. You must first lear
 
 ## 0.2.1 Configure VS Code
 
-Let's make your reading, writing, and developing life a little easier with some VSC tools and settings.
+Before we begin, let's make your reading, writing, and developing life a little easier with some VSC tools and settings.
 
 ### Default VSC settings
 
@@ -237,16 +243,13 @@ Write one that assumes the file is `.md`, and another that assumes it is an `.ht
 - enter_md_link_here
 - enter_html_link_here
 
-## E3. Link to page in same project
+## E3. Link to a resource in same project
 
-Write a markdown link, e.g., [Rendered linked text](./path/to/file.md), with a relative path to the `00-gh-nb.md` file for the "1.0-Reviewing the GH Methodology & Learning to Write JS in Observable" chapter.
+Write a markdown link, e.g., [Rendered linked text](./path/to/file.md), with a ***relative path*** to the `gh-anatomy.png` image file in this project. Link the following text in the bulleted point below: "Github Anatomy image".
 
-Write one that assumes the file is `.md`, and another that assumes it is an `.html` file.
+<p class="tip">You will need to use the double-dot <code>..</code> notation to travel back up the hierarchy in the project, since the image is not in the same folder/directory as this chapter's file.</p>
 
-<p class="tip">You will need to use the double-dot <code>..</code> notation.</p>
-
-- enter_md_link_here
-- enter_html_link_here
+- Link to the Github Anatomy image.
 
 ## E4. Render an image
 
@@ -260,5 +263,6 @@ ENTER_IMG_HERE
 
 1. Create a **PR** (**pull request**) and use the provided content in the template to start it.
 2. Respond to your peers and comment on their work too.
+    - Peers: Respond to any questions, concerns, or triumphs noted in their PR description.
 3. Submit the PR link in Moodle, when you're ready.
     <p class="warning">Make sure that your repo is set to being Public.</p>
