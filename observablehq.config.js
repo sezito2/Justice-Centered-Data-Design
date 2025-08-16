@@ -68,6 +68,15 @@ export default {
           path: "/01-Learning-JS/10-functions"},
       ]
     },
+    // MIDTERM
+    {
+      name: "Midterm",
+      open: false,
+      pages: [
+        {name: "Directions", path: "/MIDTERM/index"},
+        {name: "Lastname's Midterm", path: "/MIDTERM/midterm"},
+      ]
+    },
     // 2. STATS for SJ
     {
       name: "2. Stats for SJ",

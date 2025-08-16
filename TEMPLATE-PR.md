@@ -1,4 +1,4 @@
-# CHAPTER # - Firstname Lastname
+# CHAPTER X.x - Firstname Lastname
 
 ## Triumphs
 
