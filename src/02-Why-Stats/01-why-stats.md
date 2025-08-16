@@ -89,7 +89,7 @@ Your_response_here
 
 ## 4. Translating the structural approach into TPC
 
-**Question**: After considering all three of these texts -- their exigencies, propositions, and methods -- translate Mullaly's broader definition of the *structural approach* and Moreau's *practice methods* in social work into our domain of TPC by putting them into conversation with Lindgren, Gerdes, and Lawrence's SJ ethic and Graham et al's statistical genre analysis. In other words, develop a TPC structural perspective and set of practices that translates Moreau's 5 practices. Finaly, add one new practice approach specific to TPC.
+**Question**: After considering all three of these texts -- their exigencies, propositions, and methods -- translate Mullaly's broader definition of the *structural approach* and Moreau's *practice methods* in social work into our domain of TPC by putting them into conversation with Lindgren, Gerdes, and Lawrence's SJ ethic and Graham et al's statistical genre analysis. In other words, develop a TPC structural perspective and set of practices that translates Moreau's 5 practices. Finally, add one new practice approach specific to TPC.
 
 Your_response_here
 
