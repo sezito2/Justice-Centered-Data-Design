@@ -58,7 +58,7 @@ All technologies are free.
 
 ## Major Assignments
 
-### Applied Lessons / Responses (45%)
+### Applied Exercises / Responses (35%)
 
 - **Due**: Weekly
 - **Individual or Group**: Individual
@@ -66,6 +66,15 @@ All technologies are free.
 - **Points**: 5-15 per activity
 
 **Description**: We will be learning lots of new skills, so it is imperative that we practice, practice, practice. These weekly or daily exercises integrate new ideas and skills into your repertoire. They will typically be submitted via a Github link to your "pull request" on Moodle. Some exercises are worth more than others, due to their difficulty.
+
+### JavaScript Midterm (15%)
+
+- **Due**: Friday, 09/19/2025
+- **Individual or Group**: Individual
+- **Deliverable**: New page that demonstrates general JS fluency
+- **Points**: 100 points
+
+**Description**: Time to put all the pieces together by transforming a new dataset in multiple ways. This midterm's first draft is due, as noted above, on 9/19. But, you can revise it for full credit by the end of the semester. We will also take time in class to work through it, so you can ask help of your peers and myself.
 
 ### Participation (15%)
 
@@ -76,7 +85,7 @@ All technologies are free.
 
 **Description**: Rationalize your participation grade with supporting evidence from your engagement in this course. You will also reflect on the experience by providing some basic feedback for me to consider.
 
-### Final: Data Design (40%)
+### Final: Data Design (35%)
 
 - **Due**: Monday, December 8th.
 - **Individual or Group**: Group
