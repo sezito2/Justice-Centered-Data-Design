@@ -4,7 +4,7 @@
 
 Remember, before you start anything else, always follow this GH methodological workflow:
 
-1. Create meaningful **branch** that uses the agreed upon naming scheme: `CHP/x--name_of_chp`.
+1. Create meaningful **branch** that uses the agreed upon naming scheme: `CHP/X.x--lastname`.
 2. Practice the iterative process to **commit** and **push** regularly with meaningful **commit messages**.
 
 ## Overview

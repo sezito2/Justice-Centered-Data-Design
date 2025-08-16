@@ -49,7 +49,7 @@ Then, we will practice always following this GH methodological workflow for most
     <p class="note">
       Always create the new branch from the <strong>main</strong> branch, when starting a new chapter of work. By doing so, you avoid creating complex differences between files organized in the repo directories.
     </p>
-2. Name the new branch with the following naming scheme: `CHP/x--name_of_chp`.
+2. Name the new branch with the following naming scheme: `CHP/X.x--lastname`.
 3. Complete the work in the chapter, committing and pushing work as needed.
 4. When you are ready to submit your work for review, create a ***pull request*** (PR).
     <p class="note">

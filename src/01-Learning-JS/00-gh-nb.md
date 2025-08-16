@@ -60,7 +60,7 @@ We also need to make sure that we practice our Github development methodology, w
     <p class="note">
       Always create the new branch from the <strong>main</strong> branch, when starting a new chapter of work. By doing so, you avoid creating complex differences between files organized in the repo directories.
     </p>
-2. Name the new branch with the following naming scheme: `CHP/x--name_of_chp`.
+2. Name the new branch with the following naming scheme: `CHP/X.x--lastname`.
 3. Complete the work in the chapter, committing and pushing work as needed.
 4. When you are ready to submit your work for review, create a ***pull request*** (PR).
     <p class="note">
@@ -117,7 +117,7 @@ Techniques learned and practiced include:
           </pre>
     2. executes as actual JS code with a multiline block prefaced with `js`.
 3. **GH methodological workflow** specific to this class, which involves:
-    1. Developing new work on a meaningful **branch** that uses the agreed upon naming scheme: `CHP/x--name_of_chp`.
+    1. Developing new work on a meaningful **branch** that uses the agreed upon naming scheme: `CHP/X.x--lastname`.
     2. Practicing the iterative process to **commit** and **push** regularly with meaningful **commit messages**.
     3. Creating a **PR** (**pull request**) and use the provided content in the template to start it.
     4. Respond to your peers and comment on their work too.
