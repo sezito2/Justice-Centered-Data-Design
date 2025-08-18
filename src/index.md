@@ -58,7 +58,7 @@ All technologies are free.
 
 ## Major Assignments
 
-### Applied Exercises / Responses (35%)
+### Applied Exercises / Responses (40%)
 
 - **Due**: Weekly
 - **Individual or Group**: Individual
@@ -67,7 +67,9 @@ All technologies are free.
 
 **Description**: We will be learning lots of new skills, so it is imperative that we practice, practice, practice. These weekly or daily exercises integrate new ideas and skills into your repertoire. They will typically be submitted via a Github link to your "pull request" on Moodle. Some exercises are worth more than others, due to their difficulty.
 
-### JavaScript Midterm (15%)
+### JavaScript Midterm (10%)
+
+For graduate students only.
 
 - **Due**: Friday, 09/19/2025
 - **Individual or Group**: Individual

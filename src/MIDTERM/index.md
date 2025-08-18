@@ -1,6 +1,6 @@
 # Midterm - JavaScript Demonstration
 
-In this midterm, you will create a new page in this Midterm folder, so you can demonstrate the synthesis of all of the skills that we have learned up to this point in the semester.
+In this midterm for graduate students only, you will create a new page in this Midterm folder, so you can demonstrate the synthesis of all of the skills that we have learned up to this point in the semester.
 
 ## Purpose
 

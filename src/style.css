@@ -109,6 +109,7 @@
 
   /* COUNTERS */
   counter-reset: codeblock;
+  counter-reset: videoblock;
 }
 
 :root {
@@ -1403,6 +1404,24 @@ pre,
     background-color: var(--accent2Color);
     color: white;
     content: "CB " counter(codeblock) ": ";
+  }
+}
+.video-caption {
+  margin-bottom: 0.25rem;
+  padding: 0;
+  font-size: 1rem;
+  counter-increment: videoblock; /* increment by 1 */
+
+  &.cc-image {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    padding: 0.1rem 0;
+    margin-right: 0.1rem;
+    background-color: var(--foregroundColor);
+    color: white;
+    content: "Video " counter(videoblock) ": ";
   }
 }
 .observablehq--error .observablehq--inspect {
