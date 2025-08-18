@@ -74,7 +74,7 @@ For graduate students only.
 - **Due**: Friday, 09/19/2025
 - **Individual or Group**: Individual
 - **Deliverable**: New page that demonstrates general JS fluency
-- **Points**: 100 points
+- **Points**: 50 points
 
 **Description**: Time to put all the pieces together by transforming a new dataset in multiple ways. This midterm's first draft is due, as noted above, on 9/19. But, you can revise it for full credit by the end of the semester. We will also take time in class to work through it, so you can ask help of your peers and myself.
 
