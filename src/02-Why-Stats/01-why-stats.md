@@ -31,8 +31,9 @@ With these goals for the texts in mind, please respond to the questions herein a
 
 1. *Statistics for Social Justice*. Chapter 1 - "Why statistics are important." pp. 1-11.
     <p class="note">Read up to *Overview of the Book* on p. 9.</p>
-2. Lindgren, C., Gerdes, J., & Lawrence, H. (2025). The future of ethics and social justice. In D. Ross (Ed.), *The Routledge Handbook of Ethics in Technical and Professional Communication (pp. 420–430)*. Routledge. [https://doi.org/10.4324/9781003434375-46](https://doi.org/10.4324/9781003434375-46)
-3. Graham, S. S., Kim, S.-Y., DeVasto, D. M., & Keith, W. (2015). Statistical Genre Analysis: Toward big data methodologies in Technical Communication. *Technical Communication Quarterly*, 24(1), 70–104.
+2. *Statistics for Social Justice*. Chapter 2 - "The history of empiricism." pp. 13-24.
+3. Lindgren, C., Gerdes, J., & Lawrence, H. (2025). The future of ethics and social justice. In D. Ross (Ed.), *The Routledge Handbook of Ethics in Technical and Professional Communication (pp. 420–430)*. Routledge. [https://doi.org/10.4324/9781003434375-46](https://doi.org/10.4324/9781003434375-46)
+4. Graham, S. S., Kim, S.-Y., DeVasto, D. M., & Keith, W. (2015). Statistical Genre Analysis: Toward big data methodologies in Technical Communication. *Technical Communication Quarterly*, 24(1), 70–104.
 
 ## 1. Questions about "Why statistics are important"
 
@@ -54,29 +55,37 @@ Your_response_here
 
 Your_response_here
 
-## 2. Questions About "The future of ethics and social justice" in TPC
+## 2. Questions about "The history of empiricism"
 
-### 2.1. On the "*socially just ethic*"
+### 2.1. On feminist empiricism
+
+**Question**: According to the SFSJ authors, what is ***feminist empiricism***? And, what issues does it recognize as important to recognize and remedy? Be sure to discuss why it emphasizes the importance of critically reflecting on aspects of the ***context*** of empirical work.
+
+Your_response_here
+
+## 3. Questions About "The future of ethics and social justice" in TPC
+
+### 3.1. On the "*socially just ethic*"
 
 **Question**: Name and define some of what you deem as the main different parts of the ***socially just ethic***. Be sure to discuss how it is different from other ethical approaches.
 
 Your_response_here
 
-### 2.2. Why an SJ ethic?
+### 3.2. Why an SJ ethic?
 
 **Question**: Why do Lindgren, Gerdes, and Lawrence position a "SJ ethic" as essential to the future of TPC? What types of problems does it help TPC tackle?
 
 Your_response_here
 
-## 3. Questions About "Statistical Genre Analysis" (SGA)
+## 4. Questions About "Statistical Genre Analysis" (SGA)
 
-### 3.1. On "big" data
+### 4.1. On "big" data
 
 **Question**: How do Graham et al define and discuss what constitutes "big" data? How does their definition differ from what you have heard before you read this article?
 
 Your_response_here
 
-### 3.2. On SGA
+### 4.2. On SGA
 
 **Question**: Summarize the following parts of SGA:
 
@@ -87,9 +96,15 @@ Your_response_here
 
 Your_response_here
 
-## 4. Translating the structural approach into TPC
+## 5. "Science is a social endeavor."
 
-**Question**: After considering all three of these texts -- their exigencies, propositions, and methods -- translate Mullaly's broader definition of the *structural approach* and Moreau's *practice methods* in social work into our domain of TPC by putting them into conversation with Lindgren, Gerdes, and Lawrence's SJ ethic and Graham et al's statistical genre analysis. In other words, develop a TPC structural perspective and set of practices that translates Moreau's 5 practices. Finally, add one new practice approach specific to TPC.
+**Question**: Discuss what this statement means to you. Then, discuss any connections, confusion, and/or questions that you recognize with a SJ ethic and structural perspective?
+
+Your_response_here
+
+## 6. Translating the structural approach into TPC
+
+**Question**: After considering all of these texts -- their exigencies, propositions, and methods -- translate Mullaly's broader definition of the *structural approach* and Moreau's *practice methods* in social work into the domain of TPC or humanist domain of work by putting them into conversation with Lindgren, Gerdes, and Lawrence's SJ ethic and Graham et al's statistical genre analysis. In other words, begin to develop your own structural perspective and set of practices that translates Moreau's 5 practices. Finally, add one new practice approach specific to TPC/your domain.
 
 Your_response_here
 
