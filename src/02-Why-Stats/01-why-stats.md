@@ -37,11 +37,19 @@ With these goals for the texts in mind, please respond to the questions herein a
 
 ## 1. Questions about "Why statistics are important"
 
-### 1.1. Data vs. information
+### 1.1. Defining key terms
 
-**Question**: According to the SFSJ authors, what are the main difference between **data** and **information**?
+**Question**: Use the space below to define the provided key terms.
 
-Your_response_here
+- According to the SFSJ authors, what are the main difference between **data** and **information**?:
+- **Variable**:
+- **Constant**:
+- **Conceptualization**:
+- **Operationalization**:
+- **Nominal level of data**:
+- **Ordinal level of data**:
+- **Interval level of data**:
+- **Ratio level of data**:
 
 ### 1.2. On positivism
 
