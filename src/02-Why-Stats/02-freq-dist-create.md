@@ -526,7 +526,7 @@ After we count these two values, we can then calculate the frequency percentage 
 ]
 ```
 
-Instead of using .map(), we are going to use the nice and simple for...of loop to iterate down to each level in our grouping's hierarchy, so we can count the total ballots and total rejected ballots per week>race.
+Instead of using .map(), we are going to use the nice and simple `for...of` loop to iterate down to each level in our grouping's hierarchy, so we can count the total ballots and total rejected ballots per week>race.
 
 This is still going to be tricky for you, and that's ok. I have supplied you with starter-code, so you can see how we can accomplish this goal for the data design. Be sure to review the comments that explain each step, then convert the code to an exectuable codeblock and finish the work, so you populate `voterNATotalsPerWeek` with 335 objects like the example I provided above.
 
@@ -553,18 +553,20 @@ for (const [week, weekEntries] of ballotsPerWeek) {
   for (const [raceKey, raceEntries] of weekEntries) {
 
     // 3.1. Count total ballots per raceEntries,
-    // skip null values
+    // IMP! skip null values
     const totalPerWeek = d3.sum()
 
     // 3.2. Count total not accepted ballots per raceEntries,
-    // skip the null values
+    // IMP! skip the null values
     const totalNACurrWeek = d3.sum()
 
     // 3. Calculate percentage of total rejected ballots
     const percNA = //Add percentage calculation here
 
-    // 4. Push all values to voterNATotalsPerWeek array
-    // weekNum, raceKey, totalPerWeek, totalNACurrWeek, percNA
+    /** 4. Push desired values to voterNATotalsPerWeek array
+     *     as an object with the shortcut key-value assignment below:
+     *       { weekNum, raceKey, totalPerWeek, totalNACurrWeek, percNA }
+    **/
     // Enter code here
 
   }

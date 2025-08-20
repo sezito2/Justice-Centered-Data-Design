@@ -9,9 +9,11 @@ xx-*
 planning.md
 *.ipynb
 src/assets/readings/wX-*
-src/*/utils/
+src/*/utils-tc/
+src/*/components-tc/
 *--teachers_copy.md
 *--EXAMPLE.js
+*--EXAMPLE.md
 
 
 # TOO BIG VIDS

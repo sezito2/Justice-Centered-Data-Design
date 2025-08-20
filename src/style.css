@@ -1301,6 +1301,12 @@ pre,
   overflow-x: auto;
   box-sizing: border-box;
   box-shadow: 1px 2px 3px -1px var(--foregroundColor);
+
+  /* SVG Chart */
+  & > svg,
+  & > figure > svg {
+    margin: auto;
+  }
 }
 .observablehq-pre-container {
   & pre {
