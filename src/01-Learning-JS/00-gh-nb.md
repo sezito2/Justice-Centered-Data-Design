@@ -120,7 +120,7 @@ Techniques learned and practiced include:
     1. Developing new work on a meaningful **branch** that uses the agreed upon naming scheme: `CHP/X.x--lastname`.
     2. Practicing the iterative process to **commit** and **push** regularly with meaningful **commit messages**.
     3. Creating a **PR** (**pull request**) and use the provided content in the template to start it.
-    4. Respond to your peers and comment on their work too.
+    4. No peer responses required for this chapter.
     5. Submit the PR link in Moodle, when you're ready.
 
 ## Submission

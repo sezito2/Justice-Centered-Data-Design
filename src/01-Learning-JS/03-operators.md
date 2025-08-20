@@ -222,5 +222,5 @@ First, go back to the last chapter and grab the suite of primitives that you cre
 ## Submission
 
 1. Create a **PR** (**pull request**) and use the provided content in the template to start it.
-2. Respond to your peers and comment on their work too.
+2. No peer responses are due for this chapter.
 3. Submit the PR link in Moodle, when you're ready.

@@ -1047,5 +1047,5 @@ First outline your procedure with steps below. Then, use the JS codeblock to per
 ## Submission
 
 1. Create a **PR** (**pull request**) and use the provided content in the template to start it.
-2. Respond to your peers and comment on their work too.
+2. Respond to your peers and comment on their work on at least one chapter..
 3. Submit the PR link in Moodle, when you're ready.

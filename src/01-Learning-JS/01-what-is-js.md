@@ -238,5 +238,5 @@ Comments, declarations, intitialization, and variables help us start our reading
 ## Submission
 
 1. Create a **PR** (**pull request**) and use the provided content in the template to start it.
-2. Respond to 1-2 questions or ideas from at least one of your peers.
+2. No peer responses required for this chapter.
 3. Submit the PR link in Moodle, when you're ready.
