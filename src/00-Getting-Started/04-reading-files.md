@@ -270,8 +270,8 @@ Write a markdown link, e.g., [Rendered linked text](./path/to/file.md), with a r
 
 Write one that assumes the file is `.md`, and another that assumes it is an `.html` file.
 
-- [0.3 md link](..\00-Getting-Started\03-cmd-line.md)
-- [html link?](..\00-Getting-Started\03-cmd-line.html)
+- [0.3 md link](03-cmd-line.md)
+- [html link?](03-cmd-line.html)
 
 ## E3. Link to a resource in same project
 
@@ -279,7 +279,7 @@ Write a markdown link, e.g., [Rendered linked text](./path/to/file.md), with a *
 
 <p class="tip">You will need to use the double-dot <code>..</code> notation to travel back up the hierarchy in the project, since the image is not in the same folder/directory as this chapter's file.</p>
 
-- Link to the Github Anatomy image.
+- [Link to the Github Anatomy image.](../assets/images/0-gs/gh-anatomy.png)
 
 ## E4. Render an image
 
