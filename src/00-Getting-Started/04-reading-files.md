@@ -287,7 +287,7 @@ Write a markdown image, e.g., `![Alt text description](./path/in/here.jpg)`, whi
 
 <p class="tip">You will need to use the double-dot <code>..</code> notation.</p>
 
-ENTER_IMG_HERE
+![Hotel bookings data charts](../assets/images/hotel-bookings-dark.webp)
 
 ## Submission
 
