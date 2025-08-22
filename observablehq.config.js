@@ -84,13 +84,42 @@ export default {
       pages: [
         {
           name: "2.1 Why Stats?",
-          path: "/02-Why-Stats/01-why-stats"},
+          path: "/02-Why-Stats/01-why-stats"
+        },
         {
           name: "2.2 Creating Frequency Distributions",
           path: "/02-Why-Stats/02-freq-dist-create"
         },
+        // {
+        //   name: "2.3 Plotting Frequency Distributions",
+        //   path: "/02-Why-Stats/03-freq-dist-plot--teachers_copy"
+        // },
       ]
     },
+    {
+      name: "Help",
+      open: false,
+      pages: [
+        {
+          name: "Terminal Support",
+          path: "/Help/terminal"
+        },
+      ]
+    },
+    // {
+    //   name: "DEMOS",
+    //   open: false,
+    //   pages: [
+    //     {
+    //       name: "Chp 2 Demos",
+    //       path: "/02-Why-Stats/03--EXAMPLE"
+    //     },
+    //     {
+    //       name: "Compromise Demos",
+    //       path: "/xx-Textual-Analysis/compromise"
+    //     },
+    //   ]
+    // },
   ],
 
   // Content to add to the head of the page, e.g. for a favicon:
