@@ -2,9 +2,11 @@
 
 This page includes resources to support your terminal work in class.
 
-## Fetching & Pulling Changes from Original Textbook Repo into Your Forked Version
+## Updating the JCDD Textbook
 
 The following sequence of commands ensure that you can update your textbook, if necessary.
+
+Specifically, you will learn how to use git commands to `fetch` and `pull` changes from original textbook repo, which is ***upstream***, and `merge` them into your forked version.
 
 ### 1. Setting up upstream checks
 
