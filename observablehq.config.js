@@ -96,6 +96,7 @@ export default {
         // },
       ]
     },
+    // HELP PAGES
     {
       name: "Help",
       open: false,
@@ -104,6 +105,25 @@ export default {
           name: "Terminal Support",
           path: "/Help/terminal"
         },
+        {
+          name: "Markdown Support",
+          path: "/Help/markdown"
+        },
+      ]
+    },
+    // CLASS DEMOS
+    {
+      name: "Class Demos",
+      open: false,
+      pages: [
+        {
+          name: "Eyes on the Prize!",
+          path: "/Class-Demos/00-eotp"
+        },
+        // {
+        //   name: "Compromise Demo",
+        //   path: "/Class-Demos/xx-compromise"
+        // },
       ]
     },
     // {
@@ -112,7 +132,7 @@ export default {
     //   pages: [
     //     {
     //       name: "Chp 2 Demos",
-    //       path: "/02-Why-Stats/03--EXAMPLE"
+    //       path: "/02-Why-Stats/02--EXAMPLE"
     //     },
     //     {
     //       name: "Compromise Demos",
@@ -124,4 +144,5 @@ export default {
 
   // Content to add to the head of the page, e.g. for a favicon:
   head: '<link rel="icon" href="observable.png" type="image/png" sizes="32x32">\n<link rel="stylesheet" href="/assets/css/hljs.css">\n<script src="/assets/js/lib/hljs.min.js"></script>\n<script src="/assets/js/lib/hljs-javascript.min.js"></script>\n<script src="/assets/js/lib/hljs-bash.min.js"></script>\n<script src="/assets/js/lib/hljs-shell.min.js"></script>\n<script src="/assets/js/lib/hljs-json.min.js"></script>\n<script>hljs.highlightAll();</script>',
+  footer: '<script src="/assets/js/toggle-section.js"></script>',
 };

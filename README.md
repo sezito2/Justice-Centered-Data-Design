@@ -65,7 +65,7 @@ A typical Framework project looks like this:
 
 | Command           | Description                                              |
 | ----------------- | -------------------------------------------------------- |
-| `yarn install`            | Install or reinstall dependencies                        |
+| `yarn install`    | Install or reinstall dependencies                        |
 | `yarn dev`        | Start local preview server                               |
 | `yarn build`      | Build your static site, generating `./dist`              |
 | `yarn deploy`     | Deploy your app to Observable                            |
