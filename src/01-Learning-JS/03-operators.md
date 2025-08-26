@@ -215,8 +215,35 @@ First, go back to the last chapter and grab the suite of primitives that you cre
 4. Print them all to the console with `console.log()`.
 5. Check your work, as you go, by opening the browser console with the **Inspect Element** tool.
 
-```javascript
-// Write your code in here
+```js
+let teamName = "Mets"
+let worldSeriesWins = 2
+let lastWin = 1986
+let newYork = true
+let braves = null
+let yankees
+let player = {
+  firstBase: "Alonso",
+  shortStop: "Lindor",
+}
+
+console.log(teamName)
+console.log(worldSeriesWins)
+console.log(lastWin)
+console.log(newYork)
+console.log(braves)
+console.log(yankees)
+console.log(player.firstBase)
+console.log(player.shortStop)
+
+console.log(lastWin == 1986)
+console.log(lastWin != 2025)
+console.log(lastWin != 1986)
+console.log(player.shortStop = "Lindor" && player.shortStop == "Alonso")
+console.log(player.shortStop = "Lindor" && player.firstBase == "Alonso")
+console.log(worldSeriesWins + lastWin)
+console.log(lastWin - 1969)
+console.log(worldSeriesWins > 1)
 ```
 
 ## Submission
