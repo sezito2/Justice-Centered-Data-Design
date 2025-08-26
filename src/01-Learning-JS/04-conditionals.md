@@ -257,7 +257,7 @@ let person3ChildStatus = ''
 
 ```js
 let person3Name = 'Margaret Farrell'
-let personAage = 30
+let person3Age = 30
 let person3Disease = 'recent emigrant'
 let person3Profession = 'widow'
 let person3Gender = 'w'
@@ -273,7 +273,16 @@ Use the following console logs:
 - `else`: `console.log('Person is more than 30 years old.')`
 
 ```js
-// Your code here
+if (person3Age < 30){
+  console.log("Person is less than 30 years old.")
+}
+else if (person3Age == 30){
+  console.log("Person is exactly 30 years old.")
+}
+else {
+  console.log("Person is more than 30 years old.")
+}
+
 ```
 
 ## E6 - Conditional with numbers and an object!
