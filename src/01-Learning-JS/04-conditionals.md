@@ -310,7 +310,9 @@ Write an `if` statement that will report whether `childrenTotal['person1']` has 
 Use the following console log, when `if` is `true`: `console.log('Person has children.')`.
 
 ```js
-// Your code here
+if (childrenTotal.person1 != 0){
+  console.log("Person has children.")
+}
 ```
 
 ## E7
