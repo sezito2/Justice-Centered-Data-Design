@@ -234,7 +234,12 @@ Use the following console logs:
 - For `else`: `console.log('Person is more than 30 years old.')`
 
 ```js
-// Your code here
+if (person2Age < 30){
+  console.log("Person is less than 30 years old.")
+}
+else {
+  console.log("Person is more than 30 years old.")
+}
 ```
 
 ## E5 - ELSE IF time!
