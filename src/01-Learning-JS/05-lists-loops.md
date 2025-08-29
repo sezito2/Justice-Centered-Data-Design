@@ -491,11 +491,11 @@ Make sure you check to see if the correct language has been logged to the web co
 
 For your reference, here's the original declaration and instantiation of `sex`: `let sex = ["f", "m", "f", "m", "i"]`.
 
-```javascript
-// Convert and code here
+```js
+sex.push("unknown")
 ```
 
-```javascript
+```js
 // Convert and output here
 sex
 ```
