@@ -392,7 +392,7 @@ professions
 
 For this first exercise, I'll provide you with the basic structure:
 
-```js
+```javascript
 // Declare new and freshly empty array in which to push new items
 let lessProfessions = ["married", "laborer", "widow", "laborer"]
 for (const job in lessProfessions) {
@@ -401,9 +401,15 @@ for (const job in lessProfessions) {
   }
 }
 ```
-```javascript
+```js
 let lessProfessions = ["married", "laborer", "widow", "laborer"]
-lessProfessions.splice(1,1)
+for (const job in lessProfessions) {
+  if (lessProfessions.length > 3) {
+    if (lessProfessions[job] == "laborer") {
+      lessProfessions.splice(job,1)
+    }
+  }
+}
 ```
 
 <p class="codeblock-caption">
@@ -448,13 +454,14 @@ for (const job of professions){
 **Goal**: Create a new array and populate, i.e., push all items from the `childStatus` array, except for any empty Strings. Use a `for...of` loop to do so.
 
 ```js
-let newStatus = childStatus.map(
-  (s) => (s.splice(0,1))
-)
-
+for (const status of childStatus) {
+    if (status == "") {
+      childStatus.splice(status,1)
+    }
+}
 ```
-```javascript
-newStatus
+```js
+childStatus
 ```
 
 ### E5. Conditional logging
