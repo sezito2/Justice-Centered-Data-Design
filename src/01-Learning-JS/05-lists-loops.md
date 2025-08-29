@@ -426,7 +426,7 @@ lessProfessions
 **Goal**: Add a new profession as a String, `"spinster"`, to your `professions` list, then log it to the web console.
 
 ```js
-professions.push("spinster")
+lessProfessions.push("spinster")
 // Convert and code here
 ```
 
@@ -436,7 +436,7 @@ professions.push("spinster")
 
 ```js
 // Convert me to output `professions`
-professions
+lessProfessions
 ```
 
 ### E3. Loop through an array and log to the console
@@ -454,11 +454,11 @@ for (const job of professions){
 **Goal**: Create a new array and populate, i.e., push all items from the `childStatus` array, except for any empty Strings. Use a `for...of` loop to do so.
 
 ```js
-for (const status of childStatus) {
-    if (status == "") {
-      childStatus.splice(status,1)
-    }
-}
+//for (const status of newKid) {
+  //if (status == "") {
+    //newKid.splice(status,1)
+  //}
+//}
 ```
 ```js
 childStatus
@@ -469,7 +469,7 @@ childStatus
 **Goal**: Make a `for` loop that considers each item in the `childStatus` list. Log `"Person has child"` ***if*** the person has a child ***and*** `"Person does not have child"` ***if not***. Use `.length` in your conditional statement to enact this logging.
 
 ```javascript
-// Your code here
+for (const status o)
 ```
 
 Make sure you check to see if the correct language has been logged to the web console.
