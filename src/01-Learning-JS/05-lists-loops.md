@@ -392,21 +392,25 @@ professions
 
 For this first exercise, I'll provide you with the basic structure:
 
-```javascript
+```js
 // Declare new and freshly empty array in which to push new items
-let lessProfessions = []
-for () {
-  if () {
-    // Do something in here
+let lessProfessions = ["married", "laborer", "widow", "laborer"]
+for (const job in lessProfessions) {
+  if (lessProfessions.length > 3) {
+    lessProfessions.splice(1,1)
   }
 }
+```
+```javascript
+let lessProfessions = ["married", "laborer", "widow", "laborer"]
+lessProfessions.splice(1,1)
 ```
 
 <p class="codeblock-caption">
   Interactive output of the array of <code>lessProfessions</code>
 </p>
 
-```javascript
+```js
 // Convert me to output `lessProfessions`
 lessProfessions
 ```
@@ -415,7 +419,8 @@ lessProfessions
 
 **Goal**: Add a new profession as a String, `"spinster"`, to your `professions` list, then log it to the web console.
 
-```javascript
+```js
+professions.push("spinster")
 // Convert and code here
 ```
 
@@ -423,7 +428,7 @@ lessProfessions
   Interactive output of the array of <code>lessProfessions</code>
 </p>
 
-```javascript
+```js
 // Convert me to output `professions`
 professions
 ```
@@ -432,16 +437,24 @@ professions
 
 **Goal**: Make a `for` loop that considers each item in the `professions` array and logs "Person's profession is ___", which "___" should be the profession from the array.
 
-```javascript
-// Convert and code here
+```js
+for (const job of professions){
+  console.log("Person's profession is", job)
+}
 ```
 
 ### E4. More conditional pushing with `for...of`
 
 **Goal**: Create a new array and populate, i.e., push all items from the `childStatus` array, except for any empty Strings. Use a `for...of` loop to do so.
 
+```js
+let newStatus = childStatus.map(
+  (s) => (s.splice(0,1))
+)
+
+```
 ```javascript
-// Your code here
+newStatus
 ```
 
 ### E5. Conditional logging
