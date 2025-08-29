@@ -454,22 +454,33 @@ for (const job of professions){
 **Goal**: Create a new array and populate, i.e., push all items from the `childStatus` array, except for any empty Strings. Use a `for...of` loop to do so.
 
 ```js
-//for (const status of newKid) {
-  //if (status == "") {
-    //newKid.splice(status,1)
-  //}
-//}
+let newKids = []
+for (const status of childStatus) {
+  if (status != ""){
+    newKids.push(status)
+  }
+}
+
+//if (status == "") {
+  //  newKids.splice(status,1)
 ```
 ```js
-childStatus
+newKids
 ```
 
 ### E5. Conditional logging
 
 **Goal**: Make a `for` loop that considers each item in the `childStatus` list. Log `"Person has child"` ***if*** the person has a child ***and*** `"Person does not have child"` ***if not***. Use `.length` in your conditional statement to enact this logging.
 
-```javascript
-for (const status o)
+```js
+for (const status of childStatus)
+  if (status.length > 1){
+    console.log("Person has child")
+  }
+  else {
+    console.log("Person does not have child")
+  }
+  console.log(childStatus)
 ```
 
 Make sure you check to see if the correct language has been logged to the web console.
