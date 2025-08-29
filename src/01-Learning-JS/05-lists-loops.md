@@ -460,9 +460,6 @@ for (const status of childStatus) {
     newKids.push(status)
   }
 }
-
-//if (status == "") {
-  //  newKids.splice(status,1)
 ```
 ```js
 newKids
@@ -504,8 +501,20 @@ sex
 
 **Goal**: Make a `for` loop that considers each item in the `sex` list. Log "Person is male" ***if*** the person is `"m"`, "Person is female" ***if*** the person is `"f"`, "Person is intersex" ***if*** the person is `"i"`, and "Person's sex is not known" ***if*** `"unknown"`.
 
-```javascript
-// Your code here
+```js
+for (const birthSex of sex)
+  if (birthSex == "f"){
+    console.log("Person is female")
+  }
+  else if (birthSex == "m"){
+    console.log("Person is male")
+  }
+  else if (birthSex == "i"){
+    console.log("Person is intersex")
+  }
+  else if (birthSex == "unknown"){
+    console.log("Person's sex is not known")
+  }
 ```
 
 Make sure to check if the items are logged correctly.
