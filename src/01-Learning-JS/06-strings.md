@@ -197,12 +197,12 @@ Sometimes, we need to isolate parts of a text for analysis by splitting it into 
 
 Create an array of strings of Vonnegut's story as a new variable called `vonnSplit`. Do so by splitting the newly cleaned String, `vonnegutNoPuncs`, with an empty single space (`" "`).
 
-```javascript
-// Convert me to a js block and complete the exercise
+```js
+let vonnSplit = vonnegutNoPuncs.split(" ")
 ```
 
-```javascript
-// Convert me to a js block and output `vonnSplit`
+```js
+vonnSplit
 ```
 
 ### E5. Create array of all hyphenated words
@@ -213,6 +213,16 @@ Ok, last exercise! Complete the following steps to create a new array that only 
 
 1. In a first codeblock, declare a new array called `hyphenatedWords`. Then, push only hyphenated words into it.
 2. In a second codeblock, output the new array to verify your work.
+
+```js
+let hyphenatedWords = []
+for (const word of vonnSplit){
+  if (word.includes("-")){
+    hyphenatedWords.push(word)
+  }
+}
+console.log(hyphenatedWords)
+```
 
 **Question**: What oddities do you notice about the outcome? Below, explain what you suggest is happenning, and what you would do to resolve the issue with isolating a better list of hyphenated words.
 
