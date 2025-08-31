@@ -184,7 +184,6 @@ for (const mark of puncList){
     vonnegutNoPuncs = vonnegutNoPuncs.replaceAll(mark, "")
   }
 }
-
 ```
 
 ```js
