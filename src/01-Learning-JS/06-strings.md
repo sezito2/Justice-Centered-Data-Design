@@ -173,12 +173,22 @@ Ok, those chains were ridiculous, right? Below, complete the same outcome, but u
   Put those desired marks to replace in an Array. You will also need to write a conditional statement to handle the <code>--</code> differently.
 </p>
 
-```javascript
-// Convert me and use a for loop to remove all desired punctuation
+```js
+let vonnegutNoPuncs = vonnegutNoSB
+let puncList = ["\"", "\'", ",", ".", "?", ";", "--"]
+for (const mark of puncList){
+  if (mark == "--"){
+    vonnegutNoPuncs = vonnegutNoPuncs.replaceAll(mark, " ")    
+  }
+  else {
+    vonnegutNoPuncs = vonnegutNoPuncs.replaceAll(mark, "")
+  }
+}
+
 ```
 
-```javascript
-// Convert me and output the new string, vonnegutNoPuncs, here
+```js
+vonnegutNoPuncs
 ```
 
 ### E4. Split the String into an Array of Strings
