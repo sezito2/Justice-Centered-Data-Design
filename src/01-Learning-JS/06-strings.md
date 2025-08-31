@@ -156,13 +156,13 @@ let vonnegutNoSB = vonnegut.replaceAll("       *       *       *       *       *
 vonnegutNoSB
 ```
 
-```javascript
-// Convert me to a js block and complete #3
+```js
+let vonnegutClean = vonnegutNoSB.replaceAll("\"", "").replaceAll("\'", "").replaceAll(",", "").replaceAll(".", "").replaceAll("?", "").replaceAll(";", "").replaceAll("--", " ")
 ```
 
-```javascript
+```js
 // Convert me to output the grand finale!
-vonnegutNoSBDQ
+vonnegutClean
 ```
 
 ### E3. Same thing, but better method with a for loop
