@@ -226,7 +226,7 @@ console.log(hyphenatedWords)
 
 **Question**: What oddities do you notice about the outcome? Below, explain what you suggest is happenning, and what you would do to resolve the issue with isolating a better list of hyphenated words.
 
-ENTER_YOUR_RESPONSE_HERE
+Some of the hyphenated words include strings of \r\n\r\n followed by the next word in the short story. This is being included because there are no spaces between the hyphenated word and the rest of this string. To resolve this, I might remove the instances of \r\n... first then push the hyphenated words to a new array.
 
 ## Submission
 
