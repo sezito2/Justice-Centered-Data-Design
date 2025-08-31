@@ -75,9 +75,10 @@ stringEx[1] // gives value of "o"
 
 Try out the following common methods for strings located in the table below. Start by defining the variable, `str1` below in your browser's console.
 
-```
+```js
 // Running string example
 let str1 = "Cat In The Hat"
+console.log(str1)
 ```
 
 | Method | Action | Output  |
@@ -96,7 +97,7 @@ let str1 = "Cat In The Hat"
 
 Many methods can be ***chained*** in a desired sequence of execution in JS. By chained, I mean that you can link them together as follows:
 
-```javascript
+```js
 /**
   * Search for string but not worry about casing of characters
   * 1. .toLowerCase() --> make all chars lowercase in string.
@@ -129,8 +130,8 @@ vonnegut
 
 Let's start simple. Output the length of the String, `vonnegut`, in a `js` codeblock below.
 
-```javascript
-// Convert me to a js block
+```js
+console.log(vonnegut.length)
 ```
 
 ### E2. Replace parts of a String
