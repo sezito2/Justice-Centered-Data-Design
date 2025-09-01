@@ -3,6 +3,8 @@
 ```js
 // We'll cover what this code means in the D3.js section :-)
 import {utcParse,utcFormat} from "d3-time-format";
+import { Temporal } from '@js-temporal/polyfill';
+
 ```
 
 <p class="cite_small">
