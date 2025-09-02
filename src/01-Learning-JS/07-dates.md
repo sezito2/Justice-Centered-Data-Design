@@ -385,7 +385,6 @@ console.log(ballotsWithDateObjs)
 ```js
 // Convert and output
 ballotsWithDateObjs
-console.log(ballotsWithDateObjs)
 ```
 
 ### E2. d3.utcFormat(): Convert & format Date() object to String
@@ -393,18 +392,12 @@ console.log(ballotsWithDateObjs)
 **Goal**: Use `.map()` to loop through the updated array of objects, `ballotsWithDateObjs`, and create a new array of objects called `updatedBallots`. In the new `updatedBallots`, use `d3.utcFormat()` to assign a converted and formatted version of `ballot_req_dt_obj` with the following date ***format***: Wed., January 27, 1981.
 
 <!-- E2 -->
-```javascript
+```js
 let formatDate = utcFormat("%a, %b %d %Y")
-let randomDate = "025-09-02"
-console.log(randomDate)
-console.log(utcFormat(randomDate))
-//let updatedBallots = ballotsWithDateObjs.map(
-  //(voter => ({
-   // ...voter,
-    //ballot_req_dt_obj: utcFormat(voter...ballot_req_dt_obj)
-  //}))
-//)
-
+let updatedBallots = ballotsWithDateObjs.map(voter => ({
+  ...voter,
+  ballot_req_dt_obj: formatDate(voter.ballot_req_dt_obj)
+}))
 ```
 
 ```js
