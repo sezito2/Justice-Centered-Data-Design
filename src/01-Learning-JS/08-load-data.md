@@ -78,7 +78,7 @@ Here's the syntax:
 const data = FileAttachment("./../relative/path/to/data.csv")
 ```
 
-If loaded successfully, the following properties of the variable are available in addition to the data:
+If loaded successfully, the following properties of the                                           variable are available in addition to the data:
 
 - `name` - the file’s name (such as `data.csv`)
 - `mimeType` - MIME type (such as text/csv),
@@ -221,6 +221,12 @@ Goal: Demonstrate your understanding of the CSV file format by creating a mini C
 Use the empty codeblock below.
 
 ```
+playerName,position,number
+Alonso,First Base,20
+McNeil,Second Base,1
+Lindor,Short Stop,12
+Nimmo,Outfield,9
+Diaz,Pitcher,39
 ```
 
 ### E2. Load a CSV file
