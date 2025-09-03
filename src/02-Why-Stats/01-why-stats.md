@@ -1,4 +1,4 @@
-# 2.1-Why Statistics Are Important [to TPC]
+# 2.1a-Why Statistics Are Important [to TPC]
 
 ## Start Your GH Workflow
 
@@ -110,7 +110,7 @@ Your_response_here
 
 Your_response_here
 
-## 6. Translating the structural approach into TPC
+## 6. Translating the structural approach into TPC / Other Humanities Fields
 
 **Question**: After considering all of these texts -- their exigencies, propositions, and methods -- translate Mullaly's broader definition of the *structural approach* and Moreau's *practice methods* in social work into the domain of TPC or humanist domain of work by putting them into conversation with Lindgren, Gerdes, and Lawrence's SJ ethic and Graham et al's statistical genre analysis. In other words, begin to develop your own structural perspective and set of practices that translates Moreau's 5 practices. Finally, add one new practice approach specific to TPC/your domain.
 
@@ -119,5 +119,5 @@ Your_response_here
 ## Submission
 
 1. Create a **PR** (**pull request**) and use the provided content in the template to start it.
-2. Respond to your peers and comment on their work on at least one chapter..
+2. Respond to your peers and comment on their work on at least one chapter.
 3. Submit the PR link in Moodle, when you're ready.

@@ -68,15 +68,6 @@ export default {
           path: "/01-Learning-JS/10-functions"},
       ]
     },
-    // MIDTERM
-    {
-      name: "Midterm",
-      open: false,
-      pages: [
-        {name: "Directions", path: "/MIDTERM/index"},
-        {name: "Lastname's Midterm", path: "/MIDTERM/midterm"},
-      ]
-    },
     // 2. STATS for SJ
     {
       name: "2. Stats for SJ",
@@ -87,12 +78,28 @@ export default {
           path: "/02-Why-Stats/01-why-stats"
         },
         {
-          name: "2.2 Creating Frequency Distributions",
+          name: "2.2 Grouping & Calculating Frequency Distributions",
           path: "/02-Why-Stats/02-freq-dist-create"
         },
+        {
+          name: "E-2.2 Group & Count 3-Levels",
+          path: "/02-Why-Stats/02-freq-dist-EDA"
+        },
+        {
+          name: "2.3 The Humanity of Data",
+          path: "/02-Why-Stats/03-data-humanity"
+        },
         // {
-        //   name: "2.3 Plotting Frequency Distributions",
-        //   path: "/02-Why-Stats/03-freq-dist-plot--teachers_copy"
+        //   name: "2.4 Plotting Frequency Distributions",
+        //   path: "/02-Why-Stats/04-freq-dist-plot--teachers_copy"
+        // },
+        // {
+        //   name: "2.5 Central Tendency & Variability",
+        //   path: "/02-Why-Stats/05-central-tend-plot--teachers_copy"
+        // },
+        // {
+        //   name: "2.6 Correlation & Linear Regression",
+        //   path: "/02-Why-Stats/06-correlation-and-regression--teachers_copy"
         // },
       ]
     },
@@ -111,21 +118,30 @@ export default {
         },
       ]
     },
-    // CLASS DEMOS
+    // MIDTERM
     {
-      name: "Class Demos",
+      name: "Midterm",
       open: false,
       pages: [
-        {
-          name: "Eyes on the Prize!",
-          path: "/Class-Demos/00-eotp"
-        },
-        // {
-        //   name: "Compromise Demo",
-        //   path: "/Class-Demos/xx-compromise"
-        // },
+        {name: "Directions", path: "/MIDTERM/index"},
+        {name: "Lastname's Midterm", path: "/MIDTERM/midterm"},
       ]
     },
+    // CLASS DEMOS
+    // {
+    //   name: "Class Demos",
+    //   open: false,
+    //   pages: [
+    //     {
+    //       name: "Eyes on the Prize!",
+    //       path: "/Class-Demos/00-eotp"
+    //     },
+    //     {
+    //       name: "Compromise Demo",
+    //       path: "/Class-Demos/xx-compromise"
+    //     },
+    //   ]
+    // },
     // {
     //   name: "DEMOS",
     //   open: false,

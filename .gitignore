@@ -16,10 +16,12 @@ src/*/components-tc/
 *--EXAMPLE.md
 src/data/dear-governor
 src/data/city-data
+src/policies.md
 
 
 # TOO BIG VIDS
 *.mov
+02-sumUpWithReducerTests-1-twoLevel--ORIGINAL.mp4
 
 # TOO BIG DATA
 nc_absentee_20241105.csv
