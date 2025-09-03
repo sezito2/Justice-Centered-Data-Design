@@ -64,7 +64,7 @@ In this project, check out the `/src/data/events.json` file, which is a small ex
   What other properties of JSON do you notice?
 </p>
 
-**RESPONSE**: Write your response here.
+**RESPONSE**: I notice that each object contains multiple "variables". These variables are strings and separate by a `:` i.e., `"variable name": "specific data point"`. Rather than having heading at the top like a CSV, the headings are mixed into the data.
 
 ## 1.8.2 Framework's FileAttachment()
 
