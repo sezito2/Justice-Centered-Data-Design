@@ -1,5 +1,7 @@
 # 2.2-The Humanity of Data: Recognizing the Rhetorics of Data, Queer Data, and Data Feminism
 
+<p style="display:none"></p>
+
 ## Start Your GH Workflow
 
 Remember, before you start anything else, always follow this GH methodological workflow:
@@ -89,27 +91,43 @@ YOUR_RESPONSE_HERE
 
 YOUR_RESPONSE_HERE
 
-## 3. Questions about a data team's "rhetorical process of data"
+## 3. Questions about "The topology of race"
 
-### 3.1 What's the "god trick" problem?
+**Context**: In this reading, you read a shorter excerpt from a longer review essay by Lee. In this review essay, Lee summarizes Kwame Anthony Appiah's collection of essays, *In My Father's House*, as a means of instigating new lines of inquiry for legal studies.
+
+### 3.1 Race & racism: From conjecture to questions of definition
+
+**Question**: Why does Lee think it important that Appiah changed the standard line of inquiry in legal studies from "whether racism exists" (p. 441) to "what race and racism are"? What "overdetermined" (p. 441) parts or race, i.e., issues about race, does this definitional question bring into focus for deliberation? Be sure to ***define*** and discuss Appiah's position about race as being essential/biological or not and being cultural or not. Indeed, pay close attention to Appiah's definition of culture.
+
+YOUR_RESPONSE_HERE
+
+### 3.2 Race as multiplicitous
+
+**Question**: What does Lee mean by "race is always multiplicitous because social contexts are multiplicitous" (p. 447)? Use the Shaw v. Reno case to help you explain how this challenges both essentialist/biological definitions of race & Appiah's race as synonomous with culture.
+
+YOUR_RESPONSE_HERE
+
+## 4. Questions about a data team's "rhetorical process of data"
+
+### 4.1 What's the "god trick" problem?
 
 **Question**: Briefly describe the "god trick" problem. Also, discuss what connections you recognize between the "god trick" problem and some issues raised in our other readings.
 
 YOUR_RESPONSE_HERE
 
-### 3.2 What's stasis and stasis networks?
+### 4.2 What's stasis and stasis networks?
 
 **Question**: Briefly define stasis and stasis networks. Explain what stasis networks provides qualitative researchers?
 
 YOUR_RESPONSE_HERE
 
-### 3.3 What's the "DMT cluster"?
+### 4.3 What's the "DMT cluster"?
 
 **Question**: What's the *DMT cluster*, and how did connect to observations about the data team's judgment about the *quality of metrics*?
 
 YOUR_RESPONSE_HERE
 
-## 4. Synthesis Response
+## 5. Synthesis Response
 
 **Question**: Pick and choose any particular combination of concepts and heuristics from the readings in 2.1 and 2.3. Use these questions and ideas to discuss your understanding of the 2024 NC General Election mail-in ballot data. What questions and criticisms do you have about the dataset's categories, hieararchies, collection, etc.?
 
