@@ -985,12 +985,21 @@ ncSampleE1
   Be sure to write your code in a manner aligned with how I break down the process above.
 </p>
 
-```javascript
-// Your code goes here
+```js
+const parseDate = utcParse("%d/%m/%Y")
+let ncSampleE2 = nc2024SampledVoters.map(
+  (voter) => (ballot_send_dt_obj: parseDate(nc2024SampledVoters.ballot_send_dt))
+)
+
+//let ballot_send_dt_obj = parseDate(nc2024SampledVoters.ballot_send_dt)
+//const SampledVotersE2 = new InternMap.groupBy(nc2024SampledVoters,
+//  ({ballot_send_dt_obj})
+//)
+
 ```
 
-```javascript
-// Your grouped variable here
+```js
+ncSampleE2
 ```
 
 ### E3. Group NC Voters By Age Range as an InternMap()
