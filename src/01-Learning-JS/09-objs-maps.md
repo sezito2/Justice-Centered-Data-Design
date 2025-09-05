@@ -287,7 +287,7 @@ Let's use the `nc2024SampleVoters` Array of objects to learn about looping throu
 In JS, one of the current best practices is to use the `for...of` loop. This looping method helps you define a meaningful variable to use within the scope of the loop. In this case, each object in the array represents one voter, so it makes sense to name the variable as such.
 
 <!-- for...of example -->
-```javascript
+```js
 for (const voter of nc2024SampleVoters) {
   console.log(
     "Voter number",
@@ -710,7 +710,7 @@ In addition to JS's built-in data structures, like Arrays, Object Arrays, and Ma
 
 The main reason why we should learn how to use D3's InternMaps over the regular JS Map has to do with using the Date object as keys to group our data. For example, if you use dates as keys in a JavaScript Map, you may be surprised that it won’t work as you expect. Indeed, if you use `Date()` objects as keys in a `Map()`, JS will not always respect the one unique key per collection rule. Let's see what happens in the example below:
 
-```javascript
+```js
 // Example JS Map() with Date() objects as keys
 let vanillaJsDateMap = new Map([
   [new Date(Date.UTC(2001, 0, 1)), "red"],
@@ -733,7 +733,7 @@ Akin to Object Arrays, D3.js has the InternMap. ***Interning*** is specific meth
 
 For example, the below InternMap considers two Date instances representing the same moment to be equal, so the environment will only store the first instance, i.e., replace the `"red"` entry with subsequent `"green"` entry. Print that out to the console and see for yourself.
 
-```javascript
+```js
 const exampleInternMap = new InternMap([
   [new Date(Date.UTC(2001, 0, 1)), "red"],
   [new Date(Date.UTC(2001, 0, 1)), "green"] // replaces previous entry
@@ -758,13 +758,14 @@ Ok, Date() object behavior is one big reason to use InternMaps. Additionally, In
 
 For more proof, check out both of their respective `prototype` functions in the web console. Convert this `javascript` codeblock to an executable `js` codeblock and see for yourself:
 
-```javascript
+```js
 let ogJsMap = new Map()
 let d3InternMap = new InternMap()
 console.log(
-  "ogJsMap\n", ogJsMap
+  "ogJsMap\n", ogJsMap,
   "\nd3InternMap\n", d3InternMap
 )
+console.log("test")
 ```
 
 Notice how InternMap() echoes JS's Map(), so if you learn one type of map, you will intuitively understand how to work with the others. (Thank you, designers and developers!)
@@ -955,12 +956,20 @@ nc24VotersRollUpPartyAndRace.get("DEM").get("F") // Yields 4149
   Be sure to write your code in a manner aligned with how I break down the process above.
 </p>
 
-```javascript
-// Your code goes here
+```js
+let ncSampleE1 = nc2024SampledVoters.map(
+  (voter) => {
+    const race = voter.race
+    const ballotReturn = voter.ballot_rtn_status
+    if (voter.ballot_rtn_status != null){
+      return {ballotReturn, race}
+    } 
+  }
+)
 ```
 
-```javascript
-// Your new variable here
+```js
+ncSampleE1
 ```
 
 ### E2. Group NC Voters By the Ballot Sent Date as an InternMap()
