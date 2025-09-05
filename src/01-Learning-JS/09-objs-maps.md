@@ -986,15 +986,15 @@ ncSampleE1
 </p>
 
 ```js
-const parseDate = utcParse("%d/%m/%Y")
-let ncSampleE2 = nc2024SampledVoters.map(
-  (voter) => (ballot_send_dt_obj: parseDate(nc2024SampledVoters.ballot_send_dt))
+const parseDate = utcParse("%m/%d/%y")
+let ncSampleE2 = nc2024SampledVoters.map(voter => ({
+  ...voter,
+  ballot_send_dt_obj: parseDate(voter.ballot_send_dt)
+}))
+ncSampleE2 = d3.group(
+  ncSampleE2,
+  (d) => d.ballot_send_dt_obj
 )
-
-//let ballot_send_dt_obj = parseDate(nc2024SampledVoters.ballot_send_dt)
-//const SampledVotersE2 = new InternMap.groupBy(nc2024SampledVoters,
-//  ({ballot_send_dt_obj})
-//)
 
 ```
 
