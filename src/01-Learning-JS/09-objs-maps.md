@@ -1018,12 +1018,26 @@ ncSampleE2
   </ol>
 </div>
 
-```javascript
-// Your code goes here
+```js
+let ageList = [10,20,30,40,50,60,70,80,90,100]
+let ncVotersAges = d3.group(nc2024SampledVoters,
+  ({age}) => {
+    if (age >=100) {return "100+"}
+    else if (age >=90) {return "90-99"}
+    else if (age >= 80) {return "80-89"}
+    else if (age >= 70) {return "70-79"}
+    else if (age >= 60) {return "60-69"}
+    else if (age >= 50) {return "50-59"}
+    else if (age >= 40) {return "40-49"}
+    else if (age >= 30) {return "30-39"}
+    else if (age >= 20) {return "20-29"}
+    else if (age >= 10) {return "18-19"}
+  }
+)
 ```
 
-```javascript
-// Your grouped variable here
+```js
+ncVotersAges
 ```
 
 ### E4. Group NC Voters by Your Desired set of 2-3 Fields as an InternMap()
@@ -1032,16 +1046,23 @@ ncSampleE2
 
 First outline your procedure with steps below. Then, use the JS codeblock to perform your grouping as a D3.js `InternMap()`.
 
-1. Enter step 1
-2. Enter step 2
-3. ...
+1. First, I have to come up with a new variable for the array to keep things organized. `ncVotersE4`
+2. Set the new array, `ncVotersE4` `=` to the InternMap group by function `d3.group()`
+3. In the first line, enter the array that I'm taking the data from (`nc2024SampledVoters`)
+4. ***Note:*** be sure to add a comma after each line
+5. for each field I am interested in, I use the following formula `(d) => d.field`. Indenting as needed
 
-```javascript
-// Your code goes here
+```js
+let ncVotersE4 = d3.group(
+  nc2024SampledVoters,
+    (d)=> d.county_desc,
+      (d) => d.gender,
+        (d) => d.voter_party_code
+)
 ```
 
-```javascript
-// Your grouped variable here
+```js
+ncVotersE4
 ```
 
 ### E5. Rollup NC Voters by Total Ballot Sent Date as an InternMap()
@@ -1050,16 +1071,32 @@ First outline your procedure with steps below. Then, use the JS codeblock to per
 
 First outline your procedure with steps below. Then, use the JS codeblock to perform your rollup as a D3.js `InternMap()`.
 
-1. Enter step 1
-2. Enter step 2
-3. ...
+1. We did somethings similar in E2 and in the date chapter, so I referenced my code for those exercises.
+2. first, create the new date() field
+   1. let a variable = the utcParse() function. Make sure the date format matches the format in the data, otherwise the dates will be wrong. This data uses month-day-year
+   2. create a new variable equal to a map of the data (nc2024SampledVoters)
+   3. Within the map, we want this to loop through each voter, so inclued ...voter,
+   4. For each voter, create a new field `ballot_req_dt_obj` that uses the declared date function from before to parse through the existing field `ballot_req_dt`
+3. Use the InternMap() d3.rollup() function
+   1. list the array we are drawing our data from (`ncSampleE5`). This is the one we created using the .map()
+   2. Add `(D) => D.length` to get the count
+   3. use `(d) => d.field` to group by the specified field.
 
-```javascript
-// Your code goes here
+```js
+const parseDate = utcParse("%m/%d/%y")
+let ncSampleE5 = nc2024SampledVoters.map(voter => ({
+  ...voter,
+  ballot_req_dt_obj: parseDate(voter.ballot_req_dt)
+}))
+let ncVotersE5 = d3.rollup(
+  ncSampleE5,
+  (D) => D.length,
+  (d) => d.ballot_req_dt_obj
+)
 ```
 
-```javascript
-// Your grouped variable here
+```js
+ncVotersE5
 ```
 
 ## Submission
