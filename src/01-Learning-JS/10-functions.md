@@ -93,8 +93,12 @@ Overall keep that rule-of-thumb in mind as you practice writing functions.
 Use D3.js `FileAttachment()` method below in VS Code. Remember that you'll need to write a relative path as a String parameter that helps the computer find where the CSV file is in relation to this particular page's file in the project tree.
 
 <!-- Attach sampled NC voter data -->
-```javascript
+```js
+let ncVoters = FileAttachment("../data/nc-voters/nc_absentee_mail_2024_n20000.csv").csv ({typed: true})
 // Convert to `js` codeblock and attach sampled NC voter data file: nc_absentee_mail_2024_n20000.csv
+```
+```js
+ncVoters
 ```
 
 ## E2. Convert String dates to Date() objects
@@ -103,26 +107,34 @@ Use D3.js `FileAttachment()` method below in VS Code. Remember that you'll need 
 
 First outline your procedure with steps below.
 
-1. Enter step 1
-2. Enter step 2
-3. ...
+1. First define how to parse the Dates
+2. create a function to parse dates using the voterData parameter
+   1. This function should contain a map similar to the ones i've used in previous exercises. It will include directions to parse throught the three date objects
+3. define my variables to pass through the function
+4. run the function
 
 Now, code!
 
-```javascript
-// Your function code goes here
-```
-
-```javascript
-// Your use of the function code goes here
+```js
+import {utcParse,utcFormat} from "d3-time-format"
+const parseDate = utcParse("%m/%d/%y")
+let dateFunc = (voters) => {
+  return voters.map(voter => ({
+  ...voter,
+  ballot_req_dt_obj: parseDate(voter.ballot_req_dt),
+  ballot_send_dt_obj: parseDate(voter.ballot_send_dt),
+  ballot_rtn_dt_obj: parseDate(voter.ballot_rtn_dt)
+  }))
+}
+let ballotDates = dateFunc(ncVoters)
 ```
 
 <p class="codeblock-caption">
   E1 Interactive Output
 </p>
 
-```javascript
-// Convert and output variable here
+```js
+ballotDates
 ```
 
 ## E3. Create Your Own Function (with Conditions)!
@@ -131,26 +143,38 @@ Now, code!
 
 First outline your procedure with steps below.
 
-1. Enter step 1
-2. Enter step 2
-3. ...
+1. create a function skeleton
+   1. This function should contain conditional if statements.
+   2. Be sure to include only one return statement
+2. define my variables to pass through the function
+3. run the function
 
 Now, code!
 
-```javascript
-// Your function code goes here
+```js
+let statusFunction = (voters) => {
+  return voters.map(voter => {
+    if (voter.ballot_rtn_dt == null || voter.ballot_rtn_dt == ""){
+      return "This voter did not return their ballot."
+    }
+    else {
+      return "This voter returned their ballot."
+    }
+  })
+}
+
 ```
 
-```javascript
-// Your use of the function code goes here
+```js
+let ballotReturn = statusFunction(ncVoters)
 ```
 
 <p class="codeblock-caption">
   E2 Interactive Output
 </p>
 
-```javascript
-// Your output variable here
+```js
+ballotReturn
 ```
 
 ## Submission
