@@ -94,8 +94,11 @@ Use D3.js `FileAttachment()` method below in VS Code. Remember that you'll need 
 
 <!-- Attach sampled NC voter data -->
 ```js
-FileAttachment("./../src/data/nc-voters/nc_absentee_mail_2024_n20000.csv")
+let ncVoters = FileAttachment("../data/nc-voters/nc_absentee_mail_2024_n20000.csv").csv ({typed: true})
 // Convert to `js` codeblock and attach sampled NC voter data file: nc_absentee_mail_2024_n20000.csv
+```
+```js
+ncVoters
 ```
 
 ## E2. Convert String dates to Date() objects
@@ -104,18 +107,30 @@ FileAttachment("./../src/data/nc-voters/nc_absentee_mail_2024_n20000.csv")
 
 First outline your procedure with steps below.
 
-1. Enter step 1
-2. Enter step 2
-3. ...
+1. First define how to parse the Dates
+2. create a function to parse dates using the voterData parameter
+   1. This function should contain a map similar to the ones i've used in previous exercises. It will include directions to parse throught the three date objects
+3. define my variables to pass through the function
+4. run the function
 
 Now, code!
 
-```javascript
-// Your function code goes here
+```js
+import {utcParse,utcFormat} from "d3-time-format"
+const parseDate = utcParse("%m/%d/%y")
+let func = (voters) => {
+  return voters.map(voter => ({
+  ...voter,
+  ballot_req_dt_obj: parseDate(voter.ballot_req_dt),
+  ballot_send_dt_obj: parseDate(voter.ballot_send_dt),
+  ballot_rtn_dt_obj: parseDate(voter.ballot_rtn_dt)
+  }))
+}
+let ballotDates = func(ncVoters)
 ```
 
-```javascript
-// Your use of the function code goes here
+```js
+ballotDates
 ```
 
 <p class="codeblock-caption">
