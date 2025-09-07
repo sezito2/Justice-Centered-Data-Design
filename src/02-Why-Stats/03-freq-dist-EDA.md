@@ -97,7 +97,7 @@ Roll up your sleeves and let's start coding this new data!
 
 ## E1. Attach the data
 
-Let's attach and render the data out to the page, so we can reference it, when needed.
+Let's attach and render the dataset CSV file called `nc_absentee_mail_2024_no_dropped_dupes.csv` out to the page, so we can reference it, when needed.
 
 Let's assign the attached data to a constant variable called `ncVotersAll`.
 
@@ -144,7 +144,7 @@ Copy and paste the code and comments in the larger codeblock below into your `ut
       Remember that JS' <code>.map()</code> is simply a fancy for loop, which we learned in <a href="/01-Learning-JS/09-objs-maps.html#iterate-iterables-with-map" target="_blank" rel="noreferrer noopenner">Chapter 1.9 - Objects & Maps</a>. In our case with <code>ncVotersAll</code>, each object in the array represents one mail-in voter's ballot.
     </p>
 
-Ok, the code below has already been added to the utils.js file, so be sure to open the utils.js file to start your importable coding work!
+Ok, the code below has already been added to the `utils.js` file, so be sure to open the `utils.js` file to start your importable coding work!
 
 <p class="tip">
   I highly recommend opening a <strong>two-column layout in VS Code</strong>, so you can see both files as you work on each part of this exercise.
@@ -216,7 +216,7 @@ export const mapDateObject = (data, dateString) => {
 }
 ```
 
-Import the `mapDateObject` function in the initial import statement at the top of this page, so you can start to develop and test it as you use it.
+Import the `mapDateObject` function in the `import` statement at the top of this page, so you can start to develop and test it as you use it. I have already imported the `getUniquePropListBy()` function from `utils.js`, so you only need to add a comma after it—like you do in Arrays.
 
 <p class="tip">
   Console logs are your friend for testing your code! Just be sure to erase them, when you don't need them anymore.
@@ -224,7 +224,7 @@ Import the `mapDateObject` function in the initial import statement at the top o
 
 ```javascript
 // Convert so you can test your imported function as you develop it
-const ncVotersAllUpdated = mapDateObject(ncVotersAll)
+const ncVotersAllUpdated = mapDateObject(ncVotersAll, "ENTER THE DATEFIELD HERE")
 ```
 
 Ok, now convert the below codeblock to an exectuable one, so you can view the output.
@@ -242,10 +242,10 @@ ncVotersAllUpdated
 
 Ok, now that we have a new week number date property at the *per voter ballot level*, you need to create a three-level grouping, so we can count the length of the following grouping sequence: `ballot_req_week` > `race` > `ballot_rtn_status`.
 
-It's time to take your knowledge of one-level and two-level RFS method and create an RFS function that can handle a ***three-level grouping***! Write this `threeLevelRollUpFlatMap()` function in the `utils.js` file.
+It's time to take your knowledge of one-level and two-level RFS method and create an RFS function that can handle a ***three-level grouping***! Write and test your new `threeLevelRollUpFlatMap()` function in the `utils.js` file by adding the function to your import statement at the top of this file.
 
 <p class="tip">
-  The structure and parameters will follow from <code>twoLevelRollUpFlatMap()</code>, so you can copy and paste this existing function to jump start <code>threeLevelRollUpFlatMap()</code>.
+  <code>threeLevelRollUpFlatMap()</code>'s structure and parameters will follow from <code>twoLevelRollUpFlatMap()</code>, so you can copy and paste this existing function to jump start your work.
 </p>
 
 The output should resemble something like the example image below:
@@ -359,31 +359,32 @@ const afGroupedPercResults = []
 **/
 for (const weekNumber of uniqueListOfWeekNumbers) {
 
-  /**
-   * 3. Calculate the sum grand total
-   *    for the current WEEK value
-   *    for ALL races and statuses.
-   *    We need the grand total, so we
-   *    can calculate the ratio/percentage
-   *    value for each week.
-   *    **IMPORTANT!!!**
-   *    Make sure you ignore null values
-   *    for `ballot_rtn_status`
-  **/
-  const weekAF = d3.sum(
-    // Replace me with the iterable: `afByWeekRaceStatus`
-    // Replace me with your accessor function here
-
-    // WARNING: Remember to separate your iterable and accessor with a comma
-  )
-
-  // 4. Loop through testor functions with your custom conditions
+  // 3. Loop through testor functions with your custom conditions
   //    - Use `for...in` so we can loop as many tests as provided
   for () {
 
-    // 5. Loop through interested properties
+    // 4. Loop through interested properties
     //    - Use `for...in` so we can loop as many tests as provided
     for () {
+
+      /**
+       * 3. Calculate the sum grand total
+       *    for the current WEEK value
+       *    for ALL current race and statuses.
+       *    We need this sum total, so we
+       *    can calculate the ratio/percentage
+       *    value for each week within
+       *    the current race.
+       *    **IMPORTANT!!!**
+       *    Make sure you ignore null values
+       *    for `ballot_rtn_status`
+      **/
+      const weekRaceAF = d3.sum(
+        // Replace me with the iterable: `afByWeekRaceStatus`
+        // Replace me with your accessor function here
+
+        // WARNING: Remember to separate your iterable and accessor with a comma
+      )
 
       /**
        * 6. Tally absolute frequency based on
@@ -425,7 +426,7 @@ for (const weekNumber of uniqueListOfWeekNumbers) {
         af: ,
         // Calculate the percentage with:
         // the total for the grouped level (summedUpLevel)
-        // divided by the total for the entire week (weekAF)
+        // divided by the total for the entire week (weekRaceAF)
         percentage: ,
       })
 
@@ -456,6 +457,12 @@ Tabulate the data here. Use `Inputs.table()`'s `format` option to express the pe
 ```javascript
 // Convert and tabulate afGroupedPercResults here
 ```
+
+## Question: Why not percentage of all ballots per week?
+
+Why did I direct you to sum the total for the week > race group, rather than calculate the percentage based on the grand sum total for the entire week across all included races? How are those percentages' respective *interpretive levels* different?
+
+YOUR_RESPONSE_HERE
 
 ## Question: New insights?
 
