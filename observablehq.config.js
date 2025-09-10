@@ -97,14 +97,10 @@ export default {
         //   name: "2.5 Central Tendency & Variability",
         //   path: "/02-Why-Stats/05-central-tend-plot--teachers_copy"
         // },
-        // {
-        //   name: "2.6 Correlation & Linear Regression",
-        //   path: "/02-Why-Stats/06-correlation-and-regression--teachers_copy"
-        // },
-        // {
-        //   name: "2.7 Basic Textual Analysis",
-        //   path: "/02-Why-Stats/07-textual-analysis--teachers_copy"
-        // },
+        {
+          name: "2.6 Correlation & Linear Regression",
+          path: "/02-Why-Stats/06-correlation-and-regression--teachers_copy"
+        },
       ]
     },
     // HELP PAGES
@@ -140,10 +136,10 @@ export default {
           name: "Eyes on the Prize!",
           path: "/Class-Demos/00-eotp"
         },
-        // {
-        //   name: "Compromise Demo",
-        //   path: "/Class-Demos/xx-compromise"
-        // },
+        {
+          name: "Compromise Demo",
+          path: "/Class-Demos/xx-compromise"
+        },
       ]
     },
     // {
@@ -164,6 +160,5 @@ export default {
 
   // Content to add to the head of the page, e.g. for a favicon:
   head: '<link rel="icon" href="observable.png" type="image/png" sizes="32x32">\n<link rel="stylesheet" href="/assets/css/hljs.css">\n<script src="/assets/js/lib/hljs.min.js"></script>\n<script src="/assets/js/lib/hljs-javascript.min.js"></script>\n<script src="/assets/js/lib/hljs-bash.min.js"></script>\n<script src="/assets/js/lib/hljs-shell.min.js"></script>\n<script src="/assets/js/lib/hljs-json.min.js"></script>\n<script>hljs.highlightAll();</script>',
-  // Scripts for the footer
-  footer: '<script src="/assets/js/toggle-section.js"></script><script src="/assets/js/video-playback.js"></script>',
+  footer: '<script src="/assets/js/toggle-section.js"></script>',
 };
