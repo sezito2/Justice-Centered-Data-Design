@@ -103,6 +103,14 @@ Use D3.js `FileAttachment()` method below in VS Code. Remember that you'll need 
 
 First outline your procedure with steps below.
 
+<p class="figure-caption">
+  A primer video to tackle this first big coding problem.
+</p>
+
+<video controls style="width: 620px; height:620px">
+  <source src="./../assets/vids/01-js/01.10-e2-plan-function.mp4" type="video/mp4" />
+</video>
+
 1. Enter step 1
 2. Enter step 2
 3. ...

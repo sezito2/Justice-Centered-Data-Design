@@ -445,6 +445,30 @@ video {
   height: 100% !important;
   box-shadow: 1px 1px 4px 1px var(--accentShade3);
 }
+/* Video Playback Speed Buttons */
+.video--playback_container {
+  display: flex;
+  gap: 0.45rem;
+  margin-bottom: 2rem;
+
+  & > button {
+    padding: 0.35rem;
+    background-color: var(--theme-background-alt);
+    color: var(--theme-foreground-alt);
+    font-family: var(--copyFonts);
+    font-weight: bold;
+    border: 1px solid var(--theme-foreground-alt);
+    box-shadow: 1px 1px 2px -1px var(--theme-foreground-alt);
+    transition: 0.2s;
+
+    &:hover {
+      padding: 0.4rem;
+      background-color: var(--theme-foreground-alt);
+      color: var(--theme-background-alt);
+      transition: 0.2s;
+    }
+  }
+}
 
 /* Text Effects */
 
@@ -1416,6 +1440,7 @@ pre,
   }
 }
 .figure-caption {
+  margin-top: 2rem;
   margin-bottom: 0.25rem;
   padding: 0;
   font-size: 1rem;
