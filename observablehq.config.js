@@ -97,10 +97,10 @@ export default {
         //   name: "2.5 Central Tendency & Variability",
         //   path: "/02-Why-Stats/05-central-tend-plot--teachers_copy"
         // },
-        {
-          name: "2.6 Correlation & Linear Regression",
-          path: "/02-Why-Stats/06-correlation-and-regression--teachers_copy"
-        },
+        // {
+        //   name: "2.6 Correlation & Linear Regression",
+        //   path: "/02-Why-Stats/06-correlation-and-regression--teachers_copy"
+        // },
       ]
     },
     // HELP PAGES
@@ -136,10 +136,10 @@ export default {
           name: "Eyes on the Prize!",
           path: "/Class-Demos/00-eotp"
         },
-        {
-          name: "Compromise Demo",
-          path: "/Class-Demos/xx-compromise"
-        },
+        // {
+        //   name: "Compromise Demo",
+        //   path: "/Class-Demos/xx-compromise"
+        // },
       ]
     },
     // {
