@@ -37,13 +37,13 @@ The dates found in the data file are not strings. But below is the code I would 
 
 ```javascript
 const dateParse = d3.timeParse("%Y-%m-%d")
-let metaAds = metaAdsOriginal.map(
-  (ad) => {
-    dateParse(ad.ad_creation_time)
+let metaAds = metaAdsOriginal.map((ad)=> ({
+    ...ad,
+    ad_creation_time_obj: dateParse(ad.ad_creation_time)
   }
-)
+))
 ```
-```js
+```javascript
 metaAds
 ```
 
