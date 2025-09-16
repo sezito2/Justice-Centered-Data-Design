@@ -33,7 +33,7 @@ metaAds
 ```
 
 ## Convert Dates
-
+## Convert Dates
 Convert the dates, which are strings, into Date() objects with your own custom
 D3.js parser and any formatters. Discuss any particular choices to format the
 date data in any new ways.
