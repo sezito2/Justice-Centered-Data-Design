@@ -1,5 +1,4 @@
 # Zito - Midterm
-*Note: The theme is making my title the same color as the background*
 
 * **Name**: Sami Zito
 * **Dataset**: Filename of the chosen dataset
@@ -26,20 +25,24 @@ gleaned during your first glance.
 
 Remember that this is a notebook, so you can treat it like one. `:-)`
 ```js
-let metaAds = FileAttachment("../data/midterm-options/meta-ads/meta-ads-mentioning-israel-after-2015-09-11.csv").csv({typed: true})
+let metaAdsOriginal = FileAttachment("../data/midterm-options/meta-ads/meta-ads-mentioning-israel-after-2015-09-11.csv").csv({typed: true})
 ```
 ```js
-metaAds
+metaAdsOriginal
 ```
 
 ## Convert Dates
-## Convert Dates
-Convert the dates, which are strings, into Date() objects with your own custom
-D3.js parser and any formatters. Discuss any particular choices to format the
-date data in any new ways.
 
-Again, be sure to output your newly transformed data in executable codeblocks
-for easier verification and reviewing.
+The dates found in the data file are not strings. But below is the code I would use to convert the date strings to date objects.
+
+```javascript
+const dateParse = d3.timeParse("%Y-%m-%d")
+let metaAds = dateParse(metaAdsOriginal.ad_creation_time)
+```
+```js
+//metaAds
+```
+
 
 ## Grouping #1 - Name of grouping here
 
