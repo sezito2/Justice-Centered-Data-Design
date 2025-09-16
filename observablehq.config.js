@@ -142,16 +142,16 @@ export default {
         // },
       ]
     },
-    {
-      name: "Textual Analysis",
-      open: false,
-      pages: [
-        {
-          name: "Compromise",
-          path: "/xx-Textual-Analysis/compromise"
-        },
-      ]
-    },
+    // {
+    //   name: "Textual Analysis",
+    //   open: false,
+    //   pages: [
+    //     {
+    //       name: "Compromise",
+    //       path: "/xx-Textual-Analysis/compromise"
+    //     },
+    //   ]
+    // },
   ],
 
   // Content to add to the head of the page, e.g. for a favicon:
