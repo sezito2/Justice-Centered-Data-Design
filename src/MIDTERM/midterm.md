@@ -24,6 +24,9 @@ You can note its size, for instance, as well as any other notable insights
 gleaned during your first glance.
 
 Remember that this is a notebook, so you can treat it like one. `:-)`
+```javascript
+let metaAdsOriginal = FileAttachment("../data/midterm-options/meta-ads/meta-ads-mentioning-israel-after-2015-09-11.csv").csv({typed: true})
+```
 ```js
 let metaAdsOriginal = FileAttachment("../data/midterm-options/meta-ads/meta-ads-mentioning-israel-after-2015-09-11.csv").csv({typed: true})
 ```
@@ -45,6 +48,22 @@ let metaAds = metaAdsOriginal.map((ad)=> ({
 ```
 ```javascript
 metaAds
+```
+
+### Format Dates
+<!-- Formatting dates to play around with differnt ideas -->
+```js
+let dayNum = d3.utcFormat("%j")
+let prettyFormat = d3.utcFormat("%b %d, %Y")
+let metaAdsDateNum = metaAdsOriginal.map((ad) => ({
+  ...ad,
+  ad_creation_time_day: dayNum(ad.ad_creation_time),
+  formatted_date:  prettyFormat(ad.ad_creation_time)
+  })
+)
+```
+```js
+metaAdsDateNum
 ```
 
 
