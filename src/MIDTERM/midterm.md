@@ -18,12 +18,8 @@ Use the following general scheme to revise as needed.
 
 ## Attach the data
 
-In this section, be sure to make some small notes about the data and output it
-in an executable js codeblock, so you can review it on the page interactively.
-You can note its size, for instance, as well as any other notable insights
-gleaned during your first glance.
-
-Remember that this is a notebook, so you can treat it like one. `:-)`
+* csv data (will need ({typed: true}) when attaching the file)
+  
 ```javascript
 let metaAdsOriginal = FileAttachment("../data/midterm-options/meta-ads/meta-ads-mentioning-israel-after-2015-09-11.csv").csv({typed: true})
 ```
@@ -55,19 +51,50 @@ metaAds
 ```js
 let dayNum = d3.utcFormat("%j")
 let prettyFormat = d3.utcFormat("%b %d, %Y")
-let metaAdsDateNum = metaAdsOriginal.map((ad) => ({
+let yearFormat = d3.utcFormat("%Y")
+let metaAdsDates = metaAdsOriginal.map((ad) => ({
   ...ad,
   ad_creation_time_day: dayNum(ad.ad_creation_time),
-  formatted_date:  prettyFormat(ad.ad_creation_time)
+  formatted_date:  prettyFormat(ad.ad_creation_time),
+  year: yearFormat(ad.ad_creation_time),
   })
 )
 ```
 ```js
-metaAdsDateNum
+metaAdsDates
 ```
 
 
-## Grouping #1 - Name of grouping here
+## Grouping #1 - Maximum Amount Spent vs the Minimum Impressions
+
+Explain your plan to group the data in a particular way here, before you do so.
+At least one of the groupings should use some variation of D3's `.rollup()`, so
+you can count particular grouped properties.
+
+Provide a procedure of your grouping plan in an ordered list before the codeblock:
+
+1. define the new array variable 
+2. set the new variable equal to `d3.rollup`
+3. In the `()` enter the orginal array
+4. Enter fields to group by with the formula: `(d) => d.field`
+
+```js
+let groupByArray1 = d3.rollup(
+  metaAdsOriginal,
+  (D) => D.length,
+  (d) => d.max_spend,
+    (d) => d.min_impressions,
+)
+```
+
+```js
+groupByArray1
+```
+
+Again, be sure to output your newly transformed data in executable codeblocks
+for easier verification and reviewing.
+
+## Grouping #2 - Minimum amount spend by year
 
 Explain your plan to group the data in a particular way here, before you do so.
 At least one of the groupings should use some variation of D3's `.rollup()`, so
@@ -79,23 +106,17 @@ Provide a procedure of your grouping plan in an ordered list before the codebloc
 2. Coding_Action_2
 3. ...
 
-Again, be sure to output your newly transformed data in executable codeblocks
-for easier verification and reviewing.
-
-## Grouping #2 - Name of grouping here
-
-Explain your plan to group the data in a particular way here, before you do so.
-At least one of the groupings should use some variation of D3's `.rollup()`, so
-you can count particular grouped properties.
-
-Provide a procedure of your grouping plan in an ordered list before the codeblock:
-
-1. Coding_Action_1
-2. Coding_Action_2
-3. ...
-
-Again, be sure to output your newly transformed data in executable codeblocks
-for easier verification and reviewing.
+```js
+let amountByYear = d3.rollup(
+  metaAdsDates,
+  (D) => D.length,
+  (d) => d.year,
+    (d) => d.min_spend,
+)
+```
+```js
+amountByYear
+```
 
 ## Reflection
 
