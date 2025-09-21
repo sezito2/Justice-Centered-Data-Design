@@ -131,7 +131,7 @@ Statistical Genre Analysis (SGA) attempts to combine qualitative verbal data wit
 
 **Question**: Discuss what this statement means to you. Then, discuss any connections, confusion, and/or questions that you recognize with a SJ ethic and structural perspective?
 
-Your_response_here
+This statement makes me think of the power of community, in a few differnt ways. Like stated by feminist empiricists, knowledge is shaped by community. People cannot spearate what they know and their values from the communities the grew up in and are a part of. Additionally, science is built off of other science. Essentially, it is a group effort to advance scienctific knowledge. Including a community's diverse members is one way to approach research from SJ ethics perspective. The includsion of many groups of people in science helps to reinvent what the power structure in science research looks like, as it has been dominanted by white men in the past. I think SJ ethics is a great framework for future research, but how can we apply this to past research?
 
 ## 6. Translating the structural approach into TPC / Other Humanities Fields
 
