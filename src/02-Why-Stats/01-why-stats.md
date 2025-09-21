@@ -71,7 +71,7 @@ Your_response_here
 
 **Question**: According to the SFSJ authors, what is ***feminist empiricism***? And, what issues does it recognize as important to recognize and remedy? Be sure to discuss why it emphasizes the importance of critically reflecting on aspects of the ***context*** of empirical work.
 
-Your_response_here
+Feminist empiricism follows the core belief of empiricism that only knowledge from direct oberservation should be accepted as scientific fact, but that science is not separate from individual values and science is influences by values. Social factors are relevevant to knowledge, this emphasizes the importance of community. This is an attempt to remedy the sexism and male-centric (views of) science.
 
 ## 3. Questions About "The future of ethics and social justice" in TPC
 
@@ -79,33 +79,34 @@ Your_response_here
 
 **Question**: Name and define some of what you deem as the main different parts of the ***socially just ethic***. Be sure to discuss how it is different from other ethical approaches.
 
-Your_response_here
+Socially just ethics are centered around values to whatever group is most in need. SJ ethics shift over time compared to traditional ethics that are predetermined and shared across a whole society. Ethics typically are assumed by the majority who tend to have the power. SJ ethics combats the hegemonic powers by re-centering values.
 
 ### 3.2. Defining critical issues
 
 **Question**: Briefly define each of the critical issues discussed: Cultural Imperialism, Marginalization, and Intersectional Oppression.
 
-**Cultural Imperialism**: Your_response_here
+**Cultural Imperialism**: Violent stealing of land, forced cultural assimilation, labor exploitations/slavery, and taking of resources.
 
-**Marginalization**: Your_response_here
+**Marginalization**: Excluding groups of people from society.
 
-**Intersectional Oppression**: Your_response_here
+**Intersectional Oppression**: How does intersectionality impact a person's participation in society. All identies of a person influence a person's place in socity (e.g., race, gender, disability)
 
 ### 3.3. Defining the 3Ps to help us recognize oppression
 
 **Question**: Define each of the 3Ps below. Explain how each helps us recognize oppression.
 
-**Power**: Your_response_here
+**Power**: How are people organized in a society, who has control, what are the dominant beliefs? Power is an opressive strucure, so asking those questions can help assess who/what has power and what groups have less-none.
 
-**Privilege**: Your_response_here
+**Privilege**: What advantages might some people have based on their identities. 
+This positionality lends people power or pushes them to the margins. (ex. a white woman has white privilege but still faces sexism)
 
-**Positionality**: Your_response_here
+**Positionality**: Where do people lie in the power structure. Very closely linked to privilege as what privilege you have determines your positionality.
 
 ### 3.4. Why an SJ ethic?
 
 **Question**: Why do Lindgren, Gerdes, and Lawrence position a "SJ ethic" as essential to the future of TPC? What types of problems does it help TPC tackle?
 
-Your_response_here
+TPC should advocate for equitable changes to benefit the most people and how do we make ethical decisions. It can help TPC professionals reflect and tackle issues of inclusion/exlcusion, reciprocity in research and practice, reflexivity.
 
 ## 4. Questions About "Statistical Genre Analysis" (SGA)
 
