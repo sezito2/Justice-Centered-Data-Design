@@ -114,7 +114,7 @@ TPC should advocate for equitable changes to benefit the most people and how do 
 
 **Question**: How do Graham et al define and discuss what constitutes "big" data? How does their definition differ from what you have heard before you read this article?
 
-Your_response_here
+Big data is field-dependent, what qualifies as big data in one discipline may not be big data in another. Big data refers to large quantities of data, that may go beyond current processing capabilities.
 
 ### 4.2. On SGA
 
@@ -125,7 +125,7 @@ Your_response_here
 3. What questions SGA data and methods enable TPC to ask, and
 4. What methods it uses to do so.
 
-Your_response_here
+Statistical Genre Analysis (SGA) attempts to combine qualitative verbal data with statistical methods. SGA is primarily focused on discourse/verbal data. This helps TPC professionals offer conclusion on big data without losing the humanistic side of the inquiry. The researchers used a 5,000 page data subset of conference presentation transcripts. Using SGA allows researchers to ask question of correlation, i.e., how does this variable impacts another variable. SGA uses a mixed-methods approach using qualitative coding and statistical analysis.
 
 ## 5. "Science is a social endeavor."
 
