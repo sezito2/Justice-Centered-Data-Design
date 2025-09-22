@@ -43,27 +43,35 @@ With these goals for the texts in mind, please respond to the questions herein a
 
 **Question**: Use the space below to define the provided key terms.
 
-- According to the SFSJ authors, what are the main difference between **data** and **information**?:
-- **Variable**:
-- **Constant**:
-- **Conceptualization**:
-- **Operationalization**:
-- **Nominal level of data**:
-- **Ordinal level of data**:
-- **Interval level of data**:
-- **Ratio level of data**:
+- According to the SFSJ authors, what are the main difference between **data** and **information**?: Information is conclusions based on analysis of data (measurements).
+- **Variable**: A characteristic that varies
+- **Constant**: A characteristic that does not vary
+- **Conceptualization**: The process used to choose and define variables
+- **Operationalization**: The method used  to measure the variables
+- **Nominal level of data**: Classficiation of variables that is mutally exclusive, no order or rank
+- **Ordinal level of data**: Classficiation of variables that is mutally exclusive and have an order
+- **Interval level of data**: Classficiation of variables that is mutally exclusive,order, and equal space
+- **Ratio level of data**: Classficiation of variables that is mutally exclusive,order, equally spaced, and have a true zero
 
 ### 1.2. On positivism
 
 **Question**: Describe how the S4SJ authors define and use the term **positivism**. How do they suggest it is different from **post-positivism**? According to the authors, why are both paradigms important to social workers? Now, how do you imagine it is important for TPC professionals?
 
-Your_response_here
+Positivism is defined as a paradigm that posits social behavior can be studied in a scientific manner. However, post-positivism says science subjugates knowledge and that humans are too complex to fit into the narrowness of the scientific method.These paradigms are important to both SW and TPC because it situates the work with empiricist methods and focuses on the holistic experience. TPC work is human focus, so both of these theories focus on how we can best study the human experience.
 
 ### 1.3. On the "*structural perspective*"
 
 **Question**: Name and define the different parts of the ***structural perspective***. Be sure to cover the parts related practice and research.
 
-Your_response_here
+The strucutral perspective seeks to change the systems rather than the people within the systems. There are two competeing perspectives: neoliberal and marxist ideologies. There are five practice mehtods: defence of the client, collectivization, materialization, increasing client power in the worker-client relationship, and enhacing client power through personal change.
+**Neoliberal**: societal problems are a cause of people who don't respect the rules, capitalism is a sound economic system.
+**Marxist**: transforms social structure and conditions that cause negative societal effects (ex. exploitation)
+**defence of the client**: defending clients against oppressive systems.
+**collectivization**: people are not alone in their struggles, must connect to support networks
+**materialization**: many problems are a result of material ineqalities
+**increasing client power in the worker-client relationship**: empower clients and state things clearly for easy comprehension
+**enhacing client power through personal change**:  maximize strengths to help reduce destructive behaviors
+
 
 ## 2. Questions about "The history of empiricism"
 
