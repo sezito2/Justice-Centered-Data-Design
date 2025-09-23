@@ -87,13 +87,13 @@ The authors argue that most binaries will have a hidden hierarchy. Of the option
 
 *Queer Data*: Beyond a checkbox: the story of queer data
  
-*intersectional LGBTQ data*: 
+*intersectional LGBTQ data*: Our stories intertwine
 
 ### 2.2 Guyan's exigence for the book
 
 **Question**: Why did Guyan write this book? What was his exigence?
 
-YOUR_RESPONSE_HERE
+Having worked with large universities/organziations Guyan saw how even with the increased research on the queer community, the lives of queer people have not improved (as seen by the number of hate crimes). Guyan want data to focus more on the stories of people and provide meaningful change. Used correctly, queer data can boost activism and  "enable LGBTQ people to lead full, authentic lives." (p. 33)
 
 ### 2.3 "Prescriptive" versus "descriptive"
 
