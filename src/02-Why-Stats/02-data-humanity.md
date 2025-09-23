@@ -115,7 +115,7 @@ There seems to be a misconception in research that the more research that is don
 
 **Question**: Why does Lee think it important that Appiah changed the standard line of inquiry in legal studies from "whether racism exists" (p. 441) to "what race and racism are"? What "overdetermined" (p. 441) parts or race, i.e., issues about race, does this definitional question bring into focus for deliberation? Be sure to ***define*** and discuss Appiah's position about race as being essential/biological or not and being cultural or not. Indeed, pay close attention to Appiah's definition of culture.
 
-YOUR_RESPONSE_HERE
+Changing these questions allows the dialogue to pass through to the important questions like what power structures are influencing racism and what racism exists. In my opinion it is silly to ask whether or not racism exists, as it clearly exists and our society is built on the structures built by racism. How groups are categorized and designated as racially distinct is something of importance. Appiah states view race as a biological conception can be dangerous and is simply false. The idea of biological differences is used to perpetuate racism. Culture is formed by communites and shared meanings within these communities.
 
 ### 3.2 Race as multiplicitous
 
@@ -155,3 +155,4 @@ YOUR_RESPONSE_HERE
     <p class="warning">Make sure that you create a PR for your forked version.</p>
 2. Respond to your peers and comment on their work on at least one chapter.
 3. Submit the PR link in Moodle, when you're ready.
+I'm not quite sure I understand Appiah stance on race and culture. Are they saying that it is better to base race off of culture rather than biological differences, because culture lends itself to difference in ethnic groups?
