@@ -99,7 +99,7 @@ Having worked with large universities/organziations Guyan saw how even with the 
 
 **Question**: What does Guyan mean when he labels terms like gender, sex, and sexuality as being descriptive—*not* prescriptive (see pp. 13-14 in particular)? Explain the differences between the two with an example from each of the terms.
 
-YOUR_RESPONSE_HERE
+These identities are descriptive because they describe a person's identity at the time. Gender and sexuality are fluid and change over time. These characteristics also vary from person to person, so the feelings of womanhood will vary from one woman to another.
 
 ### 2.4 "'Visibility is a trap'"
 
