@@ -121,7 +121,7 @@ Changing these questions allows the dialogue to pass through to the important qu
 
 **Question**: What does Lee mean by "race is always multiplicitous because social contexts are multiplicitous" (p. 447)? Use the Shaw v. Reno case to help you explain how this challenges both essentialist/biological definitions of race & Appiah's race as synonomous with culture.
 
-YOUR_RESPONSE_HERE
+Someone's race is not as simple as their skin color, many factors are at play. The communities and ethnic groups someone belongs to influence their race and how race is perceieved. I also think within the social context of race, their is a hierarchy within our society that values some races more than others. this add complexity to the idea of race (especially for multiracial individuals.) In the Shaw v. Reno case, the majority opinion focused on race as biological factor of skin color and that we should not care about race because it is just the color of skin. However, ignoring the social context and historical significance behind race does a disservice to racial groups.
 
 ## 4. Questions about a data team's "rhetorical process of data"
 
