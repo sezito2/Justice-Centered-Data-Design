@@ -49,13 +49,25 @@ All PDF copies are available in our learning management system.
 
 **Question**: According to D'Ignazio and Klein, what principles concern data and "power"? Define and discuss each principle below. Be sure to note the important questions to ask about data and power.
 
-YOUR_RESPONSE_HERE
+1. **Examine Power**: understanding how power is structured in society
+
+     * Data science for whom?
+     * Data science by whom?
+     * Data science with whose interests and goals in mind?
+
+2. **challenge power**: commit to rebalancing the unequal distribution of power
+   
+3. **elevate emotion an embodiment**: value emotion as a part of data science
+4. **rethink binaries and hierachies**: challenge the gender binary and strive for equality of all genders. There is the hidden hierarchy (patriarchy) within the gender binary
+5. **embrace pluralism**: collect data from multiple perspecitves and communities
+6. **consider context**: consider what context data was collect and analyzed in. Any context will produce bias and impact the data.
+7. **make labor visible**: value, recognize, and compensate labor
 
 ### 1.2 Data: Objective mirror, or not?
 
 **Question**: What do D'Ignazio and Klein mean by issues of "false binaries and hidden hierarchies" (p. 3)? Then, explain how principles 3, 5, 6 and 7 each approach such issues.
 
-YOUR_RESPONSE_HERE
+The authors argue that most binaries will have a hidden hierarchy. Of the options in a binary, one might have more power than the other. For example, on the gender binary, men have more power since we live in a patriarchy, thus being a "hidden hierarchy". principle 3 deals with this by pointing out how emotion (women being seen as more emotional) in research is useful, but often looked down upon because it doesn't stick to "just the facts". Principle 5 discusses who gets to share knowledge and encouraging Indigenous groups to share their knowledge. Historically indigenous knowledge has been excluded from research for not following the scientific method. Principle 6 focuses on the context of data. A quote that stood out is "Race isn't a risk factor...racism is". Researchers must understand the power structure of race, class, gender, etc. to see how it impacts data analysis. finally, principle 7 encourages recognition of labor as marginalized groups have not hard their work attributed to themselves in the past(and currently).
 
 ## 2. Questions about Queer Data
 
@@ -63,15 +75,19 @@ YOUR_RESPONSE_HERE
 
 **Question**: Create a bulleted list of short excerpts and summary statements where Guyan defines "queer data" and "intersectional LGBTQ data" in the introduction. Be sure to accompany all excerpts and paraphrases with page number locations in the PDF.
 
-- "Short excerpt 1" (p. xx)
-- "Short paraphrase 1" (p. xx)
-- "Short excerpt 2" (p. xx)
-- "Short paraphrase 2" (p. xx)
-- ...
+- Queer data goes beyond exploring non-cishet individuals (p.12)
+- "challenge to conventional understandings of how data and identities intersect" (p. 12)
+- "queer data disrupts the binaries of male/female, heterosexual/homosexual and cis/trans" (p. 12)
+- The data is telling the story of a person/community (p. 12)
+- We cannot separate the experiences of gender and sexuality from other identities (p.22)
+- new challenges emerge with the inter section of multiple identities (p.29)
+- "intersectional LGBTQ data tells a nuanced story that better reflects the messy and overlapping experiences of people everyday lives" (p. 29)
 
 **Question**: Based on your list above, write your own movie tagline, i.e., a short and entertaining one-liner that tries to capture one of the main aspects of "queer data", and another tagline about "intersectional LGBTQ data."
 
-YOUR_TAGLINE_HERE
+*Queer Data*: Beyond a checkbox: the story of queer data
+ 
+*intersectional LGBTQ data*: 
 
 ### 2.2 Guyan's exigence for the book
 
