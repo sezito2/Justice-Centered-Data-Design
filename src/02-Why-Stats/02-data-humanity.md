@@ -105,7 +105,7 @@ YOUR_RESPONSE_HERE
 
 **Question**: Guyan cites Foucault's idea about how "'visibility is a trap'" (p. 20 of the PDF). What does this expression mean, and why does Guyan draw parallels between Foucault's original use of it with issues of power and data? Be sure to illuminate your discussion with specific examples that Guyan uses in the book.
 
-YOUR_RESPONSE_HERE
+There seems to be a misconception in research that the more research that is done, the more visibility a group has in society, and therefore, the better off that group will be (i.e., visibility leads to acceptance). However, this notion is false as seen in queer data/research. Although queer research is at an all-time high, the number of hate crimes has not dropped and there anti-trans waves of hate/violence. Visibility does not erase history or challenge a power structure.
 
 ## 3. Questions about "The topology of race"
 
@@ -145,7 +145,7 @@ YOUR_RESPONSE_HERE
 
 ## 5. Synthesis Response
 
-**Question**: Pick and choose any particular combination of concepts and heuristics from the readings in 2.1 and 2.3. Use these questions and ideas to discuss your understanding of the 2024 NC General Election mail-in ballot data. What questions and criticisms do you have about the dataset's categories, hieararchies, collection, etc.?
+**Question**: Pick and choose any particular combination of concepts and heuristics from the readings in 2.1 and 2.2. Use these questions and ideas to discuss your understanding of the 2024 NC General Election mail-in ballot data. What questions and criticisms do you have about the dataset's categories, hieararchies, collection, etc.?
 
 YOUR_RESPONSE_HERE
 
