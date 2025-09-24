@@ -141,7 +141,7 @@ Stasis is a procedure to guide discussion towards an agreement through the use o
 
 **Question**: What's the *DMT cluster*, and how did connect to observations about the data team's judgment about the *quality of metrics*?
 
-YOUR_RESPONSE_HERE
+The DMT cluster is alignment and significance/oddities/interestingness. The DMT cluster highlights how a research teams collects, processes, analyzes, or visualized data. DMT clust also showcases the quality of findings and the relationships between variables.
 
 ## Submission
 
@@ -149,4 +149,3 @@ YOUR_RESPONSE_HERE
     <p class="warning">Make sure that you create a PR for your forked version.</p>
 2. Respond to your peers and comment on their work on at least one chapter.
 3. Submit the PR link in Moodle, when you're ready.
-I'm not quite sure I understand Appiah stance on race and culture. Are they saying that it is better to base race off of culture rather than biological differences, because culture lends itself to difference in ethnic groups?
