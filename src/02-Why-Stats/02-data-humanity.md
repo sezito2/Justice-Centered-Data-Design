@@ -129,23 +129,17 @@ Someone's race is not as simple as their skin color, many factors are at play. T
 
 **Question**: Briefly describe the "god trick" problem. Also, discuss what connections you recognize between the "god trick" problem and some issues raised in our other readings.
 
-YOUR_RESPONSE_HERE
+The "god trick" reminded me of our feminist empiricism readings. The "god trick" is the belief that scientific research is morally and emotionally neutral and sacrifices the rhetorical process for the sake of neutrality. Feminist empiricist claim that no research is neutral as scientist have values and identities that shape the way data are analyzed.
 
 ### 4.2 What's stasis and stasis networks?
 
 **Question**: Briefly define stasis and stasis networks. Explain what stasis networks provides qualitative researchers?
 
-YOUR_RESPONSE_HERE
+Stasis is a procedure to guide discussion towards an agreement through the use of guiding question. Stasis networks is a methodology to incorporate stases in a "nonprocedural and nonlinear analytical codes". This helps solve some of the rigidity problems the traditional stases face. Having a nonlinear order allows for more natural and free rhetoric, in an attempt to avoid TPC's "god trick".
 
 ### 4.3 What's the "DMT cluster"?
 
 **Question**: What's the *DMT cluster*, and how did connect to observations about the data team's judgment about the *quality of metrics*?
-
-YOUR_RESPONSE_HERE
-
-## 5. Synthesis Response
-
-**Question**: Pick and choose any particular combination of concepts and heuristics from the readings in 2.1 and 2.2. Use these questions and ideas to discuss your understanding of the 2024 NC General Election mail-in ballot data. What questions and criticisms do you have about the dataset's categories, hieararchies, collection, etc.?
 
 YOUR_RESPONSE_HERE
 
