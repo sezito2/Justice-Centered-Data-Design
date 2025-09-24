@@ -49,13 +49,25 @@ All PDF copies are available in our learning management system.
 
 **Question**: According to D'Ignazio and Klein, what principles concern data and "power"? Define and discuss each principle below. Be sure to note the important questions to ask about data and power.
 
-YOUR_RESPONSE_HERE
+1. **Examine Power**: understanding how power is structured in society
+
+     * Data science for whom?
+     * Data science by whom?
+     * Data science with whose interests and goals in mind?
+
+2. **challenge power**: commit to rebalancing the unequal distribution of power
+   
+3. **elevate emotion an embodiment**: value emotion as a part of data science
+4. **rethink binaries and hierachies**: challenge the gender binary and strive for equality of all genders. There is the hidden hierarchy (patriarchy) within the gender binary
+5. **embrace pluralism**: collect data from multiple perspecitves and communities
+6. **consider context**: consider what context data was collect and analyzed in. Any context will produce bias and impact the data.
+7. **make labor visible**: value, recognize, and compensate labor
 
 ### 1.2 Data: Objective mirror, or not?
 
 **Question**: What do D'Ignazio and Klein mean by issues of "false binaries and hidden hierarchies" (p. 3)? Then, explain how principles 3, 5, 6 and 7 each approach such issues.
 
-YOUR_RESPONSE_HERE
+The authors argue that most binaries will have a hidden hierarchy. Of the options in a binary, one might have more power than the other. For example, on the gender binary, men have more power since we live in a patriarchy, thus being a "hidden hierarchy". principle 3 deals with this by pointing out how emotion (women being seen as more emotional) in research is useful, but often looked down upon because it doesn't stick to "just the facts". Principle 5 discusses who gets to share knowledge and encouraging Indigenous groups to share their knowledge. Historically indigenous knowledge has been excluded from research for not following the scientific method. Principle 6 focuses on the context of data. A quote that stood out is "Race isn't a risk factor...racism is". Researchers must understand the power structure of race, class, gender, etc. to see how it impacts data analysis. finally, principle 7 encourages recognition of labor as marginalized groups have not hard their work attributed to themselves in the past(and currently).
 
 ## 2. Questions about Queer Data
 
@@ -63,33 +75,37 @@ YOUR_RESPONSE_HERE
 
 **Question**: Create a bulleted list of short excerpts and summary statements where Guyan defines "queer data" and "intersectional LGBTQ data" in the introduction. Be sure to accompany all excerpts and paraphrases with page number locations in the PDF.
 
-- "Short excerpt 1" (p. xx)
-- "Short paraphrase 1" (p. xx)
-- "Short excerpt 2" (p. xx)
-- "Short paraphrase 2" (p. xx)
-- ...
+- Queer data goes beyond exploring non-cishet individuals (p.12)
+- "challenge to conventional understandings of how data and identities intersect" (p. 12)
+- "queer data disrupts the binaries of male/female, heterosexual/homosexual and cis/trans" (p. 12)
+- The data is telling the story of a person/community (p. 12)
+- We cannot separate the experiences of gender and sexuality from other identities (p.22)
+- new challenges emerge with the inter section of multiple identities (p.29)
+- "intersectional LGBTQ data tells a nuanced story that better reflects the messy and overlapping experiences of people everyday lives" (p. 29)
 
 **Question**: Based on your list above, write your own movie tagline, i.e., a short and entertaining one-liner that tries to capture one of the main aspects of "queer data", and another tagline about "intersectional LGBTQ data."
 
-YOUR_TAGLINE_HERE
+*Queer Data*: Beyond a checkbox: the story of queer data
+ 
+*intersectional LGBTQ data*: Our stories intertwine
 
 ### 2.2 Guyan's exigence for the book
 
 **Question**: Why did Guyan write this book? What was his exigence?
 
-YOUR_RESPONSE_HERE
+Having worked with large universities/organziations Guyan saw how even with the increased research on the queer community, the lives of queer people have not improved (as seen by the number of hate crimes). Guyan want data to focus more on the stories of people and provide meaningful change. Used correctly, queer data can boost activism and  "enable LGBTQ people to lead full, authentic lives." (p. 33)
 
 ### 2.3 "Prescriptive" versus "descriptive"
 
 **Question**: What does Guyan mean when he labels terms like gender, sex, and sexuality as being descriptive—*not* prescriptive (see pp. 13-14 in particular)? Explain the differences between the two with an example from each of the terms.
 
-YOUR_RESPONSE_HERE
+These identities are descriptive because they describe a person's identity at the time. Gender and sexuality are fluid and change over time. These characteristics also vary from person to person, so the feelings of womanhood will vary from one woman to another.
 
 ### 2.4 "'Visibility is a trap'"
 
 **Question**: Guyan cites Foucault's idea about how "'visibility is a trap'" (p. 20 of the PDF). What does this expression mean, and why does Guyan draw parallels between Foucault's original use of it with issues of power and data? Be sure to illuminate your discussion with specific examples that Guyan uses in the book.
 
-YOUR_RESPONSE_HERE
+There seems to be a misconception in research that the more research that is done, the more visibility a group has in society, and therefore, the better off that group will be (i.e., visibility leads to acceptance). However, this notion is false as seen in queer data/research. Although queer research is at an all-time high, the number of hate crimes has not dropped and there anti-trans waves of hate/violence. Visibility does not erase history or challenge a power structure.
 
 ## 3. Questions about "The topology of race"
 
@@ -99,13 +115,13 @@ YOUR_RESPONSE_HERE
 
 **Question**: Why does Lee think it important that Appiah changed the standard line of inquiry in legal studies from "whether racism exists" (p. 441) to "what race and racism are"? What "overdetermined" (p. 441) parts or race, i.e., issues about race, does this definitional question bring into focus for deliberation? Be sure to ***define*** and discuss Appiah's position about race as being essential/biological or not and being cultural or not. Indeed, pay close attention to Appiah's definition of culture.
 
-YOUR_RESPONSE_HERE
+Changing these questions allows the dialogue to pass through to the important questions like what power structures are influencing racism and what racism exists. In my opinion it is silly to ask whether or not racism exists, as it clearly exists and our society is built on the structures built by racism. How groups are categorized and designated as racially distinct is something of importance. Appiah states view race as a biological conception can be dangerous and is simply false. The idea of biological differences is used to perpetuate racism. Culture is formed by communites and shared meanings within these communities.
 
 ### 3.2 Race as multiplicitous
 
 **Question**: What does Lee mean by "race is always multiplicitous because social contexts are multiplicitous" (p. 447)? Use the Shaw v. Reno case to help you explain how this challenges both essentialist/biological definitions of race & Appiah's race as synonomous with culture.
 
-YOUR_RESPONSE_HERE
+Someone's race is not as simple as their skin color, many factors are at play. The communities and ethnic groups someone belongs to influence their race and how race is perceieved. I also think within the social context of race, their is a hierarchy within our society that values some races more than others. this add complexity to the idea of race (especially for multiracial individuals.) In the Shaw v. Reno case, the majority opinion focused on race as biological factor of skin color and that we should not care about race because it is just the color of skin. However, ignoring the social context and historical significance behind race does a disservice to racial groups.
 
 ## 4. Questions about a data team's "rhetorical process of data"
 
@@ -113,25 +129,19 @@ YOUR_RESPONSE_HERE
 
 **Question**: Briefly describe the "god trick" problem. Also, discuss what connections you recognize between the "god trick" problem and some issues raised in our other readings.
 
-YOUR_RESPONSE_HERE
+The "god trick" reminded me of our feminist empiricism readings. The "god trick" is the belief that scientific research is morally and emotionally neutral and sacrifices the rhetorical process for the sake of neutrality. Feminist empiricist claim that no research is neutral as scientist have values and identities that shape the way data are analyzed.
 
 ### 4.2 What's stasis and stasis networks?
 
 **Question**: Briefly define stasis and stasis networks. Explain what stasis networks provides qualitative researchers?
 
-YOUR_RESPONSE_HERE
+Stasis is a procedure to guide discussion towards an agreement through the use of guiding question. Stasis networks is a methodology to incorporate stases in a "nonprocedural and nonlinear analytical codes". This helps solve some of the rigidity problems the traditional stases face. Having a nonlinear order allows for more natural and free rhetoric, in an attempt to avoid TPC's "god trick".
 
 ### 4.3 What's the "DMT cluster"?
 
 **Question**: What's the *DMT cluster*, and how did connect to observations about the data team's judgment about the *quality of metrics*?
 
-YOUR_RESPONSE_HERE
-
-## 5. Synthesis Response
-
-**Question**: Pick and choose any particular combination of concepts and heuristics from the readings in 2.1 and 2.3. Use these questions and ideas to discuss your understanding of the 2024 NC General Election mail-in ballot data. What questions and criticisms do you have about the dataset's categories, hieararchies, collection, etc.?
-
-YOUR_RESPONSE_HERE
+The DMT cluster is alignment and significance/oddities/interestingness. The DMT cluster highlights how a research teams collects, processes, analyzes, or visualized data. DMT clust also showcases the quality of findings and the relationships between variables.
 
 ## Submission
 
