@@ -404,14 +404,12 @@ for (const job in professions) {
 }
 ```
 ```js
-let lessProfessions = ["married", "laborer", "widow", "laborer"]
-for (const job in lessProfessions) {
-  if (lessProfessions.length > 3) {
-    if (lessProfessions[job] == "laborer") {
-      lessProfessions.splice(job,1)
+let lessProfessions = []
+for (const job in professions) {
+  if (job != 1) {
+    lessProfessions.push(professions[job])
     }
   }
-}
 ```
 
 <p class="codeblock-caption">
