@@ -195,15 +195,15 @@ Finally, inside of the `/src/data/nc-voters/provenance/` folder, you can also re
 
 **Question**: After reviewing the above information, how would a SJ ethic inform your intiial understanding of the data, its collected values, and its context? List out in other information or questions that you sense might be missing about the data.
 
-ENTER_YOUR_RESPONSE_HERE
+The main thing I think is missing from this data is the why a ballot was rejected. I am also curious on what the process to reject ballots is. Do humans look over the ballots? Is it a machine? When looking at this data, it is very cut and dry and lacking humanistic qualities like emotion and seems detatch from the people and systems filling out and checking the ballots. The collection and publication of the data may indicate an attempt at transparency for elections but I think there are still unanswered questions. 
 
 **Question**: Based on the case scenario as a communicator at Protect Democracy, and a SJ ethic in mind, what questions, i.e., angles, do you think may be helpful to meet the needs of your situation. Discuss any columns/fields that you are surprised about or spark any curiosities, and create a list of questions they spark in you.
 
-ENTER_YOUR_RESPONSE_HERE
+In this scenario, I would be interested in looking at race, ballot return status, ballot request, sent, and return dates (to see how long different ballots took to be processed). Additionally, prescinct or congressional district would be interesting to explore given north carolina's history of gerrymandering districts to group racial groups and provide benefits to the republican party. How do ballot acceptances differ between different races? How quickly are ballots processed for different races? Do some precinct/districts have higher rates of denied ballots?
 
 **Question**: What can you understand about the `ballot_rtn_status` column? In other words, what types of values are possible?
 
-ENTER_YOUR_RESPONSE_HERE
+`ballot_rtn_status` indicates the Ballot return status, which can be an up to 30 character string
 
 ## 2.3.4 Calculate Absolute Grouped Frequencies with RFS Method
 
