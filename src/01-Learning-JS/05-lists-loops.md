@@ -394,10 +394,12 @@ For this first exercise, I'll provide you with the basic structure:
 
 ```javascript
 // Declare new and freshly empty array in which to push new items
-let lessProfessions = ["married", "laborer", "widow", "laborer"]
-for (const job in lessProfessions) {
-  if (lessProfessions.length > 3) {
-    lessProfessions.splice(1,1)
+let lessProfessions = []
+for (const job in professions) {
+  if (job != 1) {
+    // Then, just push away
+    lessProfessions.push(professions[job])
+    // But, .splice on its own could remove it outside of the for loop, so you were onto something here
   }
 }
 ```
