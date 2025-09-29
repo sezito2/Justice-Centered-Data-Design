@@ -195,7 +195,7 @@ Finally, inside of the `/src/data/nc-voters/provenance/` folder, you can also re
 
 **Question**: After reviewing the above information, how would a SJ ethic inform your intiial understanding of the data, its collected values, and its context? List out in other information or questions that you sense might be missing about the data.
 
-The main thing I think is missing from this data is the why a ballot was rejected. I am also curious on what the process to reject ballots is. Do humans look over the ballots? Is it a machine? When looking at this data, it is very cut and dry and lacking humanistic qualities like emotion and seems detatch from the people and systems filling out and checking the ballots. The collection and publication of the data may indicate an attempt at transparency for elections but I think there are still unanswered questions. 
+The main thing I think is missing from this data is the why a ballot was rejected (After looking at the rollup array, I can see that the status may include some description. However, I'm not sure what all of the descriptions mean). I am also curious on what the process to reject ballots is. Do humans look over the ballots? Is it a machine? When looking at this data, it is very cut and dry and lacking humanistic qualities like emotion and seems detatch from the people and systems filling out and checking the ballots. The collection and publication of the data may indicate an attempt at transparency for elections but I think there are still unanswered questions. 
 
 **Question**: Based on the case scenario as a communicator at Protect Democracy, and a SJ ethic in mind, what questions, i.e., angles, do you think may be helpful to meet the needs of your situation. Discuss any columns/fields that you are surprised about or spark any curiosities, and create a list of questions they spark in you.
 
@@ -282,7 +282,7 @@ Ok, so we want to create a desired ***grouping*** of `ballot_rtn_status` > `race
     2. Add second param: the computation to perform on the rolled up data. In this case, we want the absolute frequency of ballot statuses per race.
 
 <!-- Example rollups() -->
-```javascript
+```js
 /**
  * .rollups()
  * @return: a flattened version of InternMap:
@@ -301,7 +301,7 @@ const afStatusByRace = d3.rollups(
 </p>
 
 <!-- afStatusByRace output -->
-```javascript
+```js
 // Convert to render on page
 afStatusByRace
 ```
@@ -386,9 +386,9 @@ In this second video, I explain the code inside of the custom `oneLevelRollUpFla
 
 Ok, now that you have watched the above video about the `oneLevelRollUpFlatMap()` function. Import it from the `./utils/utils.js` file in the codeblock below.
 
-```javascript
+```js
 // Convert me and import oneLevelRollUpFlatMap()
-import {PUT_ANY_FUNCTIONS_IN_HERE, SEPARATE_MORE_THAN_ONE, WITH_COMMAS} from "enter/path/here.js"
+import {oneLevelRollUpFlatMap} from "../utils/utils.js"
 
 ```
 
@@ -396,14 +396,18 @@ Now, see if it worked!
 
 Use the imported function in the below codeblock to rollup and flatten `ncVotersAll` by (1) `race` and (2) `ballot_rtn_status`.
 
-```javascript
+```js
 // Convert and use `oneLevelRollUpFlatMap()` on `ncVotersAll`
-const byRaceAndBallotStatus = ADD_FUNCTION_HERE
+const byRaceAndBallotStatus = oneLevelRollUpFlatMap(
+  ncVotersAll,
+  "race",
+  "af",
+  )
 ```
 
 Ok, let's see if `byRaceAndBallotStatus` shows up here by rendering it to the page.
 
-```javascript
+```js
 byRaceAndBallotStatus
 ```
 
