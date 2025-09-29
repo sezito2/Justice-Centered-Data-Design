@@ -388,7 +388,7 @@ Ok, now that you have watched the above video about the `oneLevelRollUpFlatMap()
 
 ```js
 // Convert me and import oneLevelRollUpFlatMap()
-import {oneLevelRollUpFlatMap} from "../ch2_utils.js"
+import {oneLevelRollUpFlatMap} from "./utils/ch2_utils.js"
 //import {PUT_ANY_FUNCTIONS_IN_HERE, SEPARATE_MORE_THAN_ONE, WITH_COMMAS} from "enter/path/here.js"
 
 ```
@@ -402,7 +402,7 @@ Use the imported function in the below codeblock to rollup and flatten `ncVoters
 const byRaceAndBallotStatus = oneLevelRollUpFlatMap(
   ncVotersAll,
   "race",
-  "af",
+  "ballot_rtn_status",
   )
 ```
 
@@ -425,12 +425,16 @@ byRaceAndBallotStatus
 
 Ok, now you try this custom function with a different variable from the dataset.
 
-```javascript
-// Convert and create your own one-level grouping
+```js
+const byCongDistAndStatus = oneLevelRollUpFlatMap(
+  ncVotersAll,
+  "cong_dist_desc",
+  "ballot_rtn_status", 
+)
 ```
 
-```javascript
-// Convert and output your variable here
+```js
+byCongDistAndStatus
 ```
 
 ## E6. Import and use `twoLevelRollUpFlatMap()` on `ncVotersAll`
@@ -449,7 +453,8 @@ In this video, follow along as I explain the code for the `twoLevelRollUpFlatMap
 
 After you have watched the above video, it is time for you to try this custom function with the two example variables used in the our running angle.
 
-```javascript
+```js
+import {twoLevelRollUpFlatMap} from "./utils/ch2_utils.js"
 // Convert and create your own two-level grouping
 ```
 
