@@ -388,7 +388,8 @@ Ok, now that you have watched the above video about the `oneLevelRollUpFlatMap()
 
 ```js
 // Convert me and import oneLevelRollUpFlatMap()
-import {oneLevelRollUpFlatMap} from "../utils/utils.js"
+import {oneLevelRollUpFlatMap} from "../ch2_utils.js"
+//import {PUT_ANY_FUNCTIONS_IN_HERE, SEPARATE_MORE_THAN_ONE, WITH_COMMAS} from "enter/path/here.js"
 
 ```
 
