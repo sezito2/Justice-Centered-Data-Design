@@ -75,9 +75,10 @@ stringEx[1] // gives value of "o"
 
 Try out the following common methods for strings located in the table below. Start by defining the variable, `str1` below in your browser's console.
 
-```
+```js
 // Running string example
 let str1 = "Cat In The Hat"
+console.log(str1)
 ```
 
 | Method | Action | Output  |
@@ -96,7 +97,7 @@ let str1 = "Cat In The Hat"
 
 Many methods can be ***chained*** in a desired sequence of execution in JS. By chained, I mean that you can link them together as follows:
 
-```javascript
+```js
 /**
   * Search for string but not worry about casing of characters
   * 1. .toLowerCase() --> make all chars lowercase in string.
@@ -129,8 +130,8 @@ vonnegut
 
 Let's start simple. Output the length of the String, `vonnegut`, in a `js` codeblock below.
 
-```javascript
-// Convert me to a js block
+```js
+console.log(vonnegut.length)
 ```
 
 ### E2. Replace parts of a String
@@ -147,21 +148,21 @@ If you review the String, you will notice how there are section breaks represent
     </div>
 4. In the fourth codeblock, output the new variable, `vonnegutNoSBDQ`, to verify if it worked.
 
-```javascript
-// Convert me to a js block and complete #1
+```js
+let vonnegutNoSB = vonnegut.replaceAll("       *       *       *       *       *", "")
 ```
 
-```javascript
-// Convert me to a js block and complete #2
+```js
+vonnegutNoSB
 ```
 
-```javascript
-// Convert me to a js block and complete #3
+```js
+let vonnegutClean = vonnegutNoSB.replaceAll("\"", "").replaceAll("\'", "").replaceAll(",", "").replaceAll(".", "").replaceAll("?", "").replaceAll(";", "").replaceAll("--", " ")
 ```
 
-```javascript
+```js
 // Convert me to output the grand finale!
-vonnegutNoSBDQ
+vonnegutClean
 ```
 
 ### E3. Same thing, but better method with a for loop
@@ -172,12 +173,21 @@ Ok, those chains were ridiculous, right? Below, complete the same outcome, but u
   Put those desired marks to replace in an Array. You will also need to write a conditional statement to handle the <code>--</code> differently.
 </p>
 
-```javascript
-// Convert me and use a for loop to remove all desired punctuation
+```js
+let vonnegutNoPuncs = vonnegutNoSB
+let puncList = ["\"", "\'", ",", ".", "?", ";", "--"]
+for (const mark of puncList){
+  if (mark == "--"){
+    vonnegutNoPuncs = vonnegutNoPuncs.replaceAll(mark, " ")    
+  }
+  else {
+    vonnegutNoPuncs = vonnegutNoPuncs.replaceAll(mark, "")
+  }
+}
 ```
 
-```javascript
-// Convert me and output the new string, vonnegutNoPuncs, here
+```js
+vonnegutNoPuncs
 ```
 
 ### E4. Split the String into an Array of Strings
@@ -186,12 +196,12 @@ Sometimes, we need to isolate parts of a text for analysis by splitting it into 
 
 Create an array of strings of Vonnegut's story as a new variable called `vonnSplit`. Do so by splitting the newly cleaned String, `vonnegutNoPuncs`, with an empty single space (`" "`).
 
-```javascript
-// Convert me to a js block and complete the exercise
+```js
+let vonnSplit = vonnegutNoPuncs.split(" ")
 ```
 
-```javascript
-// Convert me to a js block and output `vonnSplit`
+```js
+vonnSplit
 ```
 
 ### E5. Create array of all hyphenated words
@@ -203,9 +213,19 @@ Ok, last exercise! Complete the following steps to create a new array that only 
 1. In a first codeblock, declare a new array called `hyphenatedWords`. Then, push only hyphenated words into it.
 2. In a second codeblock, output the new array to verify your work.
 
+```js
+let hyphenatedWords = []
+for (const word of vonnSplit){
+  if (word.includes("-")){
+    hyphenatedWords.push(word)
+  }
+}
+console.log(hyphenatedWords)
+```
+
 **Question**: What oddities do you notice about the outcome? Below, explain what you suggest is happenning, and what you would do to resolve the issue with isolating a better list of hyphenated words.
 
-ENTER_YOUR_RESPONSE_HERE
+Some of the hyphenated words include strings of \r\n\r\n followed by the next word in the short story. This is being included because there are no spaces between the hyphenated word and the rest of this string. To resolve this, I might remove the instances of \r\n... first then push the hyphenated words to a new array.
 
 ## Submission
 
