@@ -399,17 +399,17 @@ Use the imported function in the below codeblock to rollup and flatten `ncVoters
 
 ```js
 // Convert and use `oneLevelRollUpFlatMap()` on `ncVotersAll`
-const byRaceAndBallotStatus = oneLevelRollUpFlatMap(
+const byRace = oneLevelRollUpFlatMap(
   ncVotersAll,
   "race",
-  "ballot_rtn_status",
+  "af",
   )
 ```
 
 Ok, let's see if `byRaceAndBallotStatus` shows up here by rendering it to the page.
 
 ```js
-byRaceAndBallotStatus
+byRace
 ```
 
 <div class="error-caption">
@@ -429,7 +429,7 @@ Ok, now you try this custom function with a different variable from the dataset.
 const byCongDistAndStatus = oneLevelRollUpFlatMap(
   ncVotersAll,
   "cong_dist_desc",
-  "ballot_rtn_status", 
+  "af", 
 )
 ```
 
@@ -455,11 +455,18 @@ After you have watched the above video, it is time for you to try this custom fu
 
 ```js
 import {twoLevelRollUpFlatMap} from "./utils/ch2_utils.js"
-// Convert and create your own two-level grouping
+
+let byRaceAndStatus = twoLevelRollUpFlatMap(
+  ncVotersAll,
+  "race",
+  "ballot_rtn_status",
+  "af"
+)
+
 ```
 
-```javascript
-// Convert and output your variable here
+```js
+byRaceAndStatus
 ```
 
 ## 2.3.7 RFS 3. Sum it up with D3's .sum()!
@@ -540,12 +547,55 @@ Follow along with me in the video below to learn how to create a custom function
 </video>
 
 <!-- Your Reducer Functions -->
-```javascript
-// Convert and create your own reducer functions akin to "ACCEPTED" vs "REJECTED"
+
+```js
+const getAcceptedBallots = (d) => {
+  if (d.ballot_rtn_status != null && d.ballot_rtn_status.startsWith("ACCEPTED") == true){
+    return d.af
+  }
+  else {
+    return 0
+  }
+}
+
+const getRejectedBallots = (d) => {
+  if (d.ballot_rtn_status != null && d.ballot_rtn_status.startsWith("ACCEPTED") == false){
+    return d.af
+  }
+  else {
+    return 0
+  }
+}
+
+const reducerFunc = [
+  {type: "ACCEPTED", func: getAcceptedBallots},
+  {type: "REJECTED", func: getRejectedBallots},
+]
+
+const reducerProps = ["WHITE", "BLACK or AFRICAN AMERICAN",]
 ```
 
-<!-- Call and use sumUpWithReducerTests() -->
 ```javascript
+let testFilter = ballotStatusFilter(ncVotersAll)
+```
+```javascript
+testFilter
+```
+const meaningfulFunctionName = (param1, param2) => {
+  // A silly example of doing something with the parameters
+  let newData = param1 + param2
+
+  // return the desired data
+  return newData
+}
+
+<!-- Call and use sumUpWithReducerTests() -->
+```js
+import {sumUpWithReducerTests} from "./utils/ch2_utils.js"
+
+let summedUp = sumUpWithReducerTests(reducerFunc, reducerProps, 
+  byRaceAndStatus, "race", "ballot_rtn_status", "af")
+
 /**
  * Convert and use sumUpWithReducerTests().
  * Be sure to review the utils.js file, so you
@@ -558,8 +608,8 @@ Follow along with me in the video below to learn how to create a custom function
 </p>
 
 <!-- Your Reducer Functions -->
-```javascript
-// Convert and output your summed up data
+```js
+summedUp
 ```
 
 ## E8. Tabulated absolute frequencies of rejected ballots per race
@@ -571,8 +621,22 @@ Ok, tabulate the rolledup and summed-up results with `Inputs.table()`. Be sure t
 3. Sort the table based on what you deem the most helpful combo of column and ascending vs. descending.
 4. Be sure to provide a short response to the question about your table design.
 
-```javascript
-// Enter your table here
+```js
+Inputs.table(
+  summedUp,
+  {
+    rows: 25,
+      width: {
+        id_num: 60,
+        county_desc: 90,
+        gender: 40,
+      },
+      header: {
+        race: "Voter's Race",
+        county_desc: "County",
+      },
+    }
+  )
 ```
 
 ### Question: Explain your table design choices.
