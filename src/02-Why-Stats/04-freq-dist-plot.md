@@ -145,7 +145,8 @@ ncVotersAll
 Let's use our helpful `mapDateObject()` function in the `utils.js` file, so we can easily create Date() objects and new date fields, such as week numbers.
 
 <!-- Create date objects and new date props -->
-```javascript
+```js
+const ncUpdates = mapDateObject(ncVotersAll, "ballot_req_dt")
 /**
  * Use the mapDateObject() function below
  * and assign the returned data to a new
@@ -158,7 +159,7 @@ Let's use our helpful `mapDateObject()` function in the `utils.js` file, so we c
   Interactive output of full data set.
 </p>
 
-```javascript
+```js
 // Convert if you want to print the data to the page
 ncUpdates
 ```
@@ -178,7 +179,9 @@ Alright, let's use our custom utility functions to create some data to plot. Con
     <p class="note">We're also going to sort this data after we roll it up and flatten it.</p>
 
 <!-- Use the custom functions here -->
-```javascript
+```js
+const afByRace = oneLevelRollUpFlatMap(ncUpdates, "race", "af")
+const afByWeekAndRace = twoLevelRollUpFlatMap(ncUpdates, "ballot_req_dt_week", "race", "af")
 // Convert and create the data described above
 
 ```
@@ -187,9 +190,13 @@ Alright, let's use our custom utility functions to create some data to plot. Con
   Feel free to use the codeblock below to check your outputs.
 </p>
 
-```javascript
+```js
+afByRace
 // Convert check outputs: afByRace & afByWeekAndRace
 
+```
+```js
+afByWeekAndRace
 ```
 
 ## E4. Sort *afByWeekAndRace* with *.sort()*
@@ -205,11 +212,11 @@ JS has the built-in `sort()` method, which takes a function/accessor as a parame
 3. Code that does organizes the data.
     - In this case, we can use D3's `ascending()` function, which accepts two parameters: the 2 items to compare. Since we're comparing two objects, we need to specify which keys to compare with `a` & `b`.
 
-```javascript
+```js
 // How to use JS' .sort() method with D3's ascending or descending functions.
 const afByWeekAndRaceSorted = afByWeekAndRace.sort(
   // sort() takes a function/accessor as a parameter.
-  (a,b) => d3.ascending(a.ballot_req_week, b.ballot_req_week)
+  (a,b) => d3.ascending(a.ballot_req_dt_week, b.ballot_req_dt_week)
 )
 ```
 
@@ -217,8 +224,8 @@ const afByWeekAndRaceSorted = afByWeekAndRace.sort(
   Output of the sorted data: <code>afByWeekAndRaceSorted</code>.
 </p>
 
-```javascript
-// Convert and output rendered data to page
+```js
+afByWeekAndRaceSorted
 
 ```
 
@@ -269,15 +276,43 @@ const afByWeekAndRaceSorted = afByWeekAndRace.sort(
 
 I've supplied you with the skeleton for this plot. Be sure to add the options noted in the directions above.
 
-```javascript
+```js
 Plot.plot({
+  grid: true,
+  x: {label: "Race:"},
+  y: {label: "# of Absentee Ballots:"},
   // 1. Add comma-separated layout options
-
   marks: [
     // 2. Add comma-separated marks options
-
+    
     // 3. Create your bar chart
-    Plot.barY()
+    Plot.ruleY([0]),
+    Plot.barY(
+      afByRace,
+      {
+        x: "race",
+        y: "af",
+        sort: {x: "-y"},
+        insetRight: 10,
+        insetLeft: 10,
+        tip: true,
+        marginLeft: 50,
+      
+      }
+    ),
+    Plot.axisX(
+      {
+        label: "Race",
+        lineWidth: 8,
+        marginBottom: 50,
+        
+      }
+    ),
+    Plot.axisY(
+      {
+        label: "Total # of Absentee Ballots",
+      }
+    )
   ]
 })
 ```
@@ -288,13 +323,13 @@ Plot.plot({
 
 To create the plot that you have the `oneLevelRollUpFlatMap()` function at your fingertips, as well as the new date property field for the month number, `ballot_req_dt_month`, which you should have created with `mapDateObject()` before this part of the notebook.
 
-```javascript
+```js
 /**
  * Use oneLevelRollUpFlatMap() to count the
  * absolute frequencies (AF) of `ballot_req_dt_month`.
  * Name the AF property `af`.
 **/
-const monthlyBallotRequests = oneLevelRollUpFlatMap()
+const monthlyBallotRequests = oneLevelRollUpFlatMap(ncVotersAll)
 ```
 
 Let's plot it as a histogram!
@@ -330,7 +365,20 @@ The output should resemble the following video, but you may add any options that
   </p>
 </video>
 
-```javascript
+```js
+Plot.plot({
+  marks: [
+    Plot.ruleY([0],
+      stroke: "blue", 
+      strokeWidth: 3,
+    ),
+    
+    Plot.rectY(
+      monthlyBallotRequests
+    )
+  ]
+})
+
 // Convert and plot the histogram here
 
 ```
