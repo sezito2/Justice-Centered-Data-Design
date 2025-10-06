@@ -335,11 +335,11 @@ const reducerProps = [
 const reducerFuncs = [
   {
     type: "ACCEPTED",
-    func: "getAcceptedBallots"
+    func: getAcceptedBallots
   },
   {
     type: "REJECTED",
-    func: "getAcceptedBallots"
+    func: getAcceptedBallots
   },
 ]
 
@@ -398,10 +398,18 @@ for (const weekNumber of uniqueListOfWeekNumbers) {
       **/
       const weekRaceAF = d3.sum(
         afByWeekRaceStatus,
-        (v) => v.length,
-        (d) => d.ballot_req_dt_week,
-          (d) => reducerProps[raceProp],
-          (d) => d.ballot_rtn_status
+        d => {
+          if (
+            d.ballot_req_dt_week === weekNumber &&
+            d[raceProp] === reducerProps[raceProp] &&
+            d.ballot_rtn_status !== null
+          ) {
+            return d.af
+          } else {
+            return 0
+          }
+        }
+
       
        
         // Replace me with your accessor function here
@@ -417,10 +425,14 @@ for (const weekNumber of uniqueListOfWeekNumbers) {
       **/
       const summedUpLevel = d3.sum(
         afByWeekRaceStatus,
-        (v) => v.length,
-        (d) => d.ballot_req_dt_week,
-          (d) => reducerProps[raceProp],
-          (d) => d.ballot_rtn_status
+        d => {
+          if (d.ballot_req_dt_week === weekNumber && d[raceProp] === reducerProps[raceProp] && ballot.func(d)>0){
+            return d.af
+          } 
+          else {
+            return 0
+          }
+        }
 
         /**
          * Replace me with your accessor function.

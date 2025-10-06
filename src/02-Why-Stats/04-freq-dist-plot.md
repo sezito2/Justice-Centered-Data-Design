@@ -2,7 +2,7 @@
 
 ```js
 import {utcParse, utcFormat} from "d3-time-format";
-// Import your functions
+import {oneLevelRollUpFlatMap, twoLevelRollUpFlatMap, threeLevelRollUpFlatMap, mapDateObject, getUniquePropListBy} from "./utils/utils.js"
 
 ```
 
@@ -127,15 +127,15 @@ Again, we are going to continue working with the 2024 NC absentee voter CSV file
 2. Assign the data to a variable named `ncVotersAll`.
 3. Render it to the page in a separate codeblock.
 
-```javascript
-// FileAttachment() code here.
+```js
+let ncVotersAll = FileAttachment("../data/nc-voters/nc_absentee_mail_2024.csv").csv({typed: true})
 ```
 
 <p class="codeblock-caption">
   Interactive output of full data set.
 </p>
 
-```javascript
+```js
 // Convert if you want to print the data to the page
 ncVotersAll
 ```
