@@ -627,23 +627,28 @@ Inputs.table(
   {
     rows: 25,
       width: {
-        id_num: 60,
-        county_desc: 90,
-        gender: 40,
+        race: 75,
+        ballot_rtn_status: 50,
+        af: 50,
       },
       header: {
         race: "Voter's Race",
-        county_desc: "County",
+        ballot_rtn_status: "Ballot Status",
+        af: "# of Absentee Ballots",
       },
-    }
-  )
+    align: {
+      race: "left",
+      af: "left",
+    },
+  }
+)
 ```
 
 ### Question: Explain your table design choices.
 
 **Q**: What *insights* and *new questions* did you garner from it that you hope to also illustrate/provide for your audience?
 
-ENTER_YOUR_RESPONSE_HERE
+The proportion of rejected black/african american ballots to accepted ballots is signifcantly different from the white ballots.
 
 ## Conclusion
 
