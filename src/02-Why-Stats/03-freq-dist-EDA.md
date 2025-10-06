@@ -296,7 +296,7 @@ The result should resemble the following output:
 ### 4.1 Write your reducer functions
 
 <!-- Reducer Functions -->
-```javascript
+```js
 /**
  * Write a reducer function that checks to make sure
  * ballot_rtn_status is NOT null and starts with "ACCEPTED"
@@ -305,26 +305,41 @@ The result should resemble the following output:
 **/
 
 // Now, do the same for what will become "REJECTED" statuses
+const getAcceptedBallots = (d) => {
+  if (d.ballot_rtn_status != null && d.ballot_rtn_status.startsWith("ACCEPTED") == true){
+    return d.af
+  }
+  else {
+    return 0
+  }
+}
+const getRejectedBallots = (d) => {
+  if (d.ballot_rtn_status != null && d.ballot_rtn_status.startsWith("ACCEPTED") == false){
+    return d.af
+  }
+  else {
+    return 0
+  }
+}
 
 ```
 
 ### 4.2 Write your reducer properties and objectify your reducer functions
 
 <!-- Reducer Properties & Objectify reducerFuncs -->
-```javascript
+```js
 const reducerProps = [
-  // Let's reduce the data to these two values for race
   "WHITE", "BLACK or AFRICAN AMERICAN"
 ]
 
 const reducerFuncs = [
   {
     type: "ACCEPTED",
-    func:  // ENTER FUNCTION TO EVAL AS "ACCEPTED"
+    func: "getAcceptedBallots"
   },
   {
     type: "REJECTED",
-    func:  // ENTER FUNCTION TO EVAL AS "REJECTED"
+    func: "getAcceptedBallots"
   },
 ]
 
@@ -349,7 +364,7 @@ Instead of creating a generalizable function for all three-level cases, some tim
 Convert the below codeblock and develop it further in this notebook to complete the task. We're not creating a module, because sometimes the complexity of the situation just demands using simpler methods to meet the situation. Indeed, there's nothing wrong with using the helpful set of for loops and conditions to get the job done. `:-)`
 
 <!-- Counting it all up through a series of custom loops -->
-```javascript
+```js
 // 1. Create array for tallied frequency results
 const afGroupedPercResults = []
 
