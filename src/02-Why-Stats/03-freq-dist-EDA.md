@@ -5,6 +5,7 @@
 import {utcParse,utcFormat} from "d3-time-format";
 // Import your custom modules here: getUniquePropListBy, oneLevelRollUpFlatMap, twoLevelRollUpFlatMap, threeLevelRollUpFlatMap, sumUpWithReducerTests
 import {getUniquePropListBy} from "./utils/utils.js";
+import {mapDateObject} from "./utils/utils.js"
 ```
 
 ## Start Your GH Workflow
@@ -101,15 +102,15 @@ Let's attach and render the dataset CSV file called `nc_absentee_mail_2024_no_dr
 
 Let's assign the attached data to a constant variable called `ncVotersAll`.
 
-```javascript
-// Attach with this codeblock
+```js
+let ncVotersAll = FileAttachment("../data/nc-voters/nc_absentee_mail_2024_no_dropped_dupes.csv").csv ({typed: true})
 ```
 
 <p class="codeblock-caption">
   Output of full dataset
 </p>
 
-```javascript
+```js
 ncVotersAll
 ```
 
@@ -222,9 +223,10 @@ Import the `mapDateObject` function in the `import` statement at the top of this
   Console logs are your friend for testing your code! Just be sure to erase them, when you don't need them anymore.
 </p>
 
-```javascript
+
+```js
 // Convert so you can test your imported function as you develop it
-const ncVotersAllUpdated = mapDateObject(ncVotersAll, "ENTER THE DATEFIELD HERE")
+const ncVotersAllUpdated = mapDateObject(ncVotersAll, "ballot_req_dt")
 ```
 
 Ok, now convert the below codeblock to an exectuable one, so you can view the output.
@@ -233,7 +235,7 @@ Ok, now convert the below codeblock to an exectuable one, so you can view the ou
   Interactive output of <code>ncVotersAllUpdated</code> with new date properties:
 </p>
 
-```javascript
+```js
 // Convert to output
 ncVotersAllUpdated
 ```

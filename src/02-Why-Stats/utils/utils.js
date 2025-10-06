@@ -13,7 +13,8 @@ import {ascending,descending,sum,rollup,rollups} from "d3-array";
 import {utcParse,utcFormat} from "d3-time-format";
 
 // Add Your Date Parsers & Formatters Below
-
+const parseDate = utcParse("%m/%d/%Y")
+const formatWeekNumber = (date) => Number(utcFormat("%U")(date))
 
 // Complete this codeblock code from Chapter E-2.2, exercise 2 below
 export const mapDateObject = (data, dateString) => {
@@ -32,7 +33,9 @@ export const mapDateObject = (data, dateString) => {
        *    property for each `ballot`
        *    called `objField`.
       **/
-     ballot[objField] = parseDate(ballot[dateField])
+     ballot[objField] = parseDate(ballot[dateString])
+     ballot[weekField] = formatWeekNumber(ballot[objField]);
+     console.log(parseDate("01/01/2022"))
     }
     return ballot
   })
@@ -107,27 +110,6 @@ export const oneLevelRollUpFlatMap = (data, level1Key, countKey) => {
   // 3. Return the sorted totals
   return flatTotals
 }
-
-/*export function oneLevelRollUpFlatMap(data, level1Key, countKey) {
-
-  // 1. Rollups on one level
-  const colTotals = rollups(
-    data,
-    (v) => v.length, // Count length of leaf node
-    (d) => d[level1Key] // d["race"]
-  )
-
-  // 2. Flatten back to array of objects
-  const flatTotals = colTotals.flatMap((e) => {
-    return {
-      [level1Key]: e[0],
-      [countKey]: e[1]
-    }
-  })
-
-  // 3. Return the sorted totals
-  return flatTotals
-}*/
 
 /** twoLevelRollUpSumUp()
  * Groups & counts data by one level
