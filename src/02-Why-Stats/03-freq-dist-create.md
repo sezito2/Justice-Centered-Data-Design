@@ -648,7 +648,7 @@ Inputs.table(
 
 **Q**: What *insights* and *new questions* did you garner from it that you hope to also illustrate/provide for your audience?
 
-The proportion of rejected black/african american ballots to accepted ballots is signifcantly different from the white ballots.
+The proportion of rejected black/african american ballots to accepted ballots is significantly different from the white ballots. About 27% of black/african american absentee ballots were rejected, compared to 21% of white absentee ballots. I am curious how party afiliations play into this (if at all).
 
 ## Conclusion
 
