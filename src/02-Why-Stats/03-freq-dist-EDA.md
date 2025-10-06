@@ -378,11 +378,11 @@ for (const weekNumber of uniqueListOfWeekNumbers) {
 
   // 3. Loop through testor functions with your custom conditions
   //    - Use `for...in` so we can loop as many tests as provided
-  for () {
+  for (const ballot in reducerFuncs) {
 
     // 4. Loop through interested properties
     //    - Use `for...in` so we can loop as many tests as provided
-    for () {
+    for (const raceProp in reducerProps) {
 
       /**
        * 3. Calculate the sum grand total
@@ -397,7 +397,13 @@ for (const weekNumber of uniqueListOfWeekNumbers) {
        *    for `ballot_rtn_status`
       **/
       const weekRaceAF = d3.sum(
-        // Replace me with the iterable: `afByWeekRaceStatus`
+        afByWeekRaceStatus,
+        (v) => v.length,
+        (d) => d.ballot_req_dt_week,
+          (d) => reducerProps[raceProp],
+          (d) => d.ballot_rtn_status
+      
+       
         // Replace me with your accessor function here
 
         // WARNING: Remember to separate your iterable and accessor with a comma
@@ -410,7 +416,12 @@ for (const weekNumber of uniqueListOfWeekNumbers) {
        *    3. REDUCER FUNCTION return value.
       **/
       const summedUpLevel = d3.sum(
-        // Replace me with the `afByWeekRaceStatus` data
+        afByWeekRaceStatus,
+        (v) => v.length,
+        (d) => d.ballot_req_dt_week,
+          (d) => reducerProps[raceProp],
+          (d) => d.ballot_rtn_status
+
         /**
          * Replace me with your accessor function.
          * Remember to use your reducer function and property
@@ -434,17 +445,19 @@ for (const weekNumber of uniqueListOfWeekNumbers) {
       **/
       afGroupedPercResults.push({
         // Add the current week
-        ballot_req_dt_week: ,
+        ballot_req_dt_week: weekNumber,
         // Add the current reducer property here
-        race: reducerProps[rProperty],
+        race: reducerProps[raceProp],
         // Add the current reducer function "type"
-        ballot_rtn_status: ,
+        ballot_rtn_status: ballot,
         // Add the AF value for the week here
-        af: ,
+        af: summedUpLevel,
         // Calculate the percentage with:
         // the total for the grouped level (summedUpLevel)
         // divided by the total for the entire week (weekRaceAF)
-        percentage: ,
+        percentage: (typeof weekRaceAF === "number" && weekRaceAF > 0)
+    ? summedUpLevel / weekRaceAF
+    : 0,
       })
 
     }
@@ -456,7 +469,7 @@ for (const weekNumber of uniqueListOfWeekNumbers) {
   Output of afGroupedPercResults.
 </p>
 
-```javascript
+```js
 afGroupedPercResults
 ```
 
@@ -471,7 +484,15 @@ Tabulate the data here. Use `Inputs.table()`'s `format` option to express the pe
   You can then use <code>Inputs.table()</code>'s <code>format: { object_key: (x) => //use `x` in an accessor here, // Add more ... }</code> to express data appropriately. (Reference Observable Framework's <a href="https://observablehq.com/framework/inputs/table#inputs-3a86ea-4" target="_blank" rel="noreferrer noopenner">example in their docs</a>)
 </p>
 
-```javascript
+```js
+Inputs.table(
+  afGroupedPercResults,
+  {
+    format: {
+      percentage: d3.format(".2%")
+    }
+  }
+)
 // Convert and tabulate afGroupedPercResults here
 ```
 
