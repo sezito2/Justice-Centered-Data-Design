@@ -15,7 +15,7 @@ import {utcParse,utcFormat} from "d3-time-format";
 // Add Your Date Parsers & Formatters Below
 const parseDate = utcParse("%m/%d/%Y")
 const formatWeekNumber = (date) => Number(utcFormat("%U")(date))
-const formatMonth = utcFormat("%M")
+const formatMonth = utcFormat("%m")
 const formatYear = utcFormat("%Y")
 
 // Complete this codeblock code from Chapter E-2.2, exercise 2 below

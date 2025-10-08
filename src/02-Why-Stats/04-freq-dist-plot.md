@@ -329,7 +329,10 @@ To create the plot that you have the `oneLevelRollUpFlatMap()` function at your 
  * absolute frequencies (AF) of `ballot_req_dt_month`.
  * Name the AF property `af`.
 **/
-const monthlyBallotRequests = oneLevelRollUpFlatMap(ncVotersAll)
+const monthlyBallotRequests = oneLevelRollUpFlatMap(ncUpdates, "ballot_req_dt_month", "af")
+```
+```js
+monthlyBallotRequests
 ```
 
 Let's plot it as a histogram!
@@ -367,14 +370,21 @@ The output should resemble the following video, but you may add any options that
 
 ```js
 Plot.plot({
+  marginLeft: 60,
+  x: {label: "Month Requested:"},
+  y: {label: "# of Absentee Ballots:"},
   marks: [
     Plot.ruleY([0],
-      stroke: "blue", 
-      strokeWidth: 3,
+      {stroke: "blue", strokeWidth: 3,},
     ),
-    
     Plot.rectY(
-      monthlyBallotRequests
+      monthlyBallotRequests,
+      {
+        x: "ballot_req_dt_month",
+        y: "af",
+        interval: 1,
+        tip: true,
+      }
     )
   ]
 })
