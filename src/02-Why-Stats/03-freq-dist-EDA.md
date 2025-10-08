@@ -400,12 +400,14 @@ for (const weekNumber of uniqueListOfWeekNumbers) {
         afByWeekRaceStatus,
         d => {
           if (
-            d.ballot_req_dt_week === weekNumber &&
-            d[raceProp] === reducerProps[raceProp] &&
+            d.ballot_req_dt_week == weekNumber &&
+            d[raceProp] == reducerProps[raceProp] &&
             d.ballot_rtn_status !== null
-          ) {
+          ) 
+          {
             return d.af
-          } else {
+          } 
+          else {
             return 0
           }
         }
