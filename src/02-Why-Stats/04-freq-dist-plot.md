@@ -375,7 +375,10 @@ Plot.plot({
   y: {label: "# of Absentee Ballots:"},
   marks: [
     Plot.ruleY([0],
-      {stroke: "blue", strokeWidth: 3,},
+      {
+        stroke: "blue", 
+        strokeWidth: 3,
+      },
     ),
     Plot.rectY(
       monthlyBallotRequests,
@@ -384,8 +387,8 @@ Plot.plot({
         y: "af",
         interval: 1,
         tip: true,
-      }
-    )
+      },
+    ),
   ]
 })
 
@@ -492,6 +495,12 @@ In a few codeblocks below, redo your work from the last extended exercise. I als
 For this plot, we want to include all ballot requests and statuses -- except any rows that are `null`. So, let's attach and use the `nc_absentee_mail_2024_no_dropped_dupes.csv` dataset, which includes all such recorded instances, even if conducted by the same voter.
 
 Assign it to a constant variable named `ncMailBallots`.
+```js
+let ncMailBallots = FileAttachment("../data/nc-voters/nc_absentee_mail_2024_no_dropped_dupes.csv").csv({typed: true})
+```
+```js
+ncMailBallots
+```
 
 <!-- JS codeblock to attach nc_absentee_mail_2024_no_dropped_dupes.csv -->
 
@@ -501,13 +510,16 @@ Assign it to a constant variable named `ncMailBallots`.
 Map those Date objects and other week properties with your custom `mapDateObject()` function.
 
 Assign it to a constant variable named `ncMailBallotsUpdated`.
+```js
+let ncMailBallotsUpdated = mapDateObject(ncMailBallots, "ballot_req_dt")
+```
 
 <!-- JS codeblock to map date objects as ncMailBallotsUpdated-->
 
 
 Output `ncMailBallotsUpdated` below:
 
-```javascript
+```js
 ncMailBallotsUpdated
 ```
 
@@ -521,11 +533,13 @@ Time to use your `threeLevelRollUpFlatMap` function!
 
 ![Output of white & black race > ballot return status grouping per week](./../assets/images/2-why-stats/04-plot-RFS-full-output.png)
 
-
+```js
+let afByWeekRaceStatus = threeLevelRollUpFlatMap(ncMailBallotsUpdated, "ballot_req_dt_week", "race", "ballot_rtn_status",)
+```
 
 #### Output of afByWeekRaceStatus
 
-```javascript
+```js
 // Convert and render data
 afByWeekRaceStatus
 ```
