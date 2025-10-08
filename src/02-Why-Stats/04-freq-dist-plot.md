@@ -534,7 +534,7 @@ Time to use your `threeLevelRollUpFlatMap` function!
 ![Output of white & black race > ballot return status grouping per week](./../assets/images/2-why-stats/04-plot-RFS-full-output.png)
 
 ```js
-let afByWeekRaceStatus = threeLevelRollUpFlatMap(ncMailBallotsUpdated, "ballot_req_dt_week", "race", "ballot_rtn_status",)
+let afByWeekRaceStatus = threeLevelRollUpFlatMap(ncMailBallotsUpdated, "ballot_req_dt_week", "race", "ballot_rtn_status", "af")
 ```
 
 #### Output of afByWeekRaceStatus
@@ -562,6 +562,126 @@ Finally, we need to reduce our grouped data to either being ACCEPTED or REJECTED
 </p>
 
 I recommend reusing your code from the last chapter.
+
+<!-- we need to count week number, see if ballot was accepted or rejected, know the "race" property -->
+```javascript
+// week number
+// const uniqueListOfWeekNumbers = getUniquePropListsBy(afByWeekRaceStatus, "ballot_req_dt_week")
+
+// ballot status
+// const reducerFuncs = [
+//   {type: "ACCEPTED", func: getAcceptedBallots},
+//   {type: "REJECTED", func: getRejectedBallots},
+// ]
+
+const reducerProps
+
+```
+1. loop through week
+2. for that week, loop through reducer func
+3. for that func, loop through prop
+4. calculate
+   1. af
+   2. percentage then
+   3. .push() new object with deisre properites to empty array
+      1. 'ballot_req_dt_week', 'race', 'ballot_rtn_status', 'af', and 'percentage'
+
+```js
+//reducer functions
+const getAcceptedBallots = (d) => {
+  // if ballot status is accepted, then count
+  if (d.ballot_rtn_status != null && d.ballot_rtn_status.startsWith("ACCEPTED") == true){
+    console.log("Accepted ballot, af:", d.af)
+    return d.af
+  }
+  // if not accepted, return 0
+  else {
+    return 0
+  }
+}
+console.log(getAcceptedBallots)
+const getRejectedBallots = (d) => {
+  // if ballot status is rejected, then count
+  if (d.ballot_rtn_status != null && d.ballot_rtn_status.startsWith("ACCEPTED") == false){
+    return d.af
+  }
+  // if not rejected, return 0
+  else {
+    return 0
+  }
+}
+```
+```js
+// array of reducer functions
+const reducerFuncs = [
+  {
+    type: "ACCEPTED",
+    func: getAcceptedBallots,
+  },
+  {
+    type: "REJECTED",
+    func: getRejectedBallots
+  },
+]
+```
+
+```js
+// Reducer Properties
+const reducerProps = ["WHITE", "BLACK or AFRICAN AMERICAN"]
+
+// lsit of unique week numbers to verify counts per week
+const uniqueListOfWeekNumbers = getUniquePropListBy(afByWeekRaceStatus, "ballot_req_dt_week")
+```
+
+```js
+const afGroupedPercResults = []
+
+// loop through week #s
+for (const weekNumber of uniqueListOfWeekNumbers){
+
+  // loop through reducer func (ballot status)
+  for (const testorObj in reducerFuncs){
+
+    // loop through reducer properties (race)
+    for (const rProperty in reducerProps){
+
+      // sum for all races and status per week
+      const weekAf = d3.sum(
+        afByWeekRaceStatus,
+        (d) => {
+          if (d.ballot_rtn_status != null && d.ballot_req_dt_week == weekNumber && d.race == reducerProps[rProperty]){
+            return d.af
+          }
+        }
+      )
+
+      // talley frequency
+      const summedUpLevel = d3.sum(
+        afByWeekRaceStatus,
+        (d) => {
+          if (d.ballot_req_dt_week == weekNumber && d.race == reducerProps[rProperty]){
+            const xTotalToSum = reducerFuncs[testorObj]["func"](d)
+            return xTotalToSum
+          }
+        }
+      )
+
+      //push to array
+      afGroupedPercResults.push({
+        ballot_req_dt_week: weekNumber,
+        race: reducerProps[rProperty],
+        ballot_rtn_status: reducerFuncs[testorObj]["type"],
+        af: summedUpLevel,
+        percentage: summedUpLevel/ weekAf,
+      })
+    }
+  }
+}
+```
+
+```js
+afGroupedPercResults
+```
 
 ### 5. Filter the data for plotting
 
