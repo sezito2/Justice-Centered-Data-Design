@@ -374,11 +374,11 @@ const afGroupedPercResults = []
  *    our unique list of possible values
  *    in the first grouping level.
 **/
-for (const weekNumber of uniqueListOfWeekNumbers) {
+for (const weekNumber in uniqueListOfWeekNumbers) {
 
   // 3. Loop through testor functions with your custom conditions
   //    - Use `for...in` so we can loop as many tests as provided
-  for (const ballot in reducerFuncs) {
+  for (const testorObj in reducerFuncs) {
 
     // 4. Loop through interested properties
     //    - Use `for...in` so we can loop as many tests as provided
@@ -398,19 +398,25 @@ for (const weekNumber of uniqueListOfWeekNumbers) {
       **/
       const weekRaceAF = d3.sum(
         afByWeekRaceStatus,
-        d => {
-          if (
-            d.ballot_req_dt_week == weekNumber &&
-            d[raceProp] == reducerProps[raceProp] &&
-            d.ballot_rtn_status !== null
-          ) 
-          {
-            return d.af
-          } 
-          else {
-            return 0
+        (d) => {
+          if (d[raceProp] == reducerProps[raceProp]){
+            const xTotalToSum = reducerFuncs[testorObj]["func"](d)
+            return xTotalToSum
           }
         }
+        // d => {
+        //   if (
+        //     d.ballot_req_dt_week == weekNumber &&
+        //     d[raceProp] == reducerProps[raceProp] &&
+        //     d.ballot_rtn_status !== null
+        //   ) 
+        //   {
+        //     return d.af
+        //   } 
+        //   else {
+        //     return 0
+        //   }
+        // }
 
       
        
@@ -428,7 +434,7 @@ for (const weekNumber of uniqueListOfWeekNumbers) {
       const summedUpLevel = d3.sum(
         afByWeekRaceStatus,
         d => {
-          if (d.ballot_req_dt_week === weekNumber && d[raceProp] === reducerProps[raceProp] && ballot.func(d)>0){
+          if (d.ballot_req_dt_week === weekNumber && d[raceProp] === reducerProps[raceProp] && testorObj.func(d)>0){
             return d.af
           } 
           else {
@@ -463,13 +469,13 @@ for (const weekNumber of uniqueListOfWeekNumbers) {
         // Add the current reducer property here
         race: reducerProps[raceProp],
         // Add the current reducer function "type"
-        ballot_rtn_status: ballot,
+        ballot_rtn_status: testorObj,
         // Add the AF value for the week here
         af: summedUpLevel,
         // Calculate the percentage with:
         // the total for the grouped level (summedUpLevel)
         // divided by the total for the entire week (weekRaceAF)
-        percentage: (typeof weekRaceAF === "number" && weekRaceAF > 0)
+        percentage: (typeof weekRaceAF == "number" && weekRaceAF > 0)
     ? summedUpLevel / weekRaceAF
     : 0,
       })
