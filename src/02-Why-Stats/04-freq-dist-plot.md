@@ -672,7 +672,7 @@ for (const weekNumber of uniqueListOfWeekNumbers){
         race: reducerProps[rProperty],
         ballot_rtn_status: reducerFuncs[testorObj]["type"],
         af: summedUpLevel,
-        percentage: summedUpLevel/ weekAf,
+        percentage: (summedUpLevel/ weekAf)*100,
       })
     }
   }
@@ -688,28 +688,7 @@ afGroupedPercResults
 Our angle for this plot focuses on "REJECTED" ballots only. Additionally, recall that our `Plot.plot()` line chart needs to draw 2 different lines based on results from data with the race values of either `"WHITE"` and `"BLACK or AFRICAN AMERICAN"`. Finally, I recommend filtering the week numbers to only include weeks 0-45.
 
 In a codeblock, use JS' `.filter()` on your grouped results to create a two constant variables for each grouping. See the 2 figures below that give you an idea of what your output will include for each new variable.
-```js
-// const afBlackRejectedBallots = (d) => {
-//   // if ballot status is rejected, then count
-//   if (d.ballot_rtn_status != null && d.ballot_rtn_status.startsWith("ACCEPTED") == false && d.race == "BLACK or AFRICAN AMERICAN"){
-//     return d.af
-//   }
-//   // if not rejected, return 0
-//   else {
-//     return 0
-//   }
-// }
-// const afWhiteRejectedBallots = (d) => {
-//   // if ballot status is rejected, then count
-//   if (d.ballot_rtn_status != null && d.ballot_rtn_status.startsWith("ACCEPTED") == false && d.race == "WHITE"){
-//     return d.af
-//   }
-//   // if not rejected, return 0
-//   else {
-//     return 0
-//   }
-// }
-```
+
 ```js
 const afBlackRejectedBallots = afGroupedPercResults.filter((ballot) => ballot.race == "BLACK or AFRICAN AMERICAN" && ballot.ballot_rtn_status == "REJECTED" && ballot.ballot_req_dt_week <= 45)
 ```
@@ -744,18 +723,18 @@ Remember, you should be plotting the weeks along the x-axis and the percentage v
 - In `marks`, add week 45 information:
     - `Plot.dot()` to denote the last day to request a ballot: Oct 29th.
     - `Plot.tip()` to add an anchored tip to the dot for week 45. I'll provide you with the options to make your tip work:
-    ```javascript
-    // 1. Custom Date() object for the last day to request
-    const parseDate = utcParse("%m/%d/%y")
-    const formatWeekNumber = d3.utcFormat("%W")
-    // 2. Created as a list of objects in case I want to add more specific dates/tips
-    const pollsWeekOfLastDay = [ { lastWeek: Number (formatWeekNumber( parseDate("10/29/24") ) ), }]
-    // 3. The mark to includes in your Plot's `marks` array option
-    Plot.tip(
-      [`Last day\nto req\nOct 29th`],
-      {x: pollsWeekOfLastDay["lastWeek"], y: 0, dy: -5, dx: 277, anchor: "bottom"}
-    ),
-    ```
+```js
+// 1. Custom Date() object for the last day to request
+const parseDate = utcParse("%m/%d/%y")
+const formatWeekNumber = d3.utcFormat("%W")
+// 2. Created as a list of objects in case I want to add more specific dates/tips
+const pollsWeekOfLastDay = [ { lastWeek: Number (formatWeekNumber( parseDate("10/29/24") ) ), }]
+// 3. The mark to includes in your Plot's `marks` array option
+// <!-- Plot.tip(
+//   [`Last day\nto req\nOct 29th`],
+//   {x: pollsWeekOfLastDay["lastWeek"], y: 0, dy: -5, dx: 277, anchor: "bottom"}
+// ), -->
+```
 
 Do the best you can to recreate what you see in the video example.
 
@@ -766,8 +745,7 @@ Do the best you can to recreate what you see in the video example.
 ```js
 Plot.plot({
   marks: [
-    Plot.rectY([0]
-    ),
+    Plot.ruleY([0]),
     Plot.lineY(
       afBlackRejectedBallots,
       {
@@ -776,7 +754,27 @@ Plot.plot({
         stroke: "black",
         tip: true,
       }
-    )
+    ),
+    Plot.lineY(
+      afWhiteRejectedBallots,
+      {
+        x: "ballot_req_dt_week",
+        y: "percentage",
+        stroke: "red",
+        tip: true,
+      }
+    ),
+    Plot.dot(
+      pollsWeekOfLastDay,
+      {
+        x: "lastWeek",
+        y: 0
+      }
+    ),
+    Plot.tip(
+      [`Last day\nto req\nOct 29th`],
+      {x: pollsWeekOfLastDay["lastWeek"], y: 0, dy: -5, dx: 277, anchor: "bottom"}
+    ),
   ]
 })
 ```

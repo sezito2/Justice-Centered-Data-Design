@@ -467,9 +467,7 @@ for (const weekNumber of uniqueListOfWeekNumbers) {
         // Calculate the percentage with:
         // the total for the grouped level (summedUpLevel)
         // divided by the total for the entire week (weekRaceAF)
-        percentage: (typeof weekRaceAF === "number" && weekRaceAF > 0)
-    ? summedUpLevel / weekRaceAF
-    : 0,
+        percentage: summedUpLevel/weekRaceAF
       })
 
     }
