@@ -446,19 +446,19 @@ Inputs.table(
 
 Why did I direct you to sum the total for the week > race group, rather than calculate the percentage based on the grand sum total for the entire week across all included races? How are those percentages' respective *interpretive levels* different?
 
-YOUR_RESPONSE_HERE
+Grouping by race allows us to easily compare the differences in accepted versus rejected ballots per week based on racial group. If we want to look at how ballots were processed over time we could only group by week. However, since we are interested in how race plays a factor, the data needs to be grouped by race too.
 
 ## Question: New insights?
 
 After tabulating the data, as well as sorting and reviewing it, what new angles and questions come to mind?
 
-YOUR_RESPONSE_HERE
+I am curious about how time impacts the acceptance of ballots. For most weeks, black/african american ballots were rejected more often than white ballots. However, there are a few weeks towards the beginning of the year where this trend is reversed. Are there common reasons (i.e., why ballots were rejected) each week, for example, is their a spike in photo ID issues one week?
 
 ## Question: Difficulties?
 
 After tabulating the data, as well as sorting and reviewing it, what difficulties are you experiencing as you review so much data in a table?
 
-YOUR_RESPONSE_HERE
+It is hard to read and parse through all the data in the table. It is also hard to visualize patterns and trends. A chart would be useful to help the visualization process.
 
 ## Conclusion
 
