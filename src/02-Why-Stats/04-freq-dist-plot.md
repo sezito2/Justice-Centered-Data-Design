@@ -688,6 +688,40 @@ afGroupedPercResults
 Our angle for this plot focuses on "REJECTED" ballots only. Additionally, recall that our `Plot.plot()` line chart needs to draw 2 different lines based on results from data with the race values of either `"WHITE"` and `"BLACK or AFRICAN AMERICAN"`. Finally, I recommend filtering the week numbers to only include weeks 0-45.
 
 In a codeblock, use JS' `.filter()` on your grouped results to create a two constant variables for each grouping. See the 2 figures below that give you an idea of what your output will include for each new variable.
+```js
+// const afBlackRejectedBallots = (d) => {
+//   // if ballot status is rejected, then count
+//   if (d.ballot_rtn_status != null && d.ballot_rtn_status.startsWith("ACCEPTED") == false && d.race == "BLACK or AFRICAN AMERICAN"){
+//     return d.af
+//   }
+//   // if not rejected, return 0
+//   else {
+//     return 0
+//   }
+// }
+// const afWhiteRejectedBallots = (d) => {
+//   // if ballot status is rejected, then count
+//   if (d.ballot_rtn_status != null && d.ballot_rtn_status.startsWith("ACCEPTED") == false && d.race == "WHITE"){
+//     return d.af
+//   }
+//   // if not rejected, return 0
+//   else {
+//     return 0
+//   }
+// }
+```
+```js
+const afBlackRejectedBallots = afGroupedPercResults.filter((ballot) => ballot.race == "BLACK or AFRICAN AMERICAN" && ballot.ballot_rtn_status == "REJECTED" && ballot.ballot_req_dt_week <= 45)
+```
+```js
+afBlackRejectedBallots
+```
+```js
+const afWhiteRejectedBallots = afGroupedPercResults.filter((ballot) => ballot.race == "WHITE" && ballot.ballot_rtn_status == "REJECTED" && ballot.ballot_req_dt_week <= 45)
+```
+```js
+afWhiteRejectedBallots
+```
 
 <p class="figure-caption">
   Example outputs from the filtering work to create 2 distinct arrays of objects.
@@ -728,6 +762,24 @@ Do the best you can to recreate what you see in the video example.
 <video controls style="width: 620px; height:620px">
   <source src="../assets/vids/02-why-stats/02-voter-reject-perc.mp4" type="video/mp4" />
 </video>
+
+```js
+Plot.plot({
+  marks: [
+    Plot.rectY([0]
+    ),
+    Plot.lineY(
+      afBlackRejectedBallots,
+      {
+        x: "ballot_req_dt_week",
+        y: "percentage",
+        stroke: "black",
+        tip: true,
+      }
+    )
+  ]
+})
+```
 
 ## E8. Reflection Questions
 
