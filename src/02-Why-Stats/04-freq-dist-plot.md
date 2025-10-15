@@ -793,13 +793,13 @@ Use the structure provided below to briefly discuss each type of graph: line, ba
 
 #### Line
 
-- **Appropriate level of data**:
+- **Appropriate level of data**: Interval
 - **Strengths**:
 - **Weaknesses**:
 
 #### Bar
 
-- **Appropriate level of data**:
+- **Appropriate level of data**: Nominal
 - **Strengths**:
 - **Weaknesses**:
 
