@@ -192,6 +192,7 @@ const digArchiveRolledUp = d3.rollup(
   digArchivePageTests,
   // Based on the leaf node, create object of CT info
   leaf => {
+    console.log(leaf)
     return {
       mean: d3.mean(leaf, l => l[colOfInterest]),
       median: d3.median(leaf, l => l[colOfInterest]),
