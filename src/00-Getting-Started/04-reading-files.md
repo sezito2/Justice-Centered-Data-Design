@@ -33,7 +33,7 @@
 
 </style>
 
-# 0.2-Reading & Writing Code Files
+# 0.4-Reading & Writing Code Files
 
 In this chapter, we will practice configuring your VS Code editor, understanding the project architecture of this book's Observable data app, and learning how to read and write texts in the Markdown format.
 
@@ -82,7 +82,7 @@ Here's how to complete this process with Github Desktop and VS Code:
 
 Let's cover some fundamentals before we venture any further. You must first learn how to read the different types of code files in the project *and* understand how the files are organized in what's called the ***architecture*** of the project. We will focus first on files written in what's called ***Markdown***.
 
-## 0.2.1 Configure VS Code
+## 0.4.1 Configure VS Code
 
 Before we begin, let's make your reading, writing, and developing life a little easier with some VSC tools and settings.
 
@@ -100,7 +100,7 @@ Before we begin, let's make your reading, writing, and developing life a little 
   1. Open Settings and search for "Terminal › Integrated › Default Profile: Osx".
   2. In the dropdown menu, select ***bash***.
 
-## 0.2.2 Markdown: Take 10 Minutes to Learn It!
+## 0.4.2 Markdown: Take 10 Minutes to Learn It!
 
 Markdown (MD) is one way to write and format content for the web, because it uses the most universal text encodings called ***plaintext***. Plaintext written in MD can be easily shared between computers, mobile phones, and people.
 
@@ -118,7 +118,7 @@ Before you go any further, complete the [Markdown Tutorial](https://www.markdown
 
 <p class="note">You will need to submit a screenshot of the completion screen by rendering it on this page in one of the exercises below.</p>
 
-## 0.2.3 Project Structure
+## 0.4.3 Project Structure
 
 Software projects require understanding its structure: Where, How, and Why files are organized and stored in a particular way. It isn't enough to save a file anywhere. Code requires specific pointers to load and use resources at well-defined locations. So, understanding project structure, i.e., architecture, is paramount!
 
@@ -181,7 +181,7 @@ For example, the Observable Framework folks designed typical Framework project a
 
 Overall, a project's structure helps you organize and stay organized, so you can create your own mind palace for each project for easier memory retention and recall. Believe me! As someone who has worked on multiple software projects, structure matters and helps reduce the workload, when executed well.
 
-## 0.2.4 On Filepaths: Navigating Your Project's Structure
+## 0.4.4 On Filepaths: Navigating Your Project's Structure
 
 Ok, so project's maintain a well-defined architecture, so you can organize your files. Great! But, how do we use them?! ***Enter filepaths***.
 
@@ -262,7 +262,7 @@ Put the screenshot image in the following path, which assumes we're in the root 
 
 Use a relative filepath in the Markdown image to do so.
 
-ADD_YOUR_IMG_HERE
+![Markdown Tutorial Screenshot](../assets/images/md-tutuorial.png)
 
 ## E2. Link to 0.3 Using the Command Line
 
@@ -270,8 +270,8 @@ Write a markdown link, e.g., [Rendered linked text](./path/to/file.md), with a r
 
 Write one that assumes the file is `.md`, and another that assumes it is an `.html` file.
 
-- enter_md_link_here
-- enter_html_link_here
+- [0.3 md link](03-cmd-line.md)
+- [html link?](03-cmd-line.html)
 
 ## E3. Link to a resource in same project
 
@@ -279,7 +279,7 @@ Write a markdown link, e.g., [Rendered linked text](./path/to/file.md), with a *
 
 <p class="tip">You will need to use the double-dot <code>..</code> notation to travel back up the hierarchy in the project, since the image is not in the same folder/directory as this chapter's file.</p>
 
-- Link to the Github Anatomy image.
+- [Link to the Github Anatomy image.](../assets/images/0-gs/gh-anatomy.png)
 
 ## E4. Render an image
 
@@ -287,7 +287,7 @@ Write a markdown image, e.g., `![Alt text description](./path/in/here.jpg)`, whi
 
 <p class="tip">You will need to use the double-dot <code>..</code> notation.</p>
 
-ENTER_IMG_HERE
+![Hotel bookings data charts](../assets/images/hotel-bookings-dark.webp)
 
 ## Submission
 
