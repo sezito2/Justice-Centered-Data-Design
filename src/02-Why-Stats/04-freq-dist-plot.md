@@ -785,7 +785,7 @@ Plot.plot({
 
 After working with the NC voter dataset, describe any new insights, new questions or angles, or issues that you might consider sharing with your team at Protect Democracy.
 
-YOUR_RESPONSE_HERE
+After looking at the line charts, I think it is interesting that both black and white absentee ballots were rejected in similar patterns throughout the year. For the most part, black ballots were rejected at a higher rate than white ballots. However, a spike in rejections in one race usually corralates with a spike in rejections in the other race. I wonder if this is because of a influx of ballots on those weeks, or if it is has to do with the people reviewing the ballots.
 
 ### 2. Types of graphs
 
