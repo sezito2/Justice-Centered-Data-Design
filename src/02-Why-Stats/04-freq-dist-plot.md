@@ -819,7 +819,17 @@ Use the structure provided below to briefly discuss each type of graph: line, ba
 
 Describe an example of how the voter data could be manipulated to give an unethical presence to inaccurate conclusions. What specifically about the data work and any visualizing or reporting deliverables woudl make them unethical? Feel free to draw upon any of our past critical data readings, including this week's short addition about interpretive levels and the importance of context.
 
-YOUR_RESPONSE_HERE
+A common way I see chart manipulated is to only include the very top range of data. This may make the data seem more different than it really is.
+
+![y-axis ranging from 3000-3600](../assets/images/2-why-stats/image.png) 
+
+vs.
+
+![y-axis ranging from 0-4000](../assets/images/2-why-stats/image-1.png)
+
+These charts represent the same data but the labeling on the y axis makes the differences seem more significant.
+
+Other ways to manipulate this data would be to omit data points, widening the range of the y-axis to minimize differences and using chart types not suitable for the data (ex. using a pie chart to talk about ballots rejected over time). For this dataset, minimizing the differences could lead people to believe ballots were rejected at a similar rate between all races. This may cause a lack of investigation into rejection practices.
 
 ## Submission
 
