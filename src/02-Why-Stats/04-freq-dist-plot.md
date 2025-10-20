@@ -794,26 +794,26 @@ Use the structure provided below to briefly discuss each type of graph: line, ba
 #### Line
 
 - **Appropriate level of data**: Interval
-- **Strengths**:
-- **Weaknesses**:
+- **Strengths**: comparing trends with multiple groups, easy to see trends over time
+- **Weaknesses**: easier to manipulate data and intervals to show misleading data
 
 #### Bar
 
 - **Appropriate level of data**: Nominal
-- **Strengths**:
-- **Weaknesses**:
+- **Strengths**: comparison between differnt categories, frequency of categories, easy to read than tables
+- **Weaknesses**: harder to see patterns/trends
 
 #### Pie
 
-- **Appropriate level of data**:
-- **Strengths**:
-- **Weaknesses**:
+- **Appropriate level of data**: nominal/ordinal
+- **Strengths**: comparison of frequency between categories
+- **Weaknesses**: cannot show trends over time; too many categories makes the chart hard to understand
 
-#### Histogram
+#### Histogram 
 
-- **Appropriate level of data**:
-- **Strengths**:
-- **Weaknesses**:
+- **Appropriate level of data**: interval/ratio
+- **Strengths**: data distribution over set interval; good with categories such as time; good with larger data sets
+- **Weaknesses**: intervals may lose the specifics of data; harder to tell values within the intervals
 
 ### 3. On making un/ethical arguments with data
 
