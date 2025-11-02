@@ -59,8 +59,8 @@ Again, we are going to continue working with the 2024 NC absentee voter CSV file
 2. Assign the data to a variable named `ncVotersAll`.
 3. Render it to the page in a separate codeblock.
 
-```javascript
-// FileAttachment() code here assigned to `ncVotersAll`
+```js
+let ncVotersAll = FileAttachment("../data/nc-voters/nc_absentee_mail_2024.csv").csv({typed: true})
 ```
 
 Output the data as an interactive array of objects below:
@@ -69,8 +69,7 @@ Output the data as an interactive array of objects below:
   Interactive output of full data set in <code>ncVotersAll</code>
 </p>
 
-```javascript
-// Convert to render on page
+```js
 ncVotersAll
 ```
 
@@ -80,7 +79,7 @@ We will be learning how to "read" large data sets with exploratory data analysis
 
 Observable has a suite of modules called **Inputs**. We're going to learn how to use [Observable's Inputs.table()](https://observablehq.com/framework/inputs/table) method to render the attached data as a table. In its most basic form, it expects a flat array of objects with properties, which is what `FileAttachment()` renders for us.
 
-```javascript
+```js
 // Most basic Inputs.table()
 Inputs.table(ncVotersAll)
 ```
@@ -142,6 +141,35 @@ Inputs.table(
   }
 )
 ```
+```js
+Inputs.table(
+  ncVotersAll,
+  {
+    columns: [
+      "id_num", "county_desc", "race", "gender", "age",
+      "ballot_request_party", "ballot_rtn_status"
+    ],
+    rows: 25,
+    width: {
+      id_num: 60,
+      county_desc: 90,
+      gender: 40,
+      age: 20,
+      race: 90,
+      ballot_request_party: 90,
+    },
+    header: {
+      id_num: "ID",
+      county_desc: "County",
+      race: "Race",
+      gender: "Gender",
+      age: "Age",
+      ballot_request_party: "Ballot Party",
+      ballot_rtn_status: "Ballot Status",
+    },
+  }
+)
+```
 
 ## E3. Case Scenario & Data Provenance
 
@@ -167,15 +195,15 @@ Finally, inside of the `/src/data/nc-voters/provenance/` folder, you can also re
 
 **Question**: After reviewing the above information, how would a SJ ethic inform your intiial understanding of the data, its collected values, and its context? List out in other information or questions that you sense might be missing about the data.
 
-ENTER_YOUR_RESPONSE_HERE
+The main thing I think is missing from this data is the why a ballot was rejected (After looking at the rollup array, I can see that the status may include some description. However, I'm not sure what all of the descriptions mean). I am also curious on what the process to reject ballots is. Do humans look over the ballots? Is it a machine? When looking at this data, it is very cut and dry and lacking humanistic qualities like emotion and seems detatch from the people and systems filling out and checking the ballots. The collection and publication of the data may indicate an attempt at transparency for elections but I think there are still unanswered questions. 
 
 **Question**: Based on the case scenario as a communicator at Protect Democracy, and a SJ ethic in mind, what questions, i.e., angles, do you think may be helpful to meet the needs of your situation. Discuss any columns/fields that you are surprised about or spark any curiosities, and create a list of questions they spark in you.
 
-ENTER_YOUR_RESPONSE_HERE
+In this scenario, I would be interested in looking at race, ballot return status, ballot request, sent, and return dates (to see how long different ballots took to be processed). Additionally, prescinct or congressional district would be interesting to explore given north carolina's history of gerrymandering districts to group racial groups and provide benefits to the republican party. How do ballot acceptances differ between different races? How quickly are ballots processed for different races? Do some precinct/districts have higher rates of denied ballots?
 
 **Question**: What can you understand about the `ballot_rtn_status` column? In other words, what types of values are possible?
 
-ENTER_YOUR_RESPONSE_HERE
+`ballot_rtn_status` indicates the Ballot return status, which can be an up to 30 character string
 
 ## 2.3.4 Calculate Absolute Grouped Frequencies with RFS Method
 
@@ -254,7 +282,7 @@ Ok, so we want to create a desired ***grouping*** of `ballot_rtn_status` > `race
     2. Add second param: the computation to perform on the rolled up data. In this case, we want the absolute frequency of ballot statuses per race.
 
 <!-- Example rollups() -->
-```javascript
+```js
 /**
  * .rollups()
  * @return: a flattened version of InternMap:
@@ -273,7 +301,7 @@ const afStatusByRace = d3.rollups(
 </p>
 
 <!-- afStatusByRace output -->
-```javascript
+```js
 // Convert to render on page
 afStatusByRace
 ```
@@ -358,9 +386,10 @@ In this second video, I explain the code inside of the custom `oneLevelRollUpFla
 
 Ok, now that you have watched the above video about the `oneLevelRollUpFlatMap()` function. Import it from the `./utils/utils.js` file in the codeblock below.
 
-```javascript
+```js
 // Convert me and import oneLevelRollUpFlatMap()
-import {PUT_ANY_FUNCTIONS_IN_HERE, SEPARATE_MORE_THAN_ONE, WITH_COMMAS} from "enter/path/here.js"
+import {oneLevelRollUpFlatMap} from "./utils/ch2_utils.js"
+//import {PUT_ANY_FUNCTIONS_IN_HERE, SEPARATE_MORE_THAN_ONE, WITH_COMMAS} from "enter/path/here.js"
 
 ```
 
@@ -368,15 +397,19 @@ Now, see if it worked!
 
 Use the imported function in the below codeblock to rollup and flatten `ncVotersAll` by (1) `race` and (2) `ballot_rtn_status`.
 
-```javascript
+```js
 // Convert and use `oneLevelRollUpFlatMap()` on `ncVotersAll`
-const byRaceAndBallotStatus = ADD_FUNCTION_HERE
+const byRace = oneLevelRollUpFlatMap(
+  ncVotersAll,
+  "race",
+  "af",
+  )
 ```
 
 Ok, let's see if `byRaceAndBallotStatus` shows up here by rendering it to the page.
 
-```javascript
-byRaceAndBallotStatus
+```js
+byRace
 ```
 
 <div class="error-caption">
@@ -392,12 +425,16 @@ byRaceAndBallotStatus
 
 Ok, now you try this custom function with a different variable from the dataset.
 
-```javascript
-// Convert and create your own one-level grouping
+```js
+const byCongDistAndStatus = oneLevelRollUpFlatMap(
+  ncVotersAll,
+  "cong_dist_desc",
+  "af", 
+)
 ```
 
-```javascript
-// Convert and output your variable here
+```js
+byCongDistAndStatus
 ```
 
 ## E6. Import and use `twoLevelRollUpFlatMap()` on `ncVotersAll`
@@ -416,12 +453,20 @@ In this video, follow along as I explain the code for the `twoLevelRollUpFlatMap
 
 After you have watched the above video, it is time for you to try this custom function with the two example variables used in the our running angle.
 
-```javascript
-// Convert and create your own two-level grouping
+```js
+import {twoLevelRollUpFlatMap} from "./utils/ch2_utils.js"
+
+let byRaceAndStatus = twoLevelRollUpFlatMap(
+  ncVotersAll,
+  "race",
+  "ballot_rtn_status",
+  "af"
+)
+
 ```
 
-```javascript
-// Convert and output your variable here
+```js
+byRaceAndStatus
 ```
 
 ## 2.3.7 RFS 3. Sum it up with D3's .sum()!
@@ -502,12 +547,55 @@ Follow along with me in the video below to learn how to create a custom function
 </video>
 
 <!-- Your Reducer Functions -->
-```javascript
-// Convert and create your own reducer functions akin to "ACCEPTED" vs "REJECTED"
+
+```js
+const getAcceptedBallots = (d) => {
+  if (d.ballot_rtn_status != null && d.ballot_rtn_status.startsWith("ACCEPTED") == true){
+    return d.af
+  }
+  else {
+    return 0
+  }
+}
+
+const getRejectedBallots = (d) => {
+  if (d.ballot_rtn_status != null && d.ballot_rtn_status.startsWith("ACCEPTED") == false){
+    return d.af
+  }
+  else {
+    return 0
+  }
+}
+
+const reducerFunc = [
+  {type: "ACCEPTED", func: getAcceptedBallots},
+  {type: "REJECTED", func: getRejectedBallots},
+]
+
+const reducerProps = ["WHITE", "BLACK or AFRICAN AMERICAN",]
 ```
 
-<!-- Call and use sumUpWithReducerTests() -->
 ```javascript
+let testFilter = ballotStatusFilter(ncVotersAll)
+```
+```javascript
+testFilter
+```
+const meaningfulFunctionName = (param1, param2) => {
+  // A silly example of doing something with the parameters
+  let newData = param1 + param2
+
+  // return the desired data
+  return newData
+}
+
+<!-- Call and use sumUpWithReducerTests() -->
+```js
+import {sumUpWithReducerTests} from "./utils/ch2_utils.js"
+
+let summedUp = sumUpWithReducerTests(reducerFunc, reducerProps, 
+  byRaceAndStatus, "race", "ballot_rtn_status", "af")
+
 /**
  * Convert and use sumUpWithReducerTests().
  * Be sure to review the utils.js file, so you
@@ -520,8 +608,8 @@ Follow along with me in the video below to learn how to create a custom function
 </p>
 
 <!-- Your Reducer Functions -->
-```javascript
-// Convert and output your summed up data
+```js
+summedUp
 ```
 
 ## E8. Tabulated absolute frequencies of rejected ballots per race
@@ -533,15 +621,34 @@ Ok, tabulate the rolledup and summed-up results with `Inputs.table()`. Be sure t
 3. Sort the table based on what you deem the most helpful combo of column and ascending vs. descending.
 4. Be sure to provide a short response to the question about your table design.
 
-```javascript
-// Enter your table here
+```js
+Inputs.table(
+  summedUp,
+  {
+    rows: 25,
+      width: {
+        race: 75,
+        ballot_rtn_status: 50,
+        af: 50,
+      },
+      header: {
+        race: "Voter's Race",
+        ballot_rtn_status: "Ballot Status",
+        af: "# of Absentee Ballots",
+      },
+    align: {
+      race: "left",
+      af: "left",
+    },
+  }
+)
 ```
 
 ### Question: Explain your table design choices.
 
 **Q**: What *insights* and *new questions* did you garner from it that you hope to also illustrate/provide for your audience?
 
-ENTER_YOUR_RESPONSE_HERE
+The proportion of rejected black/african american ballots to accepted ballots is significantly different from the white ballots. About 27% of black/african american absentee ballots were rejected, compared to 21% of white absentee ballots. I am curious how party afiliations play into this (if at all).
 
 ## Conclusion
 
