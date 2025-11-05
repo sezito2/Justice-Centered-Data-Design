@@ -109,7 +109,7 @@
 
   /* COUNTERS */
   counter-reset: codeblock;
-  counter-reset: videoblock;
+  counter-reset: figureblock;
 }
 
 :root {
@@ -121,6 +121,9 @@
   --theme-foreground-muted: var(--accent2Shade6);
 
   --theme-foreground-focus: var(--accentColor);
+
+  /* WIDTH & HEIGHT CONSTANTS */
+  --label-width: 160px !important;
 }
 
 html:not(:focus-within) {
@@ -137,7 +140,6 @@ p, table, figure, figcaption, .katex-display, ul, ol, code, pre, body {
 }
 
 /* ANCHORS */
-
 a, .card a {
   text-decoration:none !important;
   color:var(--primaryColor);
@@ -235,7 +237,7 @@ h2,h3 {
   font-family: var(--headingFonts);
 }
 
-h1 { 
+h1 {
   font-family: var(--titleFont);
   font-size: 2.75rem;
   font-weight: 400;
@@ -243,10 +245,10 @@ h1 {
   max-width: unset;
 
   /* Effect */
-  background: linear-gradient( 30deg, var(--theme-foreground-focus), currentColor);
+  /* background: linear-gradient( 30deg, var(--theme-foreground-focus), currentColor);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
+    background-clip: text; */
 
   & > a {
     background: unset !important;
@@ -293,15 +295,6 @@ blockquote {
 .cite_small {
   font-size: 0.8rem;
 }
-
-/* CUSTOM CODE FORMATTING */
-
-/* Overwrite Highlight.js defaults */
-/* .observablehq-pre-container {
-  & .hljs {
-    background: white !important;
-  }
-} */
 
 /* LISTS */
 
@@ -372,7 +365,7 @@ table {
           color: var(--accentShade6);
           text-align: left;
           vertical-align: bottom;
-    
+
           white-space: nowrap;
           text-overflow: ellipsis;
           overflow: hidden;
@@ -393,7 +386,7 @@ table {
           color: var(--primaryColor);
           text-align: left;
           vertical-align: bottom;
-    
+
           white-space: nowrap;
           text-overflow: ellipsis;
           overflow: hidden;
@@ -420,6 +413,8 @@ table {
 
 }
 
+/* FORMS */
+
 form[class^='inputs-'] {
 
   table {
@@ -437,10 +432,35 @@ form[class^='inputs-'] {
 }
 
 /* VIDEOS */
+
 video {
   width: 100% !important;
   height: 100% !important;
   box-shadow: 1px 1px 4px 1px var(--accentShade3);
+}
+/* Video Playback Speed Buttons */
+.video--playback_container {
+  display: flex;
+  gap: 0.45rem;
+  margin-bottom: 2rem;
+
+  & > button {
+    padding: 0.35rem;
+    background-color: var(--theme-background-alt);
+    color: var(--theme-foreground-alt);
+    font-family: var(--copyFonts);
+    font-weight: bold;
+    border: 1px solid var(--theme-foreground-alt);
+    box-shadow: 1px 1px 2px -1px var(--theme-foreground-alt);
+    transition: 0.2s;
+
+    &:hover {
+      padding: 0.4rem;
+      background-color: var(--theme-foreground-alt);
+      color: var(--theme-background-alt);
+      transition: 0.2s;
+    }
+  }
 }
 
 /* Text Effects */
@@ -490,7 +510,7 @@ video {
   margin: 4rem -1rem;
   gap: 2rem;
   max-width: calc(640px + 2rem);
-  
+
   & img {
     max-width: 100%;
     border-radius: 8px;
@@ -503,7 +523,7 @@ video {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-  
+
     &:hover, &:focus {
       transition:background-size .16s;
       color: var(--accentShade1);
@@ -516,7 +536,7 @@ video {
         box-shadow: 0 0 0 0.75px var(--theme-foreground-focus), 0 6px 12px 0 rgba(0, 0, 0, 0.2);
       }
     }
-  
+
     &:not(:hover, :focus) {
       color: var(--theme-foreground-muted);
     }
@@ -1287,37 +1307,13 @@ video {
   }
 }
 
-
-/* PRE / Code */
-pre,
-.observablehq-pre-container,
-.observablehq--block {
-  background-color: var(--codeBlock);
-  border-radius: 4px;
-  margin: 3rem auto;
-  max-width: 800px;
-  min-height: 100%;
-  padding: 0;
-  overflow-x: auto;
-  box-sizing: border-box;
-  box-shadow: 1px 2px 3px -1px var(--foregroundColor);
-
-  /* SVG Chart */
-  & > svg,
-  & > figure > svg {
-    margin: auto;
-  }
-}
-.observablehq-pre-container {
-  & pre {
-    padding-right: 0;
-    margin: 0;
-    max-width: none;
-    overflow-x: unset;
-  }
-}
+/* NOTES & TIP BOXES */
 .note, .tip, .warning, .caution, .example {
   margin: 2rem auto;
+}
+.warning {
+  background-color: var(--theme-foreground-alt);
+  color: var(--theme-background-alt);
 }
 .example {
   margin: auto;
@@ -1330,11 +1326,18 @@ pre,
   background-color: var(--theme-background-alt);
 
   &::before {
-    content: "EXAMPLE";
+    content: "Example";
     color: var(--theme-foreground-muted);
     display: block;
     margin-bottom: 1rem;
     font-weight: 700;
+  }
+
+  /* Example Output */
+  &.code-output {
+    & > img {
+      max-width: 350px;
+    }
   }
 }
 .question {
@@ -1351,6 +1354,25 @@ pre,
   &::before {
     content: "QUESTION";
     color: var(--theme-foreground-muted);
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+}
+.note--definition {
+  margin: auto;
+  color: var(--foregroundColor);
+  border-left: solid 1px;
+  border-radius: 0 4px 4px 0;
+  padding: 1rem 0.5rem;
+  box-sizing: border-box;
+  max-width: 640px;
+  border-left-color: var(--accentShade5);
+  background-color: var(--accentShade1);
+
+  &::before {
+    content: "DEFINITION";
+    color: var(--accentShade6);
     display: block;
     margin-bottom: 1rem;
     font-weight: 700;
@@ -1395,7 +1417,7 @@ pre,
   }
 }
 .codeblock-caption {
-  margin-bottom: -2.5rem;
+  margin-bottom: 1.5rem;
   padding: 0;
   font-size: 1rem;
   counter-increment: codeblock; /* increment by 1 */
@@ -1411,12 +1433,18 @@ pre,
     color: white;
     content: "CB " counter(codeblock) ": ";
   }
+
+  /* IMAGES */
+  & > img {
+    max-width: 300px;
+  }
 }
-.video-caption {
+.figure-caption {
+  margin-top: 2rem;
   margin-bottom: 0.25rem;
   padding: 0;
   font-size: 1rem;
-  counter-increment: videoblock; /* increment by 1 */
+  counter-increment: figureblock; /* increment by 1 */
 
   &.cc-image {
     margin-bottom: 0;
@@ -1427,12 +1455,53 @@ pre,
     margin-right: 0.1rem;
     background-color: var(--foregroundColor);
     color: white;
-    content: "Video " counter(videoblock) ": ";
+    content: "Figure " counter(figureblock) ": ";
+  }
+}
+.error-caption {
+  border-left-color: var(--theme-red);
+  background-color: color-mix(in srgb, var(--theme-red), var(--theme-background) 90%);
+
+  border-left: solid 1px;
+    border-left-color: currentcolor;
+  border-radius: 0 4px 4px 0;
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  box-sizing: border-box;
+  max-width: 640px;
+
+  &::before {
+    content: "Experience an Error?";
+    color: var(--theme-red);
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 700;
   }
 }
 .observablehq--error .observablehq--inspect {
   margin: 2rem auto;
   max-width: 640px;
+}
+
+/* CUSTOM CODE FORMATTING */
+pre,
+.observablehq-pre-container,
+.observablehq--block {
+  background-color: var(--codeBlock);
+  border-radius: 4px;
+  margin: 3rem auto;
+  max-width: 800px;
+  min-height: 100%;
+  padding: 0;
+  overflow-x: auto;
+  box-sizing: border-box;
+  box-shadow: 1px 2px 3px -1px var(--foregroundColor);
+
+  /* SVG Chart */
+  & > svg,
+  & > figure > svg {
+    margin: auto;
+  }
 }
 
 /* Interactive pre codeblocks */

@@ -11,15 +11,21 @@
   "dependencies": {
     "@observablehq/framework": "^1.13.2",
     "@observablehq/plot": "^0.6.17",
+    "compromise": "^14.14.4",
+    "compromise-stats": "^0.1.1",
     "csv": "^6.4.1",
+    "csv-parser": "^3.2.0",
+    "csv-stringify": "^6.6.0",
     "d3-array": "^3.2.4",
     "d3-dsv": "^3.0.1",
     "d3-fetch": "^3.0.1",
     "d3-format": "^3.1.0",
     "d3-time-format": "^4.1.0",
     "fs": "^0.0.1-security",
-    "highlight.js": "^11.11.1",
-    "simple-statistics": "^7.8.8"
+    "natural": "^8.1.0",
+    "simple-statistics": "^7.8.8",
+    "tiny-tfidf": "^0.9.1",
+    "wtf_wikipedia": "^10.4.0"
   },
   "devDependencies": {
     "rimraf": "^5.0.5"

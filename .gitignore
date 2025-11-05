@@ -14,13 +14,21 @@ src/*/components-tc/
 *--teachers_copy.md
 *--EXAMPLE.js
 *--EXAMPLE.md
+src/data/dear-governor
+src/data/city-data
+src/policies.md
 
+# Observable Template Example
+example-*
+REVISIONS.md
 
 # TOO BIG VIDS
 *.mov
+02-sumUpWithReducerTests-1-twoLevel--ORIGINAL.mp4
 
 # TOO BIG DATA
 nc_absentee_20241105.csv
 
-# Observable Template Example
-example-*
+# Ignored Data
+src/data/archive-audit/all_results_combined.csv
+src/data/hcr-letters/hcr-letters-substack.json
