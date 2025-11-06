@@ -13,7 +13,8 @@ import {ascending,descending,sum,rollup,rollups} from "d3-array";
 import {utcParse,utcFormat} from "d3-time-format";
 
 // Add Your Date Parsers & Formatters Below
-
+const parseDate = utcParse("%m/%d/%Y")
+const formatWeekNumber = (date) => Number(utcFormat("%U")(date))
 
 // Complete this codeblock code from Chapter E-2.2, exercise 2 below
 export const mapDateObject = (data, dateString) => {
@@ -32,7 +33,8 @@ export const mapDateObject = (data, dateString) => {
        *    property for each `ballot`
        *    called `objField`.
       **/
-     ballot[objField] = parseDate(ballot[dateField])
+     ballot[objField] = parseDate(ballot[dateString])
+     ballot[weekField] = formatWeekNumber(ballot[objField]);
     }
     return ballot
   })
@@ -234,4 +236,40 @@ export const sumUpWithReducerTests = (reducerFunctions, reducerProperties, data,
  * (4) Add 1 more nested .flatMap() to handle the
  *     third level.
 **/
+export const threeLevelRollUpFlatMap = (data, level1Key, level2Key, level3Key, countKey) => {
 
+  // 1. Rollups on 3 nested levels
+  const colTotals = rollups(
+    data,
+    (v) => v.length, //Count length of leaf node
+    (d) => d[level1Key], //Accessor at 1st level
+      (d) => d[level2Key], //Accessor at 2nd level
+        (d) => d[level3Key], //Accessor at 3rd level
+  )
+
+  // 2. Flatten 1st grouped level back to array of objects
+  const flatTotals = colTotals.flatMap((l1Elem) => {
+    let l1KeyValue = l1Elem[0]
+
+    const flatLevel1 = l1Elem[1].flatMap((l2Elem) => {
+      let l2KeyValue = l2Elem[0]
+
+      const flatLevel2 = l2Elem[1].flatMap((l3Elem) => {
+        let l3KeyValue = l3Elem[0]
+        let countValue = l3Elem[1]
+
+        return {
+          [level1Key]: l1KeyValue,
+          [level2Key]: l2KeyValue,
+          [level3Key]: l3KeyValue,
+          [countKey]: countValue
+        }
+      })
+      return flatLevel2
+   })
+
+   return flatLevel1 
+  })
+  // 3. Return the sorted totals
+  return flatTotals
+}
