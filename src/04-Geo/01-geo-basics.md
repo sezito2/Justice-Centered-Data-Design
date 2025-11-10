@@ -24,7 +24,7 @@ const {Deck, AmbientLight, GeoJsonLayer, TextLayer, IconLayer, HexagonLayer, Poi
 
 ## Primer on Geo-Spatial Data
 
-In this notebook, we will learn how to use a conveniently hosted st of Census shape files from the . All of these files follow from the GeoJSON data format specification, which looks like the following example:
+In this notebook, we will learn how to use a conveniently hosted st of Census shape files from the . All of these files follow from the[ GeoJSON data format specification](https://geojson.org/), which looks like the following example:
 
 ```javascript
 {
@@ -41,7 +41,9 @@ In this notebook, we will learn how to use a conveniently hosted st of Census sh
 
 Check out a live, hosted example on their CDN (content delivery network) for U.S. state-level shapes: [states-10m.json](https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json).
 
-## 2. How to Fetch GeoJSON
+## 2. How to Fetch GeoJSON with us-atlas
+
+We're going to use a handy node module, us-atlas, to fetch and use GeoJSON shape datasets. Here's one way to get started:
 
 ```javascript
 // Get county-level shape data for US
@@ -53,6 +55,8 @@ const states = topojson.feature(us, us.objects.states)
 // Use .map() to isolate state centroids (for text label)
 const stateCentroid = states.features.map(d => ({name: d.properties.name, longitude: d3.geoCentroid(d.geometry)[0], latitude: d3.geoCentroid(d.geometry)[1]}))
 ```
+
+Note how we are fetching the counties-10m.json file on-the-fly, so we do not need to host all of the data in our repo. But, that means we need to be connected to the internet to use it.
 
 <!-- GET US STATE -->
 ```js
@@ -66,6 +70,9 @@ const stateCentroid = states.features.map(d => ({name: d.properties.name, longit
 
 ## 3. How To Create Maps in Observable with Deck.gl
 
+Let's look in our code editor and review the steps to create the map.
+
+<!-- 1. HTML TEMPLATE with OBSERVABLE CLASSES -->
 <div class="grid grid-cols-3">
   <div class="card grid-colspan-3" style="padding: 0px;">
     <div style="padding: 1rem;">
@@ -75,6 +82,7 @@ const stateCentroid = states.features.map(d => ({name: d.properties.name, longit
   <div>
     <figure style="max-width: none; position: relative;">
       <div id="container__us_basic" style="border-radius: 8px; overflow: hidden; height: 620px; margin: 0rem 0;">
+        <!-- The map gets inserted inside this canvas element with this ID attribute -->
         <canvas id="container__us_basic_canvas"></canvas>
       </div>
     </figure>
@@ -82,9 +90,8 @@ const stateCentroid = states.features.map(d => ({name: d.properties.name, longit
 </div>
 </div>
 
-<!-- Create interactive map with deck.gl -->
+<!-- 2. Create the initial state of the map to render -->
 ```js
-// Create the initial state of the map to render
 const initialViewState = {
   longitude: -93,
   latitude: 38,
@@ -95,12 +102,13 @@ const initialViewState = {
   bearing: 0
 }
 
-// Get canvas element via HTML ID attribute;
-// needed for cleaning up rendered map on page,
-// upon interactive updates with users
+// 3. Get canvas element via HTML ID attribute;
+//    needed for cleaning up rendered map on page,
+//    upon interactive updates with users
 const canvasContainer = document.getElementById('container__us_basic_canvas')
 ```
 
+<!-- 4. Create a new Deck() object -->
 ```js
 const deckInstance = new Deck({
   canvas: "container__us_basic_canvas",
@@ -122,12 +130,16 @@ const lindgren = [
 ]
 ```
 
-
+<!--
+  5. Set properties on the Deck object,
+     which includes drawing one layer at
+     a time within the `layers: []` property.
+-->
 ```js
 deckInstance.setProps({
   controller: true,
   layers: [
-    // Basic state-level map
+    // 1. Basic state-level map
     new GeoJsonLayer({
       id: "us-base-map",
       data: states,
@@ -135,7 +147,7 @@ deckInstance.setProps({
       getLineColor: [38, 38, 38],
       getFillColor: [255,255,255, 100]
     }),
-    // Labels for states
+    // 2. Labels for states
     new TextLayer({
       id: "us-text-layer",
       data: stateCentroid,
@@ -154,6 +166,7 @@ deckInstance.setProps({
       getAlignmentBaseline: 'center',
       getPixelOffset: [0, -10]
     }),
+    // 3. Add Icons
     // new IconLayer({
     //   id: 'IconLayer',
     //   data: lindgren,
