@@ -171,6 +171,10 @@ export default {
           name: "Markdown Support",
           path: "/Help/markdown"
         },
+        {
+          name: "Data Processing",
+          path: "/Help/processing"
+        },
       ]
     },
     // MIDTERM
