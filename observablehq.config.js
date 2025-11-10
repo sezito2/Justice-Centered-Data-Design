@@ -166,6 +166,16 @@ export default {
           path: "/03-Textual-Analysis/02-processing"
         },
       ],
+    // 4. GEO SPATIAL
+    {
+      name: "4. Geo-Spatial",
+      open: false,
+      pages: [
+        {
+          name: "4.1 Geo Data Basics",
+          path: "/04-Geo/01-geo-basics"
+        },
+      ]
     },
     // HELP PAGES
     {
