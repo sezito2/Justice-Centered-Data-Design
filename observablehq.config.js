@@ -64,16 +64,16 @@ export default {
           path: "/01-Learning-JS/07-dates"
         },
         {
-          name: "1.7. Dates & Time - My Copy",
-          path: "/01-Learning-JS/07-dates--teachers_copy"
+          name: "1.7. Dates & Time",
+          path: "/01-Learning-JS/07-dates"
         },
         {
           name: "1.8. Data Formats & Loading",
           path: "/01-Learning-JS/08-load-data"
         },
         {
-          name: "1.8. Data Formats & Loading - My Copy",
-          path: "/01-Learning-JS/08-load-data--teachers_copy"
+          name: "1.8. Data Formats & Loading",
+          path: "/01-Learning-JS/08-load-data"
         },
         {
           name: "1.9. Objects & Maps",
@@ -85,7 +85,7 @@ export default {
         },
         {
           name: "1.10. Functions - TC",
-          path: "/01-Learning-JS/10-functions--teachers_copy"
+          path: "/01-Learning-JS/10-functions"
         },
       ]
     },
@@ -108,7 +108,7 @@ export default {
         },
         {
           name: "2.3-Grouping & FDs - My Copy",
-          path: "/02-Why-Stats/03-freq-dist-create--teachers_copy"
+          path: "/02-Why-Stats/03-freq-dist-create"
         },
         {
           name: "E-2.3 Group & Count 3-Levels",
@@ -116,7 +116,7 @@ export default {
         },
         {
           name: "2.4 Plotting Frequency Distributions",
-          path: "/02-Why-Stats/04-freq-dist-plot--teachers_copy"
+          path: "/02-Why-Stats/04-freq-dist-plot"
         },
         {
           name: "2.5 Central Tendency",
