@@ -225,6 +225,22 @@ We will use D3's d3-geo function called `.geoContains()`:
 >
 > - Point must be specified as a two-element array [longitude, latitude] in degrees.
 
+Each power plant entry has a `longitude` and a `latitude` property, which we simply need to provide as an Array to `.geoContains()`.
+
+```javascript
+const sampled_NC_PowerPlants = us_power_plants.filter(
+  (pp) => {
+    // Go through each selected source type from the above selection form
+    for (let source of selectPrimSource) {
+      // If the selected source & if the lat-lon are within the provided geo shape, return the row
+      if ( (pp.PrimSource == source) && (d3.geoContains(nc_State, [pp.longitude, pp.latitude]) === true)) {
+        return pp
+      }
+    }
+  }
+)
+```
+
 ```js
 const sampled_NC_PowerPlants = us_power_plants.filter(
   (pp) => {
@@ -236,8 +252,6 @@ const sampled_NC_PowerPlants = us_power_plants.filter(
   }
 )
 ```
-
-Each power plant entry has a `longitude` and a `latitude` property, which we simply need to provide as an Array.
 
 ```js
 sampled_NC_PowerPlants
