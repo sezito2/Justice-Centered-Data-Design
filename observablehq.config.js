@@ -72,19 +72,11 @@ export default {
           path: "/01-Learning-JS/08-load-data"
         },
         {
-          name: "1.8. Data Formats & Loading",
-          path: "/01-Learning-JS/08-load-data"
-        },
-        {
           name: "1.9. Objects & Maps",
           path: "/01-Learning-JS/09-objs-maps"
         },
         {
           name: "1.10. Functions",
-          path: "/01-Learning-JS/10-functions"
-        },
-        {
-          name: "1.10. Functions - TC",
           path: "/01-Learning-JS/10-functions"
         },
       ]
@@ -155,6 +147,10 @@ export default {
         {
           name: "4.1 Geo Data Basics",
           path: "/04-Geo/01-geo-basics"
+        },
+        {
+          name: "4.2 Mapping with Plot",
+          path: "/04-Geo/02-plot-geo"
         },
       ]
     },
