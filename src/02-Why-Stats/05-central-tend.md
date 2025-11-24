@@ -162,6 +162,7 @@ In the attached dataset, `digArchivePageTests`, the FCP value in milliseconds us
     2. Rollup at per website level with `.hostname`.
 
 <!-- Exectuable FCP rollup -->
+<!-- Non-Exectuable FCP rollup -->
 ```javascript
 // FCP measured in milliseconds
 const colOfInterest = "first-contentful-paint-numericValue"
@@ -230,6 +231,10 @@ let digArchiveCentralTendencies = Array.from(
     }
   }
 )
+```
+
+```js
+digArchiveCentralTendencies
 ```
 
 ## Exploratory Data Analysis of Central Tendency Measures
@@ -309,6 +314,7 @@ Plot.plot({
     ),
 
     // Plot median values
+    // Plot values
     Plot.dot(
       digArchivePageTests,
       {
@@ -336,6 +342,19 @@ Plot.plot({
 You may have noticed how there are some websites in the dataset with some atypical values. While the bar-dot chart gave us the opportunity to see some possible atypical values, we can alternatively use Observable's faceting plots to help us see the distribution in a different way.
 
 ```js
+d3.groupSort(
+  digArchivePageTests.filter(
+    (d) => d[colOfInterest]),
+    (Group) => {
+      // What's Group? Log it and find out.
+      // console.log("hostname MEAN:", d3.mean(Group, (g) => g[colOfInterest]))
+      return d3.median(Group, (g) => g[colOfInterest])
+    },
+  (d) => d.hostname,
+)
+```
+
+```js
 Plot.plot({
   color: {legend: true, scheme: "YlGnBu", label: "Frequency Ratio (0-1)"},
   marginLeft: 200,
@@ -343,6 +362,18 @@ Plot.plot({
   x: {grid: true},
   // `fy` is the "force-directed" y-axis value, which groups the y axis per hostname in this case
   fy: {
+  /**
+   * `fy` is the "force-directed" y-axis value, which groups the y axis per hostname in this case.
+   * In fy, we want to create a domain range based on the hostname as a grouped leaf node: An array of hostnames. However, let's group and sort them by a central tendency value of the column of interest, since that's the goal of the visual.
+  **/
+  fy: {
+    /**
+     * `domain` is the range of values of an axis.
+     * In this case, we're
+     * 1. Grouping by the hostname property, which will be our leaf node;
+     * 2. Filtering the grouped data by our column of interest, but specifically a sorted return value at the leaf node.
+     * The output: Array of hostname values sorted by their returned value in the
+    **/
     domain: d3.groupSort(
       digArchivePageTests.filter(
         (d) => d[colOfInterest]),
@@ -350,6 +381,7 @@ Plot.plot({
           // What's Group? Log it and find out.
           // console.log("hostname MEAN:", d3.mean(Group, (g) => g[colOfInterest]))
           return d3.mean(Group, (g) => g[colOfInterest])
+          return d3.median(Group, (g) => g[colOfInterest])
         },
       (d) => d.hostname,
     )
@@ -362,6 +394,20 @@ Plot.plot({
           fill: "proportion-facet",
         },
         {
+      /**
+       * BINS
+       * (https://observablehq.com/plot/transforms/bin#bin-transform)
+       * The bin transform groups quantitative or temporal data — continuous measurements such as heights, weights, or temperatures — into discrete bins. You can then compute summary statistics for each bin, such as a count, sum, or proportion.
+      **/
+      Plot.binX(
+        {
+          // fill channel represents count per bin
+          fill: "proportion-facet",
+        },
+        {
+          /**
+           * outputs argument (here {y: "count"}) declares additional output channels (y) and the associated reducer (count). Hence the height of each rect above represents the number of athletes in the corresponding bin, i.e., the number of athletes with a similar weight.
+          **/
           x: colOfInterest,
           fy: "hostname",
         }
