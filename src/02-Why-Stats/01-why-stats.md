@@ -43,27 +43,35 @@ With these goals for the texts in mind, please respond to the questions herein a
 
 **Question**: Use the space below to define the provided key terms.
 
-- According to the SFSJ authors, what are the main difference between **data** and **information**?:
-- **Variable**:
-- **Constant**:
-- **Conceptualization**:
-- **Operationalization**:
-- **Nominal level of data**:
-- **Ordinal level of data**:
-- **Interval level of data**:
-- **Ratio level of data**:
+- According to the SFSJ authors, what are the main difference between **data** and **information**?: Information is conclusions based on analysis of data (measurements).
+- **Variable**: A characteristic that varies
+- **Constant**: A characteristic that does not vary
+- **Conceptualization**: The process used to choose and define variables
+- **Operationalization**: The method used  to measure the variables
+- **Nominal level of data**: Classficiation of variables that is mutally exclusive, no order or rank
+- **Ordinal level of data**: Classficiation of variables that is mutally exclusive and have an order
+- **Interval level of data**: Classficiation of variables that is mutally exclusive,order, and equal space
+- **Ratio level of data**: Classficiation of variables that is mutally exclusive,order, equally spaced, and have a true zero
 
 ### 1.2. On positivism
 
 **Question**: Describe how the S4SJ authors define and use the term **positivism**. How do they suggest it is different from **post-positivism**? According to the authors, why are both paradigms important to social workers? Now, how do you imagine it is important for TPC professionals?
 
-Your_response_here
+Positivism is defined as a paradigm that posits social behavior can be studied in a scientific manner. However, post-positivism says science subjugates knowledge and that humans are too complex to fit into the narrowness of the scientific method.These paradigms are important to both SW and TPC because it situates the work with empiricist methods and focuses on the holistic experience. TPC work is human focus, so both of these theories focus on how we can best study the human experience.
 
 ### 1.3. On the "*structural perspective*"
 
 **Question**: Name and define the different parts of the ***structural perspective***. Be sure to cover the parts related practice and research.
 
-Your_response_here
+The strucutral perspective seeks to change the systems rather than the people within the systems. There are two competeing perspectives: neoliberal and marxist ideologies. There are five practice mehtods: defence of the client, collectivization, materialization, increasing client power in the worker-client relationship, and enhacing client power through personal change.
+**Neoliberal**: societal problems are a cause of people who don't respect the rules, capitalism is a sound economic system.
+**Marxist**: transforms social structure and conditions that cause negative societal effects (ex. exploitation)
+**defence of the client**: defending clients against oppressive systems.
+**collectivization**: people are not alone in their struggles, must connect to support networks
+**materialization**: many problems are a result of material ineqalities
+**increasing client power in the worker-client relationship**: empower clients and state things clearly for easy comprehension
+**enhacing client power through personal change**:  maximize strengths to help reduce destructive behaviors
+
 
 ## 2. Questions about "The history of empiricism"
 
@@ -71,7 +79,7 @@ Your_response_here
 
 **Question**: According to the SFSJ authors, what is ***feminist empiricism***? And, what issues does it recognize as important to recognize and remedy? Be sure to discuss why it emphasizes the importance of critically reflecting on aspects of the ***context*** of empirical work.
 
-Your_response_here
+Feminist empiricism follows the core belief of empiricism that only knowledge from direct oberservation should be accepted as scientific fact, but that science is not separate from individual values and science is influences by values. Social factors are relevevant to knowledge, this emphasizes the importance of community. This is an attempt to remedy the sexism and male-centric (views of) science.
 
 ## 3. Questions About "The future of ethics and social justice" in TPC
 
@@ -79,33 +87,34 @@ Your_response_here
 
 **Question**: Name and define some of what you deem as the main different parts of the ***socially just ethic***. Be sure to discuss how it is different from other ethical approaches.
 
-Your_response_here
+Socially just ethics are centered around values to whatever group is most in need. SJ ethics shift over time compared to traditional ethics that are predetermined and shared across a whole society. Ethics typically are assumed by the majority who tend to have the power. SJ ethics combats the hegemonic powers by re-centering values.
 
 ### 3.2. Defining critical issues
 
 **Question**: Briefly define each of the critical issues discussed: Cultural Imperialism, Marginalization, and Intersectional Oppression.
 
-**Cultural Imperialism**: Your_response_here
+**Cultural Imperialism**: Violent stealing of land, forced cultural assimilation, labor exploitations/slavery, and taking of resources.
 
-**Marginalization**: Your_response_here
+**Marginalization**: Excluding groups of people from society.
 
-**Intersectional Oppression**: Your_response_here
+**Intersectional Oppression**: How does intersectionality impact a person's participation in society. All identies of a person influence a person's place in socity (e.g., race, gender, disability)
 
 ### 3.3. Defining the 3Ps to help us recognize oppression
 
 **Question**: Define each of the 3Ps below. Explain how each helps us recognize oppression.
 
-**Power**: Your_response_here
+**Power**: How are people organized in a society, who has control, what are the dominant beliefs? Power is an opressive strucure, so asking those questions can help assess who/what has power and what groups have less-none.
 
-**Privilege**: Your_response_here
+**Privilege**: What advantages might some people have based on their identities. 
+This positionality lends people power or pushes them to the margins. (ex. a white woman has white privilege but still faces sexism)
 
-**Positionality**: Your_response_here
+**Positionality**: Where do people lie in the power structure. Very closely linked to privilege as what privilege you have determines your positionality.
 
 ### 3.4. Why an SJ ethic?
 
 **Question**: Why do Lindgren, Gerdes, and Lawrence position a "SJ ethic" as essential to the future of TPC? What types of problems does it help TPC tackle?
 
-Your_response_here
+TPC should advocate for equitable changes to benefit the most people and how do we make ethical decisions. It can help TPC professionals reflect and tackle issues of inclusion/exlcusion, reciprocity in research and practice, reflexivity.
 
 ## 4. Questions About "Statistical Genre Analysis" (SGA)
 
@@ -113,7 +122,7 @@ Your_response_here
 
 **Question**: How do Graham et al define and discuss what constitutes "big" data? How does their definition differ from what you have heard before you read this article?
 
-Your_response_here
+Big data is field-dependent, what qualifies as big data in one discipline may not be big data in another. Big data refers to large quantities of data, that may go beyond current processing capabilities.
 
 ### 4.2. On SGA
 
@@ -124,19 +133,19 @@ Your_response_here
 3. What questions SGA data and methods enable TPC to ask, and
 4. What methods it uses to do so.
 
-Your_response_here
+Statistical Genre Analysis (SGA) attempts to combine qualitative verbal data with statistical methods. SGA is primarily focused on discourse/verbal data. This helps TPC professionals offer conclusion on big data without losing the humanistic side of the inquiry. The researchers used a 5,000 page data subset of conference presentation transcripts. Using SGA allows researchers to ask question of correlation, i.e., how does this variable impacts another variable. SGA uses a mixed-methods approach using qualitative coding and statistical analysis.
 
 ## 5. "Science is a social endeavor."
 
 **Question**: Discuss what this statement means to you. Then, discuss any connections, confusion, and/or questions that you recognize with a SJ ethic and structural perspective?
 
-Your_response_here
+This statement makes me think of the power of community, in a few differnt ways. Like stated by feminist empiricists, knowledge is shaped by community. People cannot spearate what they know and their values from the communities the grew up in and are a part of. Additionally, science is built off of other science. Essentially, it is a group effort to advance scienctific knowledge. Including a community's diverse members is one way to approach research from SJ ethics perspective. The includsion of many groups of people in science helps to reinvent what the power structure in science research looks like, as it has been dominanted by white men in the past. I think SJ ethics is a great framework for future research, but how can we apply this to past research?
 
 ## 6. Translating the structural approach into TPC / Other Humanities Fields
 
 **Question**: After considering all of these texts -- their exigencies, propositions, and methods -- translate Mullaly's broader definition of the *structural approach* and Moreau's *practice methods* in social work into the domain of TPC or humanist domain of work by putting them into conversation with Lindgren, Gerdes, and Lawrence's SJ ethic and Graham et al's statistical genre analysis. In other words, begin to develop your own structural perspective and set of practices that translates Moreau's 5 practices. Finally, add one new practice approach specific to TPC/your domain.
 
-Your_response_here
+Moreau's practice methods disrupt the hegemonic narrative and push for a focus on changing social systems to benefit the people within them. Moreau is focused on those who have been failed by the system because of power structures, intersectionality, and marginalization. A capitalist and imperialist society is not designed to benefit all, but rahter the select few. Discourse analysis of marginalized groups is essential to gain a perspective outside the power structure. Mullaly approach "seeks to change the social system and not the individual who receives, through no fault of their own, the results of defective arrangements" This quote stood out to me as someone interesting in UX/human factors. Therefore, my practice specific approach would be to refocus on system errors rather than human error. If people are making errors, what is causing the erros what systems could be changed to prevent error. For example, could a piece of documentation implement plain language to make instructions more clear, or change its formatting to make warning stand out more.
 
 ## Submission
 
