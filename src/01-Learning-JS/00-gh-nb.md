@@ -99,6 +99,12 @@ Here's that process again for you:
 3. Create another multiline JS codeblock that is executable by using the "js" keyword after the first 3 backticks.
 4. Inside the "js" codeblock, add the following text `console.log("I do NOT show up on the page")`.
     - **NOTE**: This codeblock should NOT render on the locally hosted page. I'll show where to find it in class. `:-)`
+```javascript
+// I will show up on the page
+```
+```js
+console.log("I do NOT show up on the page")
+```
 
 ## Conclusion
 
