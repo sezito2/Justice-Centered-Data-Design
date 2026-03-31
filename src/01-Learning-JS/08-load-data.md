@@ -64,7 +64,7 @@ In this project, check out the `/src/data/events.json` file, which is a small ex
   What other properties of JSON do you notice?
 </p>
 
-**RESPONSE**: Write your response here.
+**RESPONSE**: I notice that each object contains multiple "variables". These variables are strings and separate by a `:` i.e., `"variable name": "specific data point"`. Rather than having heading at the top like a CSV, the headings are mixed into the data.
 
 ## 1.8.2 Framework's FileAttachment()
 
@@ -78,7 +78,7 @@ Here's the syntax:
 const data = FileAttachment("./../relative/path/to/data.csv")
 ```
 
-If loaded successfully, the following properties of the variable are available in addition to the data:
+If loaded successfully, the following properties of the                                           variable are available in addition to the data:
 
 - `name` - the file’s name (such as `data.csv`)
 - `mimeType` - MIME type (such as text/csv),
@@ -221,6 +221,12 @@ Goal: Demonstrate your understanding of the CSV file format by creating a mini C
 Use the empty codeblock below.
 
 ```
+playerName,position,number
+Alonso,First Base,20
+McNeil,Second Base,1
+Lindor,Short Stop,12
+Nimmo,Outfield,9
+Diaz,Pitcher,39
 ```
 
 ### E2. Load a CSV file
@@ -234,12 +240,12 @@ In this case, load the following CSV file: `nc_absentee_mail_2024.csv`.
 2. In the second codeblock, use `console.log()` to log the following properties to the console: `.name` and `.size`.
 3. Still in the second codeblock, add a second `console.log()` and log the first object in the Array to the console.
 
-```javascript
-// Your FileAttachment() code goes here
+```js
+let mailData = FileAttachment("./../src/data/nc-voters/nc_absentee_mail_2024.csv")
 ```
 
-```javascript
-// Your other code with your variable goes here
+```js
+console.log(mailData.name, mailData.size)
 ```
 
 Make sure that you verify the logs are there!
